@@ -1,0 +1,100 @@
+\documentclass[12pt,letterpaper,twoside,openright]{report}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage[backend=biber, style=nature, sorting=none]{biblatex}
+\usepackage{float}
+\usepackage[top=1in, bottom=1.5in, left=1.25in, right=1in]{geometry}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{mathrsfs}
+\usepackage{mathtools}
+\usepackage[version=3]{mhchem}
+\usepackage{nicefrac}
+\usepackage{setspace}
+
+\bibliography{biblio}
+\graphicspath{{img/}}
+\renewcommand\baselinestretch{1.5}
+
+\begin{document}
+\begin{titlepage}
+	\centering \large
+	{\Large \bf Stochastic models of genetic circuits\par}
+        \vspace{0.3cm}
+        {by\par}
+        \vspace{0.3cm}
+	{\Large Luis Alberto Guti\'errez L\'opez \par}
+        \vspace{2cm}
+        {\setstretch{1.0}
+	{Submitted to the Department of Physics\par}
+        {in partial fulfillment of the requirements for the degree of \par}}
+        \vspace{.25cm}
+	{Bachelor of Science in Physics\par}
+        \vspace{.25cm}
+        {at the\par}
+        \vspace{.25cm}
+        {UNIVERSIDAD DE LOS ANDES\par}
+        \vspace{.25cm}
+        {May 12, 2016}
+
+        \vspace{1.8cm}
+
+        %Author \dotfill \par
+        %\setstretch{1.0}\raggedleft Department of Physics\\May 12, 2016
+        
+        \vspace{1.2cm}
+
+        Certified by \dotfill \par
+        \setstretch{1.0}\raggedleft Juan Manuel Pedraza Leal \\ Associate Professor \\ Monograph Supervisor
+	\vfill
+\end{titlepage}
+
+\cleardoublepage
+
+\begin{center}
+
+{\large \bf Stochastic models of genetic circuits} \\
+by \\
+{\large Luis Alberto Guti\'errez L\'opez}
+
+\vspace{1.0cm}
+
+\setstretch{1.0}{
+Submitted to the Department of Physics \\
+on May 12, 2016 in partial fulfillment of the \\
+requirements for the degree of \\
+Bachelor of Science in Physics
+}
+\end{center}
+\par
+\subsection*{Abstract}
+\addcontentsline{toc}{chapter}{Abstract}
+\vspace{-0.5cm}
+\begin{singlespacing}
+All living beings store their genetic information in the DNA and use similar basic mechanisms to read it and on its basis, build their structure and develop their functions. Nevertheless, the information codified on the DNA is not the only aspect that makes an organism what it is. A big and complex network of gene regulation determines which genes are read at a particular moment and the intensity of their activity making it possible, for instance, to differentiate between our muscle cells and our neurons, very different cells but with the same genetic material. Since gene expression is mediated by reactions between molecules, which at the deepest levels consist of random collisions of the reactants, gene expression and regulation is subjected to noise. A cell also regulates the expression of many genes according to the environment, which may change randomly. In response to these important sources of noise, living beings have developed their regulatory networks to work properly under its presence. This work explores the models that have been done on the last years related to stochasticity in gene expression, the insights they have given to us into the principles of biology and the design of synthetic biological circuits.\par
+\end{singlespacing}
+\vspace{0.5cm}
+\setstretch{1.0}{
+\noindent Monograph Supervisor: Juan Manuel Pedraza Leal\\
+Title: Associate Professor\par}
+\setstretch{1.5}
+\newpage
+\tableofcontents
+\addcontentsline{toc}{chapter}{Contents}
+\newpage
+\listoffigures
+\newpage
+\listoftables
+
+\raggedbottom
+\include{introduction}
+\include{concepts}
+\include{master1}
+\include{langevin1}
+\include{bursting}
+\include{division}
+\cite{thattai01} \cite{kaern05} \cite{elowitz02} \cite{pedraza05} \cite{paulsson05} \cite{alon99} \cite{arkin98} \cite{pedraza08} \cite{huh11a} \cite{huh11b} \cite{gillespie77} \cite{paulsson04} \cite{bertsekas08} \cite{vankampen92} \cite{gardiner03}
+\printbibliography
+\addcontentsline{toc}{chapter}{Bibliography}
+
+\end{document}
