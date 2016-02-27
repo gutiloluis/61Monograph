@@ -3,7 +3,7 @@
 #include <gsl/gsl_rng.h>
 
 int i;
-int n_cells = 1000;
+int n_cells = 10000;
 int t_total;
 
 double p_unrep =1200.0;
