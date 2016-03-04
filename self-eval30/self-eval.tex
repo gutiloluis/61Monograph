@@ -1,0 +1,35 @@
+\documentclass[12pt, letterpaper]{article}
+\usepackage[spanish]{babel}
+\usepackage[top=1in, bottom=1.5in, left=1.25in, right=1in]{geometry}
+\author{Luis Alberto Guti\'errez L\'opez}
+\date{\today}
+\title{\textbf{Revisi\'on del 30\% de la monograf\'ia}}
+\begin{document}
+
+\maketitle
+
+\section*{Realizado}
+\begin{itemize}
+  \item Estudiar probabilidad y temas b\'asicos de procesos estoc\'asticos que no se ven con mucho detalle en el pregrado.
+  \item Estudiar con detalle los art\'iculos principales sobre los cu\'ales estoy realizando la revisi\'on, entendiendo los c\'alculos y estudiando los temas necesarios para entenderlo.
+  \item Del documento realic\'e la totalidad de la estructura (tabla de contenido) y casi la totalidad de la parte algebraica y la secuencia general del escrito. La bibliograf\'ia que he usado hasta ahora tambi\'en fue inclu\'ida.
+  \item He implementado varias de las simulaciones estoc\'asticas. En esta parte procur\'e buscar maneras de realizar las simulaciones de Gillespie con mayor eficiencia utilizando el lenguaje C para generar los datos. 
+  \item Tambi\'en he comenzado a trabajar en el objetivo de procurar generalizar los modelos mencionados. Para ello he estudiado procesos estoc\'asticos y he empezado a analizar qu\'e problemas particulares se podr\'ian atacar y de qu\'e posibles maneras.
+\end{itemize}
+
+\section*{A realizar}
+\begin{itemize}
+  \item Explicar mejor la distinci\'on entre ruido intr\'insico y extr\'inseco. Tal vez incluyendo una secci\'on adicional en el cap\'itulo de conceptos previos.
+  \item Incluir un cap\'itulo adicional donde se explique la \textit{linear noise approximation}, la propagaci\'on del ruido por promedio temporal, y c\'omo se interpreta la ganancia logar\'itmica.
+  \item Realizar las simulaciones restantes, para ello es necesario interpretar las ecuaciones para identificar las tasas. Una vez hecho esto la implementaci\'on es muy sencilla porque ya tengo el algoritmo implementado y probado.
+  \item Revisar la presentaci\'on del documento, incluyendo el formato, la ortograf\'ia y vocabulario (ingl\'es), las im\'agenes escogidas, las citas y referencias a figuras y ecuaciones.
+  \item Muchas de las im\'agenes que he puesto las voy a cambiar m\'as adelante, especialmente en las secciones de biolog\'ia de la parte de conceptos previos. Espero tener im\'agenes m\'as claras, concretas y en un formato m\'as homog\'eneo.
+  \item En algunas partes hay pasos que no est\'an muy bien justificados, entoces revisar\'e esto e incluir\'e las justificaciones que hagan falta.
+  \item Evaluar qu\'e otros temas se pueden incluir en los conceptos previos y si debo omitir algunos de los que he puesto. Hab\'ia pensado incluir algo sobre sumas de variables aleatorias, la distribuci\'on de su suma y el producto de convoluci\'on. Tambi\'en quiero detallar m\'as la parte del algoritmo de Gillespie.
+  \item Luego de hacer las simulaciones pienso incluir el an\'alisis f\'isico y biol\'ogico de los resultados obtenidos. S\'e que falta mucho an\'alisis en lo que llevo del documento pero prefer\'i esperar a tener todas las simulaciones y las gr\'aficas para escribirlo en referencia a ellas. Todos los items hasta aqu\'i espero tenerlos finalizados para la d\'ecima semana de clases (luego de semana de receso).
+  \item Luego de finalizar los items anteriores, quiero dedicarme completamente a buscar maneras de mejorar los modelos que han sido realizados. Para ello estudiar\'e procesos estoc\'asticos, c\'alculo estoc\'astico y pensar\'e el resto del semestre c\'omo se podr\'ian usar dichas herramientas para hacer modelos m\'as completos.
+\end{itemize}
+
+Adem\'as de analizar la posibilidad de obtener modelos m\'as generales, quiero que el documento que realice sirva como rerferencia para las personas que quieran estudiar el tema de ruido en circuitos gen\'eticos. Por esta raz\'on inclu\'i una secci\'on de conceptos previos y realic\'e los pasos algebraicos detalladamente, de tal forma que adem\'as de mostrar los resultados, se muestren claramente las herramientas matem\'aticas utilizadas. Tambi\'en, en base a este objetivo, me gustar\'ia ver si puedo incluir referencias a bibliograf\'ia adicional a los temas y enlaces a los c\'odigos fuente de los algoritmos.
+
+\end{document}
