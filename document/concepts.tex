@@ -160,9 +160,10 @@ To find the probability of a certain outcome of $X$, sometimes it is easier to u
 
 The \textbf{expected value} (also called average) of a function of a random variable $f(X)$ is defined as
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:con-ave_def}
   \langle f(X)\rangle \coloneqq \sum_xf(x)P(x).
-\end{equation*}
+\end{equation}
 
 From the definition can be noticed that the expected value is linear, i.e., for a pair of random variables $X$ and $Y$, and a constant $c$
 
@@ -178,9 +179,10 @@ The variance $\sigma^2(X)$ of $X$ measures the dispersion of the possible outcom
 
 It can be easily shown that
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:con-var_nice}
   \sigma^2(X) = \langle X^2\rangle - \langle X\rangle^2.
-\end{equation*}
+\end{equation}
 
 From the previous equation it can be seen that for a constant $c$
 
@@ -222,18 +224,20 @@ The \textbf{covariance} of $X$ and $Y$ is defined as
 It can be thought as a measure of how correlated is their behaviour. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme case, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent by eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
 
 \section{Noise}
-
+\label{sec:con-noise}
 Intuitively, we may expect that a random variable is more 'random' or noisy, when the deviations relative to the expected value are bigger. With this in mind, the noise in a random variable $X$ must increase as the variance increases and decrease as the mean increases (the same deviation from a smaller expected value contributes more to the noise than from a bigger one). The quantities that have benn used to measure noise in biology are the Fano factor $\nu$ and the coefficient of variation $\eta$, which are defined by
 
-\begin{equation*}
-\nu_X \coloneqq \frac{\sigma^2(X)}{\langle X \rangle}.
-\end{equation*}
+\begin{equation}
+  \label{eq:con-fano_def}
+  \nu_X \coloneqq \frac{\sigma^2(X)}{\langle X \rangle}.
+\end{equation}
 
-\begin{equation*}
-\eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
-\end{equation*}
+\begin{equation}
+  \label{eq:con-cv_def}
+  \eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
+\end{equation}
 
-The Fano factor has been used in the first studies of noise in biology since it had the particular property that for a random variable with a Poisson distribution $\nu_X=1$ and hence it measures deviations from a Poissonian behavior. In more recent studies the coefficient of variation is being used because it is dimensionless and for that reason it does not depend on the units used for the random variable.
+The Fano factor has been used in the first studies of noise in biology since it had the particular property that for a random variable with a Poisson distribution $\nu_X=1$ and hence it measures deviations from a Poissonian behavior. In more recent studies the coefficient of variation is being used because it is dimensionless and for that reason it does not depend on the units used for the random variable. For this reason, the generic term 'noise' is now used to refer to $\eta$.
 
 \section{Moment generating functions}
 
@@ -328,13 +332,70 @@ where the hat denotes Fourier transform. A mathematical tool that will be very u
   \mathscr{F}(C_X(\tau)) = S_X(\omega),\quad\text{and}\quad \mathscr{F}^{-1}(S_X(\omega)) = C_X(\tau).
 \end{equation*}
 
+\section{The Poisson process}
+
+Many of the processes of creation and destruction that occur in this context are modeled as Poisson processes. For example, the creation and destruction of mRNA and proteins.The Poisson process is a continous-time stochastic process that is used to model arrivals when there is some known arrival rate and when the arrivals at different time intervals are independent.
+
+Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\mathbb{Z}$ arrivals during a time interval $\tau$ and assume that it is the same for any interval of the same length. We denote by $\lambda$ the arrival rate for the process. The Poisson process satisfy the following properties
+
+\begin{itemize}
+  \item  $P(k,\tau)$ is the same for all intervals of length $\tau$.
+  \item  The value of $P(k,\tau)$ during some particular interval is independent of other intervals.
+  \item $P(k,\tau)$ satisfies the following
+    \begin{equation*}
+      \begin{split}
+        P(0,\tau)=1-\lambda\tau+o_0(\tau),\\
+        P(1,\tau)=\lambda\tau+o_1(\tau),\\
+        P(k,\tau)=o_k(\tau).\quad\text{for } k>1.
+      \end{split}
+    \end{equation*}
+    
+    Where $o_k(\tau)$, $k=0,1,\dotsc$ are functions that become negligible compared to $\tau$ as it becomes small, that is
+
+    \begin{equation*}
+      \lim_{\tau\to 0}\frac{o_k(\tau)}{\tau}=0.
+    \end{equation*}
+\end{itemize}
+
+It can be proven that according to the previous properties, $P(k,\tau)$ is given by \todo{Prove?}
+
+\begin{equation*}
+  P(k,\tau) = e^{-\lambda\tau}\frac{(\lambda\tau)^k}{k!},\quad k=0,1,\dotsc
+\end{equation*}
+
+which is a Poisson distribution, using the definition for the expected value and variance (eqs. \eqref{eq:con-var_nice} and \eqref{eq:con-ave_def}), letting $N_\tau$ be the number of arrivals during a time interval $\tau$  we get after a little algebra
+
+\begin{equation*}
+  \langle N_\tau\rangle = \sigma^2(N_\tau) = \lambda \tau.
+\end{equation*}
+
+The average number of arrivals in a time $\tau$ is, as intuitively expected, the arrival rate times the length of the interval. From eqs. \eqref{eq:con-fano_def} and \eqref{eq:con-cv_def}, the noise and Fano factor for $N_\tau$ are
+
+\begin{equation*}
+  \nu(N_\tau) = 1,\quad\quad \eta(N_\tau) = \frac{1}{\sqrt{N_\tau}}.
+\end{equation*}
+
+This proves what was said on section \ref{sec:con-noise} about the previous use of the Fano factor as the standard measure of noise. From the form of $\eta$ we conclude that if the number of events is large, the Poisson noise is negligible. But for a biological system, for instance, the average number of copies of mRNA of a given gene is of the order of $10$. This makes the effect of noise a significant factor. Also, altought the mean number of proteins is of the order of $1000$, the Poisson noise is negligible, but there is an important contribution of noise coming from the RNA, as we will see on chapter \ref{ch:master}.
+
+Now we will find the time between events, by now let $t=0$ the time of the last event and let $t=T$ the time of the next event, then
+
+\begin{equation*}
+  F_T(t) \coloneqq P(t\leq T) = 1-P(T>t) = 1 - P(0,t) = 1 - e^{-\lambda\tau}.
+\end{equation*}
+
+And differentiating we get the \textbf{exponential PDF}, which is given by
+
+\begin{equation*}
+  f_T(t) = \lambda e^{-\lambda t},
+\end{equation*}
+
 \section{The Gillespie algorithm}
 
 To simulate the models we will use the Gillespie algorithm \cite{gillespie77} which improves speed a lot with respect to brute-force stochastic algorithms. It is used to simulate events that occur with a certain probability per unit time (e.g. creation and destruction of RNA or proteins, binding of an enzyme to a substrate, etc.)
 
 In the brute force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
 
-In the Gillespie algorithm, we take advantage of the properties of the Poisson process, namely its memorylessness and its merging properties. Assuming all the events are Poissonian, the interarrival times are exponentially distributed and therefore memorylessness \todo[inline]{More detail and rigor} \cite{bertsekas08}.
+In the Gillespie algorithm, we take advantage of the properties of the Poisson process, namely its memorylessness and its merging properties. Assuming all the events are Poissonian, the interarrival times are exponentially distributed and therefore memoryless. The  \todo[inline]{More detail and rigor} \cite{bertsekas08}.
 
 There are not fixed time intervals in this case, a random number is sampled with an exponential distribution to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. To sample an exponential random number $X$ with parameter $K$ from an uniform $U$ between $0$ and $1$, the following formula can be used.
 

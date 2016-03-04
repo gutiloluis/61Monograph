@@ -10,27 +10,28 @@
 \BOOKMARK [1][-]{section.1.6}{Moment generating functions}{chapter.1}% 10
 \BOOKMARK [1][-]{section.1.7}{Characteristic function}{chapter.1}% 11
 \BOOKMARK [1][-]{section.1.8}{Stochastic processes}{chapter.1}% 12
-\BOOKMARK [1][-]{section.1.9}{The Gillespie algorithm}{chapter.1}% 13
-\BOOKMARK [0][-]{chapter.2}{Basic genetic circuits in steady state - The master equation}{}% 14
-\BOOKMARK [1][-]{section.2.1}{Single gene}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{Several species with linear interactions}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.3}{Several species with non-linear interactions - Negative autorregulation}{chapter.2}% 17
-\BOOKMARK [0][-]{chapter.3}{Cascade of regulation - The Langevin equation}{}% 18
-\BOOKMARK [0][-]{chapter.4}{Effects of bursting and senescence}{}% 19
-\BOOKMARK [1][-]{section.4.1}{mRNA bursts}{chapter.4}% 20
-\BOOKMARK [1][-]{section.4.2}{Arbitrary distribution of creation times}{chapter.4}% 21
-\BOOKMARK [1][-]{section.4.3}{Decay of molecules}{chapter.4}% 22
-\BOOKMARK [1][-]{section.4.4}{Senescence of mRNA}{chapter.4}% 23
-\BOOKMARK [0][-]{chapter.5}{Effects of cell division}{}% 24
-\BOOKMARK [1][-]{section.5.1}{Characterizing the noise arising from cell division}{chapter.5}% 25
-\BOOKMARK [1][-]{section.5.2}{Independent segregation}{chapter.5}% 26
-\BOOKMARK [1][-]{section.5.3}{Disordered segregation}{chapter.5}% 27
-\BOOKMARK [2][-]{subsection.5.3.1}{General case}{section.5.3}% 28
-\BOOKMARK [2][-]{subsection.5.3.2}{Random size and random accessible volume}{section.5.3}% 29
-\BOOKMARK [2][-]{subsection.5.3.3}{Clustered segregation}{section.5.3}% 30
-\BOOKMARK [2][-]{subsection.5.3.4}{Upper limit of the partitioning error}{section.5.3}% 31
-\BOOKMARK [1][-]{section.5.4}{Ordered segregation}{chapter.5}% 32
-\BOOKMARK [2][-]{subsection.5.4.1}{Self-volume exclusion}{section.5.4}% 33
-\BOOKMARK [2][-]{subsection.5.4.2}{Binding to spindle sites}{section.5.4}% 34
-\BOOKMARK [2][-]{subsection.5.4.3}{Pair formation mechanisms}{section.5.4}% 35
-\BOOKMARK [0][-]{chapter*.8}{Bibliography}{}% 36
+\BOOKMARK [1][-]{section.1.9}{The Poisson process}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.10}{The Gillespie algorithm}{chapter.1}% 14
+\BOOKMARK [0][-]{chapter.2}{Basic genetic circuits in steady state - The master equation}{}% 15
+\BOOKMARK [1][-]{section.2.1}{Single gene}{chapter.2}% 16
+\BOOKMARK [1][-]{section.2.2}{Several species with linear interactions}{chapter.2}% 17
+\BOOKMARK [1][-]{section.2.3}{Several species with non-linear interactions - Negative autorregulation}{chapter.2}% 18
+\BOOKMARK [0][-]{chapter.3}{Cascade of regulation - The Langevin equation}{}% 19
+\BOOKMARK [0][-]{chapter.4}{Effects of bursting and senescence}{}% 20
+\BOOKMARK [1][-]{section.4.1}{mRNA bursts}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Arbitrary distribution of creation times}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Decay of molecules}{chapter.4}% 23
+\BOOKMARK [1][-]{section.4.4}{Senescence of mRNA}{chapter.4}% 24
+\BOOKMARK [0][-]{chapter.5}{Effects of cell division}{}% 25
+\BOOKMARK [1][-]{section.5.1}{Characterizing the noise arising from cell division}{chapter.5}% 26
+\BOOKMARK [1][-]{section.5.2}{Independent segregation}{chapter.5}% 27
+\BOOKMARK [1][-]{section.5.3}{Disordered segregation}{chapter.5}% 28
+\BOOKMARK [2][-]{subsection.5.3.1}{General case}{section.5.3}% 29
+\BOOKMARK [2][-]{subsection.5.3.2}{Random size and random accessible volume}{section.5.3}% 30
+\BOOKMARK [2][-]{subsection.5.3.3}{Clustered segregation}{section.5.3}% 31
+\BOOKMARK [2][-]{subsection.5.3.4}{Upper limit of the partitioning error}{section.5.3}% 32
+\BOOKMARK [1][-]{section.5.4}{Ordered segregation}{chapter.5}% 33
+\BOOKMARK [2][-]{subsection.5.4.1}{Self-volume exclusion}{section.5.4}% 34
+\BOOKMARK [2][-]{subsection.5.4.2}{Binding to spindle sites}{section.5.4}% 35
+\BOOKMARK [2][-]{subsection.5.4.3}{Pair formation mechanisms}{section.5.4}% 36
+\BOOKMARK [0][-]{chapter*.9}{Bibliography}{}% 37
