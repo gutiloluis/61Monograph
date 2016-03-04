@@ -23,37 +23,37 @@ Those differences lie on the genes that each cell is expressing at a certain tim
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=5cm]{con-tf_simple}
+  \includegraphics[width=12cm]{con-tf_simple}
   \caption[Transcription factors]{\label{fig:con-tf_simple} Scheme of the mechanisms of transcription factors. Retrieved from: \url{http://biowiki.ucdavis.edu}}
 \end{figure}
 
-From these principles of inhibition and activation, the mechanisms of gene regulation can be very complex. For example, a molecule can change the conformation of another protein that when affected by the first, inhibits the transcription of certain gene. Those molecules may be signals from the environment and with mechanisms of this type, the cell process environmental signals to express the optimal genes according to the environment. It is also important to point out that the inhibition and activation is not necessarily done individually. A certain gene may need more than one different protein to enhance its activity, or there may be genes that are activated by a protein and inhibited by others, whose production is in turn mediated by other molecules and transcription factors, a well studied case is the \textit{lac} operon in \textit{E. coli} whose mechanism is explained on fig. \ref{fig:con-lac_operon}.
+The mechanisms of gene regulation can be very complex. For example, a molecule can change the conformation of another protein that when affected by the first, inhibits the transcription of certain gene. Those molecules may be signals from the environment and with mechanisms of this type, the cell process environmental signals to express the optimal genes according to the environment. It is also important to point out that the inhibition and activation is not necessarily done individually. A certain gene may need more than one different protein to enhance its activity, or there may be genes that are activated by a protein and inhibited by others, whose production is in turn mediated by other molecules and transcription factors, a well studied case is the \textit{lac} operon in \textit{E. coli} whose mechanism is explained on fig. \ref{fig:con-lac_operon}.
 
-From the biochemical point of view, transcription factors bind specific sites on the \textit{promoter}, a region of the DNA which is upstream the gene (or set of genes for prokaryotes), and it is where the RNA Polymerase binds to initiate transcription (see fig. \ref{con-parts_of_DNA}). The binding of the transcription factor may enhance or obstruct the binding of RNA Polymerase to the promoter.
+From the biochemical point of view, transcription factors bind specific sites on the \textit{promoter}, a region of the DNA which is upstream the gene (or set of genes for prokaryotes), and it is where the RNA Polymerase binds to initiate transcription (see fig. \ref{fig:con-parts_of_DNA}). The binding of the transcription factor may enhance or obstruct the binding of RNA Polymerase to the promoter.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=5cm]{con-lac_operon}
+  \includegraphics[width=10cm]{con-lac_operon}
   \caption[Example of gene regulation]{\label{fig:con-lac_operon} Example of gene regulation (Lac operon). Retrieved from \url{upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Lac_operon-2010-21-01.png/550px-Lac_operon-2010-21-01.png}}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=5cm]{con-parts_of_DNA}
+  \includegraphics[width=10cm]{con-parts_of_DNA}
   \caption[Parts of a gene]{\label{fig:con-parts_of_DNA} The promoter, RBS, stop codon are shown. Retrieved from \url{http://2013.igem.org/wiki/images/c/c6/HIT-Harbin_Project_Schematic.png}}
 \end{figure}
 
-Therefore, in addition to the genotype, gene expression is very important for the cells to develop properly. And, together with the genetic information, defines its structure and behavior. With this in mind, and the fact that those networks may be very large and complex, the approach that Systems Biology is proposing consists on focusing on the interactions between the different genes and components of a cell than on the details of the structure of the molecules involved. That bunch of interactions may be visualized as biological circuits, that are groups of genes that regulate each other's expression. Figure \ref{fig:con-biocircuits_conv} shows some of the conventions used in the schemes of biological circuits.
+Therefore, in addition to the genotype, gene expression is very important for the cells to develop properly. And, together with the genetic information, defines its structure and behavior. With this in mind, and the fact that those networks may be very large and complex, the approach that Systems Biology is proposing consists on focusing on the interactions between the different genes and components of a cell rather than on the details of the structure of the molecules involved. The set of interactions may be visualized as biological circuits, that are groups of genes that regulate each other's expression. Figure \ref{fig:con-biocircuits_conv} shows some of the conventions used in the schemes of biological circuits.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=5cm]{con-biocircuits_conv}
+  \includegraphics[width=10cm]{con-biocircuits_conv}
   \caption[Systems biology conventions]{\label{fig:con-biocircuits_conv} Typical conventions for biological circuits used in Systems Biology. Retrieved from \url{http://beacon-center.org/wp-content/uploads/2012/10/SyntheticGeneCircuit.png}}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=5cm]{con-biocircuits_comp}
+  \includegraphics[width=12cm]{con-biocircuits_comp}
   \caption[Example of a biological circuit]{\label{fig:con-biocircuits_comp} Example of a biological circuit. Retrieved from \url{http://www.nature.com/nrg/journal/v13/n6/images/nrg3227-i2.jpg}}
 \end{figure}
 
@@ -77,13 +77,13 @@ which in steady state yields
 
 \begin{equation}
   \label{eq:hillss}
-  [X]^n[D] = \frac{k_-}{k_+}[nXD]
+  [X]^n[D] = \frac{k_-}{k_+}[nXD].
 \end{equation}
 
-Taking the total number $D_T$ of copies of the gene (promoter and DNA molecules) as a constant we have
+Taking the total number $D_T$ of copies of the gene (promoter and DNA molecules) as a constant we obtain
 
 \begin{equation*}
-  [D_T] = [D]+[nXD]
+  [D_T] = [D]+[nXD].
 \end{equation*}
 
 Solving for the free DNA concentration $[D]$ and replacing in eq. \eqref{eq:hillss}
@@ -98,7 +98,7 @@ $[nXD]/[D_T]$ and $[D]/[D_T]$ are the fractions of DNA bound and unbound to the 
   \frac{[nXD]}{[D_T]} = \frac{[X]^n}{K_d^n+[X]^n}, \quad\quad\quad\quad\quad  \frac{[D]}{[D_T]} = \frac{K_d^n}{K_d^n+[X]^n} = \frac{1}{1+\left(\frac{[X]}{K_d}\right)^n},
 \end{equation*}
 
-where $K_d^n \coloneqq k_-/k_+$. In a timescale such that many bindings and unbindings of the transcription factor to the promoter have occurred, those fractions can be interpreted as the probability of having $n$ bound molecules of $X$, and the probability for being unbound, respectively. If the promoter has a basal transcription rate $a$ (meaning that it trascribes without induction or at full repression) OJOOO the difference between the net transcription rate $f([X])$ and the basal rate is proportional to the bound DNA for an activator, and to the unbound DNA for a repressor, the net rates are thus
+where $K_d^n \coloneqq k_-/k_+$. In a timescale such that many bindings and unbindings of the transcription factor to the promoter have occurred, those fractions can be interpreted as the probability of having $n$ bound molecules of $X$, and the probability for being unbound, respectively. If the increasing in transcription rate with respect to the basal rate $a$ is proportional to the probabilities of being bound for an activator, and of being unbound for a repressor, the net rates are
 
 \begin{equation}
   \label{eq:con-hillac}
@@ -112,7 +112,7 @@ for an activator, and
   f([X]) = a + b \frac{1}{1+\left(\frac{[X]}{K_d}\right)^n}.
 \end{equation}
 
-for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the \textit{dissociation constant}, which is the concentration of $[X]$ needed for half activation or repression. Biologically it represents OJOOO  $n$ is called the \textit{Hill coefficient} and from the derivation can be said that it is a measure of the cooperativity of the transcription factor, being larger if the binding of a molecule of $[X]$ enhances more the binding of another one. Larger $n$ give a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show the shape of typical Hill functions given by eqs. \eqref{eq:con-hillac} and \eqref{eq:conhillrep}.
+for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the \textit{dissociation constant}, which is the concentration of $[X]$ needed for half activation or repression. Biologically it represents the chemical affinity between $x$ and the promoter.  $n$ is called the \textit{Hill coefficient} and from the derivation can be said that it is related to the cooperativity of the transcription factor, being larger if the binding of a molecule of $[X]$ enhances more the binding of another one. A larger value of $n$ give a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show the shape of typical Hill functions given by eqs. \eqref{eq:con-hillac} and \eqref{eq:con-hillrep}.
 
 \begin{figure}[H]
   \centering
@@ -130,94 +130,94 @@ Notice in both graphs that as $n\rightarrow\infty$, the function appears more li
 
 \section{Probability}
 
-A random variable $X$ is a quantity that can take values randomly from a certain set. How likely is that any value $x$ happens is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. Those functions follow the  axioms of nonnegativity, additivity and normalization. \cite{bertsekas08}. \footnote{We will only consider the discrete case because the models will always consist on discrete numbers of molecules. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the PDF.}
+Consider an experiment in which the set of possible outcomes is clearly known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. For a discrete random variable, $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will only consider the discrete case because the models will always consist on discrete numbers of molecules. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the PDF.}
 
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
-\begin{equation}
+\begin{equation*}
   P(x_1,\dotsc,x_n) = P(x_1)\dotsm P(x_n)
-\end{equation}
+\end{equation*}
 
-The conditional probability of the r. v.s $X_1,\dotsc,X_k$ given the variables $X_{k+1},\dotsc,X_n$ is denoted by $P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n)$ and it is defined
+The conditional probability of the r. v.s $X_1,\dotsc,X_k$ given the variables $X_{k+1},\dotsc,X_n$ is denoted by $P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n)$ and it is defined as
 
-\begin{equation}
-  P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) \coloneqq \frac{P(x_1,\dotsc,x_n)}{P(x_{k+1},\dotsc,x_n)}
-\end{equation}
+\begin{equation*}
+  P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) \coloneqq \frac{P(x_1,\dotsc,x_n)}{P(x_{k+1},\dotsc,x_n)},
+\end{equation*}
 
-provided that the denominator is different from $0$. Notice that if all the random variables are independent it reduces to
+provided that the denominator is different from $0$. It can be thought as the probability of a certain outcome for $x_1,\dotsc,x_k$ when certain given values of $x_{k+1},\dotsc,x_n$ have been obtained. Notice that if all the random variables are independent it reduces to
 
-\begin{equation}
-  P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) = P(x_1,\dotsc,x_k)
-\end{equation}
+\begin{equation*}
+  P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) = P(x_1,\dotsc,x_k).
+\end{equation*}
 
-the conditional and unconditional probabilities are equal, meaning that the outcome of $(x_{k+1},\dotsc,x_n)$ does not affect the outcome of $(x_1,\dotsc,x_k)$. That is a more intuitive way of interpreting independence.
+The conditional and unconditional probabilities are equal, meaning that the outcome of $(x_{k+1},\dotsc,x_n)$ does not affect the outcome of $(x_1,\dotsc,x_k)$.
 
-To find the probability of an outcome of $X$, sometimes it is easier to the \textbf{total probability theorem}
+To find the probability of a certain outcome of $X$, sometimes it is easier to use the \textbf{total probability theorem}
 
-\begin{equation}
-  P(x) = \sum_y P(x,y) = \sum_y P(x|y)P(y)
-\end{equation}
+\begin{equation*}
+  P(x) = \sum_y P(x,y) = \sum_y P(x|y)P(y).
+\end{equation*}
 
 The \textbf{expected value} (also called average) of a function of a random variable $f(X)$ is defined as
 
-\begin{equation}
-  \langle f(X)\rangle = \sum_xf(x)P(x).
-\end{equation}
+\begin{equation*}
+  \langle f(X)\rangle \coloneqq \sum_xf(x)P(x).
+\end{equation*}
 
-From the definition it can be noticed that the expected value is linear, i.e., for a pair of random variables $X$ and $Y$ and a constant $c$
+From the definition can be noticed that the expected value is linear, i.e., for a pair of random variables $X$ and $Y$, and a constant $c$
 
-\begin{equation}
+\begin{equation*}
   \langle X+cY\rangle = \langle X\rangle+c\langle Y\rangle.
-\end{equation}
+\end{equation*}
 
 The variance $\sigma^2(X)$ of $X$ measures the dispersion of the possible outcomes of the random variable, it is defined as
 
-\begin{equation}
-  \sigma^2(X) \coloneqq \left\langle\left( X-\langle X\rangle\right)^2\right\rangle,
-\end{equation}
+\begin{equation*}
+  \sigma^2(X) \coloneqq \left\langle\left( X-\langle X\rangle\right)^2\right\rangle.
+\end{equation*}
 
-it can be easily shown that
+It can be easily shown that
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(X) = \langle X^2\rangle - \langle X\rangle^2.
-\end{equation}
+\end{equation*}
 
 From the previous equation it can be seen that for a constant $c$
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(cX) = c^2\sigma^2(X)
-\end{equation}
+\end{equation*}
 
 If $X$ and $Y$ are independent, it can be shown that
 
 \begin{equation}
   \label {eq:con-mom_ind}
-  \langle XY\rangle = \langle X\rangle\langle Y\rangle \quad\text{and}\quad \sigma^2(X+Y) = \sigma^2(X)+\sigma^2(Y)
+  \langle XY\rangle = \langle X\rangle\langle Y\rangle \quad\text{and}\quad \sigma^2(X+Y) = \sigma^2(X)+\sigma^2(Y).
 \end{equation}
 
 The conditional expectation of $X$ given a random variable $Y$, $\langle X|Y\rangle$ is itself a random variable which depends on $Y$, which when $Y$ is fixed in some $y$ is given by
 
-\begin{equation}
+\begin{equation*}
   \langle X|y\rangle \coloneqq \sum_xxP(x|y),
-\end{equation}
+\end{equation*}
 
 and it follows that
 
-\begin{equation}
+\begin{equation*}
   \left\langle\langle X|Y\rangle\right\rangle = \left\langle X\right\rangle
-\end{equation}
+\end{equation*}
 
 which is the \textbf{law of total expectation}, for the variance there is an analogous theorem, called the \textbf{law of total variance}
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(x) = \left\langle\sigma^2(x|y)\right\rangle + \sigma^2\left(\langle x|y\rangle\right)
-\end{equation}
+\end{equation*}
 
 The \textbf{covariance} of $X$ and $Y$ is defined as
 
-\begin{equation}
+\begin{equation*}
   \text{cov}(X,Y) \coloneqq \left\langle\left(X-\langle X\rangle\right)\left(Y-\langle Y\rangle\right)\right\rangle = \langle XY\rangle - \langle X\rangle\langle Y\rangle.
-\end{equation}
+\end{equation*}
 
 It can be thought as a measure of how correlated is their behaviour. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme case, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent by eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
 
@@ -246,95 +246,95 @@ F(z_1,\dotsc,z_N) \coloneqq \sum_{\mathclap{n_1=0}}^{\infty} \dotsi \sum_{\mathc
 
 Evaluating the function on $z_1 = \dotsb = z_N = 1$ (denoted by $\left. \right|_1$) we obtain
 
-\begin{equation}
+\begin{equation*}
 \left.F\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}}f(n_1,\dotsc,n_N) = 1.
-\end{equation}
+\end{equation*}
 
-The last part stands as a consequence of the normalization of PDFs. Taking the derivative of eq. \ref{def:mom_gen} with respect to $z_i$, $i = 1,\dotsc,N$ we get
+by the axiom of normalization. Taking the derivative of eq. \ref{def:mom_gen} with respect to $z_i$, $i = 1,\dotsc,N$ we get
 
-\begin{equation}
+\begin{equation*}
 \left.\frac{\partial F}{\partial z_i}\right|_1 = \left.\sum_{\mathclap{n_1,\dotsc,n_N}}n_i z_1^{n_1}\dotsm z_i^{n_i-1}\dotsm z_N^{n^N}f(n_1,\dotsc,n_N)\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}} n_i f(n_1,\dotsc,n_N) = \langle n_i \rangle.
-\end{equation}
+\end{equation*}
 
-Taking another derivative with respect to $z_j$, $j=1,\dotsc,N$ with $j\neq i$ we obtain
+Differentiating again with respect to $z_j$, $j=1,\dotsc,N$ with $j\neq i$ we obtain
 
-\begin{equation}
+\begin{equation*}
 \left. \frac{\partial F}{\partial z_i z_j} \right|_1 = \langle n_i n_j \rangle.
-\end{equation}
+\end{equation*}
 
 Differentiating eq. \ref{def:mom_gen} twice with respect to $z_i$ we obtain similarly
 
-\begin{equation}
+\begin{equation*}
 \left. \frac{\partial^2F}{\partial z_i^2}\right|_1 = \langle n_i(n_i-1) \rangle.
-\end{equation}
+\end{equation*}
 
 These properties will be very useful in the subsequent sections to find the noise of a genetic system.
 
 \section{Characteristic function}
 
-Another transformation of the PMF that has properties similar to the mentioned for the moment generating function is the characteristic function. It is defined for a set of random variables $(X_1,\dotsc,X_N)$ as\footnote{We will consider here the case with the real exponent}.
+Another transformation of the PMF that has properties similar to the mentioned for the moment generating function is the characteristic function. It is defined for a $N$-tuple of random variables $(X_1,\dotsc,X_N)$ as\footnote{We will consider here the case with the real exponent}.
 
-\begin{equation}
+\begin{equation*}
   \phi(s_1,\dotsc,s_N)\coloneqq \left\langle e^{\sum_{i=1}^Ns_ix_i}\right\rangle = \sum_{x_1}\dotsi\sum_{x_N}\exp\left(\sum_{i=1}^Ns_ix_i\right).
-\end{equation}
+\end{equation*}
 
 We will denote the evaluation at $s_1=\dotsb=s_N=0$ by $|_0$ It is easy to see that by normalization
 
-\begin{equation}
+\begin{equation*}
   \phi(s)|_0 = 1.
-\end{equation}
+\end{equation*}
 
 Differentiating once with respect to $s_i$ for $i=1,\dotsc,N$.
 
-\begin{equation}
-  \left.\frac{\partial\phi(s_1,\dotsc,s_N)}{\partial s_i}\right|_0 = \left.\left\langle x_i e^{\sum_{i=1}^Ns_ix_i}\right\rangle\right|_0 = \langle x_i\rangle,
-\end{equation}
+\begin{equation*}
+  \left.\frac{\partial\phi(s_1,\dotsc,s_N)}{\partial s_i}\right|_0 = \left.\left\langle x_i e^{\sum_{i=1}^Ns_ix_i}\right\rangle\right|_0 = \langle x_i\rangle.
+\end{equation*}
 
-each differentiation with respect to $s_i$ produces a factor $x_i$ in the average, hence
+Each differentiation with respect to $s_i$ produces a factor $x_i$ in the average, hence
 
-\begin{equation}
-  \left.\frac{\partial^2\phi(s_1,\dotsc,s_N)}{\partial s_i \partial s_j}\right|_0 = \langle x_ix_j\rangle,
-\end{equation}
+\begin{equation*}
+  \left.\frac{\partial^2\phi(s_1,\dotsc,s_N)}{\partial s_i \partial s_j}\right|_0 = \langle x_ix_j\rangle.
+\end{equation*}
 
-equation that is valid for any $i,j=1,\dotsc,N$, even for the case $i=j$. In that case, the left hand side becomes a second derivative and the right hand side becomes $\langle x_i^2\rangle$. By calculating higher order derivatives we can find higher order moments in the same way.
+This equation is valid for any $i,j=1,\dotsc,N$, even for the case $i=j$. In that case the right hand side becomes $\langle x_i^2\rangle$. By calculating higher order derivatives we can find higher order moments in the same way.
   
 \section{Stochastic processes}
 
-An stochastic variable is a set of random variables indexed by another variable, which usually is taken to be the time. An outcome of the stochastic process is a function of time which varies randomly between different repetitions of the experiment. \cite{vankampen92} \cite{gardiner03}.
+A stochastic process $X(t)$ \footnote{or $\{X\}_n$ if the time steps are discrete} is a set of random variables indexed by another variable, which usually is taken to be the time. An outcome of the stochastic process is a function of time which varies randomly between different repetitions of the experiment \cite{vankampen92} \cite{gardiner03}.
 
 The \textbf{autocorrelation} $C_X$ of a stochastic process $X(t)$ is given by
 
-\begin{equation}
+\begin{equation*}
   C_X(t,t') \coloneqq \langle X(t)X(t')\rangle.
-\end{equation}
+\end{equation*}
 
-It tells us the degree of correlation between outcomes of the random variables at different times. If the process $X$ is \textbf{stationary}, the autocorrelation only depends on the time difference
+It measures the degree of correlation between outcomes of the random variables at different times. If the process $X$ is \textbf{stationary}, the autocorrelation only depends on the time difference, i.e.
 
-\begin{equation}
+\begin{equation*}
   C(\tau) \coloneqq \langle X(t)X(t+\tau)\rangle,
-\end{equation}
+\end{equation*}
 
 where $\tau \coloneqq t'-t$.
 
-The \textbf{power spectrum} of a stochastic process is defined as average of the square norm of the Fourier transform of the process
+The \textbf{power spectrum} $S_X$ of a stochastic process is defined as average of the square norm of its the Fourier transform
 
-\begin{equation}
+\begin{equation*}
   S_X(\omega) \coloneqq \left|\langle\hat X\rangle\right|^2,
-\end{equation}
+\end{equation*}
 
 where the hat denotes Fourier transform. A mathematical tool that will be very useful in the calculations is the \textbf{Wiener-Khinchin theorem} It states that the power spectrum and the autocorrelation are Fourier-Transform pairs, that is
 
-\begin{equation}
+\begin{equation*}
   \mathscr{F}(C_X(\tau)) = S_X(\omega),\quad\text{and}\quad \mathscr{F}^{-1}(S_X(\omega)) = C_X(\tau).
-\end{equation}
+\end{equation*}
 
 \section{The Gillespie algorithm}
 
 To simulate the models we will use the Gillespie algorithm \cite{gillespie77} which improves speed a lot with respect to brute-force stochastic algorithms. It is used to simulate events that occur with a certain probability per unit time (e.g. creation and destruction of RNA or proteins, binding of an enzyme to a substrate, etc.)
 
-In the brute force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally very inefficient.
+In the brute force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
 
-In the Gillespie algorithm, we explode the properties of the Poisson process, namely its memorylessness and its merging properties. Assuming all the events are Poissonian, the interarrival times are exponentially distributed and therefore memorylessness. \cite{bertsekas08} (SAY IT MORE RIGOROUSLY) 
+In the Gillespie algorithm, we take advantage of the properties of the Poisson process, namely its memorylessness and its merging properties. Assuming all the events are Poissonian, the interarrival times are exponentially distributed and therefore memorylessness \todo[inline]{More detail and rigor} \cite{bertsekas08}.
 
 There are not fixed time intervals in this case, a random number is sampled with an exponential distribution to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. To sample an exponential random number $X$ with parameter $K$ from an uniform $U$ between $0$ and $1$, the following formula can be used.
 
@@ -342,6 +342,6 @@ There are not fixed time intervals in this case, a random number is sampled with
   X = -\frac{1}{K}\ln(U)
 \end{equation}
 
-Where $K$ turns out to be the sum of the probabilities per unit time of all the events. (PROVE? MORE RIGOR?)
+Where $K$ turns out to be the sum of the probabilities per unit time of all the events. \todo[inline]{More detail and rigor}
 
-The Gillespie algorithm is by far more efficient. First, it does not need to have a fixed time interval, it finds it with a random number. Second, the number of random numbers sampled in the brute-force algorithm is equal to the number of events (which can be large), and some of the times there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to advance in time in many fewer steps. Finally, a very important aspect is that the Gillespie algorithm is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.
+The Gillespie algorithm is by far more efficient. First, it does not need to have a fixed time interval, it finds it with a random number. Second, the number of random numbers sampled in the brute-force algorithm is equal to the number of events (which can be large), and some of the times there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to go forward in time in many fewer steps. Finally, a very important aspect is that the Gillespie algorithm is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.
