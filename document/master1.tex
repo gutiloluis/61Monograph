@@ -25,8 +25,8 @@ The deterministic equations describing these processes are therefore given by
 Hence, on steady state
 
 \begin{align}
-  \langle n_1 \rangle &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
-  \langle n_2 \rangle &= \frac{k_p}{\gamma_p} \langle n_1 \rangle = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
+  \langle n_1 \rangle_s &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
+  \langle n_2 \rangle_s &= \frac{k_p}{\gamma_p} \langle n_1 \rangle_s = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
 \end{align}
 
 But these are numbers of molecules which are discrete, and on that discreteness lies part of the stochastic behaviour of those kind of systems. The molecules are created and degradated one at a time at a certain average rate but the timing between each creation or degradation should not match exactly the rates. 
@@ -58,33 +58,33 @@ Notice that the first term refers to a transition from state $(n_1-1,n_2,t)$ to 
 We will write the master equation in terms of the moment generating function $F(z_1,z_2)$, as defined in eq. \eqref{def:mom_gen} on page \pageref{def:mom_gen}. Multiplying by $z_1^{n_1}z_2^{n_2}$ and summing over $n_1$ and $n_2$, both from $0$ to $\infty$ we obtain for the left hand side simply $\dot{F}(z_1,z_2)$. For the first term on the right hand side we obtain \footnote{The time dependence is not shown for simplicity.}
 
 \begin{equation*}
-  \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1}z_2^{n_2}f(n_1-1,n_2) = \sum_{\mathclap{n_1=-1,n_2=0}}z_1^{n_1+1}z_2^{n_2}f(n_1,n_2),
+  \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1}z_2^{n_2}f(n_1-1,n_2) = \sum_{\mathclap{n_1=-1,n_2=0}}^\infty z_1^{n_1+1}z_2^{n_2}f(n_1,n_2),
 \end{equation*}
 
 but since $n_1$ represents number of molecules, it must be a positive quantity. Hence $f(-1,n_2)=0$ and the last sum can be taken from $n_1=0$ yielding
 
 \begin{equation*}
-  z_1 \sum_{\mathclap{n_1=0,n_2=0}}z_1^{n_1}z_2^{n_2}f(n_1,n_2) = z_1F(z_1,z_2).
+  z_1 \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1}z_2^{n_2}f(n_1,n_2) = z_1F(z_1,z_2).
 \end{equation*}
 
 For the second term of eq. \eqref{eq:master} the result is trivial, for the third term we get
 
 \begin{equation*}
-  \sum_{\mathclap{n_1=0,n_2=0}}n_1f(n_1,n_2-1) = \sum_{\mathclap{n_1=0,n_2=-1}}n_1z_1^{n_1}z_2^{n_2+1}f(n_1,n_2).
+  \sum_{\mathclap{n_1=0,n_2=0}}^\infty n_1f(n_1,n_2-1) = \sum_{\mathclap{n_1=0,n_2=-1}}^\infty n_1z_1^{n_1}z_2^{n_2+1}f(n_1,n_2).
 \end{equation*}
 
 Using the same argument as above, $f(n_1,-1) = 0$. Rearranging it becomes
 
 \begin{equation*}
-  z_1 z_2 \sum_{\mathclap{n_1=0,n_2=0}} z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = z_1 z_2 \frac{\partial F(z_1,z_2)}{\partial z_1}.
+  z_1 z_2 \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = z_1 z_2 \frac{\partial F(z_1,z_2)}{\partial z_1}.
 \end{equation*}
 
 For the fifth term
 
 \begin{equation*}
   \begin{split}
-    \sum_{\mathclap{n_1=0,n_2=0}}(n_1+1)z_1^{n_1}z_2^{n_2}f(n_1+1,n_2) &= \sum_{\mathclap{n_1=1,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2)\\ 
-    &= z_1 \sum_{\mathclap{n_1=0,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = \frac{\partial F(z_1,z_2)}{\partial z_1}.
+    \sum_{\mathclap{n_1=0,n_2=0}}^\infty (n_1+1)z_1^{n_1}z_2^{n_2}f(n_1+1,n_2) &= \sum_{\mathclap{n_1=1,n_2=0}}^\infty n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2)\\ 
+    &= z_1 \sum_{\mathclap{n_1=0,n_2=0}}^\infty n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = \frac{\partial F(z_1,z_2)}{\partial z_1}.
   \end{split}
 \end{equation*}
 
@@ -125,7 +125,7 @@ Evaluating eqs. \eqref{eq:dz1} and \eqref{eq:dz2} at $z_1 = z_2 = 1$ and using p
 \dot{\langle n_2 \rangle}&= k_p\langle n_1 \rangle - \gamma_p \langle n_2 \rangle.
 \end{align*}
 
-Therefore, the averages follow the deterministic equations given by eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. The steady state values are thus given by eqs. \eqref{eq:mas-simple_ss_1} and \eqref{q:mas-simple_ss_2}. The deterministic equations reproduce the average behavior.
+Therefore, the averages follow the deterministic equations given by eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. The steady state values are thus given by eqs. \eqref{eq:mas-simple_ss_1} and \eqref{eq:mas-simple_ss_2}. The deterministic equations reproduce the average behavior. 
 
 Differentiating eq. \eqref{eq:dz1} with respect to $z_2$, eq. \eqref{eq:dz1} with respect to $z_1$ and eq. \eqref{eq:dz2} with respect to $z_2$ and evaluating at $z_1 = z_2 = 1$ we obtain, respectively
 
@@ -142,7 +142,7 @@ We will treat the previous equations in steady state, that is, with their time d
   0 = k_rd \langle n_1 \rangle_s -\gamma_r \left(\langle n_1^2 \rangle_s - \langle n_1 \rangle_s \right) \Rightarrow \langle n_1^2 \rangle_s = \frac{k_rd}{\gamma_r}\langle n_1 \rangle_s + \langle n_1 \rangle_s = \langle n_1 \rangle_s^2 + \langle n_1 \rangle_s.
 \end{equation}
 
-Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano factor and the CV are given by
+Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano factor and the CV squared for the mRNA are given by
 
 \begin{equation}
   \label{noise1}
@@ -150,6 +150,8 @@ Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano f
 \end{equation}
 
 Which is the noise for a Poisson process as we saw on eq. \eqref{eq:con-poisson_noise}. This makes sense since the assumptions made for the mRNA dynamics correspond to the ones made for the Poisson process in section \ref{sec:poisson}.
+
+\todo[inline]{Explain this in a more concrete way?}
 
 From eq. \eqref{eq:dz1z2} we have
 
@@ -170,11 +172,11 @@ Hence, the covariance is given by
   &=\langle n_2\rangle_s\frac{k_rd+\gamma_p-\gamma_r\langle n_1\rangle_s}{\gamma_r+\gamma_p}.
 \end{align*}
 
-From eq. \eqref{eq:mas-simple_ss_1} the first and fourth term of the numerator cancel out, therefore
+From eq. \eqref{eq:mas-simple_ss_1} the first and third term of the numerator cancel out, therefore
 
 \begin{equation}
   \label{eq:cov12}
-  \boxed{\text{cov}(n_1,n_2)_s = \langle n_2 \rangle_s\frac{1}{1+\frac{\gamma_r}{\gamma_p}}}.
+  \boxed{\text{cov}(n_1,n_2)_s = \langle n_2 \rangle_s\frac{\frac{\gamma_p}{\gamma_r}}{1+\frac{\gamma_p}{\gamma_r}}}.
 \end{equation}
 
 From eq. \ref{eq:dz2z2} we have in steady state
@@ -196,7 +198,7 @@ Hence substracting $\langle n_2\rangle_s^2$ from the previous equation we obtain
   \sigma_2^2 = \langle n_2\rangle\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
 \end{equation*}
 
-Therefore, the noise in steady state is given by
+Therefore, the noise for the proteins in steady state is given by
 
 \begin{equation}
   \label{eq:noise2}
@@ -210,6 +212,8 @@ As can be noticed, the noise in the proteins is bigger than Poissonian. Define $
 \end{equation*}
 
 The analytical results are compared with simulations in fig. \ref{fig:mas-sim_simple}. It can be noticed that the noise is strongly dependent on the burst size $b$, independent of $k_r$ and weakly dependent on the protein half-life $\tau_p = \ln2/\gamma_r$.
+
+\todo[inline]{Explain here the effect of time averaging or leave it to another section?}
 
 \begin{figure}[H]
   \centering
@@ -249,9 +253,7 @@ where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matri
 
 Hence, $\mathbf{A}$ contains the creation rates and represents how each rate depends on the different species and $\mathbf{\Gamma}$ has the degradation rates, which is diagonal whenever the degradation is not mediated by interactions with other molecules.
 
-Now considering an arbitrary circuit with linear interaction in order that we can write its deterministic equations in the form of eq. \ref{eq:matdet}
-
-Figure \ref{fig:mas-trans_single} and eq. \ref{eq:master} can be generalized according to eq. \ref{eq:matdet} to obtain \ref{fig:mas-trans_many}
+Now, for an arbitrary circuit with an arbitrary number $N$ of species and linear interaction between them, we can write its deterministic equations in the form of eq. \ref{eq:matdet}. Also, the state state space will have $N$ dimensions in the general case (see fig. \ref{fig:mas-trans_many}).
 
 \begin{figure}[H]
   \centering
@@ -259,21 +261,23 @@ Figure \ref{fig:mas-trans_single} and eq. \ref{eq:master} can be generalized acc
   \caption[Transitions between states in general] {\label{fig:mas-trans_many} Scheme of the possible transitions in the case of three species.}
 \end{figure}
 
-The master equation can thus be written as (NOTATION, EXPLAIN THE LIMITS OF THE SUM)
+According to fig. \ref{fig:mas-trans_many}, in the general case the master equation will have as many terms as there are transitions involving the state $\mathbf{n}$. The master equation can thus be written in general as follows
 
 \begin{equation}
 \label{eq:masterg1}
-\dot{f}(n_i) =  \sum_i\left(\sum_j A_{ij}n_j \left( f(n_i-1) - f(n_i) \right) + \sum_j \Gamma_{ij}((n_j+1)f(n_i+1)-n_jf(n_i))\right)
+\dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \sum_{j=1}^N \Gamma_{ij}((n_j+1)p(n_i+1)-n_jp(n_i))\right)
 \end{equation}
 
-Decaying is usually dependent on the quantity of the same molecule, assuming this the matrix $\Gamma$ becomes diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \ref{eq:masterg1} becomes
+When for a fixed specie $i$, the terms in parentheses represent having $n_i-1$ molecules of the $i$th type and creating one; having $n_i$ and creating one; having $n_i+1$ and destroying one; and having $n_i$ and destroying one, respectively. Since this is possible for each of the $N$ types of molecules, we must sum over $i$ as well.
+
+Assuming that degradation does not involve interactions between various molecules, the matrix $\Gamma$ can be taken to be diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \ref{eq:masterg1} becomes \footnote{To reduce the complexity of the expressions, we define $p(n_i) \coloneqq p(\mathbf{n}) = p(n_1,\dotsc,n_i,\dotsc,n_N)$, and $p(n_i\pm1)\coloneqq p(n_1,\dotsc,n_i\pm1,\dotsc,n_N)$.}
 
 \begin{equation}
 \label{eq:masterg2}
-\dot{f}(n_i) =  \sum_i\left(\sum_j A_{ij}n_j \left( f(n_i-1) - f(n_i) \right) + \Gamma_{i}((n_i+1)f(n_i+1)-n_if(n_i))\right).
+\dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \Gamma_{i}((n_i+1)p(n_i+1)-n_ip(n_i))\right).
 \end{equation}
 
-To get an equation for the moment generating functions, we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. For the first term we get an expression like the following (for a fixed $i$) (OJO ABUSE OF NOTATION, SAY LIMITS OF SUM, DEFINE EXPLICITLY ALL Zs?)
+We will follow the same procedure of the previous section, i.e. write the master equation in terms of the moment generating function and use its properties to find expressions for the moments. To get an equation for the moment generating functions, we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. At first, we will consider the term in parentheses of eq. \ref{eq:masterg2} and later we will sum over $i$. For the first term we get an expression like the following
 
 \begin{equation}
 \label{eq:momg1}
