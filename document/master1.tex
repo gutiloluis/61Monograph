@@ -15,49 +15,23 @@ For the process of transcription and translation the number $d$ of DNA copies of
   \caption[Model of gene expression for a single gene]{\label{fig:mas-dogma} Steps of gene expression considered in the model. Taken from \cite{thattai01}.}
 \end{figure}
 
-The equations describing these processes are therefore given by
+The deterministic equations describing these processes are therefore given by
 
 \begin{align}
-  \dot{n_1}(t) &= k_rd-\gamma_rn_1(t), \label{eq:1}\\
-  \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t). \label{eq:2}
+  \dot{n_1}(t) &= k_rd-\gamma_rn_1(t)\label{eq:mas-simple_det_1},\\
+  \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t) \label{eq:mas-simple_det_2}.
 \end{align}
 
-In matrix notation, they can be written as
-
-\begin{equation}
-  \label{eq:matdet}
-  \mathbf{\dot{n}} = \left( \mathbf{A} - \mathbf{\Gamma} \right) \mathbf{n},
-\end{equation}
-
-where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ are defined as
-
-\begin{eqnarray}
-  \mathbf{A} &=
-  \begin{pmatrix}
-    0 & 0 & 0 \\
-    k_r & 0 & 0 \\
-    0 & k_p & 0
-  \end{pmatrix},\quad \quad
-  \mathbf{\Gamma} &=
-  \begin{pmatrix}
-    0 & 0 & 0 \\
-    0 & \gamma_r & 0 \\
-    0 & 0 & \gamma_p
-  \end{pmatrix}.
-\end{eqnarray}
-
-Hence, $\mathbf{A}$ contains the creation rates and represents how each rate depends on the different species.
-
-From eqs. \ref{eq:1} and \ref{eq:2} can be deduced that on steady state
+Hence, on steady state
 
 \begin{align}
-  \langle n_1 \rangle &= \frac{k_r}{\gamma_r}, \label{eq:ssr} \\
-  \langle n_2 \rangle &= \frac{k_p}{\gamma_p} \langle n_1 \rangle = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:ssp}.
+  \langle n_1 \rangle &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
+  \langle n_2 \rangle &= \frac{k_p}{\gamma_p} \langle n_1 \rangle = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
 \end{align}
 
 But these are numbers of molecules which are discrete, and on that discreteness lies part of the stochastic behaviour of those kind of systems. The molecules are created and degradated one at a time at a certain average rate but the timing between each creation or degradation should not match exactly the rates. 
 
-To model the intrinsic noise, we will consider each value of $\mathbf{n}$ as a possible state for the system. There are transitions between the possible states which are proportional to the rates of creation and degradation as can be seen on figure \ref{fig:mas-trans_single}.
+To model the intrinsic noise, we will consider each pair of values of $(n_1,n_2)$ as a possible state for the system. There are transitions between the possible states which are proportional to the rates of creation and degradation as can be seen on figure \ref{fig:mas-trans_single}.
 
 \begin{figure}[H]
   \centering
@@ -65,141 +39,142 @@ To model the intrinsic noise, we will consider each value of $\mathbf{n}$ as a p
   \caption[Transitions between states for a single gene]{\label{fig:mas-trans_single} Scheme of the possible transitions involving $n_1$ RNA molecules and $n_2$ protein molecules.}
 \end{figure}
 
-The transitions shown in figure \ref{fig:mas-trans_single} are the ways in which the vector $\mathbf{n}$ can change from or to $(d,n_1,n_2)$. According to this, the so called master equation can be written
+The transitions shown in figure \ref{fig:mas-trans_single} are the ways in which $(n_1,n_2)$ can change. This transitions can be interpreted probabilistically. There is a probability $p(n_1,n_2,t)$ of being at the state $(n_1,n_2)$ at time $t$ which changes according to the probabilities of being in the adjacent states and the transition probabilities given by the reaction rates. The reaction rates are interpreted as the probabilities per unit time for a reaction to occur. For instance, in a small time $\mathrm{d}t$, the probability of creating a mRNA molecule is $k_r\mathrm{d}t$. For the other it is analogous. Also, it is assumed that the probabilities $p$ of being at a state are independent of the transition probabilities.
+
+With this in mind, we can write a difference-differential equation for the probability distribution $p$ which is called the master equation. It is a difference equation in the number of species $(n_1,n_2)$, and differential in time $t$. In this case it is given by
 
 \begin{equation}
   \label{eq:master}
   \begin{split}
-    \frac{dp(n_1,n_2,t)}{dt} &= k_rdp(n_1-1,n_2,t) - k_rdp(n_1,n_2,t)\\
+    \frac{\mathrm{d}p(n_1,n_2,t)}{\mathrm{d}t} &= k_rdp(n_1-1,n_2,t) - k_rdp(n_1,n_2,t)\\
 &+ k_pn_1p(n_1,n_2-1,t) - k_pn_1p(n_1,n_2,t)\\
 &+ \gamma_r(n_1+1)p(n_1+1,n_2,t) - \gamma_rn_1p(n_1,n_2,t)\\
 &+ \gamma_p(n_2+1)p(n_1,n_2+1,t) - \gamma_pn_2p(n_1,n_2+1,t)
   \end{split}
 \end{equation}
 
-Notice that the first term refers to a transition from state $(n_1-1,n_2,t)$ to $(n_1,n_2,t)$ via a creation of a RNA molecule, whereas the second term involves a transition $(n_1,n_2,t) \rightarrow (n_1+1,n_2,t)$ also by a creation of RNA. The third and fourth terms have a similar meaning but related to protein creation. The other terms refer to transitions due to degradation.
+Notice that the first term refers to a transition from state $(n_1-1,n_2,t)$ to $(n_1,n_2,t)$ by a creation of a mRNA molecule, whereas the second term involves a transition $(n_1,n_2,t) \rightarrow (n_1+1,n_2,t)$ also by mRNA synthesis. The third and fourth terms have the meaning but related to protein synthesis. The other terms are related to transitions due to degradation.
 
-Multiplying by $z_1^{n_1}z_2^{n_2}$ and summing over $n_1$ and $n_2$, both from $0$ to $\infty$ we obtain, recalling the definition of the moment generating function (the time dependence and the upper limit of the sum are not shown for simplicity).
-
-\begin{equation*}
-\sum_{\mathclap{n_1=0,n_2=0}} z_1^{n_1}z_2^{n_2}f(n_1-1,n_2) = \sum_{\mathclap{n_1=-1,n_2=0}}z_1^{n_1+1}z_2^{n_2}f(n_1,n_2)
-\end{equation*}
-
-But since $n_1$ represents number of molecules, it must be a positive quantity. Hence $f(-1,n_2)=0$ and the last sum can be taken from $n_1=0$ getting
-
-\begin{equation}
-\label{eq:mom1}
-z_1 \sum_{\mathclap{n_1=0,n_2=0}}z_1^{n_1}z_2^{n_2}f(n_1,n_2) = z_1F(z_1,z_2).
-\end{equation}
-
-For the second term of eq. \ref{eq:master} the result is trivial, for the third term we get
+We will write the master equation in terms of the moment generating function $F(z_1,z_2)$, as defined in eq. \eqref{def:mom_gen} on page \pageref{def:mom_gen}. Multiplying by $z_1^{n_1}z_2^{n_2}$ and summing over $n_1$ and $n_2$, both from $0$ to $\infty$ we obtain for the left hand side simply $\dot{F}(z_1,z_2)$. For the first term on the right hand side we obtain \footnote{The time dependence is not shown for simplicity.}
 
 \begin{equation*}
-\sum_{\mathclap{n_1=0,n_2=0}}n_1f(n_1,n_2-1) = \sum_{\mathclap{n_1=0,n_2=-1}}n_1z_1^{n_1}z_2^{n_2+1}f(n_1,n_2).
+  \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1}z_2^{n_2}f(n_1-1,n_2) = \sum_{\mathclap{n_1=-1,n_2=0}}z_1^{n_1+1}z_2^{n_2}f(n_1,n_2),
 \end{equation*}
 
-Using the same argument as above, $f(n_1,-1) = 0$. Rearranging we get
+but since $n_1$ represents number of molecules, it must be a positive quantity. Hence $f(-1,n_2)=0$ and the last sum can be taken from $n_1=0$ yielding
 
-\begin{equation}
-z_1 z_2 \sum_{\mathclap{n_1=0,n_2=0}} z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = z_1 z_2 \frac{\partial F(z_1,z_2)}{\partial z_1}.
-\end{equation}
+\begin{equation*}
+  z_1 \sum_{\mathclap{n_1=0,n_2=0}}z_1^{n_1}z_2^{n_2}f(n_1,n_2) = z_1F(z_1,z_2).
+\end{equation*}
+
+For the second term of eq. \eqref{eq:master} the result is trivial, for the third term we get
+
+\begin{equation*}
+  \sum_{\mathclap{n_1=0,n_2=0}}n_1f(n_1,n_2-1) = \sum_{\mathclap{n_1=0,n_2=-1}}n_1z_1^{n_1}z_2^{n_2+1}f(n_1,n_2).
+\end{equation*}
+
+Using the same argument as above, $f(n_1,-1) = 0$. Rearranging it becomes
+
+\begin{equation*}
+  z_1 z_2 \sum_{\mathclap{n_1=0,n_2=0}} z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = z_1 z_2 \frac{\partial F(z_1,z_2)}{\partial z_1}.
+\end{equation*}
 
 For the fifth term
 
-\begin{equation}
-\label{eq:mom4}
-\begin{split}
-\sum_{\mathclap{n_1=0,n_2=0}}(n_1+1)z_1^{n_1}z_2^{n_2}f(n_1+1,n_2) &= \sum_{\mathclap{n_1=1,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2)\\ 
-&= z_1 \sum_{\mathclap{n_1=0,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = \frac{\partial F(z_1,z_2)}{\partial z_1}.
-\end{split}
-\end{equation}
+\begin{equation*}
+  \begin{split}
+    \sum_{\mathclap{n_1=0,n_2=0}}(n_1+1)z_1^{n_1}z_2^{n_2}f(n_1+1,n_2) &= \sum_{\mathclap{n_1=1,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2)\\ 
+    &= z_1 \sum_{\mathclap{n_1=0,n_2=0}}n_1z_1^{n_1-1}z_2^{n_2}f(n_1,n_2) = \frac{\partial F(z_1,z_2)}{\partial z_1}.
+  \end{split}
+\end{equation*}
 
-The other terms are treated in a similar fashion. Putting all of this together in we obtain the equation for the moment generating function $F$
-
-\begin{equation}
-\label{eq:masterF}
-\begin{split}
-\dot{F}(z_1,z_2,t) &= k_rd(z_1-1)F(z_1,z_2,t) + k_pz_1(z_2-1)\frac{\partial F(z_1,z_2,t)}{\partial z_1} \\
-&+ \gamma_r(1-z_1)\frac{\partial F(z_1,z_2,t)}{\partial z_1} + \gamma_p(1-z_2)\frac{\partial F(z_1,z_2,t)}{\partial z_2}.
-\end{split}
-\end{equation}
-
-Taking the derivative with respect to $z_1$ we obtain
+The other terms are treated in a similar fashion. Putting all of this together in we obtain the master equation in terms of the moment generating function $F$
 
 \begin{equation}
-\label{eq:dz1}
-\begin{split}
-\frac{\partial \dot{F}}{\partial z_1} &= k_rd\left( F+(z-1)\frac{\partial F}{\partial z_1} \right) + k_p(z_2-1) \left( \frac{\partial F}{\partial z_1} + z_1 \frac{\partial^2 F}{\partial z_1^2} \right)\\
-&+\gamma_r\left(-\frac{\partial F}{\partial z_1}+(1-z_1)\frac{\partial^2 F}{\partial z_1^2}\right)+\gamma_p(1-z_2)\frac{\partial^2 F}{\partial z_1 \partial z_2},
-\end{split}
+  \label{eq:masterF}
+  \begin{split}
+    \dot{F}(z_1,z_2,t) &= k_rd(z_1-1)F(z_1,z_2,t) + k_pz_1(z_2-1)\frac{\partial F(z_1,z_2,t)}{\partial z_1} \\
+    &+ \gamma_r(1-z_1)\frac{\partial F(z_1,z_2,t)}{\partial z_1} + \gamma_p(1-z_2)\frac{\partial F(z_1,z_2,t)}{\partial z_2}.
+  \end{split}
 \end{equation}
 
-and taking the derivative of eq. \ref{eq:masterF} with respect to $z_2$
+We thus transformed a difference equation in $(n_1,n_2)$ into a partial differential equation in $(z_1,z_2)$. Instead of solving completely, we will use the properties of $F$ (eqs. \eqref{eq:con-mom_gen_1} - \eqref{eq:con-mom_gen_d1d1}) to find the moments. Taking the derivative with respect to $z_1$ we obtain
 
 \begin{equation}
-\label{eq:dz2}
-\begin{split}
-\frac{\partial \dot{F}}{\partial z_2}&=k_rd(z_1-1)\frac{\partial F}{\partial z_2} + k_pz_1\left(\frac{\partial F}{\partial z_1} + (z_2-1)\frac{\partial^2 F}{\partial z_1 \partial z_2} \right)\\
-&+ \gamma_r(1-z_1)\frac{\partial^2 F}{\partial z_1 \partial z_2} + \gamma_p\left(-\frac{\partial F}{\partial z_2}+(1-z_2)\frac{\partial^2 F}{\partial z_2^2}\right).
-\end{split}
+  \label{eq:dz1}
+  \begin{split}
+    \frac{\partial \dot{F}}{\partial z_1} &= k_rd\left( F+(z-1)\frac{\partial F}{\partial z_1} \right) + k_p(z_2-1) \left( \frac{\partial F}{\partial z_1} + z_1 \frac{\partial^2 F}{\partial z_1^2} \right)\\
+    &+\gamma_r\left(-\frac{\partial F}{\partial z_1}+(1-z_1)\frac{\partial^2 F}{\partial z_1^2}\right)+\gamma_p(1-z_2)\frac{\partial^2 F}{\partial z_1 \partial z_2},
+  \end{split}
 \end{equation}
 
-Evaluating eqs. \ref{eq:dz1} and \ref{eq:dz2} at $z_1 = z_2 = 1$ and using properties (FILL) we obtain the deterministic equations
+and taking the derivative of eq. \eqref{eq:masterF} with respect to $z_2$
+
+\begin{equation}
+  \label{eq:dz2}
+  \begin{split}
+    \frac{\partial \dot{F}}{\partial z_2}&=k_rd(z_1-1)\frac{\partial F}{\partial z_2} + k_pz_1\left(\frac{\partial F}{\partial z_1} + (z_2-1)\frac{\partial^2 F}{\partial z_1 \partial z_2} \right)\\
+    &+ \gamma_r(1-z_1)\frac{\partial^2 F}{\partial z_1 \partial z_2} + \gamma_p\left(-\frac{\partial F}{\partial z_2}+(1-z_2)\frac{\partial^2 F}{\partial z_2^2}\right).
+  \end{split}
+\end{equation}
+
+Evaluating eqs. \eqref{eq:dz1} and \eqref{eq:dz2} at $z_1 = z_2 = 1$ and using properties \eqref{eq:con-mom_gen_1} and \eqref{eq:con-mom_gen_d1} we obtain
 
 \begin{align*}
 \dot{\langle n_1 \rangle}&= k_rd - \gamma_r \langle n_1 \rangle,\\
 \dot{\langle n_2 \rangle}&= k_p\langle n_1 \rangle - \gamma_p \langle n_2 \rangle.
 \end{align*}
 
-Therefore, the averages follow the deterministic behavior given by eqs. \ref{eq:1} and \ref{eq:2}, as expected. The steady state values are given by eqs. \ref{eq:ssr} and \ref{eq:ssp}.
+Therefore, the averages follow the deterministic equations given by eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. The steady state values are thus given by eqs. \eqref{eq:mas-simple_ss_1} and \eqref{q:mas-simple_ss_2}. The deterministic equations reproduce the average behavior.
 
-Differentiating eq. \ref{eq:dz1} with respect to $z_2$, eq. \ref{eq:dz1} with respect to $z_1$ and eq. \ref{eq:dz2} with respect to $z_2$ and evaluating at $z_1 = z_2 = 1$ we obtain, respectively
+Differentiating eq. \eqref{eq:dz1} with respect to $z_2$, eq. \eqref{eq:dz1} with respect to $z_1$ and eq. \eqref{eq:dz2} with respect to $z_2$ and evaluating at $z_1 = z_2 = 1$ we obtain, respectively
 
 \begin{align}
-\dot{\langle n_1n_2\rangle} &= k_rd\langle n_2 \rangle + k_p\left(\langle n_1\rangle + \langle n_1(n_1-1) \rangle \right) - \left( \gamma_r + \gamma_p \right)\langle n_1n_2 \rangle,\label{eq:dz1z2}\\
-\dot{\langle n_1(n_1-1)\rangle} &= 2k_r\langle n_1\rangle-2\gamma_r\langle n_1(n_1-1) \rangle, \label{eq:dz1z1}\\
-\dot{\langle n_2(n_2-1)\rangle} &= 2k_p\langle n_1n_2 \rangle - 2\gamma_p\langle n_2(n_2-1)\rangle. \label{eq:dz2z2}
+  \dot{\langle n_1n_2\rangle} &= k_rd\langle n_2 \rangle + k_p\left(\langle n_1\rangle + \langle n_1(n_1-1) \rangle \right) - \left( \gamma_r + \gamma_p \right)\langle n_1n_2 \rangle,\label{eq:dz1z2}\\
+  \dot{\langle n_1(n_1-1)\rangle} &= 2k_r\langle n_1\rangle-2\gamma_r\langle n_1(n_1-1) \rangle, \label{eq:dz1z1}\\
+  \dot{\langle n_2(n_2-1)\rangle} &= 2k_p\langle n_1n_2 \rangle - 2\gamma_p\langle n_2(n_2-1)\rangle. \label{eq:dz2z2}
 \end{align}
 
-We will treat the previous equations in steady state, that is, with their time derivatives equal to zero. From  eq. \ref{eq:dz1z1}, we get
+We will treat the previous equations in steady state, that is, with their time derivatives equal to zero. From  eq. \eqref{eq:dz1z1}, we get
 
 \begin{equation}
-\label{eq:pren1}
-0 = k_rd \langle n_1 \rangle_s -\gamma_r \left(\langle n_1^2 \rangle_s - \langle n_1 \rangle_s \right) \Rightarrow \langle n_1^2 \rangle_s = \frac{k_rd}{\gamma_r}\langle n_1 \rangle_s + \langle n_1 \rangle_s = \langle n_1 \rangle_s^2 + \langle n_1 \rangle_s.
+  \label{eq:pren1}
+  0 = k_rd \langle n_1 \rangle_s -\gamma_r \left(\langle n_1^2 \rangle_s - \langle n_1 \rangle_s \right) \Rightarrow \langle n_1^2 \rangle_s = \frac{k_rd}{\gamma_r}\langle n_1 \rangle_s + \langle n_1 \rangle_s = \langle n_1 \rangle_s^2 + \langle n_1 \rangle_s.
 \end{equation}
 
-Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$ and the Fano factor and the coefficient of variation are given by (FILL)
+Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano factor and the CV are given by
 
 \begin{equation}
-\label{noise1}
-\boxed{\nu_1 = 1}, \quad\quad \boxed{\eta_1^2 = \frac{1}{\langle n_1 \rangle}}.
+  \label{noise1}
+  \boxed{\nu_1 = 1}, \quad\quad \boxed{\eta_1^2 = \frac{1}{\langle n_1 \rangle}}.
 \end{equation}
 
-Which is characteristic of a Poisson process, as expected because ... (TODO).
+Which is the noise for a Poisson process as we saw on eq. \eqref{eq:con-poisson_noise}. This makes sense since the assumptions made for the mRNA dynamics correspond to the ones made for the Poisson process in section \ref{sec:poisson}.
 
-From eq. \ref{eq:dz1z2} we have
+From eq. \eqref{eq:dz1z2} we have
 
 \begin{equation*}
-0 = k_rd \langle n_2 \rangle_s + k_p \langle n_1^2 \rangle_s - (\gamma_p + \gamma_r) \langle n_1n_2 \rangle_s \Rightarrow \langle n_1n_2 \rangle_s  = \frac{k_rd\langle n_2\rangle_s+k_p\langle n_1^2\rangle_s}{\gamma_r+\gamma_p}.
+  0 = k_rd \langle n_2 \rangle_s + k_p \langle n_1^2 \rangle_s - (\gamma_p + \gamma_r) \langle n_1n_2 \rangle_s \Rightarrow \langle n_1n_2 \rangle_s  = \frac{k_rd\langle n_2\rangle_s+k_p\langle n_1^2\rangle_s}{\gamma_r+\gamma_p}.
 \end{equation*}
 
-But from eq. \ref{eq:pren1} and \ref{eq:ssp},
+But from eq. \eqref{eq:pren1} and \eqref{eq:mas-simple_ss_2},
+
 \begin{equation}
-\langle n_1^2 \rangle_s = \langle n_1 \rangle_s\left( \langle n_1 \rangle_s+1\right) = \frac{\gamma_p}{k_p}\langle n_2 \rangle_s\left(\langle n_1\rangle_s + 1\right),
+\langle n_1^2 \rangle_s = \langle n_1 \rangle_s\left( \langle n_1 \rangle_s+1\right) = \frac{\gamma_p}{k_p}\langle n_2 \rangle_s\left(\langle n_1\rangle_s + 1\right).
 \end{equation}
 
-thus, the covariance is given by
+Hence, the covariance is given by
 
 \begin{align*}
-\langle n_1n_2 \rangle_s - \langle n_1 \rangle_s\langle n_2\rangle_s &= \langle n_2 \rangle_s \left(\frac{k_rd+\gamma_p\left(\langle n_1\rangle_s+1\right)}{\gamma_r+\gamma_p}-\langle n_1\rangle_s\right)\\
-&=\langle n_2\rangle_s\frac{k_rd+\gamma_p-\gamma_r\langle n_1\rangle_s}{\gamma_r+\gamma_p}.
+  \langle n_1n_2 \rangle_s - \langle n_1 \rangle_s\langle n_2\rangle_s &= \langle n_2 \rangle_s \left(\frac{k_rd+\gamma_p\left(\langle n_1\rangle_s+1\right)}{\gamma_r+\gamma_p}-\langle n_1\rangle_s\right)\\
+  &=\langle n_2\rangle_s\frac{k_rd+\gamma_p-\gamma_r\langle n_1\rangle_s}{\gamma_r+\gamma_p}.
 \end{align*}
 
-From eq. \ref{eq:ssr} the first and fourth term of the denominator cancel out, therefore
+From eq. \eqref{eq:mas-simple_ss_1} the first and fourth term of the numerator cancel out, therefore
 
 \begin{equation}
-\label{eq:cov12}
-\boxed{\text{cov}(n_1,n_2)_s = \langle n_2 \rangle_s\frac{1}{1+\frac{\gamma_r}{\gamma_p}}}.
+  \label{eq:cov12}
+  \boxed{\text{cov}(n_1,n_2)_s = \langle n_2 \rangle_s\frac{1}{1+\frac{\gamma_r}{\gamma_p}}}.
 \end{equation}
 
 From eq. \ref{eq:dz2z2} we have in steady state
@@ -211,39 +186,70 @@ kp\langle n_1n_2\rangle_s = \gamma_p\langle n_2^2\rangle_s-\gamma_p\langle n_2\r
 Replacing eq. \ref{eq:cov12} in the previous equation we get after rearranging
 
 \begin{align*}
-\langle n_2^2\rangle_s &= \frac{k_p}{\gamma_p}\left(\langle n_1 \rangle_s\langle n_2\rangle_s + \frac{\langle n_2\rangle_s\gamma_p}{\gamma_r+\gamma_p}\right) + \langle n_2 \rangle_s\\
-&=\langle n_2^2\rangle_s+\frac{k_p\langle n_2\rangle_s}{\gamma_r+\gamma_p}+\langle n_2 \rangle_s.
+  \langle n_2^2\rangle_s &= \frac{k_p}{\gamma_p}\left(\langle n_1 \rangle_s\langle n_2\rangle_s + \frac{\langle n_2\rangle_s\gamma_p}{\gamma_r+\gamma_p}\right) + \langle n_2 \rangle_s\\
+  &=\langle n_2^2\rangle_s+\frac{k_p\langle n_2\rangle_s}{\gamma_r+\gamma_p}+\langle n_2 \rangle_s.
 \end{align*}
 
 Hence substracting $\langle n_2\rangle_s^2$ from the previous equation we obtain, in steady state,
 
-\begin{equation}
-\sigma_2^2 = \langle n_2\rangle\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
-\end{equation}
+\begin{equation*}
+  \sigma_2^2 = \langle n_2\rangle\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
+\end{equation*}
 
 Therefore, the noise in steady state is given by
 
 \begin{equation}
-\label{noise2}
-\boxed{\nu_2 = \frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1}, \quad \quad \boxed{\eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right)}.
+  \label{eq:noise2}
+  \boxed{\nu_2 = \frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1}, \quad \quad \boxed{\eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right)}.
 \end{equation}
 
-As can be noticed, the noise in the proteins is bigger than Poissonian. If we define $b\coloneqq \nicefrac{k_p}{\gamma_r}$ and taking the degradation rate for a protein to be much smaller than for RNA, we have $\nicefrac{\gamma_p}{\gamma_r} \ll 1$ therefore the noise reduces to
+As can be noticed, the noise in the proteins is bigger than Poissonian. Define $b\coloneqq \nicefrac{k_p}{\gamma_r}$, the average number of proteins produced during a lifetime of a transcript, called the burst size. and taking the degradation rate for a protein to be much smaller than for RNA, we have $\nicefrac{\gamma_p}{\gamma_r} \ll 1$ reducing the noise reduces to
 
-\begin{equation}
-\label{eq:noise2a}
-\boxed{\nu_2 = b+1}, \quad \quad \boxed{\eta_2^2 = \frac{1}{\langle n_2\rangle}\left(b+1\right)}.
-\end{equation}
+\begin{equation*}
+  \nu_2 = b+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(b+1\right).
+\end{equation*}
+
+The analytical results are compared with simulations in fig. \ref{fig:mas-sim_simple}. It can be noticed that the noise is strongly dependent on the burst size $b$, independent of $k_r$ and weakly dependent on the protein half-life $\tau_p = \ln2/\gamma_r$.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{mas-sim_simple}
-  \caption[Noise in proteins: comparing analytical results and simulations]{\label{fig:mas-sim_simple} Comparison between the results of the simulations and the analytical results given by eq. \ref{eq:noise2a}. The legend indicates which parameter is varied while the others are fixed.}
+  \includegraphics[width=11cm]{mas-sim_simple}
+  \caption[Noise in proteins: comparing analytical results and simulations]{\label{fig:mas-sim_simple} Comparison between the results of the simulations (dots) and the analytical results (lines) given by eq. \eqref{eq:noise2}. The Fano factor is plotted vs. the mean. The legend indicates which parameter is varied while the others are fixed.}
 \end{figure}
 
-CONCLUSION IMPORTANT.
+Therefore, the noise and the steady state average can be controlled independently by controlling the burst size $b$. If a cell produces many mRNAs and a few proteins per transcript (small $b$), the noise is reduced. On the contrary, the same average number of proteins can be reached by producing a few mRNAs and many proteins per mRNA (large $b$). In this case the noise is larger. Nevertheless there is an additional factor, reducing noise in this case requires a constant synthesis and degradation of mRNA. This is inefficient for the cells since they are inverting energy in the production of mRNAs from which there will be little proteins translated, representing a disadvantage in fitness. 
+
+This analysis suggests that there is a pay-off between fitness and noise reduction in the cells that has been tuned by evolution according to the necessity of reliability of the particular genetic component. However, we will see that there are other mechanisms, like negative autorregulation, that allow cells to reduce noise in a more efficient way (see sec. \ref{sec:mas-neg_autorreg}).
 
 \section{Several species with linear interactions}
+
+In this section we generalize the previous results to arbitrary genetic network in which the interactions between its components are linear. To introduce the model, consider eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. In matrix notation, they can be written as
+
+\begin{equation}
+  \label{eq:matdet}
+  \mathbf{\dot{n}} = \left( \mathbf{A} - \mathbf{\Gamma} \right) \mathbf{n},
+\end{equation}
+
+where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ are defined as
+
+\begin{equation*}
+  \mathbf{A} =
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+    k_r & 0 & 0 \\
+    0 & k_p & 0
+  \end{pmatrix},\quad \quad
+  \mathbf{\Gamma} =
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+    0 & \gamma_r & 0 \\
+    0 & 0 & \gamma_p
+  \end{pmatrix}.
+\end{equation*}
+
+Hence, $\mathbf{A}$ contains the creation rates and represents how each rate depends on the different species and $\mathbf{\Gamma}$ has the degradation rates, which is diagonal whenever the degradation is not mediated by interactions with other molecules.
+
+Now considering an arbitrary circuit with linear interaction in order that we can write its deterministic equations in the form of eq. \ref{eq:matdet}
 
 Figure \ref{fig:mas-trans_single} and eq. \ref{eq:master} can be generalized according to eq. \ref{eq:matdet} to obtain \ref{fig:mas-trans_many}
 
@@ -369,6 +375,7 @@ Which is valid for all $l$ and $m$, evaluating at $z_i=1$ for all $i$ we get in 
 Where $\Theta_{ij} \coloneqq \delta_{ij}\frac{\partial}{\partial z_i}$. The set of linear equations can be solved for the moments and correlation using a computer program.
 
 \section{Several species with non-linear interactions - Negative autorregulation}
+\label{sec:mas-neg_autorreg}
 
 \begin{figure}[H]
   \centering

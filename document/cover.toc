@@ -32,44 +32,44 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.1}Single gene}{33}{section.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.2}Several species with linear interactions}{41}{section.2.2}
+\contentsline {section}{\numberline {2.2}Several species with linear interactions}{42}{section.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.3}Several species with non-linear interactions - Negative autorregulation}{44}{section.2.3}
+\contentsline {section}{\numberline {2.3}Several species with non-linear interactions - Negative autorregulation}{46}{section.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Cascade of regulation - The Langevin equation}{45}{chapter.3}
+\contentsline {chapter}{\numberline {3}Cascade of regulation - The Langevin equation}{47}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Effects of bursting and senescence}{53}{chapter.4}
+\contentsline {chapter}{\numberline {4}Effects of bursting and senescence}{55}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}mRNA bursts}{53}{section.4.1}
+\contentsline {section}{\numberline {4.1}mRNA bursts}{55}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Arbitrary distribution of creation times}{55}{section.4.2}
+\contentsline {section}{\numberline {4.2}Arbitrary distribution of creation times}{57}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Decay of molecules}{62}{section.4.3}
+\contentsline {section}{\numberline {4.3}Decay of molecules}{64}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Senescence of mRNA}{66}{section.4.4}
+\contentsline {section}{\numberline {4.4}Senescence of mRNA}{68}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Effects of cell division}{69}{chapter.5}
+\contentsline {chapter}{\numberline {5}Effects of cell division}{71}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}Characterizing the noise arising from cell division}{69}{section.5.1}
+\contentsline {section}{\numberline {5.1}Characterizing the noise arising from cell division}{71}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Independent segregation}{71}{section.5.2}
+\contentsline {section}{\numberline {5.2}Independent segregation}{73}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Disordered segregation}{72}{section.5.3}
+\contentsline {section}{\numberline {5.3}Disordered segregation}{74}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.1}General case}{72}{subsection.5.3.1}
+\contentsline {subsection}{\numberline {5.3.1}General case}{74}{subsection.5.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.2}Random size and random accessible volume}{74}{subsection.5.3.2}
+\contentsline {subsection}{\numberline {5.3.2}Random size and random accessible volume}{76}{subsection.5.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.3}Clustered segregation}{75}{subsection.5.3.3}
+\contentsline {subsection}{\numberline {5.3.3}Clustered segregation}{77}{subsection.5.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.3.4}Upper limit of the partitioning error}{79}{subsection.5.3.4}
+\contentsline {subsection}{\numberline {5.3.4}Upper limit of the partitioning error}{81}{subsection.5.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Ordered segregation}{79}{section.5.4}
+\contentsline {section}{\numberline {5.4}Ordered segregation}{81}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.1}Self-volume exclusion}{79}{subsection.5.4.1}
+\contentsline {subsection}{\numberline {5.4.1}Self-volume exclusion}{81}{subsection.5.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.2}Binding to spindle sites}{80}{subsection.5.4.2}
+\contentsline {subsection}{\numberline {5.4.2}Binding to spindle sites}{82}{subsection.5.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {5.4.3}Pair formation mechanisms}{83}{subsection.5.4.3}
+\contentsline {subsection}{\numberline {5.4.3}Pair formation mechanisms}{85}{subsection.5.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{88}{chapter*.11}
+\contentsline {chapter}{Bibliography}{90}{chapter*.11}
