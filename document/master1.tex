@@ -1,13 +1,18 @@
 \chapter{Basic genetic circuits in steady state - The master equation}
 \label{ch:master}
+
+In this chapter, we develop a model of a genetic system considering only its intrinsic noise using the master equation, which is an approach to model stochastic processes where there are defined states and there are certain transition probabilities between states.
+
+This chapter is based on the work done by M. Thattai and A. van Oudenaarden in \cite{thattai01}.
+
 \section{Single gene}
 
-For the process of transcription and translation the number $d$ of DNA copies of certain gene is taken to be constant and the rate of production of RNA ($n_1$) is proportional to $d$. In the same way, the rate of production of proteins ($n_2$) is proportional to $r$. There is also a degradation rate for each molecule proportional to their concentration. The model is ilustrated in fig. \ref{fig:mas-dogma}
+For the process of transcription and translation the number $d$ of DNA copies of certain gene is taken to be constant and the rate $k_r$ of production of RNA ($n_1$) is proportional to $d$. In the same way, the rate $k_p$ of production of proteins ($n_2$) per mRNA is constant. There is also a degradation rate for each molecule proportional to their concentration. The model is ilustrated in fig. \ref{fig:mas-dogma}.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=10cm]{mas-dogma}
-  \caption[Model of gene expression for a single gene]{\label{fig:mas-dogma} Steps of gene expression considered in the model.}
+  \includegraphics[width=8cm]{mas-dogma}
+  \caption[Model of gene expression for a single gene]{\label{fig:mas-dogma} Steps of gene expression considered in the model. Taken from \cite{thattai01}.}
 \end{figure}
 
 The equations describing these processes are therefore given by
@@ -240,7 +245,6 @@ CONCLUSION IMPORTANT.
 
 \section{Several species with linear interactions}
 
-\vspace{5cm}
 Figure \ref{fig:mas-trans_single} and eq. \ref{eq:master} can be generalized according to eq. \ref{eq:matdet} to obtain \ref{fig:mas-trans_many}
 
 \begin{figure}[H]

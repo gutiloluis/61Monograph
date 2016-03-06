@@ -2,6 +2,7 @@
 \usepackage{amsmath}
 \usepackage{amsfonts}
 \usepackage[backend=biber, style=nature, sorting=none]{biblatex}
+\usepackage{chngcntr}
 \usepackage{float}
 \usepackage[top=1in, bottom=1.5in, left=1.25in, right=1in]{geometry}
 \usepackage{graphicx}
@@ -14,6 +15,8 @@
 \usepackage[textsize=footnotesize,textwidth=0.75in]{todonotes}
 
 \bibliography{biblio}
+\counterwithin{equation}{section}
+\counterwithin{figure}{section}
 \graphicspath{{img/}}
 \renewcommand\baselinestretch{1.5}
 

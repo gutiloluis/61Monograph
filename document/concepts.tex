@@ -1,5 +1,7 @@
 \chapter{Preliminary concepts}
 
+\todo[inline]{TODO: Find better images}
+
 \section{The central dogma of molecular biology}
 
 The central dogma explains how genetic information flows within a living being. It states that DNA, the molecule that stores the genetic information, is replicated by the enzyme DNA Polymerase. Also, RNA Polymerase produces messenger RNA (mRNA) from DNA in a process called transcription. Finally, the ribosome build the proteins following the sequence of the mRNA and according to a genetic code that translates from the language of nucleotides (the structural blocks of DNA and RNA) to the language of aminoacids, the structural blocks of proteins \cite{alberts13}.
@@ -15,9 +17,8 @@ Proteins are the structural and functional elementary units of living beings. Th
 An important fact is that the central dogma is valid for all the living beings. The encoding of information in DNA and the mechanisms by which proteins are made according to that information, including the genetic code, are very similar between different organisms.
 
 \section{Gene regulation and biological circuits}
-(CITE SOME REVIEW)
 
-DNA contains all the information necessary to build a living being and let him develop his functions. But genetically identical cells may differ a lot. For example, our neurons are very different in form and function than our skin cells, even though they have the same DNA and thus the same genetic information. This differentiation happens because they are expressing different sets of genes. The genetic information encoded in the DNA is called genotype, while the observable characteristics of an organism are called phenotype. In this terminology, both kinds of cells have the same genotype but differ in their genotypes. \cite{alberts13}
+DNA contains all the information necessary to build a living being and let him develop his functions. But genetically identical cells may differ a lot. For example, our neurons are very different in form and function than our skin cells, even though they have the same DNA and thus the same genetic information. This differentiation happens because they are expressing different sets of genes. The genetic information encoded in the DNA is called genotype, while the observable characteristics of an organism are called phenotype. In this terminology, both kinds of cells have the same genotype but differ in their genotypes \cite{alberts13} \cite{alon06}.
 
 Those differences lie on the genes that each cell is expressing at a certain time and how much they are being expressed (measured in the rate of production of proteins corresponding to a gene). There are proteins (and even RNA molecules) that inhibit the production of other protein by stoping transcription of the corresponding gene. On the contrary, there are proteins that enhance the production of other proteins by increasing the rate of transcription. Both activators and inhibitors are called \textit{transcription factors}, both cases can be seen on fig. \ref{fig:con-tf_simple}.
 
@@ -130,7 +131,9 @@ Notice in both graphs that as $n\rightarrow\infty$, the function appears more li
 
 \section{Probability}
 
-Consider an experiment in which the set of possible outcomes is clearly known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. For a discrete random variable, $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will only consider the discrete case because the models will always consist on discrete numbers of molecules. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the PDF.}
+Consider an experiment in which the set of possible outcomes is clearly known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. For a discrete random variable, $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.} 
+
+\todo[inline]{TODO: Explain CDFs?}
 
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
@@ -240,8 +243,7 @@ Intuitively, we may expect that a random variable is more 'random' or noisy, whe
 The Fano factor has been used in the first studies of noise in biology since it had the particular property that for a random variable with a Poisson distribution $\nu_X=1$ and hence it measures deviations from a Poissonian behavior. In more recent studies the coefficient of variation is being used because it is dimensionless and for that reason it does not depend on the units used for the random variable. For this reason, the generic term 'noise' is now used to refer to $\eta$.
 
 \section{Moment generating functions}
-
-Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n_1,\dotsc,n_N)$ be the joint probability mass function. The moment generating function $F(z_1,\dotsc,z_N)$ is defined as
+Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n_1,\dotsc,n_N)$ be the joint probability mass function. The moment generating function $F(z_1,\dotsc,z_N)$ is defined as \footnote{Not to be confused with the cumulative distribution function}
 
 \begin{equation}
 \label{def:mom_gen}
@@ -357,7 +359,9 @@ Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\ma
     \end{equation*}
 \end{itemize}
 
-It can be proven that according to the previous properties, $P(k,\tau)$ is given by \todo{Prove?}
+It can be proven that according to the previous properties, $P(k,\tau)$ is given by
+
+\todo[inline]{Prove it? Is that really true?}
 
 \begin{equation*}
   P(k,\tau) = e^{-\lambda\tau}\frac{(\lambda\tau)^k}{k!},\quad k=0,1,\dotsc
@@ -375,34 +379,41 @@ The average number of arrivals in a time $\tau$ is, as intuitively expected, the
   \nu(N_\tau) = 1,\quad\quad \eta(N_\tau) = \frac{1}{\sqrt{N_\tau}}.
 \end{equation*}
 
-This proves what was said on section \ref{sec:con-noise} about the previous use of the Fano factor as the standard measure of noise. From the form of $\eta$ we conclude that if the number of events is large, the Poisson noise is negligible. But for a biological system, for instance, the average number of copies of mRNA of a given gene is of the order of $10$. This makes the effect of noise a significant factor. Also, altought the mean number of proteins is of the order of $1000$, the Poisson noise is negligible, but there is an important contribution of noise coming from the RNA, as we will see on chapter \ref{ch:master}.
+This proves what was said on section \ref{sec:con-noise} about the previous use of the Fano factor as the standard measure of noise. From the form of $\eta$ we conclude that if the number of events is large, the Poisson noise is negligible. But for a biological system, for instance, the average number of copies of mRNA of a given gene is of the order of $10$. This makes the effect of noise a significant factor. Also, altought the mean number of proteins is of the order of $1000$, the Poisson noise is negligible, but there is an important contribution of noise coming from the RNA and other sources, as we will see on chapter \ref{ch:master}.
 
 Now we will find the time between events, by now let $t=0$ the time of the last event and let $t=T$ the time of the next event, then
 
 \begin{equation*}
-  F_T(t) \coloneqq P(t\leq T) = 1-P(T>t) = 1 - P(0,t) = 1 - e^{-\lambda\tau}.
+  P(T\leq t) =\int_0^tf_T(t')dt'=1-P(T>t) = 1 - P(0,t) = 1 - e^{-\lambda t}.
 \end{equation*}
 
-And differentiating we get the \textbf{exponential PDF}, which is given by
+Differentiating and applying the fundamental theorem of calculus, we get the \textbf{exponential PDF}, which is given by
 
 \begin{equation*}
-  f_T(t) = \lambda e^{-\lambda t},
+  \label{eq:con-exp_pdf}
+  f_T(t) = \lambda e^{-\lambda t}.
 \end{equation*}
+
+Therefore, the time $T$ until the first arrival follows an exponential distribution. 
+
+The exponential distribution is \textbf{memoryless} in the following sense: suppose an arrival happened at time $t'$, therefore, the probability distribution for the remaining time until the next arrival is an exponential with the same rate. \todo[inline]{Explain better, prove it?}. With this in mind, not only the time until the first arrival, but all the interarrival times (the times between arrivals), follow the distribution given by eq. \eqref{eq:con-exp_pdf}.
+
+Suppose we $k$ independent Poisson processes with rates $\lambda_1,\dotsc,\lambda_k$ and we record an arrival each time an arrival occur in either process. This merged process is also a Poisson process with rate $\Lambda\coloneqq\sum_{i=1}^k\lambda_i$. Also, any arrival of the merged process has a probability $\lambda_i/\Lambda$, $i=1,\dotsc,k$ of being an arrival of the $i$th process.
+
+In the models we will consider there might be several creation and destruction events which are Poissonian and independent, for example, the synthesis and degradation of different kinds of RNA and protein, the binding of transcription factors, etc. For these models, we can take advantage of the merging properties of Poisson processes to make efficient and precise simulations.
 
 \section{The Gillespie algorithm}
 
-To simulate the models we will use the Gillespie algorithm \cite{gillespie77} which improves speed a lot with respect to brute-force stochastic algorithms. It is used to simulate events that occur with a certain probability per unit time (e.g. creation and destruction of RNA or proteins, binding of an enzyme to a substrate, etc.)
+To simulate the models we will use the Gillespie algorithm \cite{gillespie77} which improves speed a lot with respect to brute-force stochastic algorithms. It is used to simulate simultaneous Poissonian events that occur with a certain rate (probability per unit time), e.g. synthesis and degradation of RNA or proteins, binding of an enzyme to a substrate, etc.
 
-In the brute force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
+In the brute-force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
 
-In the Gillespie algorithm, we take advantage of the properties of the Poisson process, namely its memorylessness and its merging properties. Assuming all the events are Poissonian, the interarrival times are exponentially distributed and therefore memoryless. The  \todo[inline]{More detail and rigor} \cite{bertsekas08}.
+In the Gillespie algorithm, we take advantage of the mentioned properties of the Poisson process \cite{bertsekas08}. There are not fixed time intervals in this case, a random number is sampled with an exponential distribution whose rate $\Lambda$ is the sum of the rates of the individual processes to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. Using the properties of the exponential CDF, to sample an exponential random number $X$ with parameter $\Lambda$ from an uniform $U$ between $0$ and $1$ we apply the following equation
 
-There are not fixed time intervals in this case, a random number is sampled with an exponential distribution to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. To sample an exponential random number $X$ with parameter $K$ from an uniform $U$ between $0$ and $1$, the following formula can be used.
+\todo[inline]{Prove it?}
 
 \begin{equation}
-  X = -\frac{1}{K}\ln(U)
+  X = -\frac{1}{\Lambda}\ln(U).
 \end{equation}
 
-Where $K$ turns out to be the sum of the probabilities per unit time of all the events. \todo[inline]{More detail and rigor}
-
-The Gillespie algorithm is by far more efficient. First, it does not need to have a fixed time interval, it finds it with a random number. Second, the number of random numbers sampled in the brute-force algorithm is equal to the number of events (which can be large), and some of the times there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to go forward in time in many fewer steps. Finally, a very important aspect is that the Gillespie algorithm is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.
+The Gillespie algorithm is by far more efficient. First, it does not need to have a fixed small time interval, it finds the time intervals between events. Second, the number of random numbers sampled per time interval in the brute-force approach is equal to the number of events (which can be large), and many of the intervals there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to go forward in time in many fewer steps. Finally, a very important aspect is that the Gillespie algorithm is that it is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.
