@@ -236,24 +236,24 @@ In this section we generalize the previous results to arbitrary genetic network 
 
 where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ are defined as
 
-\begin{equation*}
-  \mathbf{A} =
+\begin{align}
+  \mathbf{A} &=
   \begin{pmatrix}
     0 & 0 & 0 \\
     k_r & 0 & 0 \\
     0 & k_p & 0
-  \end{pmatrix},\quad \quad
-  \mathbf{\Gamma} =
+  \end{pmatrix} \label{eq:mas_A_single},\\
+  \mathbf{\Gamma} &=
   \begin{pmatrix}
     0 & 0 & 0 \\
     0 & \gamma_r & 0 \\
-    0 & 0 & \gamma_p
-  \end{pmatrix}.
-\end{equation*}
+    0 & 0 & \gamma_p 
+  \end{pmatrix} \label{eq:mas_G_single}. 
+\end{align}
 
 Hence, $\mathbf{A}$ contains the creation rates and represents how each rate depends on the different species and $\mathbf{\Gamma}$ has the degradation rates, which is diagonal whenever the degradation is not mediated by interactions with other molecules.
 
-Now, for an arbitrary circuit with an arbitrary number $N$ of species and linear interaction between them, we can write its deterministic equations in the form of eq. \ref{eq:matdet}. Also, the state state space will have $N$ dimensions in the general case (see fig. \ref{fig:mas-trans_many}).
+Now, for an arbitrary circuit with an arbitrary number $N$ of species and linear interaction between them, we can write its deterministic equations in the form of eq. \eqref{eq:matdet}. Also, the state state space will have $N$ dimensions in the general case (see fig. \ref{fig:mas-trans_many}).
 
 \begin{figure}[H]
   \centering
@@ -270,119 +270,177 @@ According to fig. \ref{fig:mas-trans_many}, in the general case the master equat
 
 When for a fixed specie $i$, the terms in parentheses represent having $n_i-1$ molecules of the $i$th type and creating one; having $n_i$ and creating one; having $n_i+1$ and destroying one; and having $n_i$ and destroying one, respectively. Since this is possible for each of the $N$ types of molecules, we must sum over $i$ as well.
 
-Assuming that degradation does not involve interactions between various molecules, the matrix $\Gamma$ can be taken to be diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \ref{eq:masterg1} becomes \footnote{To reduce the complexity of the expressions, we define $p(n_i) \coloneqq p(\mathbf{n}) = p(n_1,\dotsc,n_i,\dotsc,n_N)$, and $p(n_i\pm1)\coloneqq p(n_1,\dotsc,n_i\pm1,\dotsc,n_N)$.}
+Assuming that degradation does not involve interactions between various molecules, the matrix $\Gamma$ can be taken to be diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \eqref{eq:masterg1} becomes \footnote{To reduce the complexity of the expressions, we define $p(n_i) \coloneqq p(\mathbf{n}) = p(n_1,\dotsc,n_i,\dotsc,n_N)$, and $p(n_i\pm1)\coloneqq p(n_1,\dotsc,n_i\pm1,\dotsc,n_N)$. The same convention will be used for $F(z_i)$.}
 
 \begin{equation}
 \label{eq:masterg2}
 \dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \Gamma_{i}((n_i+1)p(n_i+1)-n_ip(n_i))\right).
 \end{equation}
 
-We will follow the same procedure of the previous section, i.e. write the master equation in terms of the moment generating function and use its properties to find expressions for the moments. To get an equation for the moment generating functions, we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. At first, we will consider the term in parentheses of eq. \ref{eq:masterg2} and later we will sum over $i$. For the first term we get an expression like the following
+We will follow the same procedure of the previous section, i.e. write the master equation in terms of the moment generating function and use its properties to find expressions for the moments. To get an equation for the moment generating functions, we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. At first, we will consider the term in parentheses of eq. \eqref{eq:masterg2} and later we will sum over $i$. For the first term we obtain the following expression \footnote{Again, to avoid having unnecesarily long expressions, we write $\sum$ refering to $\sum_{n_1=0}^\infty\dotsi\sum_{n_N=0}^\infty$.}
 
 \begin{equation}
-\label{eq:momg1}
-\sum n_j z_1^{n_1}\dotsm z_i^{n_i}\dotsm z_j^{n_j}\dotsm z_N^{n_N} f(n_i) = z_iz_j\sum n_jz_j^{n_j-1}z_i^{n_i}f(n_i) = z_iz_j\frac{\partial F}{\partial z_j}. 
+  \label{eq:momg1}
+  \sum n_j z_1^{n_1}\dotsm z_i^{n_i}\dotsm z_j^{n_j}\dotsm z_N^{n_N} f(n_i) = z_iz_j\sum n_jz_j^{n_j-1}z_i^{n_i}f(n_i) = z_iz_j\frac{\partial F}{\partial z_j}. 
 \end{equation} 
 
-Where the same trick done previously on eqs. \ref{eq:mom1} - \ref{eq:mom4} were used. For the second term, similarly to the previous one
+Where the same trick done previously to change indexes was used. Similarly, for the second term
 
 \begin{equation}
-\label{eq:momg2}
-\sum n_jz_j^{n_j}z_i^{n_i}f(n_i) = z_j\frac{\partial F}{\partial z_j}.
+  \label{eq:momg2}
+  \sum n_jz_j^{n_j}z_i^{n_i}f(n_i) = z_j\frac{\partial F}{\partial z_j}.
 \end{equation}
 
 For the third and fourth terms
 
 \begin{equation}
-\label{eq:momg3}
-\sum (n_i+1)z_i^{n_i}f(n_i+1) = \sum n_i z_i^{n_i-1}f(n_i) = \frac{\partial F}{\partial z_i}.
+  \label{eq:momg3}
+  \sum (n_i+1)z_i^{n_i}f(n_i+1) = \sum n_i z_i^{n_i-1}f(n_i) = \frac{\partial F}{\partial z_i}.
 \end{equation}
 
 \begin{equation}
-\label{eq:momg4}
-\sum n_iz_i^{n_i}f(n_i) = z_i\frac{\partial F}{\partial z_i}.
+  \label{eq:momg4}
+  \sum n_iz_i^{n_i}f(n_i) = z_i\frac{\partial F}{\partial z_i}.
 \end{equation}
 
-Replacing eqs. \ref{eq:momg1} - \ref{eq:momg4} in eq. \ref{eq:masterg2} we obtain the equation for the moment generating function
+Replacing eqs. \eqref{eq:momg1} - \eqref{eq:momg4} in eq. \eqref{eq:masterg2} we obtain the equation for the moment generating function
 
 \begin{equation}
-\dot{F} = \sum_i\left( z_i\sum_jA_{ij}\frac{\partial F}{\partial z_j} - \sum_jA_{ij} z_j \frac{\partial F}{\partial z_j} + \Gamma_i\frac{\partial F}{\partial z_i} - \Gamma_iz_i\frac{\partial F}{\partial z_i}\right),
+\dot{F}(z_i) = \sum_i\left( z_i\sum_jA_{ij}\frac{\partial F}{\partial z_j} - \sum_jA_{ij} z_j \frac{\partial F}{\partial z_j} + \Gamma_i\frac{\partial F}{\partial z_i} - \Gamma_iz_i\frac{\partial F}{\partial z_i}\right),
 \end{equation}
 
 which after factoring becomes
 
 \begin{equation}
 \label{eq:momg}
-\dot{F} = \sum_i (z_i-1)\left(\sum_jA_{ij} z_j \frac{\partial F}{\partial z_j} - \Gamma_i\frac{\partial F}{\partial z_i}\right).
+\dot{F}(z_i) = \sum_i(z_i-1)\left(\sum_jA_{ij} z_j \frac{\partial F}{\partial z_j} - \Gamma_i\frac{\partial F}{\partial z_i}\right).
 \end{equation}
 
-We have to differentiate it and use the properties (REF) to obtain equations for the moments, differentiating with respect to $z_l$
+We have to differentiate it and use the properties \eqref{eq:con-mom_gen_d1} - \eqref{eq:con-mom_gen_d1d1} to obtain equations for the moments. Differentiating with respect to $z_l$
 
-\begin{equation}
+\begin{equation*}
 \begin{split}
 \frac{\partial \dot{F}}{\partial z_l} &= \sum_i\left[(z_i-1)\left[\sum_jA_{ij}\left(\delta_{jl}\frac{\partial F}{\partial z_j}+z_j\frac{\partial^2 F}{\partial z_j\partial z_l}\right)-\Gamma_i\frac{\partial^2 F}{\partial z_i\partial z_l}\right]\right.\\
 &+\left.\delta_{il}\left(\sum_jA_{ij}z_j\frac{\partial F}{\partial z_j}-\Gamma_i\frac{\partial F}{\partial z_i}\right)\right].
 \end{split}
-\end{equation}
+\end{equation*}
 
-\begin{equation}
+\begin{equation*}
 \begin{split}
 \frac{\partial \dot{F}}{\partial z_l} &= \sum_i(z_i-1)\left[A_{il}\frac{\partial F}{\partial z_l}+\sum_jA_{ij}z_j\frac{\partial^2 F}{\partial z_j\partial z_l}-\Gamma_i\frac{\partial^2 F}{\partial z_i\partial z_l}\right]\\
 &+\sum_jA_{lj}z_j\frac{\partial F}{\partial z_j}-\Gamma_l\frac{\partial F}{\partial z_l}.
 \end{split}
-\end{equation}
+\end{equation*}
 
-Evaluando en $z_i=0$ para todo $i=1,\dotsc,N$ obtenemos usando las propiedades (CITAR)
+Evaluating in $z_i=1$, $i=1,\dotsc,N$ we otain after applying the properties of $F$
 
-\begin{equation}
-\dot{\langle n_l \rangle} = \sum_jA_{lj}\langle n_j\rangle-\Gamma_l\langle n_l\rangle.
-\end{equation}
+\begin{equation*}
+\dot{\langle n_l \rangle} = \sum_jA_{lj}\langle n_j\rangle-\Gamma_l\langle n_l\rangle,
+\end{equation*}
 
-Which can be written in matrix form
-
-\begin{equation}
-\dot{\langle \mathbf{n}\rangle} = (\mathbf{A}-\mathbf{\Gamma})\langle \mathbf{n}\rangle.
-\end{equation}
-
-Which is the same as  eq. (REF), as expected. Now differentiating again with respect to $z_m$ and some algebra
+and writing in matrix form
 
 \begin{equation}
-\begin{split}
-\frac{\partial^2 \dot{F}}{\partial z_l \partial z_m} &= \sum_i(z_i-1) \left(A_{im}\frac{\partial^2F}{\partial z_i \partial z_m} + \sum_jA_{ij}z_j\frac{\partial^3F}{\partial z_j \partial z_l \partial z_m}+A_{il}\frac{\partial^2F}{\partial z_l\partial z_m} - \Gamma_i\frac{\partial^3F}{\partial z_i \partial z_l \partial z_m}   \right)\\
-&+\sum_jA_{mj}z_j\frac{\partial^2F}{\partial z_j\partial z_l}+A_{ml}\frac{\partial F}{\partial z_l} - \Gamma_m\frac{\partial^2F}{\partial z_l\partial z_m} + A_{lm}\frac{\partial F}{\partial z_m} + \sum_jA_{lj}z_j\frac{\partial^2F}{\partial z_j\partial z_m}-\Gamma_l\frac{\partial^2F}{\partial z_l\partial z_m}.
-\end{split}
+  \label{eq:mas-general_ave}
+  \dot{\langle \mathbf{n}\rangle} = (\mathbf{A}-\mathbf{\Gamma})\langle \mathbf{n}\rangle.
 \end{equation}
+
+Which has the form of eq. \eqref{eq:matdet}, but for the averages as expected. Now differentiating again with respect to $z_m$ and doing some algebra
+
+\begin{equation*}
+  \begin{split}
+    \frac{\partial^2 \dot{F}}{\partial z_l \partial z_m} &= \sum_i(z_i-1) \left(A_{im}\frac{\partial^2F}{\partial z_i \partial z_m} + \sum_jA_{ij}z_j\frac{\partial^3F}{\partial z_j \partial z_l \partial z_m}+A_{il}\frac{\partial^2F}{\partial z_l\partial z_m} - \Gamma_i\frac{\partial^3F}{\partial z_i \partial z_l \partial z_m}   \right)\\
+    &+\sum_jA_{mj}z_j\frac{\partial^2F}{\partial z_j\partial z_l}+A_{ml}\frac{\partial F}{\partial z_l} - \Gamma_m\frac{\partial^2F}{\partial z_l\partial z_m}\\
+    &+ A_{lm}\frac{\partial F}{\partial z_m} + \sum_jA_{lj}z_j\frac{\partial^2F}{\partial z_j\partial z_m}-\Gamma_l\frac{\partial^2F}{\partial z_l\partial z_m}.
+  \end{split}
+\end{equation*}
 
 Evaluating at $z_i=1$ for all $i$ we obtain
 
-\begin{equation}
-\frac{\partial^2\dot{F}}{\partial z_l \partial z_m} = \sum_jA_{mj}z_j\frac{\partial^2F}{\partial z_j\partial z_l}+A_{ml}\frac{\partial F}{\partial z_l} - \Gamma_m\frac{\partial^2F}{\partial z_l\partial z_m} + A_{lm}\frac{\partial F}{\partial z_m} + \sum_jA_{lj}z_j\frac{\partial^2F}{\partial z_j\partial z_m}-\Gamma_l\frac{\partial^2F}{\partial z_l\partial z_m}.
-\end{equation}
+\begin{equation*}
+  \frac{\partial^2\dot{F}}{\partial z_l \partial z_m} = \sum_jA_{mj}z_j\frac{\partial^2F}{\partial z_j\partial z_l}+A_{ml}\frac{\partial F}{\partial z_l} - \Gamma_m\frac{\partial^2F}{\partial z_l\partial z_m} + A_{lm}\frac{\partial F}{\partial z_m} + \sum_jA_{lj}z_j\frac{\partial^2F}{\partial z_j\partial z_m}-\Gamma_l\frac{\partial^2F}{\partial z_l\partial z_m}.
+\end{equation*}
 
 Which can be rewritten as
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \frac{\partial^2\dot{F}}{\partial z_l \partial z_m} &= \sum_j\left(A_{mj}z_j-\Gamma_{mj}\right)\frac{\partial^2F}{\partial z_j\partial z_l} + \sum_jA_{mj}\delta_{jl}\frac{\partial F}{\partial z_j}\\
-&+\sum_j\left(A_{lj}z_j-\Gamma_{lj}\right)\frac{\partial^2F}{\partial z_j\partial z_m} + \sum_jA_{lj}\delta_{jm}\frac{\partial F}{\partial z_j}.
+    &+\sum_j\left(A_{lj}z_j-\Gamma_{lj}\right)\frac{\partial^2F}{\partial z_j\partial z_m} + \sum_jA_{lj}\delta_{jm}\frac{\partial F}{\partial z_j}.
   \end{split}
-\end{equation}
+\end{equation*}
 
-Which is valid for all $l$ and $m$, evaluating at $z_i=1$ for all $i$ we get in matrix form
-
-%\frac{\partial^2F}{\partial z_l \partial z_m}
+Which is valid for all $l$ and $m$, evaluating at $z_i=1$ for all $i$ we get after writing in matrix form
 
 \begin{equation}
+  \label{eq:mas-general}
   \boxed{\nabla\nabla^T\dot{F}|_1 = \left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)+\left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)^T}
 \end{equation}
 
-Where $\Theta_{ij} \coloneqq \delta_{ij}\frac{\partial}{\partial z_i}$. The set of linear equations can be solved for the moments and correlation using a computer program.
+\todo[inline]{Do I have to include more steps? or to explain the expression with more detail?}
+
+Where $\Theta_{ij} \coloneqq \delta_{ij}\frac{\partial}{\partial z_i}$. The set of linear equations can be solved for the moments and correlation using a computer program. Therefore, given the specific form of the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$, we only have to replace on eq. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} to find the moments and the noise. In the next section we will apply them to a particular case.
 
 \section{Several species with non-linear interactions - Negative autorregulation}
 \label{sec:mas-neg_autorreg}
 
+As we have seen on sec. \ref{sec:hill}, the interactions between the component of a genetic circuits are non-linear. As a consequence, there might be several fixed points. To use this approach we need to identify the stable fixed points, linearize about each of them, each linearization yields to a pair of matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ and we solve for each of them eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general}.
+
+We will consider the case of negative autorregulation, in this case $k_r$ is now a Hill function for a repressor (eq. \eqref{eq:con-hillac}) that depends on the number of proteins of the same gene, taking the case with no basal transcription rate, the deterministic equations are
+
+\begin{align*}
+  \dot{n_1}(t) &= \frac{k_r^{\text{max}}}{1+\left(\frac{n_2(t)}{K_d}\right)^n}d - \gamma_rn_1(t),\\
+  \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t).
+\end{align*}
+
+\todo[inline]{Include histogram and plot of Hill function to explain qualitatively why does it reduces noise, average and has only one fixed point}
+
+Making a first order Taylor expansion of $k_r$ about its value at the steady state we get
+
+\todo[inline]{Recall the machete que ellos meten ahi, d must be constant}
+
+\begin{equation}
+  \begin{split}
+  k_r(n_2) &\approx k_r(\langle n_2\rangle_s) + \left.\frac{\mathrm{d}k_r(n_2)}{\mathrm{d}n_2}\right|_{\langle n_2\rangle_s}\left(n_2-\langle n_2\rangle_s\right)\\
+  &=\frac{k_r^{\text{max}}}{1+\left(\frac{\langle n_2\rangle_s}{K_d}\right)^n} - \frac{k_r^{\text{max}}n\left(\frac{\langle n_2\rangle_s}{K_d}\right)^{n-1}}{K_d\left(1+\left(\frac{\langle n_2\rangle_s}{K_d}\right)^n\right)^2}\left(n_2-\langle n_2\rangle_s\right)\\
+  &= k_0-\frac{k_1}{d}n_2,
+  \end{split}
+\end{equation} 
+
+where $k_0$ and $k_1$ are given by
+
+\begin{equation*}
+  k_0\coloneqq k_r(\langle n_2\rangle_s) - \left.\frac{\mathrm{d}k_r(n_2)}{\mathrm{d}n_2}\right|_{\langle n_2\rangle_s}\langle n_2\rangle_s,\quad\quad k_1 \coloneqq -\left.\frac{\mathrm{d}k_r(n_2)}{\mathrm{d}n_2}\right|_{\langle n_2\rangle_s}n_2. 
+\end{equation*}
+
+Therefore, the matrix $\mathbf{A}$ becomes
+
+\begin{equation*}
+  \mathbf{A} =
+  \begin{pmatrix}
+    0 & 0 & 0 \\
+    k_0 & 0 & -k_1 \\
+    0 & k_p & 0
+  \end{pmatrix}
+\end{equation*}
+
+and $\mathbf{\Gamma}$ is the same as in \eqref{eq:mas_G_single}. Solving eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} we get
+
+\begin{equation}
+  \label{eq:mas-autorreg_final}
+  \boxed{\langle n_2\rangle_s = \frac{1}{1+b\phi}\frac{k_0b}{\gamma_p}},\quad\quad \boxed{\nu_2 = \frac{1-\phi}{1+b\phi}\frac{b}{1+\frac{\gamma_p}{\gamma_r}}+1},
+\end{equation}
+
+\todo[inline]{Specify more about the solution?}
+
+with $\phi\coloneqq k_1/\gamma_p$ representing the strength of the feedback. In figure \ref{fig:mas-sim_autorreg}, we compare eq. \eqref{eq:mas-autorreg_final}  with a Gillespie simulation using the exact rates. Altought the analytic expressions are approximate, there is an excellent match with the simulations.
+
 \begin{figure}[H]
   \centering
-  \includegraphics[width=9cm]{mas-sim_autorreg}
-  \caption[Autorregulation simulation results]{\label{fig:mas-sim_autorreg} Simulation for the case of autorregulation}
+  \includegraphics[width=11cm]{mas-sim_autorreg}
+  \caption[Autorregulation simulation results]{\label{fig:mas-sim_autorreg} Fano factor vs. average number of proteins. The solid lines correspond to eq \eqref{eq:mas-autorreg_final}, while the point represent the Gillespie simulations. In the blue part $n$ was varied and in the orange $K_d$ was varied.}
 \end{figure}
+
+\section{Final remarks and further applications}
+
+\todo[inline]{Write this section}
