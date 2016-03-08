@@ -1,11 +1,15 @@
 \chapter{Effects of bursting and senescence}
 
-There are many different phenomena that could have an effect on noise. The common models have been based on assumptions and have made fits of the data recieved from fluorescent reporters according to those assumptions. Nevertheless, noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the system according to the noise.
+There are many different phenomena that could have an effect on noise. Most of the models that have been based on assumptions and have made fits of the data obatined with fluorescent proteins according to those assumptions. Nevertheless, we will see in this chapter that noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the systems according to their noise.
 
-We will use the Fluctuation-Dissipation theorem as we used it on section FILL.
+We will use the Fluctuation-Dissipation theorem as we used it on section FILL to analyize the effects of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules in many exponential steps) on noise.
+
+This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
+
+\todo[inline]{TODO: Explain qualitatively/biologically how could bursting and senescence happen, include images.}
 
 \section{mRNA bursts}
-Let the mRNA be produced with bursts of random size $b$, the degradation and protein creation is done one at a time with exponential waiting times. In this case the only modification with respect to the ''standard model'' is the $D_{11}$ term of the matrix $\mathbf{D}$, which by definition is
+Let the mRNA be produced with bursts of random size $b$, the degradation and protein creation is done one at a time with exponential waiting times (single-step Poisson processes). In this case the only modification with respect to the ``standard model'' (eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}) is the $D_{11}$ term of the matrix $\mathbf{D}$, which by definition is
 
 \begin{equation}
   \label{eq:mrnab1}
@@ -16,23 +20,22 @@ All the possible $k$ reactions include all the creation bursts and the reaction 
 
 \begin{equation}
   \label{eq:mrnab2}
-  \sum_k(s_1^k)^2r_k = \frac{\langle n_1 \rangle}{\tau_1} + \sum_k(s_1^k)^2r_k.
+  \sum_k(s_1^k)^2r_k = \frac{\langle n_1 \rangle}{\tau_1} + \sum_{k'}(s_1^{k'})^2r_{k'}.
 \end{equation}
 
-Where now the index $k$ runs over all the synthesis reactions only. We can rewrite the second term as
+Where now the index $k'$ runs over all the synthesis reactions only. We can rewrite the second term as \footnote{For simplicity, we used the dummy index $k$ on the following calculations, keeping in mind that it only runs along the synthesis reactions.}
 
-\begin{equation}
-  \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\left(\frac{r_k}{\sum_kr_k}\right)(s_1^k)^2
-\end{equation}
+\begin{equation*}
+  \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\left(\frac{r_k}{\sum_kr_k}\right)(s_1^k)^2,
+\end{equation*}
 
 where the sum over the term in parentheses results in $1$. This term can be interpreted as the probability that the upcoming reaction turns out to be the $k^{\text{th}}$ one. Writing it as $\rho_k$ this yields
 
-\begin{equation}
-  \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\rho_k(s_1^k)^2
-\end{equation}
+\begin{equation*}
+  \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\rho_k(s_1^k)^2,
+\end{equation*}
 
-OJO
-But $s_1^k$ is the burst size for the $k^{\text{th}}$ synthesis reaction. Therefore the inner sum of the previous equation is actually an average over all the possible burst sizes, hence
+but $s_1^k$ is the burst size for the $k^{\text{th}}$ synthesis reaction. Therefore the inner sum of the previous equation is actually an average over all the possible burst sizes, hence
 
 \begin{equation}
   \label{eq:mrnab4}
@@ -41,25 +44,26 @@ But $s_1^k$ is the burst size for the $k^{\text{th}}$ synthesis reaction. Theref
 
 and using a similar trick we get
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \sum_kr_k&=\sum_kr_ks_1^k\frac{\sum_kr_k}{\sum_kr_ks_1^k}=\sum_kr_ks_1^k\left(\sum_k\left(\frac{r_k}{\sum_kr_k}\right)s_1^k\right)^{-1}\\
     &=\sum_kr_ks_1^k\left(\sum_k\rho_ks_1^k\right)^{-1}=\frac{1}{\langle b\rangle}\sum_kr_ks_1^k.
   \end{split}
-\end{equation}
-And letting the system be in steady state, all the synthesis rates equal the degradation ones. Therefore
-
-\begin{equation*}
-  \sum_kr_ks_1^k = \frac{\langle n_1\rangle}{\tau_1}
 \end{equation*}
 
-Obtaining
+Assuming the system is in steady state, all the synthesis rates equal the degradation ones. Therefore
 
-\begin{equation}
-   \sum_kr_k = \frac{\langle n_1\rangle}{\langle b\rangle\tau_1}
-\end{equation}
+\begin{equation*}
+  \sum_kr_ks_1^k = \frac{\langle n_1\rangle}{\tau_1},
+\end{equation*}
 
-Replacing this on eq. \ref{eq:mrnab4}, and then on eq. \ref{eq:mrnab2} and \ref{eq:mrnab1} we get
+obtaining
+
+\begin{equation*}
+   \sum_kr_k = \frac{\langle n_1\rangle}{\langle b\rangle\tau_1}.
+\end{equation*}
+
+Replacing this on eq. \eqref{eq:mrnab4}, and then on eq. \eqref{eq:mrnab2} and \eqref{eq:mrnab1} we get
 
 \begin{equation}
   \label{eq:d11}
@@ -68,7 +72,7 @@ Replacing this on eq. \ref{eq:mrnab4}, and then on eq. \ref{eq:mrnab2} and \ref{
 
 The matrices then become
 
-\begin{equation}
+\begin{equation*}
   \mathbf{D} = 
   \begin{pmatrix}
     D_{11} & 0 \\
@@ -79,15 +83,15 @@ The matrices then become
     \frac{1}{\tau_1} & 0 \\
     -\frac{1}{\tau_2} & \frac{1}{\tau_2}
   \end{pmatrix}.
-\end{equation}
+\end{equation*}
 
-With $D_{11}$ given by eq. \ref{eq:d11} And solving the linear system $\mathbf{M}\mathbf{\eta} + \mathbf{\eta M}^T+\mathbf{D}=0$ using Mathematica, we obtain for the noise in the proteins
+With $D_{11}$ given by eq. \eqref{eq:d11} And solving the linear system $\mathbf{M}\mathbf{\eta} + \mathbf{\eta M}^T+\mathbf{D}=0$ (see sec. \ref{sec:log_gain}), we obtain the following expression for the noise in the proteins
 
 \begin{equation}
   \boxed{\eta_{22}=\frac{1}{\langle n_2\rangle} + \frac{1}{\langle n_1\rangle} \frac{\tau_1}{\tau_1 + \tau_2} \frac{\langle b\rangle\left(1+\nicefrac{\sigma_b^2}{\langle b\rangle^2}\right)+1}{2}}.
 \end{equation}
 
-Which is COMMENTS.
+\todo[inline]{TODO: Analysis of the equations, independence on details of the distribution}
 
 \section{Arbitrary distribution of creation times}
 

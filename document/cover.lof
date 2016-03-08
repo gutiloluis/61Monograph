@@ -2,39 +2,41 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Central dogma of molecular biology}}{14}{figure.1.1.1}
+\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Central dogma of molecular biology}}{16}{figure.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.1}{\ignorespaces Transcription factors}}{15}{figure.1.2.1}
+\contentsline {figure}{\numberline {1.2.1}{\ignorespaces Transcription factors}}{17}{figure.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.2}{\ignorespaces Example of gene regulation}}{16}{figure.1.2.2}
+\contentsline {figure}{\numberline {1.2.2}{\ignorespaces Example of gene regulation}}{18}{figure.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.3}{\ignorespaces Parts of a gene}}{16}{figure.1.2.3}
+\contentsline {figure}{\numberline {1.2.3}{\ignorespaces Parts of a gene}}{18}{figure.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.4}{\ignorespaces Systems biology conventions}}{17}{figure.1.2.4}
+\contentsline {figure}{\numberline {1.2.4}{\ignorespaces Systems biology conventions}}{19}{figure.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.5}{\ignorespaces Example of a biological circuit}}{18}{figure.1.2.5}
+\contentsline {figure}{\numberline {1.2.5}{\ignorespaces Example of a biological circuit}}{20}{figure.1.2.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill function for an activator}}{20}{figure.1.3.1}
+\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill function for an activator}}{22}{figure.1.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3.2}{\ignorespaces Hill function for a repressor}}{21}{figure.1.3.2}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Model of gene expression for a single gene}}{34}{figure.2.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Transitions between states for a single gene}}{35}{figure.2.1.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.3}{\ignorespaces Noise in proteins: comparing analytical results and simulations}}{41}{figure.2.1.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.2.1}{\ignorespaces Transitions between states in general}}{43}{figure.2.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Autorregulation simulation results}}{49}{figure.2.3.1}
+\contentsline {figure}{\numberline {1.3.2}{\ignorespaces Hill function for a repressor}}{23}{figure.1.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.1.1}{\ignorespaces Circuit used for the Langevin model}}{52}{figure.3.1.1}
+\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Model of gene expression for a single gene}}{36}{figure.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Propagation of noise through a cascade}}{58}{figure.3.3.1}
+\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Transitions between states for a single gene}}{37}{figure.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1.3}{\ignorespaces Noise in proteins: comparing analytical results and simulations}}{43}{figure.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.2.1}{\ignorespaces Transitions between states in general}}{45}{figure.2.2.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Autorregulation simulation results}}{51}{figure.2.3.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.1.1}{\ignorespaces Circuit used for the Langevin model}}{54}{figure.3.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {3.3.1}{\ignorespaces Propagation of noise through a cascade}}{60}{figure.3.3.1}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

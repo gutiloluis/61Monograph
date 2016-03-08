@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  8 MAR 2016 12:46
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  8 MAR 2016 13:35
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -991,7 +991,7 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 \@quotereset=\count330
  (./cover.aux (./introduction.aux) (./concepts.aux) (./master1.aux) (./langevin
 1.aux)
-(./bursting.aux) (./division.aux
+(./fdt.aux) (./bursting.aux) (./division.aux
 
 LaTeX Warning: Label `eq:div-clus-Qx2' multiply defined.
 
@@ -1129,56 +1129,56 @@ LaTeX Font Info:    Try loading font information for U+rsfs on input line 11.
 
 (/usr/share/texlive/texmf-dist/tex/latex/jknapltx/ursfs.fd
 File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
-) [5])
+) [5] [6])
 \tf@toc=\write6
 \openout6 = `cover.toc'.
 
- [6]
-(./cover.lof)
+ [7]
+[8
+
+] (./cover.lof)
 \tf@lof=\write7
 \openout7 = `cover.lof'.
 
- [7
-
-] [8
+ [9] [10
 
 ] (./cover.lot)
 \tf@lot=\write8
 \openout8 = `cover.lot'.
 
- [9]
+ [11]
 \openout2 = `introduction.aux'.
 
- (./introduction.tex [10
+ (./introduction.tex [12
 
 
-] [11]) [12]
+] [13])
+[14]
 \openout2 = `concepts.aux'.
 
-
-(./concepts.tex
+ (./concepts.tex
 Chapter 1.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 3.
-<img/con-dogma.jpg, id=323, 319.1925pt x 390.45876pt>
+<img/con-dogma.jpg, id=353, 319.1925pt x 390.45876pt>
 File: img/con-dogma.jpg Graphic file (type jpg)
  <use img/con-dogma.jpg>
 Package pdftex.def Info: img/con-dogma.jpg used on input line 13.
 (pdftex.def)             Requested size: 142.26378pt x 174.02467pt.
 
-[13
+[15
 
 
 
-] [14 <./img/con-dogma.jpg>]
-<img/con-tf_simple.jpg, id=341, 538.6524pt x 118.041pt>
+] [16 <./img/con-dogma.jpg>]
+<img/con-tf_simple.jpg, id=369, 538.6524pt x 118.041pt>
 File: img/con-tf_simple.jpg Graphic file (type jpg)
 
 <use img/con-tf_simple.jpg>
 Package pdftex.def Info: img/con-tf_simple.jpg used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 74.8255pt.
 
-<img/con-lac_operon.png, id=346, 552.0625pt x 459.7175pt>
+<img/con-lac_operon.png, id=374, 552.0625pt x 459.7175pt>
 File: img/con-lac_operon.png Graphic file (type png)
 
 <use img/con-lac_operon.png>
@@ -1196,15 +1196,15 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
 / d2 / Lac _ operon-[]2010-[]21-[]01 .
  []
 
-[15 <./img/con-tf_simple.jpg>]
-<img/con-parts_of_DNA.png, id=356, 602.25pt x 430.60875pt>
+[17 <./img/con-tf_simple.jpg>]
+<img/con-parts_of_DNA.png, id=384, 602.25pt x 430.60875pt>
 File: img/con-parts_of_DNA.png Graphic file (type png)
 
 <use img/con-parts_of_DNA.png>
 Package pdftex.def Info: img/con-parts_of_DNA.png used on input line 43.
 (pdftex.def)             Requested size: 284.52756pt x 203.44398pt.
- [16 <./img/con-lac_operon.png> <./img/con-parts_of_DNA.png>] <img/con-biocircu
-its_conv.png, id=366, 364.36125pt x 325.215pt>
+ [18 <./img/con-lac_operon.png> <./img/con-parts_of_DNA.png>] <img/con-biocircu
+its_conv.png, id=394, 364.36125pt x 325.215pt>
 File: img/con-biocircuits_conv.png Graphic file (type png)
 
 <use img/con-biocircuits_conv.png>
@@ -1216,29 +1216,29 @@ Underfull \hbox (badness 1184) in paragraph at lines 52--52
  cir-cuits used in Sys-tems Bi-
  []
 
-<img/con-biocircuits_comp.jpg, id=370, 752.8125pt x 400.49625pt>
+<img/con-biocircuits_comp.jpg, id=398, 752.8125pt x 400.49625pt>
 File: img/con-biocircuits_comp.jpg Graphic file (type jpg)
 
 <use img/con-biocircuits_comp.jpg>
 Package pdftex.def Info: img/con-biocircuits_comp.jpg used on input line 57.
 (pdftex.def)             Requested size: 341.43306pt x 181.64552pt.
- [17 <./img/con-biocircuits_conv.png>]
-[18 <./img/con-biocircuits_comp.jpg>] [19]
-<img/con-hill_act.png, id=407, 803.0pt x 483.8075pt>
+ [19 <./img/con-biocircuits_conv.png>]
+[20 <./img/con-biocircuits_comp.jpg>] [21]
+<img/con-hill_act.png, id=435, 803.0pt x 483.8075pt>
 File: img/con-hill_act.png Graphic file (type png)
 
 <use img/con-hill_act.png>
 Package pdftex.def Info: img/con-hill_act.png used on input line 121.
 (pdftex.def)             Requested size: 341.43306pt x 205.71512pt.
 
-<img/con-hill_rep.png, id=408, 803.0pt x 483.8075pt>
+<img/con-hill_rep.png, id=436, 803.0pt x 483.8075pt>
 File: img/con-hill_rep.png Graphic file (type png)
 
 <use img/con-hill_rep.png>
 Package pdftex.def Info: img/con-hill_rep.png used on input line 127.
 (pdftex.def)             Requested size: 341.43306pt x 205.71512pt.
- [20 <./img/con-hill_act.png (PNG copy)>] [21 <./img/con-hill_rep.png (PNG copy
-)>] [22] [23] [24] [25] [26] [27]
+ [22 <./img/con-hill_act.png (PNG copy)>] [23 <./img/con-hill_rep.png (PNG copy
+)>] [24] [25] [26] [27] [28] [29]
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 351.
 
 
@@ -1247,49 +1247,49 @@ File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 351.
- [28] [29] [30])
-[31]
+ [30] [31] [32])
+[33]
 \openout2 = `master1.aux'.
 
- (./master1.tex [32
+ (./master1.tex [34
 
 
 
 ]
 Chapter 2.
-<img/mas-dogma.png, id=517, 689.57625pt x 555.07375pt>
+<img/mas-dogma.png, id=545, 689.57625pt x 555.07375pt>
 File: img/mas-dogma.png Graphic file (type png)
  <use img/mas-dogma.png>
 Package pdftex.def Info: img/mas-dogma.png used on input line 14.
 (pdftex.def)             Requested size: 227.62204pt x 183.22571pt.
 
-[33] <img/mas-trans_single.jpg, id=524, 2601.72pt x 1461.46pt>
+[35] <img/mas-trans_single.jpg, id=552, 2601.72pt x 1461.46pt>
 File: img/mas-trans_single.jpg Graphic file (type jpg)
 
 <use img/mas-trans_single.jpg>
 Package pdftex.def Info: img/mas-trans_single.jpg used on input line 38.
 (pdftex.def)             Requested size: 227.62204pt x 127.8462pt.
- [34 <./img/mas-dogma.png>] [35 <./img/mas-trans_single.jpg>]
+ [36 <./img/mas-dogma.png>] [37 <./img/mas-trans_single.jpg>]
 Overfull \hbox (4.3948pt too wide) in paragraph at lines 58--59
 []\OT1/cmr/m/n/12 We will write the mas-ter equa-tion in terms of the mo-ment g
 en-er-at-ing func-tion $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]
 ; z[]\OT1/cmr/m/n/12 )$,
  []
 
-[36] [37] [38] [39] <img/mas-sim_simple.png, id=597, 803.0pt x 511.9125pt>
+[38] [39] [40] [41] <img/mas-sim_simple.png, id=625, 803.0pt x 511.9125pt>
 File: img/mas-sim_simple.png Graphic file (type png)
 
 <use img/mas-sim_simple.png>
 Package pdftex.def Info: img/mas-sim_simple.png used on input line 220.
 (pdftex.def)             Requested size: 312.9803pt x 199.52791pt.
- [40] [41 <./img/mas-sim_simple.png (PNG copy)>]
-<img/mas-trans_many.jpg, id=615, 2601.72pt x 1461.46pt>
+ [42] [43 <./img/mas-sim_simple.png (PNG copy)>]
+<img/mas-trans_many.jpg, id=644, 2601.72pt x 1461.46pt>
 File: img/mas-trans_many.jpg Graphic file (type jpg)
 
 <use img/mas-trans_many.jpg>
 Package pdftex.def Info: img/mas-trans_many.jpg used on input line 260.
 (pdftex.def)             Requested size: 256.0748pt x 143.83536pt.
- [42] [43 <./img/mas-trans_many.jpg>] [44] [45]
+ [44] [45 <./img/mas-trans_many.jpg>] [46] [47]
 Overfull \hbox (2.92378pt too wide) detected at line 362
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 A[]z[][] \OT1/cmr/m/n/12 + \OML/cmm/m/
 it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
@@ -1297,33 +1297,33 @@ it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
 /m/n/12 ^^@[][]\OML/cmm/m/it/12 :
  []
 
-[46]
+[48]
 Overfull \hbox (7.49626pt too wide) in paragraph at lines 384--384
 []\OT1/cmr/bx/n/17.28 Several species with non-linear in-ter-ac-tions - Neg-
  []
 
-[47] <img/mas-sim_autorreg.png, id=685, 803.0pt x 512.91624pt>
+[49] <img/mas-sim_autorreg.png, id=714, 803.0pt x 512.91624pt>
 File: img/mas-sim_autorreg.png Graphic file (type png)
 
 <use img/mas-sim_autorreg.png>
 Package pdftex.def Info: img/mas-sim_autorreg.png used on input line 440.
 (pdftex.def)             Requested size: 312.9803pt x 199.91913pt.
- [48]) [49 <./img/mas-sim_autorreg.png (PNG copy)>]
+ [50]) [51 <./img/mas-sim_autorreg.png (PNG copy)>]
 \openout2 = `langevin1.aux'.
 
- (./langevin1.tex [50
+ (./langevin1.tex [52
 
 
 
 ]
 Chapter 3.
-<img/lan-circuit.png, id=709, 1370.11874pt x 157.58875pt>
+<img/lan-circuit.png, id=737, 1370.11874pt x 157.58875pt>
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
 Package pdftex.def Info: img/lan-circuit.png used on input line 12.
 (pdftex.def)             Requested size: 426.79134pt x 49.08765pt.
- [51] [52 <./img/lan-circuit.png>]
+ [53] [54 <./img/lan-circuit.png>]
 Overfull \hbox (26.0574pt too wide) in paragraph at lines 69--70
 []\OT1/cmr/m/n/12 Taking the Fourier trans-form of eq. [] and re-call-ing that 
 $[\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ([])](\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = \
@@ -1332,25 +1332,33 @@ OML/cmm/m/it/12 i!\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m
 $
  []
 
-[53] [54] [55] [56] [57]
-<img/lan-noise_sources.png, id=793, 1307.88625pt x 436.63126pt>
+[55] [56] [57] [58] [59]
+<img/lan-noise_sources.png, id=821, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
 Package pdftex.def Info: img/lan-noise_sources.png used on input line 231.
 (pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
-) [58 <./img/lan-noise_sources.png>]
+) [60 <./img/lan-noise_sources.png>]
+\openout2 = `fdt.aux'.
+
+ (./fdt.tex
+Chapter 4.
+) [61
+
+
+
+]
 \openout2 = `bursting.aux'.
 
-
-(./bursting.tex
-Chapter 4.
-[59
+ (./bursting.tex [62
 
 
 
-] [60] [61]
-Overfull \hbox (14.24927pt too wide) detected at line 105
+]
+Chapter 5.
+[63] [64] [65]
+Overfull \hbox (14.24927pt too wide) detected at line 109
 [][]\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n \OT1/cmr/m/n/12 = 1\O
 MS/cmsy/m/n/12 j\OML/cmm/m/it/12 t \OT1/cmr/m/n/12 = \OML/cmm/m/it/12 T\OT1/cmr
 /m/n/12 ) = [][] \OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 t \OT1/cmr
@@ -1364,24 +1372,24 @@ f \OMS/cmsy/m/n/12 ^^C \OT1/cmr/m/n/12 (1 \OMS/cmsy/m/n/12 ^^@ \OML/cmm/m/it/12
  F\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/12 j[]\OML/cmm/m/it/12 :
  []
 
-[62] [63] [64] [65] [66] [67]
+[66] [67] [68] [69] [70] [71]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
-(amsmath)                 on input line 336.
+(amsmath)                 on input line 340.
 
-[68] [69] [70] [71] [72]) [73]
+[72] [73] [74] [75] [76]) [77]
 \openout2 = `division.aux'.
 
- (./division.tex [74
+ (./division.tex [78
 
 
 
 ]
-Chapter 5.
-[75] [76] [77] [78] [79] [80] [81]
+Chapter 6.
+[79] [80] [81] [82] [83] [84] [85]
 
-LaTeX Warning: Reference `eq:div-arr_clust' on page 82 undefined on input line 
+LaTeX Warning: Reference `eq:div-arr_clust' on page 86 undefined on input line 
 236.
 
 
@@ -1389,12 +1397,12 @@ Overfull \hbox (21.8888pt too wide) detected at line 241
 [][][][]
  []
 
-[82]
+[86]
 
-LaTeX Warning: Reference `eq:div-arr_clust' on page 83 undefined on input line 
+LaTeX Warning: Reference `eq:div-arr_clust' on page 87 undefined on input line 
 270.
 
-[83]
+[87]
 Overfull \hbox (6.33514pt too wide) in paragraph at lines 325--326
 []\OT1/cmr/m/n/12 Where we used the con-di-tional prob-a-bil-ity the-o-rem (??)
  to write $\OML/cmm/m/it/12 P\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x; v\OT1/cmr/m/n
@@ -1403,26 +1411,33 @@ Overfull \hbox (6.33514pt too wide) in paragraph at lines 325--326
 m/it/12 v\OT1/cmr/m/n/12 )$.
  []
 
-[84] [85] [86] [87] [88] [89]
+[88] [89] [90] [91] [92] [93]
 Overfull \hbox (50.7592pt too wide) in paragraph at lines 527--527
 [] 
  []
 
-) [90] [91
+) [94] [95
 
-] [92
+] [96
 
-] [93]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
- [94]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+] [97]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
+ [98]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./cover.aux (./introduction.aux) (./concepts.aux)
-(./master1.aux) (./langevin1.aux) (./bursting.aux) (./division.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
-Package rerunfilecheck Info: File `cover.out' has not changed.
-(rerunfilecheck)             Checksum: E581BD4C41AFA045A73C75E511A10607;2936.
+(./master1.aux) (./langevin1.aux) (./fdt.aux) (./bursting.aux) (./division.aux)
+)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 
+
+Package rerunfilecheck Warning: File `cover.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `cover.out':
+(rerunfilecheck)             Before: 5FABAD91CD3B71EB8C33E09409253D09;3216
+(rerunfilecheck)             After:  35800DCE92B604442D1F75E40391629B;3216.
 
 LaTeX Warning: There were undefined references.
 
@@ -1434,15 +1449,18 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26759 strings out of 494966
- 487747 string characters out of 6179559
- 884198 words of memory out of 5000000
- 29064 multiletter control sequences out of 15000+600000
+ 26783 strings out of 494966
+ 488006 string characters out of 6179559
+ 887665 words of memory out of 5000000
+ 29073 multiletter control sequences out of 15000+600000
  15161 words of font info for 60 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,82p,10368b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exi
+pdfTeX warning (dest): name{Hfootnote.9} has been referenced but does not exi
 st, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.8} has been referenced but does not exist
+, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.7} has been referenced but does not exist
 , replaced by a fixed one
@@ -1463,6 +1481,9 @@ pdfTeX warning (dest): name{Hfootnote.2} has been referenced but does not exist
 , replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.29} has been referenced but does not exist
 , replaced by a fixed one
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
@@ -1488,10 +1509,10 @@ onts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
 2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (94 pages, 3954494 bytes).
+Output written on cover.pdf (98 pages, 3959137 bytes).
 PDF statistics:
- 1295 PDF objects out of 1440 (max. 8388607)
- 1138 compressed objects within 12 object streams
- 379 named destinations out of 1000 (max. 500000)
- 416 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1340 PDF objects out of 1440 (max. 8388607)
+ 1179 compressed objects within 12 object streams
+ 387 named destinations out of 1000 (max. 500000)
+ 448 words of extra memory for PDF output out of 10000 (max. 10000000)
 
