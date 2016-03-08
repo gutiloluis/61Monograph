@@ -343,9 +343,9 @@ This result holds for a pure birth process.
 
 \section{Decay of molecules}
 
-We include decay of molecules considering a binomial partitioning during cell division. Let $P_\text{Dr}(l|m)$ be the probability of finding $l$ molecules in volume fraction $r$ given that there are $m$ molecules before division.
+We include the effects of decay of molecules considering a binomial partitioning during cell division. Let $P_\text{Dr}(l|m)$ be the probability of finding $l$ molecules in volume fraction $r$ given that there are $m$ molecules before division.
 
-Assuming that each molecule segregates independently (we will see next that this does not necessarily happens and that introduces additional uncertainties), and that the probability of arriving at a volume is proportional to it we obtain a binomial distribution
+Assuming that each molecule segregates independently\footnote{We will see in chapter \ref{ch:div} that segregation could be much more complicated than that.}, and that the probability of arriving at a volume is proportional to it we obtain a binomial distribution
 
 \begin{equation}
   P_\text{Dr}(l|m) = {m\choose l}r^l(1-r)^{m-l}.
@@ -370,13 +370,15 @@ Multiplying by $z^l$ and summing we get the moment generating function $G_\text{
 
 where we used the binomial expansion formula on the last step.
 
-The number of molecules of at the end of a growth stage (following $P_\text{Br}$) equals the number of molecules at the beginning (following $P_\text{Ar}$) plus the number of molecules created during the cycle (following $P_{x,\tau} \coloneqq P_x|_{t=\tau}$. Assuming both random variables as independent and recalling that the probability mass function of the sum of random variables is the convolution of the individual PMFs we have (CONCEPTS)
+The number of molecules of at the end of a growth stage (following $P_\text{Br}$) equals the number of molecules at the beginning (following $P_\text{Ar}$) plus the number of molecules created during the cycle (following $P_{x,\tau} \coloneqq P_x|_{t=\tau}$). Assuming both random variables as independent and recalling that the probability mass function of the sum of random variables is the convolution of the individual PMFs we have
+
+\todo[inline]{TODO: Again, add a section in concepts about sum of random variables and convolution product}
 
 \begin{equation*}
   P_\text{Br}(m) = P_\text{Ar}\ast P_{x,\tau}(m)
 \end{equation*}
 
-Therefore (CONCEPTS),
+Therefore,
 
 \begin{equation}
   G_\text{Br}(z) = G_\text{Ar}(z)G_{x,\tau}(z).
@@ -426,7 +428,9 @@ but from eq. \ref{eq:binomG}
   \end{split}
 \end{equation}
 
-For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - \langle x\rangle + \langle x\rangle^2$. Using this on eqs. \ref{eq:2Br} and \ref{eq:2Ar} we get (MORE DETAILED?)
+For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - \langle x\rangle + \langle x\rangle^2$. Using this on eqs. \ref{eq:2Br} and \ref{eq:2Ar} we get
+
+\todo[inline]{See if it would be useful to give more detail in the next two steps}
 
 \begin{equation*}
   \begin{split}
@@ -435,7 +439,7 @@ For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - 
   \end{split}
 \end{equation*}
 
-After some algebra we obtain (MORE DETAIL?)
+After some algebra we obtain
 
 \begin{equation}
   \label{eq:sigmaBr}
@@ -460,7 +464,9 @@ Also, from eqs. \ref{eq:2Ar} and \ref{eq:sigmaBr} we get
   \end{split}
 \end{equation}
 
-Using eq. \ref{eq:aveBrAr} and after a little algebra (MORE?) we get
+Using eq. \ref{eq:aveBrAr} and after a little algebra we get
+
+\todo[inline]{Do this algebra?}
 
 \begin{equation}
   \sigma^2_\text{Ar} = \frac{r^2}{1-r^2}\sigma^2_{x,\tau}+\frac{1}{1+r}\langle m\rangle_\text{Ar},
@@ -475,13 +481,13 @@ hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \ref{eq:aveBrAr}
   \end{split}
 \end{equation}
 
-EXPLAIN THE CASE OF NORMAL DILUTION BY DIVISION. AND THE LIMIT
+\todo[inline]{Understand the intermediate steps here and complete}
 
 \begin{equation}
   \boxed{\eta^2 = \frac{\langle b\rangle\left(\eta^2_t + \eta^2_b\right)+1}{2\langle n\rangle}}
 \end{equation}
 
-Corresponding to the factor, CHECK NOTATION, COMPLETE, ANALYSIS.
+\todo[inline]{Complete and analyze here also}
 
 \section{Senescence of mRNA}
 
@@ -491,7 +497,7 @@ Suppose that mRNAs are created at a constant rate $\lambda_1$ and that they sene
   \text{Transcription} \rightarrow X_1 \rightarrow X_2 \rightarrow \dots \rightarrow X_N \rightarrow \text{Degradation}
 \end{equation}
 
-The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N$. Also, assume that the rates of transcription per mRNA between the states are the same, we will denote it as $\beta_1$.
+The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N$. Also, assume that the rates of transcription $\beta_1$ per mRNA between the states are the same. The possible transtions in the state space are thus
 
 \begin{equation}
   \begin{split}
@@ -501,22 +507,22 @@ The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N
   \end{split}
 \end{equation}
 
-Where the first line denotes transcription, the second denotes transitions between states and the third stands for degradation. Notice that the same constant $\beta_1$ is used both for transitions and for degradation as assumed. Now, denote as $x_{N+1}$ the number of proteins in a cell and suppose that independently of the current state of the mRNA molecules, the translate with the same rate $\lambda_2$ per molecule. Also, denoting the degradation rate per protein as $\beta_2$ the possible transitions for the proteins are
+Where the first line denotes transcription, the second denotes transitions between states and the third stands for degradation. Now, denote as $x_{N+1}$ the number of proteins in a cell and suppose that independently of the current state of the mRNA molecules, they are translated with the same rate $\lambda_2$ per mRNA. Also, denoting the degradation rate per protein as $\beta_2$ the possible transitions for the proteins are
 
 \begin{equation}
   \begin{split}
-    x_{N+1} &\xrightarrow{\lambda_2\sum_{i=1}^Nx_i} x_{N+1}+1\\
-    x_{N+1} &\xrightarrow{\beta_2x_{N+1}}x_{N+1}-1
+    x_{N+1} &\xrightarrow{\lambda_2\sum_{i=1}^Nx_i} x_{N+1}+1,\\
+    x_{N+1} &\xrightarrow{\beta_2x_{N+1}}x_{N+1}-1.
   \end{split}
 \end{equation}
 
-The average dynamics thus follows
+Then, the average dynamics are
 
 \begin{equation}
   \begin{split}
-    \dot{\langle x_1\rangle} &= \lambda-1 -\beta_1\langle x_1\rangle\\
-    \dot{\langle x_{i+1}\rangle} &= \beta_1\left(\langle x_i\rangle - \langle x_{i+1}\rangle\right)\quad\text{for}\quad 1\leq i\leq N\\
-    \dot{\langle x_{N+1}\rangle} &= \lambda_2\sum_{i=1}^N\langle x_i\rangle-\beta_2\langle x_{N+1}\rangle
+    \dot{\langle x_1\rangle} &= \lambda-1 -\beta_1\langle x_1\rangle,\\
+    \dot{\langle x_{i+1}\rangle} &= \beta_1\left(\langle x_i\rangle - \langle x_{i+1}\rangle\right)\quad\text{for}\quad 1\leq i\leq N,\\
+    \dot{\langle x_{N+1}\rangle} &= \lambda_2\sum_{i=1}^N\langle x_i\rangle-\beta_2\langle x_{N+1}\rangle.
   \end{split}
 \end{equation}
 
@@ -524,9 +530,9 @@ At steady state we get
 
 \begin{equation}
   \begin{split}
-    \langle x_1\rangle &= \frac{\lambda_1}{\beta_1}\\
-    \langle x_{i+1}\rangle &= \langle x_i\rangle\quad\text{for}\quad 1\leq i\leq N-1\\
-    \langle x_{N+1}\rangle &= \frac{\lambda_2}{\beta_2}\sum_{i=1}^N\langle x_i\rangle
+    \langle x_1\rangle &= \frac{\lambda_1}{\beta_1},\\
+    \langle x_{i+1}\rangle &= \langle x_i\rangle\quad\text{for}\quad 1\leq i\leq N-1,\\
+    \langle x_{N+1}\rangle &= \frac{\lambda_2}{\beta_2}\sum_{i=1}^N\langle x_i\rangle.
   \end{split}
 \end{equation}
 
@@ -538,4 +544,6 @@ Therefore,
 
 where $\tau_1 \coloneqq \nicefrac{1}{\beta_1}$.
 
-Denote the total mRNA as $m$, then $m=\sum_{i=1}^Nx_i$ and taking the average
+Denoting the total mRNA as $m$, then $m=\sum_{i=1}^Nx_i$ and taking the average
+
+\todo[inline]{Complete this}
