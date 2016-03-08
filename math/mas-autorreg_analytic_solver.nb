@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     42193,        912]
-NotebookOptionsPosition[     41363,        882]
-NotebookOutlinePosition[     41696,        897]
-CellTagsIndexPosition[     41653,        894]
+NotebookDataLength[     61517,       1344]
+NotebookOptionsPosition[     59628,       1289]
+NotebookOutlinePosition[     59961,       1304]
+CellTagsIndexPosition[     59918,       1301]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -170,7 +170,8 @@ Cell[BoxData[{
    3.665505975304854*^9, 3.665505999574853*^9}, 3.665506685688108*^9, {
    3.665564022393827*^9, 3.665564023627062*^9}, 3.665564122055414*^9, {
    3.6655641787338142`*^9, 3.665564179015312*^9}, {3.665564269638906*^9, 
-   3.6655642739104843`*^9}, {3.665564354221624*^9, 3.665564355229142*^9}}],
+   3.6655642739104843`*^9}, {3.665564354221624*^9, 3.665564355229142*^9}, {
+   3.666392985901361*^9, 3.666393006352401*^9}}],
 
 Cell[CellGroupData[{
 
@@ -218,14 +219,35 @@ Cell[BoxData[{
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
-encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
-\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.665564893575511*^9}],
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 0.`, 800, \\(\\(1\\/30\\\\ \\(\\(Log[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \
+\\(\\(1\\/120\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \
+\[Equal] \\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) \
++ \\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \
+\\(\\({p, r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666392999878072*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666392999939636*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -233,23 +255,45 @@ Cell[BoxData[
    RowBox[{"Part", "::", "partw"}], "MessageName"], 
   RowBox[{
   ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
-\[NoBreak]\\!\\({}\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
 \\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.665564893645506*^9}],
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666392999997757*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
-encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
-\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.665564893712844*^9}],
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 0.`, 800, \\(\\(1\\/30\\\\ \\(\\(Log[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \
+\\(\\(1\\/120\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \
+\[Equal] \\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) \
++ \\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \
+\\(\\({p, r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000071877*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000137246*^9}],
 
 Cell[BoxData[
  RowBox[{
@@ -257,36 +301,374 @@ Cell[BoxData[
    RowBox[{"Part", "::", "partw"}], "MessageName"], 
   RowBox[{
   ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
-\[NoBreak]\\!\\({}\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\\\"\
-\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
 \\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.665564893785955*^9}],
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.66639300019689*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
-   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
-encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
-ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
-ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
-\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.665564893854063*^9}],
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 0.5`, 800, \\(\\(1\\/30\\\\ \\(\\(Log[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \
+\\(\\(1\\/120\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \
+\[Equal] \\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) \
++ \\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \
+\\(\\({p, r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000273211*^9}],
 
 Cell[BoxData[
  RowBox[{
   StyleBox[
    RowBox[{"General", "::", "stop"}], "MessageName"], 
   RowBox[{
-  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Power :: \
-infy\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000329319*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000434759*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: argt\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.66639300043651*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393000507174*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Part :: \
+partw\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
 calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
 ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
 ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
 \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
- CellChangeTimes->{3.66556489393327*^9}]
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.66639300056627*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "nsmet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"This system cannot be solved with the methods available to \
+NSolve. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
+\\\"NSolve::nsmet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003437396*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 2, 0, \\(\\(1\\/30\\\\ \
+\\(\\(Log[\\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \\(\\(1\\/120\\\\ r\\\\ \
+\\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \[Equal] \
+\\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) + \
+\\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \\(\\({p, \
+r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement \
+rules nor a valid dispatch table, and so cannot be used for replacing. \\!\\(\
+\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.6663930034852457`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003555067*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003637237*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "nsmet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"This system cannot be solved with the methods available to \
+NSolve. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
+\\\"NSolve::nsmet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003799222*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 2, 0, \\(\\(1\\/30\\\\ \
+\\(\\(Log[\\(\\(\[LeftSkeleton] 1 \
+\[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \\(\\(1\\/120\\\\ r\\\\ \
+\\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \[Equal] \
+\\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) + \
+\\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \\(\\({p, \
+r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of replacement \
+rules nor a valid dispatch table, and so cannot be used for replacing. \\!\\(\
+\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\", \
+ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003859168*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003918466*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393003998063*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
+encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004184291*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Power", "::", "infy"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Infinite expression \[NoBreak]\\!\\(1\\/0\\)\[NoBreak] \
+encountered. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/infy\\\", ButtonNote -> \
+\\\"Power::infy\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004237754*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Infinity", "::", "indet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Indeterminate expression \[NoBreak]\\!\\(0\\\\ \
+ComplexInfinity\\)\[NoBreak] encountered. \\!\\(\\*ButtonBox[\\\"\
+\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/indet\\\", ButtonNote -> \
+\\\"Infinity::indet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004298766*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"NSolve", "::", "nsmet"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"This system cannot be solved with the methods available to \
+NSolve. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/NSolve\\\", ButtonNote -> \
+\\\"NSolve::nsmet\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004439375*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(NSolve :: \
+nsmet\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.6663930044813232`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "reps"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\({\\(NSolve[\\(\\(\\(\\(\\(\\(0 \[Equal] \
+\\(\\(\\(\\(kr[\\(\\(p, 2, 100, \\(\\(1\\/30\\\\ \\(\\(Log[\\(\\(\
+\[LeftSkeleton] 1 \[RightSkeleton]\\)\\)]\\)\\)\\)\\)\\)\\)]\\)\\) - \
+\\(\\(1\\/120\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\) && \\(\\(0 \
+\[Equal] \\(\\(\\(\\(-\\(\\(\\(p\\\\ \\(\\(Log[2]\\)\\)\\)\\/3600\\)\\)\\)\\) \
++ \\(\\(1\\/12\\\\ r\\\\ \\(\\(Log[2]\\)\\)\\)\\)\\)\\)\\)\\)\\)\\), \
+\\(\\({p, r}\\)\\), Reals\\)\\)]\\)}\\)\[NoBreak] is neither a list of \
+replacement rules nor a valid dispatch table, and so cannot be used for \
+replacing. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\
+\\\", ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/ReplaceAll/reps\\\
+\", ButtonNote -> \\\"ReplaceAll::reps\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.6663930045345907`*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: reps\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004590002*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"ReplaceAll", "::", "argt"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"\[NoBreak]\\!\\(ReplaceAll\\)\[NoBreak] called with \
+\[NoBreak]\\!\\(0\\)\[NoBreak] arguments; \[NoBreak]\\!\\(1\\)\[NoBreak] or \
+\[NoBreak]\\!\\(2\\)\[NoBreak] arguments are expected. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/argt\\\", \
+ButtonNote -> \\\"ReplaceAll::argt\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.6663930046455*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \
+\[NoBreak]\\!\\(\\*StyleBox[\\(ReplaceAll :: argt\\), \\\"MessageName\\\"]\\)\
+\[NoBreak] will be suppressed during this calculation. \
+\\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", \
+ButtonFrame->None, ButtonData:>\\\"paclet:ref/message/General/stop\\\", \
+ButtonNote -> \\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.66639300470017*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"Part", "::", "partw"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Part \[NoBreak]\\!\\(1\\)\[NoBreak] of \
+\[NoBreak]\\!\\(ReplaceAll[]\\)\[NoBreak] does not exist. \\!\\(\\*ButtonBox[\
+\\\"\[RightSkeleton]\\\", ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/partw\\\", ButtonNote -> \
+\\\"Part::partw\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.666393004778386*^9}],
+
+Cell[BoxData[
+ RowBox[{
+  StyleBox[
+   RowBox[{"General", "::", "stop"}], "MessageName"], 
+  RowBox[{
+  ":", " "}], "\<\"Further output of \[NoBreak]\\!\\(\\*StyleBox[\\(Part :: \
+partw\\), \\\"MessageName\\\"]\\)\[NoBreak] will be suppressed during this \
+calculation. \\!\\(\\*ButtonBox[\\\"\[RightSkeleton]\\\", \
+ButtonStyle->\\\"Link\\\", ButtonFrame->None, \
+ButtonData:>\\\"paclet:ref/message/General/stop\\\", ButtonNote -> \
+\\\"General::stop\\\"]\\)\"\>"}]], "Message", "MSG",
+ CellChangeTimes->{3.665564893575511*^9, 3.666392828439308*^9, 
+  3.6663930048313932`*^9}]
 }, Open  ]],
 
 Cell[BoxData[
@@ -324,8 +706,32 @@ Cell[BoxData[{
      RowBox[{"{", 
       RowBox[{"NN", ",", "KD"}], "}"}], ",", 
      RowBox[{"PlotRange", "\[Rule]", 
-      RowBox[{"{", 
-       RowBox[{"0", ",", "12"}], "}"}]}]}], "]"}]}], 
+      RowBox[{
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{"0", ",", "12"}], "}"}], "PlotLegends"}], "\[Rule]", 
+       RowBox[{"Placed", "[", 
+        RowBox[{
+         RowBox[{"LineLegend", "[", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{
+            "\"\<b\>\"", ",", "\"\<\!\(\*SubscriptBox[\(k\), \(r\)]\)\>\"", 
+             ",", "\"\<\!\(\*SubscriptBox[\(\[Tau]\), \(p\)]\)\>\""}], "}"}], 
+           ",", 
+           RowBox[{"LegendMarkerSize", "\[Rule]", 
+            RowBox[{"{", "30", "}"}]}], ",", 
+           RowBox[{"LabelStyle", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{
+              RowBox[{"FontFamily", "\[Rule]", "\"\<Palatino Linotype\>\""}], 
+              ",", "35"}], "}"}]}], ",", 
+           RowBox[{"LegendLayout", "\[Rule]", 
+            RowBox[{"{", 
+             RowBox[{"\"\<Row\>\"", ",", "3"}], "}"}]}], ",", 
+           RowBox[{"Spacings", "\[Rule]", "0.2"}]}], "]"}], ",", 
+         RowBox[{"{", 
+          RowBox[{"0.88", ",", "0.2"}], "}"}]}], "]"}]}]}]}], "]"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"Show", "[", 
   RowBox[{
@@ -358,7 +764,8 @@ Cell[BoxData[{
      RowBox[{"18", ",", 
       RowBox[{"FontFamily", "\[Rule]", "\"\<Palatino Linotype\>\""}], ",", 
       "Black"}], "]"}]}]}], "]"}]}], "Input",
- CellChangeTimes->{{3.6655687992571*^9, 3.665568846811529*^9}}],
+ CellChangeTimes->{{3.6655687992571*^9, 3.665568846811529*^9}, 
+   3.6663928120450993`*^9}],
 
 Cell[BoxData[
  GraphicsBox[{{{}, {{}, {}, 
@@ -897,21 +1304,46 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[558, 20, 942, 29, 231, "Input"],
-Cell[1503, 51, 3985, 121, 412, "Input"],
+Cell[1503, 51, 4035, 122, 445, "Input"],
 Cell[CellGroupData[{
-Cell[5513, 176, 1374, 39, 55, "Input"],
-Cell[6890, 217, 445, 10, 50, "Message"],
-Cell[7338, 229, 465, 10, 23, "Message"],
-Cell[7806, 241, 445, 10, 50, "Message"],
-Cell[8254, 253, 465, 10, 23, "Message"],
-Cell[8722, 265, 445, 10, 50, "Message"],
-Cell[9170, 277, 527, 11, 23, "Message"]
+Cell[5563, 177, 1374, 39, 55, "Input"],
+Cell[6940, 218, 1014, 17, 72, "Message"],
+Cell[7957, 237, 619, 12, 23, "Message"],
+Cell[8579, 251, 522, 11, 23, "Message"],
+Cell[9104, 264, 1014, 17, 72, "Message"],
+Cell[10121, 283, 619, 12, 23, "Message"],
+Cell[10743, 297, 521, 11, 23, "Message"],
+Cell[11267, 310, 1015, 17, 72, "Message"],
+Cell[12285, 329, 580, 12, 23, "Message"],
+Cell[12868, 343, 619, 12, 23, "Message"],
+Cell[13490, 357, 579, 12, 23, "Message"],
+Cell[14072, 371, 522, 11, 23, "Message"],
+Cell[14597, 384, 574, 12, 23, "Message"],
+Cell[15174, 398, 481, 11, 23, "Message"],
+Cell[15658, 411, 1014, 18, 72, "Message"],
+Cell[16675, 431, 619, 12, 23, "Message"],
+Cell[17297, 445, 522, 11, 23, "Message"],
+Cell[17822, 458, 481, 11, 23, "Message"],
+Cell[18306, 471, 1012, 18, 72, "Message"],
+Cell[19321, 491, 619, 12, 23, "Message"],
+Cell[19943, 505, 522, 11, 23, "Message"],
+Cell[20468, 518, 492, 11, 50, "Message"],
+Cell[20963, 531, 492, 11, 50, "Message"],
+Cell[21458, 544, 522, 11, 23, "Message"],
+Cell[21983, 557, 481, 11, 23, "Message"],
+Cell[22467, 570, 579, 12, 23, "Message"],
+Cell[23049, 584, 1014, 17, 72, "Message"],
+Cell[24066, 603, 580, 12, 23, "Message"],
+Cell[24649, 617, 617, 12, 23, "Message"],
+Cell[25269, 631, 579, 12, 23, "Message"],
+Cell[25851, 645, 522, 11, 23, "Message"],
+Cell[26376, 658, 577, 12, 23, "Message"]
 }, Open  ]],
-Cell[9712, 291, 498, 11, 32, "Input"],
-Cell[10213, 304, 328, 10, 55, "Input"],
+Cell[26968, 673, 498, 11, 32, "Input"],
+Cell[27469, 686, 328, 10, 55, "Input"],
 Cell[CellGroupData[{
-Cell[10566, 318, 1517, 42, 121, "Input"],
-Cell[12086, 362, 29261, 517, 526, 5479, 125, "CachedBoxData", "BoxData", \
+Cell[27822, 700, 2526, 67, 210, "Input"],
+Cell[30351, 769, 29261, 517, 526, 5479, 125, "CachedBoxData", "BoxData", \
 "Output"]
 }, Open  ]]
 }
