@@ -244,6 +244,7 @@ Intuitively, we may expect that a random variable is more 'random' or noisy, whe
 The Fano factor has been used in the first studies of noise in biology since it had the particular property that for a random variable with a Poisson distribution $\nu_X=1$ and hence it measures deviations from a Poissonian behavior. In more recent studies the coefficient of variation is being used because it is dimensionless and for that reason it does not depend on the units used for the random variable. For this reason, the generic term 'noise' is now used to refer to $\eta$.
 
 \section{Moment generating functions}
+
 Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n_1,\dotsc,n_N)$ be the joint probability mass function. The moment generating function $F(z_1,\dotsc,z_N)$ is defined as \footnote{Not to be confused with the cumulative distribution function}
 
 \begin{equation}
@@ -282,7 +283,7 @@ Differentiating eq. \ref{def:mom_gen} twice with respect to $z_i$ we obtain simi
 These properties will be very useful in the next sections to find the noise of a genetic system.
 
 \section{Characteristic function}
-
+\label{sec:con-charac_func}
 Another transformation of the PMF that has properties similar to the mentioned for the moment generating function is the characteristic function. It is defined for a $N$-tuple of random variables $(X_1,\dotsc,X_N)$ as\footnote{We will consider here the case with the real exponent}.
 
 \begin{equation*}
@@ -297,15 +298,17 @@ We will denote the evaluation at $s_1=\dotsb=s_N=0$ by $|_0$ It is easy to see t
 
 Differentiating once with respect to $s_i$ for $i=1,\dotsc,N$.
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:con-char_1}
   \left.\frac{\partial\phi(s_1,\dotsc,s_N)}{\partial s_i}\right|_0 = \left.\left\langle x_i e^{\sum_{i=1}^Ns_ix_i}\right\rangle\right|_0 = \langle x_i\rangle.
-\end{equation*}
+\end{equation}
 
 Each differentiation with respect to $s_i$ produces a factor $x_i$ in the average, hence
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:con-char_2}
   \left.\frac{\partial^2\phi(s_1,\dotsc,s_N)}{\partial s_i \partial s_j}\right|_0 = \langle x_ix_j\rangle.
-\end{equation*}
+\end{equation}
 
 This equation is valid for any $i,j=1,\dotsc,N$, even for the case $i=j$. In that case the right hand side becomes $\langle x_i^2\rangle$. By calculating higher order derivatives we can find higher order moments in the same way.
   
