@@ -1,23 +1,28 @@
 \chapter{Effects of cell division}
+\label{ch:div}
 
-When the cell divides, all the components (organelles, proteins, genetic material, etc.) must be distributed among the daughter cells. Nevertheless, this partition is not even and this uneveness could be a great source of noise even for components present at high numbers. In this chapter we will explore some general mechanisms of partition of molecules during cell division and how they can affect noise statistics.
+When the cell divides, all the components (organelles, proteins, genetic material, etc.) must be distributed among the daughter cells. Nevertheless, the assymetries on partition are an important source of noise even for components present at high numbers. In this chapter we will explore some general mechanisms of partition of molecules during cell division and how they can affect noise statistics.
+
+This chapter follows the work done by D. Huh and J. Paulsson in \cite{huh11b}.
 
 \section{Characterizing the noise arising from cell division}
 
 Let $x = l+r$ be the number of copies of some component (e.g. a certain protein) for a dividing cell, with $l$ and $r$ being the number of copies each daughter cell recieves. Also, let $v$ be the number of molecules of some component that affects the partition such as vacuoles or splindles. On average, we expect the molecules to distribute symmetrically. Therefore
+
+\todo[inline]{Explain vacuoles and spindles here?}
 
 \begin{equation}
   \label{eq:div-even}
   \langle l\rangle = \langle r\rangle = \frac{\langle x\rangle}{2}.
 \end{equation}
 
-We will find the statistics for $l$, from them the statistics for $r$ are trivially derived (EXPLAIN MORE). Using the law of total variance (CONCEPTS), the variance of $l$ is given by
+We will find the noise for $l$\footnote{It does not matter if we choose $r$ or $l$ since there is not preference for one of the daughter cells}. Using the law of total variance (eq. \eqref{eq:con-total_var}), the variance of $l$ is given by
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(l) = \sigma^2\left(\langle l|x,v\rangle\right) + \left\langle\sigma^2(l|x,v)\right\rangle.
-\end{equation}
+\end{equation*}
 
-Where the first and second terms can be viewed as the contributions to randomness from prior noise on $x$ and $v$ and the noise due solely to cell division (EXPLAIN MORE?), respectively. From eq. \eqref{eq:div-even}, $\langle L|x,v\rangle = \nicefrac{x}{2}$, using this and dividing by $\langle l\rangle^2 = \nicefrac{\langle x\rangle^2}{4}$ we get
+From eq. \eqref{eq:div-even}, $\langle l|x,v\rangle = \nicefrac{x}{2}$, using this and dividing by $\langle l\rangle^2 = \nicefrac{\langle x\rangle^2}{4}$ we get
 
 \begin{equation}
   \label{eq:div-noises}
@@ -27,30 +32,32 @@ Where the first and second terms can be viewed as the contributions to randomnes
   \end{split}
 \end{equation}
 
-(CONCEPTS: VAR(ax) = aavar(x)). where
+where we used eq. \eqref{eq:con-var_const}. The term $Q_x$, defined as
 
 \begin{equation}
   \label{eq:div-Q}
   Q_x^2 \coloneqq \frac{\langle\sigma^2(L|x,v)\rangle}{\langle L\rangle^2},
 \end{equation}
 
-is the noise arising from cell division. Eq. \eqref{eq:div-noises} states more clearly what was said previously: the noise after cell division (measured with the coefficient of variation), is the sum of the noise before division and the noise arising at the division process.
+is the noise arising from cell division. Eq. \eqref{eq:div-noises} states that the noise after cell division is the sum of the noise before division and the noise arising at the division process (all squared).
 
 The term $Q_x$ can be interpreted in another way. From the definition of variance and eq. \eqref{eq:div-even}
 
-\begin{equation}
+\begin{equation*}
   Q_x^2 = \frac{1}{\langle l\rangle^2}\left\langle\left(l-\langle l\rangle\right)^2|x,v\right\rangle = \frac{4}{\langle x\rangle^2}\left\langle\left.\left(l-\frac{x}{2}\right)^2\right|x,v\right\rangle
-\end{equation}
+\end{equation*}
 
 but $l - \nicefrac{x}{2} = \nicefrac{1}{2}(2l-(l-r)) = \nicefrac{l-r}{2}$, then
 
-\begin{equation}
+\begin{equation*}
    Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\left.\left(\frac{l-r}{2}\right)^2\right|x,v\right\rangle  = \frac{1}{\langle x\rangle^2}\left\langle\left(l-r\right)^2\right\rangle.
-\end{equation}
+\end{equation*}
 
-OJO EN LA EC. ANTERIOR ULT. PASO. Therefore the term $Q_x^2$ can be interpreted as the average square deviation between the quantities of the molecules of each daughter cell. For a perfect division $l=r$, making $Q_x=0$. And the most noisy case is when one recieves $x$ moleucles and the other $0$ molecules, which makes intuitive sense.
+\todo[inline]{Check notation, they seem to skip to suddenly switch from conditional expectations to unconditional ones. Is it abuse of notation or is correct?}
 
-EXPLAIN GENERAL FRAMEWORK?
+Therefore the term $Q_x^2$ can be interpreted as the average square deviation between the quantities of the molecules of each daughter cell. For a perfect division $l=r$, making $Q_x=0$. On the contrary, the most noisy case is when one daughter recieves $x$ moleucles and the other $0$ molecule.
+
+\todo[inline]{TODO: Analysis of the general framework and mock processes}
 
 \section{Independent segregation}
 
@@ -69,11 +76,11 @@ Where the jacobian and diffusion ($1\times1$) matrices are given by
 \begin{equation}
   \begin{split}
     \mathbf{A} &= \partial_l\left((x-l)-l\right) = -2,\\
-    \mathbf{B} &= (x-l)+l = x
+    \mathbf{B} &= (x-l)+l = x.
   \end{split}
 \end{equation}
 
-which solving for the variance (covariance matrix) in steady state gives
+Solving for the covariance matrix, which in this case is the variance, we obtain in steady state
 
 \begin{equation}
   \label{eq:div-var_ind}
@@ -86,7 +93,7 @@ and averaging and using eq. \eqref{eq:div-Q} we get
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{\langle x\rangle}{4} = \frac{1}{\langle x\rangle}.
 \end{equation}
 
-In the following sections, we will find the noise for some common division mechanisms and compare it to the case of independent segregation.
+In the following sections, we will find the noise for some common division mechanisms and compare it to the case of independent segregation. The mechanisms that increase the noise with respect to it are included in what we call ``disordered segregation'', and we call those that decrease it ``ordered segregation''.
 
 \section{Disordered segregation}
 
@@ -109,36 +116,36 @@ From the law of total variance we have
   \sigma^2(l|x,v) = \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)}+\sigma^2\left(\langle l|x,v,n\rangle\right)_{(n|v)}
 \end{equation}
 
-Where the subscript $(n|v)$ denotes that averages and variances are evaluated over the conditional PDF of $n$ given $x$. Notice that taking averages over $(n|v)$ and over $(n|x,v)$ is the same in this case by the assumption that $n$ is independent of $x$.
+Where the subscript $(n|v)$ denotes that averages and variances are evaluated over the conditional PDF of $n$ given $x$. Notice that taking averages over $(n|v)$ and over $(n|x,v)$ is the same in this case by the assumption that $n$ is independent of $x$. Also, by symmetry we can assume that $\langle n|v\rangle = \frac{v}{2}$.
 
-And by symmetry we have $\langle n|v\rangle = \frac{v}{2}$.
-
-Therefore, by finding the first and second moments for $P(l|x,v,n)$, we can use eq. \eqref{eq:div-varlgxv} to find the variance for $l$ given $x$ and $v$. We will use the method of the moment generating function on $P(l|x,v,n)$. The master equation for this PDF is given by.
+Therefore, by finding the first and second moments for $(l|x,v,n)$, we can use eq. \eqref{eq:div-varlgxv} to find the variance for $l$ given $x$ and $v$. We will use the method of the moment generating function on $P(l|x,v,n)$. The master equation for this PDF is given by
 
 \begin{equation}
   \partial_tP(l|x,v,n) = n(x-(l-1))P(l-1|x,v,n) - (v-n)lP(l|x,v,n).
 \end{equation}
 
-Writing the moment generating function (MGF) as
+Writing the moment generating function as defined on eq. \eqref{def:mom_gen} we get
 
 \begin{equation}
   \label{eq:div-Gdef}
-  G(z) \coloneqq \sum_{l=0}^xz^lP(l|x,v,n)
+  G(z) \coloneqq \sum_{l=0}^xz^lP(l|x,v,n).
 \end{equation}
 
-the master eq. in terms of $G$ is given by (COMPELTE PROCEDURE)
+The master eq. in terms of $G$ is thus given by \footnote{A detailed derivation of this step is done on section \ref{sec:mas-single_gene} for a more complex master equation.}
 
 \begin{equation*}
   \partial_tG(z) = nxzG(z) - (v-n+nz)z\partial_zG(z)
 \end{equation*}
 
-COMPLETE SOLUTION!!. At steady state we have
+At steady state we have
 
 \begin{equation}
   \partial_zG(z) = \frac{nxz}{(v-z+nz)z}G(z)
 \end{equation}
 
-Solving with the boundary condition $G(1) = 1$, which follows from the normalization of the PDF. We find
+Solving with the boundary condition $G(1) = 1$, which follows from the normalization of the PDF, we find
+
+\todo[inline]{Solve explicitely, say that this can be tested to be the solution, or forget it?}
 
 \begin{equation}
   G(z) = \left(1+\frac{n}{v}\left(s-1\right)\right)^x = \sum_{l=0}^x {x\choose l}\left(\frac{n}{v}\right)^l\left(1-\frac{n}{v}\right)^{x-l}z^l.
@@ -146,35 +153,35 @@ Solving with the boundary condition $G(1) = 1$, which follows from the normaliza
 
 Comparing with eq. \eqref{eq:div-Gdef} we get
 
-\begin{equation}
+\begin{equation*}
   P(l|x,v,n) = {x\choose l}\left(\frac{n}{v}\right)^l\left(1-\frac{n}{v}\right)^{x-l},
-\end{equation}
+\end{equation*}
 
-which is a binomial distribution as expected (COMMENT). From the CONCEPTS section, the average and variance are given by
+which is a binomial distribution. Its average and variance are given by \footnote{ In this case it was easy to find the distribution in terms of $G$, but we could have found the moments by differentiating and using the properties of $G$ as well}
 
-\begin{equation}
-  \langle l|x,v,n\rangle = \frac{n}{v}x, \quad\quad \sigma^2(L|x,v,n) = \frac{n}{v}\left(1-\frac{n}{v}\right)x
-\end{equation}
+\todo[inline]{Prove it or include a section on concepts?}
 
-We can also have been used the properties of $G$ to find the first two moments. (DO IT?).
+\begin{equation*}
+  \langle l|x,v,n\rangle = \frac{n}{v}x, \quad\quad \sigma^2(L|x,v,n) = \frac{n}{v}\left(1-\frac{n}{v}\right)x.
+\end{equation*}
 
-Therefore, taking the average of the conditional variance we get
+Taking the average of the conditional variance we get
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)} &= \left\langle\left.\frac{n}{v}\left(1-\frac{n}{v}\right)x\right|x,v,n\right\rangle_{(n|v)} = \left\langle\left.\left(\frac{n}{v}-\frac{n^2}{v^2}\right)x\right|x,v,n\right\rangle_{(n|v)}\\
     &= \left(\frac{\langle n|v\rangle}{v}-\frac{\sigma^2(n|v) + \langle n|v\rangle^2}{v^2}\right)x
   \end{split}
-\end{equation}
+\end{equation*}
 
-Where we replaced $\langle n^2|v\rangle = \sigma^2(n|v) + \langle n\rangle^2$. Now since $\langle n|v\rangle = \nicefrac{v}{2}$ we get
+Where we replaced $\langle n^2|v\rangle = \sigma^2(n|v) + \langle n|v\rangle^2$. Now since $\langle n|v\rangle = \nicefrac{v}{2}$
 
 \begin{equation}
   \label{eq:div-varofavel}
   \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)} = \left(\frac{1}{2} - \frac{\sigma^2(n|v)}{v^2} + \frac{1}{4}\right)x = \frac{x}{4}\left(1-Q_v^2\right),
 \end{equation}
 
-where $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$. On the other hand we have
+where $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$. On the other hand, the variance of the conditional mean is given by
 
 \begin{equation}
   \label{eq:div-aveofvarl}
@@ -194,11 +201,11 @@ averaging and multiplying by $\nicefrac{4}{\langle x\rangle^2}$ we get
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x,v)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{1}{4}\left\langle x(1-Q_v^2) + x^2Q_v^2 \right\rangle = \frac{1}{\langle x\rangle} - \frac{\langle Q_v^2x\rangle}{\langle x\rangle^2} + \frac{\langle Q_v^2x^2\rangle}{\langle x\rangle^2}.
 \end{equation}
 
-Now, we will use this equation to calculate the partitioning error $Q_x^2$ at different scenarios.
+We will use this equation to calculate the partitioning error $Q_x^2$ at different scenarios.
 
 \subsection{Random size and random accessible volume}
 
-Now we will consider an available molecule for the molecules that varies randomly. Let $n$ be the fraction of available volume in one of the daughter cells and assume that each molecule is equally likely to occupy any volume unit. Hence, the probability per unit time of each molecule leaving its cell half is proportional to the available volume in the other cell half. Therefore the process is
+Consider an available volume for the molecules that varies randomly. Let $n$ be the fraction of available volume in one of the daughter cells and assume that each molecule is equally likely to occupy any volume unit. Hence, the probability per unit time of each molecule leaving its cell half is proportional to the available volume in the other cell half. Therefore the process is
 
 \begin{equation}
   \begin{split}
@@ -213,15 +220,17 @@ Which is the general case with $v=1$. Assuming the volume variance is independen
   Q_x^2 = \frac{1}{\langle x\rangle} - \frac{Q_v^2}{\langle x\rangle^2}\left(\langle x\rangle  - \langle x^2\rangle\right) = \frac{1}{\langle x\rangle}\left(1-\langle Q_v^2\rangle\right) + \langle Q_v^2\rangle\frac{\langle x^2\rangle}{\langle x\rangle^2},
 \end{equation}
 
-but $\nicefrac{\langle x^2\rangle}{\langle x\rangle^2} = \nicefrac{\sigma^2(x) + \langle x\rangle^2}{\langle x\rangle^2} = \eta_x^2 + 1$. Also, recalling the definition  $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$. In this case $v=1$ and it is fixed. Denoting it as $Q^2_\text{vol}$ we have = $Q^2_\text{vol} = Q_v^2 = \langle Q_v^2\rangle = \nicefrac{\sigma^2(n)}{\langle n\rangle^2}$. Therefore
+but $\nicefrac{\langle x^2\rangle}{\langle x\rangle^2} = \nicefrac{(\sigma^2(x) + \langle x\rangle^2)}{\langle x\rangle^2} = \eta_x^2 + 1$. Also, recalling the definition  $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$. In this case $v=1$ and it is fixed. Denoting it as $Q^2_\text{vol}$ we have = $Q^2_\text{vol} = Q_v^2 = \langle Q_v^2\rangle = \nicefrac{\sigma^2(n)}{\langle n\rangle^2}$, therefore
 
 \begin{equation}
-  \boxed{Q_x^2 = \frac{1-Q_\text{vol}^2}{\langle x\rangle} + Q_\text{vol}^2(\eta^2_x+1)}
+  \boxed{Q_x^2 = \frac{1-Q_\text{vol}^2}{\langle x\rangle} + Q_\text{vol}^2(\eta^2_x+1)}.
 \end{equation}
+
+\todo[inline]{TODO: Analysis}
 
 \subsection{Clustered segregation}
 
-The clustering of molecules into vesicles could increase randomness in cell division. Let $x$ and $v$ be the total number of molecules and vesicles in a cell before division, respectively. Let $x_i$ be the number of molecules in vesicle $i$, then $\sum_{i=0}^vx_i=x$. Two processes add randomness: the migration of the molecules between vesicles and the partition of the vesicles into each daughter cells.
+The clustering of molecules into vesicles could increase randomness in cell division. Let $x$ and $v$ be the total number of molecules and vesicles in a cell before division, respectively, and let $x_i$ be the number of molecules in vesicle $i$, then $\sum_{i=0}^vx_i=x$. There are two processes that produce randomness: the migration of the molecules between vesicles and the partition of the vesicles into each daughter cells.
 
 In the first part, a vesicle loses a molecule with a probability proportional to its number of molecules.
 
@@ -233,7 +242,7 @@ In the first part, a vesicle loses a molecule with a probability proportional to
 In the second part, let $n$ be the number of vesicles in one of the daughters, then similarly to the previous sections.
 
 \begin{equation}
-   \eqref{eq:div-arr_clust}
+  \label{eq:div-arr_clust}
   \begin{split}
     n &\xrightarrow{v-n} n+1\\
     n &\xrightarrow{n} n-1
@@ -242,7 +251,7 @@ In the second part, let $n$ be the number of vesicles in one of the daughters, t
 
 If we assume both processes are independent, they could be done in any order to calculate the analytical expressions. i.e. it is the same to first distribute the molecules in each vesicle and then distribute the vesicles into each cell than to first distribute the empty vesicles between cells and then distribute the molecules. We will follow the second approach.
 
-Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles in one of the daughter cells and $x_{n+1},\dotsc,x_v$ be the number of molecules in the vesicles of the other daughter cell. As usual, let $l$ be the number of molecules in one of the cells, then $l = \sum_{i=1}^nx_i$, and $x-l = \sum_{i=n+1}^vx_i$. Therefore, among all the possible transitions of eq. \eqref{eq:div-vesicle_switch}, the transitions coming from $x_i$ and entering into $x_j$, for $i,j=1,\dotsc,n$, or $i,j=n+1,\dotsc,v$, both with $i\neq j$ does not change the number of molecules. The net effect on the number of molecules in one of the daughter cells is
+Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles in one of the daughter cells and $x_{n+1},\dotsc,x_v$ be the number of molecules in the vesicles of the other daughter cell. As usual, let $l$ be the number of molecules in one of the cells, then $l = \sum_{i=1}^nx_i$, and $r = x-l = \sum_{i=n+1}^vx_i$. Therefore, among all the possible transitions of eq. \eqref{eq:div-vesicle_switch}, the transitions coming from $x_i$ and entering into $x_j$, for $i,j=1,\dotsc,n$, or $i,j=n+1,\dotsc,v$, both with $i\neq j$ does not change the number of molecules. The net effect on the number of molecules in one of the daughter cells is
 
 \begin{equation}
   \begin{split}
@@ -251,7 +260,9 @@ Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles in one o
   \end{split}
 \end{equation}
 
-EXPLAIN. Which can be simplified to
+\todo[inline]{TODO: Analisis}
+
+This can be simplified to
 
 \begin{equation}
   \begin{split}
@@ -260,57 +271,61 @@ EXPLAIN. Which can be simplified to
   \end{split}
 \end{equation}
 
-which is the same as eq. \eqref{eq:div-arr_disg}, thus, from eq. \eqref{eq:div-Qdis}
+which is the same as eq. \eqref{eq:div-arr_disg}. Hence, from eq. \eqref{eq:div-Qdis}
 
 \begin{equation}
   \label{eq:div-clus-Qx1}
-  Q_x^2 = \frac{1}{\langle x\rangle} - \frac{\langle Q_v^2x\rangle}{\langle x\rangle^2} + \frac{\langle Q_v^2x^2\rangle}{\langle x\rangle^2}
+  Q_x^2 = \frac{1}{\langle x\rangle} - \frac{\langle Q_v^2x\rangle}{\langle x\rangle^2} + \frac{\langle Q_v^2x^2\rangle}{\langle x\rangle^2}.
 \end{equation}
 
-Also, a correspondence can be made between eq. \eqref{eq:div-arr_ind} and eq. \eqref{eq:div-arr_clust} by switching $l\leftrightarrow n$ and $x\leftrightarrow v$. Then, using this correspondence on eq. \eqref{eq:div-var_ind} we get 
+Also, a correspondence can be established between eq. \eqref{eq:div-arr_ind} and eq. \eqref{eq:div-arr_clust} by switching $l\leftrightarrow n$ and $x\leftrightarrow v$. Using this correspondence on eq. \eqref{eq:div-var_ind} we get 
 
 \begin{equation}
-  \sigma^2(n|v) = \frac{v}{4}
+  \sigma^2(n|v) = \frac{v}{4}.
 \end{equation}
 
-And recalling that $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$ we have in this case
+Rcalling that $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$ we have in this case
 
 \begin{equation}
   Q_v^2 = \frac{4}{v^2}\frac{v}{4} = \frac{1}{v},
 \end{equation}
 
-and replacing on eq. \eqref{eq:div-clus-Qx1} we get
+and replacing on eq. \eqref{eq:div-clus-Qx1} results in
 
 \begin{equation}
   \label{eq:div-clus-Qx2}
   \boxed{Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(\left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle \right)}
 \end{equation}
 
-EXPLAIN TERMS. If $x$ and $v$ are independent we can write it as
+\todo[inline]{TODO: Explain the terms of the eq.}
 
-\begin{equation}
+If $x$ and $v$ are independent we can write it as
+
+\begin{equation*}
   \begin{split}
     Q_x^2 &= \frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle}\left\langle\frac{1}{v}\right\rangle + \frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle = \frac{1}{\langle x\rangle}\left(1-\left\langle\frac{1}{v}\right\rangle\right)+\frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle\\
   &\approx \frac{1}{\langle x\rangle} + \frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle = \frac{1}{\langle x\rangle} + \left(1+\eta_x^2\right)\left\langle\frac{1}{v}\right\rangle,
   \end{split}
-\end{equation}
+\end{equation*}
 
-under the assumption that $\langle 1/v\rangle \ll 1$, which also allow us to making a Taylor expansion of $\langle 1/v\rangle$ around $\langle v\rangle$ obtaining (????)
+under the assumption that $\langle 1/v\rangle \ll 1$. This also allow us to do a Taylor expansion of $\langle 1/v\rangle$ around $\langle v\rangle$ obtaining
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \left\langle\frac{1}{v}\right\rangle &\approx \left\langle \frac{1}{\langle v\rangle} - \frac{v-\langle v\rangle}{\langle v\rangle^2} + \frac{(v-\langle v\rangle)^2}{\langle v\rangle^3}\right\rangle\\
     &=\frac{1}{\langle v\rangle} + \frac{\left\langle(v-\langle v\rangle)^2\right\rangle}{\langle v\rangle^3} = \frac{1}{\langle v\rangle}\left(1+\eta_v^2\right).
   \end{split}
-\end{equation}
+\end{equation*}
 
-After replacing we obtain
+After replacing $Q_x$ becomes
 
-\begin{equation}
+\begin{equation*}
   \boxed{Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{(1+\eta_x^2)(1+\eta_v^2)}{\langle v\rangle}}
-\end{equation}
+\end{equation*}
 
-When $x\ll 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, (?????) meaning that the segregation of clusters is the more significant factor on partitioning erros.
+When $x\ll 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning erros.
+
+\todo[inline]{Understand and explain the assumptions}
 
 Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \label{eq:div-clus-Qx2} becomes by definition of expected value
 
@@ -322,7 +337,7 @@ Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing t
   \end{split}
 \end{equation}
 
-Where we used the conditional probability theorem (??) to write $P(x,v) = P(x|v)P(v)$. Defining $q\coloneqq\sigma^2(x|v)/\langle x|v\rangle$ and recalling that by the law of iterated expectations $\langle x\rangle = \left\langle\langle x|v\rangle\right\rangle = s\langle v\rangle$ we get
+Defining $q\coloneqq\sigma^2(x|v)/\langle x|v\rangle$ and recalling that by the law of total expectation (eq. \eqref{eq:con-total_exp})  $\langle x\rangle = \left\langle\langle x|v\rangle\right\rangle = s\langle v\rangle$, we get
 
 \begin{equation}
   \left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle = s\langle x\rangle+s(q-1).
