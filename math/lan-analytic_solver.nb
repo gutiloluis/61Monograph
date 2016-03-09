@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[      3539,        119]
-NotebookOptionsPosition[      3305,        106]
-NotebookOutlinePosition[      3641,        121]
-CellTagsIndexPosition[      3598,        118]
+NotebookDataLength[      3536,        119]
+NotebookOptionsPosition[      3302,        106]
+NotebookOutlinePosition[      3638,        121]
+CellTagsIndexPosition[      3595,        118]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -89,7 +89,7 @@ Cell[BoxData[{
      RowBox[{"1", "+", 
       SuperscriptBox[
        RowBox[{"(", 
-        FractionBox["IPTG", "B2"], ")"}], "h2"]}]], "+", "basal2"}]}], 
+        FractionBox["y1A", "B2"], ")"}], "h2"]}]], "+", "basal2"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{
@@ -102,7 +102,7 @@ Cell[BoxData[{
         FractionBox["ATC", "Ba"], ")"}], "ha"]}]], "+", "basala"}]}], 
   ";"}]}], "Input",
  CellChangeTimes->{{3.666430991784815*^9, 3.666431188388575*^9}, {
-  3.666431239534011*^9, 3.6664314297319393`*^9}}]
+  3.666431239534011*^9, 3.666431447585636*^9}}]
 },
 WindowSize->{683, 716},
 WindowMargins->{{Automatic, -10}, {Automatic, -10}},
@@ -120,7 +120,7 @@ CellTagsIndex->{}
 *)
 (*NotebookFileOutline
 Notebook[{
-Cell[558, 20, 2743, 84, 739, "Input"]
+Cell[558, 20, 2740, 84, 796, "Input"]
 }
 ]
 *)
