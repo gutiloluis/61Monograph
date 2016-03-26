@@ -1,11 +1,93 @@
 \chapter{Cascade of regulation - The Langevin equation}
 
+\section{Intrinsic noise in a single gene using the Langevin approach}
+
+In the Langevin approach, a term representing the noise of the system is added to the deterministic equations instead of considering the transition rates between states explicitely. Knowing some of the statistical properties of the noise term will allow us to find the noise in the number of species. In this section we will use the Langevin approach to find the intrinsic noise for a single gene.
+
+Consider the model used on section \ref{sec:mas-single_gene}. For each of the deterministic equations (eqs. \label{eq:mas-simple_det_1} and \label{eq:mas-simple_det_2}), a stochastic process is added that accounts for the intrinsic noise. Including the terms $\mu_1(t)$ and $\mu_2(t)$ results in
+
+\begin{align}
+  \dot{n_1}(t) &= k_rd-\gamma_rn_1(t) + \mu_1(t)\label{eq:lan-simple_1},\\
+  \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t) + \mu_2(t)\label{eq:lan-simple_2}.
+\end{align}
+
+Now $n_1(t)$ and $n_2(t)$ are stochastic processes. We need to have some information of the noise terms in order to proceed. First, as we saw in chapter \ref{ch:master}, the averages must follow the deterministic behavior. By taking averages on both sides of eqs. \label{eq:lan-simple_1} - \label{eq:lan-simple_2} and imposing this condition we get
+
+\begin{equation*}
+  \langle\mu_r\rangle(t) = \langle\mu_r\rangle(t) = 0.
+\end{equation*}
+
+Also, assuming white noise statistics, the autocorrelations are given by
+
+\begin{align}
+  \langle\mu_1(t)\mu_1(t+\tau)\rangle &= q_1\delta(\tau),\label{eq:lan-simple_cor1} \\
+  \langle\mu_2(t)\mu_2(t+\tau)\rangle &= q_2\delta(\tau). \label{eq:lan-simple_cor2}
+\end{align}
+
+This means that we will assume that there is no correlation between the values of the noise term at different times. The coefficients $q_1$ and $q_2$ determine the strenght of the noise and will be treated later. Also, the intrinsic noise must be fully uncorrelated among mRNA and proteins, hence
+
+\begin{equation}
+  \langle\mu_1(t)\mu_2(t+\tau)\rangle = 0. \label{eq:lan-simple_cor12}
+\end{equation}
+
+We will use eqs. \eqref{eq:lan-simple_cor1} - \eqref{eq:lan-simple_cor12} to find the noise in mRNA and protein numbers. Define the difference with respect to steady state average as $\delta n_1$ and $\delta n_2$, i.e. $\delta n_i \coloneqq n_i - \langle n_i\rangle_s$, for $i=1,2$. In terms of these quantities the eqs. become
+
+\begin{align}
+  \dot{\delta n_1}(t) &= -\gamma_r\delta n_1(t) + \mu_1(t)\label{eq:lan-simple_d1},\\
+  \dot{\delta n_2}(t) &= k_p\delta n_1(t) -\gamma_p\delta n_2(t) + \mu_2(t)\label{eq:lan-simple_d2}.
+\end{align}
+
+Fourier transforming and using the fact that $\left[\mathscr{F}(\dot{x}(t))\right](\omega) = i\omega \hat{x}$, where $\hat{x}\coloneqq\mathscr{F}(x)$ we get 
+
+\begin{equation}
+  \delta\hat{n}_1(\omega) = \frac{\hat{\mu}_1(\omega)}{\gamma_r+i\omega},\quad\quad \delta\hat{n}_2(\omega) = \frac{\delta\hat{n}_1(\omega) + \hat{\mu}_2(\omega)}{\gamma_p+i\omega}.
+\end{equation}
+
+Taking the average of the square norm of the first expression we obtain the power spectrum for $\delta n_1$
+
+\begin{equation*}
+  \langle|\delta\hat{n}_1|^2\rangle = \frac{\langle|\hat{\mu}_1|^2\rangle}{\omega^2+\gamma^2} = \frac{q_1}{\omega^2+\gamma_r^2},
+\end{equation*}
+
+because by using the Wiener-Khinchin theorem (eq. \eqref{eq:con-wkth}) and eq. \eqref{eq:lan-simple_cor1} we obtain $\langle|\hat{\mu}_1|^2\rangle = q_1^2$. Making the inverse Fourier transform and evaluating at $t=0$ yields the variance of $n_1$
+
+\begin{equation*}
+  \sigma^2(n_1) = \langle\delta n_1^2\rangle = q_1^2 \left[\mathscr{F}^{-1}\frac{1}{\omega^2+\gamma_r^2}\right](t=0) = q_1^2\int_{-\infty}^\infty\frac{1}{\omega^2+\gamma_r^2}\frac{\mathrm{d}\omega}{2\pi} = \frac{q_1^2}{2\gamma_r}.
+\end{equation*}
+
+The integral can be easily solved in the complex plane or by trigonometric substitution. Keeping in mind that mRNA creation and destruction are single step Poisson processes and as we saw on chapter \ref{ch:master}, the variance must be equal to the average. Imposing this condition, we find that $q_1$ is given by
+
+\begin{equation*}
+  q_1^2 = 2\gamma_r\sigma^2(n_1) = 2\gamma_r\langle n_1\rangle = 2k_rd
+\end{equation*}
+
+There is a more general procedure for finding the noise strenght $q$ in steady state. It can be shown that for single step Poisson processes it is given by the square root of the sum of the rates for all the events evaluated at the steady state average. If amount $x$ of some molecule follows the deterministic equation
+
+\begin{equation*}
+  \dot{x} = f(x) - g(x),
+\end{equation*}
+
+then
+
+\begin{equation*}
+  q_x = \sqrt{f(\langle x\rangle_s)+g(\langle x\rangle_s)}
+\end{equation*}
+
+
+
+\todo[inline]{Prove this!?}
+
 \section{Model circuit for the cascade}
-The calculations shown in this chapter are based in the work of J. M. Pedraza and A. van Oudenaarden \cite{pedraza05}. 
+The calculations shown in this chapter are based in the work of J. M. Pedraza and A. van Oudenaarden \cite{pedraza05}. They build the model circuit and tested the theoretical results experimentally. 
+
+\todo[inline]{Cite Juan M. PhD thesis}
 
 We will consider a set of genes whose interactions are shown on figure \ref{fig:lan-circuit} considering both intrinsic and extrinsic sources of noise. The intrinsic part refers to the inherent noise due to the low number of molecules and the nature of the reactions. This was the only source of noise consider on the previous chapter. The extrinsic part arises from another factors, such as environmental fluctuations or variations in intracellular concentrations due to sudden changes on cell volume. These factors causes fluctuations in every component of the cell and thus extrinsic noise is correlated among the different genes, while intrinsic noise is not \cite{elowitz02}.
 
 \todo[inline]{Explain intrinsic/extrinsic noise in a section on concepts.}
+\todo[inline]{Explain plasmid and chromosomal DNA, and constitutive promoter.}
+
+Fig. \ref{fig:lan-circuit} shows a genetic circuit built from four genes to be used on bacteria. Gene $0$ is located in the chromosome while genes $1$ to $3$ are located in plasmids, hence, their expression is subjected to noise caused by plasmid number fluctuations. Genes $0$ codifies for \textit{LacI} and $3$ for the red fluorescent protein \textit{rfp}. Both are regulated by a constitutive promoter, gene $1$ has the promoter P$_\text{lac}$, which regulates the expression of \textit{tetR} and \text{cfp} (cyan fluorescent protein). The transcription from P$_\text{lac}$ is repressed by \textit{LacI}. Also, the repressing effect of \textit{LacI} is inhibited by IPTG.
 
 \begin{figure}[H]
   \centering
@@ -13,23 +95,31 @@ We will consider a set of genes whose interactions are shown on figure \ref{fig:
   \caption[Circuit used for the Langevin model]{\label{fig:lan-circuit} Circuit used in the Langevin model (from \cite{pedraza05}).}
 \end{figure}
 
+A similar effect happens on gene $2$, the tetracycline promoter P$_\text{tet}$, which regulated the expression of the yellow fluorescent protein \textit{yfp}. It is repressed by \textit{tetR} and the repressing effect of \textit{tetR} is also inhibited by ATC.
+
+Therefore, both IPTG and ATC are environmental signals that are used to regulate the coupling between the different genes of the cascade. Notice that for instance, at higher quantities of IPTG, expression of gene $1$ is low since the repression over it is reduced. This also causes that without ATC, the expression of gene $2$ is high. 
+
+The fluorescent proteins are used to quantify experimentally via fluorescence microscopy the expressions of each gene, which will be proportional to the intensity of the flourescence on each color. \textit{tetR} and \textit{cfp} are transcribed bicistronically in order to be able to quantify \textit{tetR} levels. We will assume that protein degradation is caused only by cell division (i.e. there is no active degradation). That allow us to use the same degradation constant for all proteins, and in particular, to assume that the behavior of \textit{cfp} reproduces exactly the behavior of \textit{tetR}. 
+
+We will label the concentrations of \textit{LacI}, \textit{tetR} (and \textit{cfp}), \textit{yfp} and \textit{rfp} as $x_0$, $x_1$, $x_2$, and $x_3$, respectively.
+
 \section{Mathematical derivations}
 
-The differential equation for the mRNA will not be considered, we will write the equation for the proteins and include the effect of mRNA in the rate of creation $k$. The results of the previous chapter for the noise in proteins caused by mRNA will also be considered. The deterministic equation for the number of proteins of gene $0$ is 
+The differential equation for the mRNA will not be considered, we will write the equation for the proteins and include the effect of mRNA in the rate of creation $k$. The results of the previous chapter for the noise in proteins caused by mRNA will also be considered. The deterministic equation for the concentration of proteins of gene $0$ is 
 
 \begin{equation}
 \label{eq:detgene0}
 \dot{x_0}(t) = k - \gamma x_0(t).
 \end{equation}
 
-Where now $k$ represents the average number of proteins created per unit time. \footnote{For a better understanding of this point. If we assume $\gamma_r\ll\gamma_p$, we can treat the mRNA in steady state, hence eq. \eqref{eq:mas-simple_det_2} becomes eq. \eqref{eq:detgene0} with $k \coloneqq k_p\langle n_1\rangle_s =  \frac{k_pk_r}{\gamma_r} = k_rb$.}In this approach we add noise terms to the previous equation, one representing the intrinsic noise $\mu_0(t)$ and other representing the global noise $\xi_0(t)$. Hence, the equation for the stochastic process $x_0(t)$ is
+Where now $k$ represents the average number of proteins created per unit time.\footnote{For a better understanding of this point. If we assume $\gamma_r\ll\gamma_p$, we can treat the mRNA in steady state, hence eq. \eqref{eq:mas-simple_det_2} becomes eq. \eqref{eq:detgene0} with $k \coloneqq k_p\langle n_1\rangle_s =  \frac{k_pk_r}{\gamma_r} = k_rb$.}In the Langevin approach noise terms are added to the previous equation representing the intrinsic noise $\mu_0(t)$ and the global noise $\xi_0(t)$. Hence, the equation for the stochastic process $x_0(t)$ is
 
 \begin{equation}
 \label{eq:gene0}
 \dot{x_0}(t) = k - \gamma x_0(t) + \mu_0(t) + \xi_0(t).
 \end{equation}
 
-Now the quantities are taken to be stochastic processes. To find the correlations and the coefficient of variation, we need some information about the noise terms. First, the average of proteins $\langle x_0 \rangle (t)$ should follow the deterministic equation \eqref{eq:detgene0}, therefore
+To find the correlations and the coefficient of variation, we need some information about the noise terms. First, the average of proteins $\langle x_0 \rangle (t)$ should follow the deterministic equation \eqref{eq:detgene0}, therefore
 
 \begin{equation*}
 \langle\mu_0\rangle(t) = \langle\xi_0\rangle(t) = 0.
