@@ -40,7 +40,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.1}Intrinsic noise in a single gene using the Langevin approach}{53}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Model circuit for the cascade}{55}{section.3.2}
+\contentsline {section}{\numberline {3.2}Model circuit for the cascade}{56}{section.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Mathematical derivations}{57}{section.3.3}
 \defcounter {refsection}{0}\relax 
@@ -92,4 +92,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{101}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{104}{chapter*.54}
+\contentsline {chapter}{Bibliography}{104}{chapter*.55}
