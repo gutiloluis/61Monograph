@@ -105,9 +105,10 @@ After solving the integrals using residues, the result is
 
 \todo[inline]{Complete this procedure}
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:lan-simple_varp}
   \sigma^2(n_2)_s = \langle p\rangle_s\left(\frac{b}{1+\gamma_p/\gamma_r}+1\right),
-\end{equation*}
+\end{equation}
 
 with $b\coloneqq k_p/\gamma_r$, also consistent with the results of section \ref{sec:mas-single_gene}.
 
@@ -168,15 +169,6 @@ and assuming white noise statistics for both sources, the autocorrelation functi
 \langle\xi_0(t)\xi_0(t+\tau)\rangle&=2\gamma\eta_G^2\bar{x}_0^2\delta(\tau). \label{eq:corex0}
 \end{align}
 
-\todo[inline]{Understand and explain more the constants and the assumption of white noise}
-
-This time we can not use eq. \eqref{eq:lan-q_form} to find the factor $q$ in the correlations since with the assumptions made in eq. \eqref{eq:detgene0}, protein creation is not a one step Poisson process. From the results of section \label{sec:lan-single} we have from comparison with eq. 
-
-\begin{equation*}
-  \sigma^2(x_0) = \frac{q_\text{int}^2}{2\gamma}
-\end{equation*}
-
-
 where $\eta_G$ is the strenght of the global noise, a parameter that is measured experimentally, and $b_0$ is the average number of protein produced per mRNA. In this section the bar denotes steady state average. Also, since both sources of noise are uncorrelated
 
 \begin{equation}
@@ -184,7 +176,40 @@ where $\eta_G$ is the strenght of the global noise, a parameter that is measured
 \langle\mu_0(t)\xi_0(t+\tau)\rangle = 0.
 \end{equation}
 
-Define $\delta x_0 \coloneqq x_0 - \bar{x}_0$, replacing this on eq. \eqref{eq:gene0} we get
+\todo[inline]{Understand and explain more the constants and the assumption of white noise}
+
+We will derive the constant term in eq. \label{eq:corin0}. Notice that we can not use eq. \eqref{eq:lan-q_form} to find the factor $q$ in the correlations since with the assumptions made in eq. \eqref{eq:detgene0}, protein creation is not a one step Poisson process. From the results of section \label{sec:lan-single} we obtain comparing with eq. \eqref{eq:lan-qrel1}
+
+\begin{equation*}
+  \sigma^2(x_0) = \frac{q_{0,\text{int}}^2}{2\gamma}
+\end{equation*}
+
+and from eq. \eqref{eq:lan-simple_varp} we obtain
+
+\begin{equation*}
+  \bar{x}_0\left(\frac{b_0}{1+\gamma_p/\gamma_r}+1\right) = \frac{q_\text{int}^2}{2\gamma}.
+\end{equation*}
+
+The bar denotes steady state average. Since proteins are much more stable than mRNA, we can take $\gamma_p\ll\gamma_r$. With this approximation we get
+
+\begin{equation*}
+  q_{0,\text{int}}^2 \approx 2\gamma\bar{x}_0(b_0+1).
+\end{equation*}
+
+In fact, since intrinsic fluctuations depends only on the gene in question, the factor $q$ has the same form for all genes, i.e.
+
+\begin{equation*}
+  q_{i,\text{int}}^2 \approx 2\gamma\bar{x}_i(b_i+1),\quad i = 0,1,2,3.
+\end{equation*}
+
+In terms of $\delta x_0 \coloneqq x_0 - \bar{x}_0$, \eqref{eq:gene0} becomes
+
+\begin{equation}
+\label{eq:dgene0}
+\dot{\delta x_0}(t) = -\gamma \delta x_0(t) + \mu_0(t) + \xi_0(t).
+\end{equation}
+
+OJO
 
 \begin{equation}
 \frac{\mathrm{d}}{\mathrm{d}t}\left(\delta x_0(t) + \bar{x}_0\right) = k - \gamma (\delta x_0(t) + \bar{x}_0) + \mu_0(t) + \xi_0(t),
@@ -192,14 +217,11 @@ Define $\delta x_0 \coloneqq x_0 - \bar{x}_0$, replacing this on eq. \eqref{eq:g
 
 Using the fact that $\bar{x}_0=k/\gamma$ we get
 
-\begin{equation}
-\label{eq:dgene0}
-\dot{\delta x_0}(t) = -\gamma \delta x_0(t) + \mu_0(t) + \xi_0(t).
-\end{equation}
-
 We will Fourier transform the equation, find its square norm and use the Wiener-Khinchin theorem (eq. \eqref{eq:con-wkth}) to find the autocorrelations in terms of the power spectrum and to write the power spectrum of $\mu(t)$ and $\xi(t)$ in terms of their autocorrelations.
 
-Taking the Fourier transform of eq. \eqref{eq:dgene0} and recalling that $[\mathscr{F}(\frac{\mathrm{d}x(t)}{\mathrm{d}t})](\omega) = i\omega \mathscr{F}(x(t))(\omega)$ for a function of time $x(t)$, we obtain after solving for $\hat{\delta x_0}$
+OJO
+
+Fourier transforming and recalling that $[\mathscr{F}(\frac{\mathrm{d}x(t)}{\mathrm{d}t})](\omega) = i\omega \mathscr{F}(x(t))(\omega)$ for a function of time $x(t)$, we obtain after solving for $\hat{\delta x_0}$
 
 \begin{equation}
 \label{eq:fgene0}
@@ -212,9 +234,7 @@ Taking the square norm and averaging we get
 \left\langle |\hat{\delta x_0}|^2 \right\rangle = \frac{\left\langle|\hat{\mu_0}|^2\right\rangle + \left\langle\hat{\mu_0}^*\hat{\xi_0}\right\rangle+\left\langle\hat{\mu_0}\hat{\xi_0}^*\right\rangle+\left\langle|\hat{\xi_0}|^2\right\rangle}{\gamma^2 + \omega^2},
 \end{equation}
 
-And using the Wiener-Khinchin theorem and eqs. \eqref{eq:corin0} - \eqref{eq:corinex0}
-
-\todo[inline]{Explain with more detail here}
+Using the Wiener-Khinchin theorem and eqs. \eqref{eq:corin0} - \eqref{eq:corinex0}
 
 \begin{equation}
   \label{eq:pgene0}
@@ -236,23 +256,25 @@ The integral can be easily solved by residues resulting in $\pi/\gamma$, therefo
 \langle \delta x_0^2 \rangle = \bar{x_0}^2\left(\frac{(b_0+1)}{\bar{x_0}}+ \eta_G^2\right)
 \end{equation*}
 
-And dividing by $\bar{x_0}^2$, we obtain the coefficient of variation
+And dividing by $\bar{x_0}^2$, we obtain the squared coefficient of variation
 
 \begin{equation}
   \label{eq:etagene0}
-  \boxed{\eta_0^2 = \frac{(b_0+1)}{\bar{x_0}}+ \eta_G^2 = \eta_{0\text{int}}^2+\eta_G^2}.
+  \boxed{\eta_0^2 = \frac{(b_0+1)}{\bar{x_0}}+ \eta_G^2 = \eta_{0,\text{int}}^2+\eta_G^2},
 \end{equation}
 
-This approach enabled us to explicitly separate the total noise of gene $0$ in the intrinsic and the extrinsic part. Now we will make the calculation for gene $1$, which follows the equation.
+where $\eta_{i,\text{int}}^2=\frac{(b_i+1)}{\bar{x_i}}$ for $i=0,1,2,3$.
+
+Therefore the total squared noise for gene $0$ is composed of the contributions from both the intrinsic and the global noise.
+
+Now we will make the calculation for gene $1$, which follows the equation
 
 \begin{equation}
 \label{eq:gene1}
 \dot{x_1}(t) = k_1(x_{0A})-\gamma x_1+\mu_1+\xi_1
 \end{equation}
 
-The decay rate $\gamma$ is the same for gene $1$ than for gene $0$ after making the assumption that the decay depends only on dilution due to cellular growth. The creation rate $k_1$ is a Hill equation for activation. The statistics for the noise terms are analogous to eqs. \eqref{eq:corin0} - \eqref{eq:corinex0}. We also need to know in this case the correlations between the noise terms corresponding to gene $0$ and the ones corresponding to gene $1$. As we have said, extrinsic sources of noise are uncorrelated
-
-\todo[inline]{Explain more about the dilution, perhaps before}
+The creation rate $k_1$ is a Hill equation for repression where the repressor is $x_{0A}$, the amount of $x_0$ that is unbound to IPTG. The statistics for the noise terms are analogous to eqs. \eqref{eq:corin0} - \eqref{eq:corinex0}. We also need to know in this case the correlations between the noise terms corresponding to gene $0$ and the ones corresponding to gene $1$. As we have said, extrinsic sources of noise are uncorrelated
 
 \begin{equation}
 \label{eq:corcross01}
@@ -267,13 +289,13 @@ but the extrinsic parts of the noise of genes $0$ and $1$ are correlated. In ana
 
 \todo[inline]{Also, understand and explain the q term here}
 
-We proceed in a similar way to gene $0$. Defining $\delta x_1(t) \coloneqq x_1(t) - \bar{x_1}$, writing eq. \eqref{eq:gene1} in terms of $\delta x_1$, $\delta x_{0A}$, and making a Taylor expansion of $f_1$ to first order in $x_{0A}$ about $\bar{x}_{0A}$ we obtain.
+We proceed in a similar way to gene $0$. Defining $\delta x_1(t) \coloneqq x_1(t) - \bar{x_1}$, writing eq. \eqref{eq:gene1} in terms of $\delta x_1$, $\delta x_{0A}$, and making a Taylor expansion of $k_1$ to first order in $x_{0A}$ about $\bar{x}_{0A}$ we obtain.
 
 \begin{equation}
 \dot{\delta x_1} = k_1(\bar{x_{0A}}) + \left.\frac{dk_1(x_{0A})}{dx_{0A}}\right|_{\bar{x_{0A}}}\delta x_{0A} - \gamma(\delta x_1 + \bar{x_1}) + \mu_1 + \xi_1,
 \end{equation}
 
-but from eq. \eqref{eq:gene1} we can see that $\bar{x_1} = \nicefrac{k_1(\bar{x_{0A}})}{\gamma}$, therefore
+but from eq. \eqref{eq:gene1}, $\bar{x_1} = \nicefrac{k_1(\bar{x_{0A}})}{\gamma}$, therefore
 
 \begin{equation}
   \label{eq:dgene1}
@@ -331,7 +353,7 @@ Writing in terms of the logarithmic gain $H_{ji}\coloneqq -\frac{\langle x_i\ran
 
 \begin{equation}
   \label{eq:etagene1}
-  \boxed{\eta_1^2 = \eta_{1\text{int}}^2 + \frac{1}{2}H_{10}^2\eta_0^2+\eta_G^2\left(1-H_{10}\right)}.
+  \eta_1^2 = \eta_{1\text{int}}^2 + \frac{1}{2}H_{10}^2\eta_0^2+\eta_G^2\left(1-H_{10}\right).
 \end{equation}
 
 \todo[inline]{TODO: Explain a lot more about the logarithmic gain}
@@ -340,24 +362,24 @@ Where $\eta_{1\text{int}}^2 = \nicefrac{(b_1+1)}{\bar{x_1}}$ and $\eta_0^2$ is g
 
 The result can be interpreted as follows, the total noise in gene one is given by the intrinsic part, the noise from gene $0$ that is propagated to gene $1$ (including both its intrinsic and global part) and the global noise that enters directly into gene $1$. The factor of $1/2$ arises from the time averaging since we assumed equal degradation rates for both proteins.
 
-\todo[inline]{See if it is better to do it with different gammas}
-
 For gene $2$ we proceed similarly, with analogous statistics for the noise terms, the resulting noise is
 
 \begin{equation}
   \label{eq:etagene2}
-  \boxed{\eta_2^2 = \eta_{2\text{int}}^2 + \frac{1}{2}H_{21}^2\eta_1^2+\frac{1}{8}H_{21}^2H_{10}^2\eta_0^2+\eta_G^2\left(1-H_{21}-\frac{1}{4}H_{21}^2H_{10}+\frac{1}{2}H_{21}H_{10}\right)}.
+  \begin{split}
+    \eta_2^2 &= \eta_{2\text{int}}^2 +  \frac{1}{2}H_{21}^2\eta_{1\text{int}}^2+\frac{3}{8}H_{21}^2H_{10}^2\eta_{0\text{int}}^2\\
+    &+\eta_G^2\left(1 + \frac{1}{2}H_{21} + \frac{3}{8}H_{21}^2H_{10}^2 - H_{21} -\frac{3}{4}H_{21}^2H_{10} + \frac{1}{2}H_{21}H_{10}\right),\\
+    &= \eta_{2\text{int}}^2 + \frac{1}{2}H_{21}^2\eta_1^2+\frac{1}{8}H_{21}^2H_{10}^2\eta_0^2+\eta_G^2\left(1-H_{21}-\frac{1}{4}H_{21}^2H_{10}+\frac{1}{2}H_{21}H_{10}\right).
+  \end{split}
 \end{equation}
 
-Which contains the intrinsic noise of gene $2$, the contribution from the total noise of gene $1$, the contribution from the total noise of gene $0$ that is transmitted first to gene $1$ and then to gene $2$ and the global noise that enters directly. 
+Which contains the intrinsic noise of gene $2$, the contribution from the total noise of gene $1$, the contribution from the total noise of gene $0$ that is transmitted first to gene $1$ and then to gene $2$ and the global noise that enters directly. A more detailed analysis will be done on next section.
 
-The correlations can be found in a similar fashion.
+The correlations can be found in a similar fashion, from the Fourier transform of each gene.
 
 \todo[inline]{TODO: Find the correlations and do the analysis that JM did on SysBio class}
 
 \section{Explicit expressions for the logarithmic gain}
-
-
 
 \section{Analysis and implications}
 

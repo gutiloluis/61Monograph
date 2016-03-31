@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  30 MAR 2016 11:29
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  31 MAR 2016 01:23
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -993,9 +993,16 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 )
 \@quotelevel=\count329
 \@quotereset=\count330
- (./cover.aux (./introduction.aux) (./concepts.aux) (./master1.aux) (./langevin
-1.aux)
-(./fdt.aux) (./bursting.aux) (./division.aux
+ (./cover.aux (./introduction.aux) (./concepts.aux) (./master1.aux) (./fdt.aux)
+
+(./langevin1.aux
+
+LaTeX Warning: Label `eq:corin0' multiply defined.
+
+
+LaTeX Warning: Label `sec:lan-single' multiply defined.
+
+) (./bursting.aux) (./division.aux
 
 LaTeX Warning: Label `eq:div-clus-Qx2' multiply defined.
 
@@ -1261,40 +1268,42 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
 Chapter 2.
-<img/mas-dogma.png, id=561, 689.57625pt x 555.07375pt>
+[35] <img/mas-dogma.png, id=566, 689.57625pt x 555.07375pt>
 File: img/mas-dogma.png Graphic file (type png)
- <use img/mas-dogma.png>
-Package pdftex.def Info: img/mas-dogma.png used on input line 14.
-(pdftex.def)             Requested size: 227.62204pt x 183.22571pt.
 
-[35] <img/mas-trans_single.jpg, id=568, 2601.72pt x 1461.46pt>
+<use img/mas-dogma.png>
+Package pdftex.def Info: img/mas-dogma.png used on input line 19.
+(pdftex.def)             Requested size: 227.62204pt x 183.22571pt.
+ [36 <./img/mas-dogma.png>]
+<img/mas-trans_single.jpg, id=579, 2601.72pt x 1461.46pt>
 File: img/mas-trans_single.jpg Graphic file (type jpg)
 
 <use img/mas-trans_single.jpg>
-Package pdftex.def Info: img/mas-trans_single.jpg used on input line 38.
+Package pdftex.def Info: img/mas-trans_single.jpg used on input line 45.
 (pdftex.def)             Requested size: 227.62204pt x 127.8462pt.
- [36 <./img/mas-dogma.png>] [37 <./img/mas-trans_single.jpg>]
-Overfull \hbox (4.3948pt too wide) in paragraph at lines 58--59
-[]\OT1/cmr/m/n/12 We will write the mas-ter equa-tion in terms of the mo-ment g
-en-er-at-ing func-tion $\OML/cmm/m/it/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 z[]
-; z[]\OT1/cmr/m/n/12 )$,
+ [37 <./img/mas-trans_single.jpg>]
+Overfull \hbox (9.74966pt too wide) in paragraph at lines 51--52
+[]\OT1/cmr/m/n/12 Therefore, to com-pletely char-ac-ter-ize the sys-tem un-der 
+this scheme, the PMF $\OML/cmm/m/it/12 p\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 n[]; 
+n[]; t\OT1/cmr/m/n/12 )$
  []
 
-[38] [39] [40] [41] <img/mas-sim_simple.png, id=641, 1003.75pt x 657.45625pt>
+[38] [39] [40] [41] [42]
+<img/mas-sim_simple.png, id=650, 1003.75pt x 657.45625pt>
 File: img/mas-sim_simple.png Graphic file (type png)
 
 <use img/mas-sim_simple.png>
-Package pdftex.def Info: img/mas-sim_simple.png used on input line 220.
+Package pdftex.def Info: img/mas-sim_simple.png used on input line 229.
 (pdftex.def)             Requested size: 312.9803pt x 205.00313pt.
- [42] [43 <./img/mas-sim_simple.png (PNG copy)>]
-<img/mas-trans_many.jpg, id=660, 2601.72pt x 1461.46pt>
+ [43 <./img/mas-sim_simple.png (PNG copy)>]
+[44] <img/mas-trans_many.jpg, id=674, 2601.72pt x 1461.46pt>
 File: img/mas-trans_many.jpg Graphic file (type jpg)
 
 <use img/mas-trans_many.jpg>
-Package pdftex.def Info: img/mas-trans_many.jpg used on input line 260.
+Package pdftex.def Info: img/mas-trans_many.jpg used on input line 269.
 (pdftex.def)             Requested size: 256.0748pt x 143.83536pt.
- [44] [45 <./img/mas-trans_many.jpg>] [46] [47]
-Overfull \hbox (2.92378pt too wide) detected at line 362
+ [45 <./img/mas-trans_many.jpg>] [46] [47]
+Overfull \hbox (2.92378pt too wide) detected at line 371
 [] \OT1/cmr/m/n/12 = [] \OML/cmm/m/it/12 A[]z[][] \OT1/cmr/m/n/12 + \OML/cmm/m/
 it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
 [] \OT1/cmr/m/n/12 + [] \OML/cmm/m/it/12 A[]z[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr
@@ -1302,114 +1311,106 @@ it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
  []
 
 [48]
-Overfull \hbox (7.49626pt too wide) in paragraph at lines 384--384
+Overfull \hbox (7.49626pt too wide) in paragraph at lines 393--393
 []\OT1/cmr/bx/n/17.28 Several species with non-linear in-ter-ac-tions - Neg-
  []
 
-[49] <img/mas-sim_autorreg.png, id=731, 1003.75pt x 657.45625pt>
+[49] <img/mas-sim_autorreg.png, id=738, 1003.75pt x 657.45625pt>
 File: img/mas-sim_autorreg.png Graphic file (type png)
 
 <use img/mas-sim_autorreg.png>
-Package pdftex.def Info: img/mas-sim_autorreg.png used on input line 440.
+Package pdftex.def Info: img/mas-sim_autorreg.png used on input line 449.
 (pdftex.def)             Requested size: 312.9803pt x 205.00313pt.
  [50]) [51 <./img/mas-sim_autorreg.png (PNG copy)>]
-\openout2 = `langevin1.aux'.
+\openout2 = `fdt.aux'.
 
- (./langevin1.tex [52
+ (./fdt.tex [52
 
 
 
 ]
 Chapter 3.
+[53] [54] [55] [56]) [57]
+\openout2 = `langevin1.aux'.
 
-Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
-[]\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
- []
-
-[53] [54] [55] [56] <img/lan-circuit.png, id=802, 1370.11874pt x 157.58875pt>
-File: img/lan-circuit.png Graphic file (type png)
-
-<use img/lan-circuit.png>
-Package pdftex.def Info: img/lan-circuit.png used on input line 128.
-(pdftex.def)             Requested size: 426.79134pt x 49.08765pt.
- [57 <./img/lan-circuit.png>] [58] [59]
-Overfull \hbox (26.0574pt too wide) in paragraph at lines 202--203
-[]\OT1/cmr/m/n/12 Taking the Fourier trans-form of eq. [] and re-call-ing that 
-$[\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 ([])](\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 ) = \
-OML/cmm/m/it/12 i!\U/rsfs/m/n/12 F\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m
-/n/12 (\OML/cmm/m/it/12 t\OT1/cmr/m/n/12 ))(\OML/cmm/m/it/12 !\OT1/cmr/m/n/12 )
-$
- []
-
-[60] [61] [62] [63]
-<img/lan-noise_sources.png, id=887, 1307.88625pt x 436.63126pt>
-File: img/lan-noise_sources.png Graphic file (type png)
-
-<use img/lan-noise_sources.png>
-Package pdftex.def Info: img/lan-noise_sources.png used on input line 368.
-(pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
- [64]) [65 <./img/lan-noise_sources.png>]
-\openout2 = `fdt.aux'.
-
-
-(./fdt.tex [66
+ (./langevin1.tex [58
 
 
 
 ]
 Chapter 4.
-) [67]
+
+Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
+[]\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
+ []
+
+[59] [60] [61] [62] <img/lan-circuit.png, id=861, 1370.11874pt x 157.58875pt>
+File: img/lan-circuit.png Graphic file (type png)
+
+<use img/lan-circuit.png>
+Package pdftex.def Info: img/lan-circuit.png used on input line 129.
+(pdftex.def)             Requested size: 426.79134pt x 49.08765pt.
+ [63 <./img/lan-circuit.png>] [64] [65] [66] [67]
+[68] [69] [70] <img/lan-noise_sources.png, id=950, 1307.88625pt x 436.63126pt>
+File: img/lan-noise_sources.png Graphic file (type png)
+
+<use img/lan-noise_sources.png>
+Package pdftex.def Info: img/lan-noise_sources.png used on input line 390.
+(pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
+) [71 <./img/lan-noise_sources.png>]
 \openout2 = `bursting.aux'.
 
- (./bursting.tex [68
+
+(./bursting.tex [72
 
 
 
 ]
 Chapter 5.
-[69] [70] [71] [72] [73] [74] [75] [76] [77]
+[73] [74] [75] [76] [77] [78] [79] [80] [81]
 
 Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 351.
 
-[78] [79] [80] [81] [82]) [83] [84]
+[82] [83] [84] [85] [86]) [87] [88]
 \openout2 = `division.aux'.
 
  (./division.tex
 Chapter 6.
-[85
+[89
 
 
 
-] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99]
+] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100] [101] [102]
+[103]
 Overfull \hbox (50.7592pt too wide) in paragraph at lines 545--545
 [] 
  []
 
-[100]) [101]
+[104]) [105]
 \openout2 = `final.aux'.
 
- (./final.tex [102
+ (./final.tex [106
 
 
 
 ]
 Chapter 7.
-) [103] [104
+) [107] [108
 
 
-] [105]
+] [109]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [106]
+ [110]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./cover.aux (./introduction.aux) (./concepts.aux)
-(./master1.aux) (./langevin1.aux) (./fdt.aux) (./bursting.aux) (./division.aux)
+(./master1.aux) (./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux)
 (./final.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `cover.out' has not changed.
-(rerunfilecheck)             Checksum: 29568951ACA9E91870A1182EEBF68CE2;3417.
+(rerunfilecheck)             Checksum: 530D38F49835FFFDA9A011DD1DB0B130;3417.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1419,15 +1420,18 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26877 strings out of 494966
- 489545 string characters out of 6179559
- 892180 words of memory out of 5000000
- 29122 multiletter control sequences out of 15000+600000
- 15161 words of font info for 60 fonts, out of 8000000 for 9000
+ 26913 strings out of 494966
+ 490077 string characters out of 6179559
+ 892950 words of memory out of 5000000
+ 29137 multiletter control sequences out of 15000+600000
+ 15507 words of font info for 61 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,82p,10368b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
-pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not ex
+pdfTeX warning (dest): name{Hfootnote.14} has been referenced but does not ex
 ist, replaced by a fixed one
+
+pdfTeX warning (dest): name{Hfootnote.13} has been referenced but does not exis
+t, replaced by a fixed one
 
 pdfTeX warning (dest): name{Hfootnote.12} has been referenced but does not exis
 t, replaced by a fixed one
@@ -1467,31 +1471,33 @@ pdfTeX warning (dest): name{Hfootnote.1} has been referenced but does not exist
 
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/
 share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/f
-onts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/ty
-pe1/public/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
-lic/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
-fonts/cm/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></
-usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/shar
-e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texliv
-e/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/typ
-e1/public/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmti12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt1
-2.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10
-.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (106 pages, 4008239 bytes).
+texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx8.pfb></usr/share/texlive
+/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cmextra/cmex8.pfb></usr/share/texlive/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmmi12.pfb></usr/share/texlive/texmf-dist/fonts/ty
+pe1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/pub
+lic/amsfonts/cm/cmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/ams
+fonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
+m/cmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/sha
+re/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texlive/texmf
+-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fo
+nts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/fonts/type
+1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
+onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10
+.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb><
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
+hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
+are/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on cover.pdf (110 pages, 4039874 bytes).
 PDF statistics:
- 1441 PDF objects out of 1728 (max. 8388607)
- 1271 compressed objects within 13 object streams
- 425 named destinations out of 1000 (max. 500000)
+ 1499 PDF objects out of 1728 (max. 8388607)
+ 1322 compressed objects within 14 object streams
+ 445 named destinations out of 1000 (max. 500000)
  464 words of extra memory for PDF output out of 10000 (max. 10000000)
 

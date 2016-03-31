@@ -28,7 +28,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {2}Basic genetic circuits in steady state - The master equation}{35}{chapter.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {2.1}Single gene}{35}{section.2.1}
+\contentsline {section}{\numberline {2.1}Single gene}{36}{section.2.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.2}Several species with linear interactions}{44}{section.2.2}
 \defcounter {refsection}{0}\relax 
@@ -36,60 +36,60 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {2.4}Final remarks and further applications}{51}{section.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {3}Cascade of regulation - The Langevin equation}{53}{chapter.3}
+\contentsline {chapter}{\numberline {3}The Fluctuation-Dissipation theorem (FDT)}{53}{chapter.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.1}Intrinsic noise in a single gene using the Langevin approach}{53}{section.3.1}
+\contentsline {section}{\numberline {3.1}Statement of the FDT}{53}{section.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.2}Model circuit for the cascade}{57}{section.3.2}
+\contentsline {section}{\numberline {3.2}Example: simple gene}{54}{section.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.3}Mathematical derivations}{58}{section.3.3}
+\contentsline {section}{\numberline {3.3}The logarithmic gain}{57}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}Explicit expressions for the logarithmic gain}{64}{section.3.4}
+\contentsline {chapter}{\numberline {4}Cascade of regulation - The Langevin equation}{59}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.5}Analysis and implications}{64}{section.3.5}
+\contentsline {section}{\numberline {4.1}Intrinsic noise in a single gene using the Langevin approach}{59}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}The Fluctuation-Dissipation theorem (FDT)}{67}{chapter.4}
+\contentsline {section}{\numberline {4.2}Model circuit for the cascade}{63}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Statement of the FDT}{67}{section.4.1}
+\contentsline {section}{\numberline {4.3}Mathematical derivations}{64}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Example: simple gene}{67}{section.4.2}
+\contentsline {section}{\numberline {4.4}Explicit expressions for the logarithmic gain}{71}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}The logarithmic gain}{67}{section.4.3}
+\contentsline {section}{\numberline {4.5}Analysis and implications}{71}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Effects of bursting and senescence}{69}{chapter.5}
+\contentsline {chapter}{\numberline {5}Effects of bursting and senescence}{73}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}mRNA bursts}{69}{section.5.1}
+\contentsline {section}{\numberline {5.1}mRNA bursts}{73}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{72}{section.5.2}
+\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{76}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Decay of molecules}{78}{section.5.3}
+\contentsline {section}{\numberline {5.3}Decay of molecules}{82}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Senescence of mRNA}{82}{section.5.4}
+\contentsline {section}{\numberline {5.4}Senescence of mRNA}{86}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Effects of cell division}{85}{chapter.6}
+\contentsline {chapter}{\numberline {6}Effects of cell division}{89}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Characterizing the noise arising from cell division}{85}{section.6.1}
+\contentsline {section}{\numberline {6.1}Characterizing the noise arising from cell division}{89}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Independent segregation}{87}{section.6.2}
+\contentsline {section}{\numberline {6.2}Independent segregation}{91}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Disordered segregation}{88}{section.6.3}
+\contentsline {section}{\numberline {6.3}Disordered segregation}{92}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}General case}{88}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}General case}{92}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{91}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{95}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{91}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{95}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{95}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{99}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ordered segregation}{96}{section.6.4}
+\contentsline {section}{\numberline {6.4}Ordered segregation}{100}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{96}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{100}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{96}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{100}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{99}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{103}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusions}{103}{chapter.7}
+\contentsline {chapter}{\numberline {7}Conclusions}{107}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{106}{chapter*.55}
+\contentsline {chapter}{Bibliography}{110}{chapter*.61}

@@ -1,13 +1,18 @@
 \chapter{Basic genetic circuits in steady state - The master equation}
 \label{ch:master}
 
-In this chapter, we develop a model of a genetic system considering only its intrinsic noise using the master equation, which is an approach to model stochastic processes where there are defined states and there are certain transition probabilities between states.
+In this chapter, we develop a model of a genetic system considering only the intrinsic noise using the master equation (ME). This is an approach where there are certain states in which the system can be found and it evolves probabilistically between those states according to some determined transition rates. In the context of genetic circuits the possible states are characterized by number of mRNAs and proteins and the transitions by their rates of creation and degradation.
+
+We introduce the ME approach applying it to the simplest possible genetic circuit: a single gene with regulated by a constitutive promoter. Next we explain a generalization of the analytic method that can be applied to an arbitrary genetic circuit that satisfies certain conditions. Finally, we ilustrate the general method using it on an negatively autorregulated gene.                                      
+\todo[inline]{Define constitutive promoter}
 
 This chapter is based on the work done by M. Thattai and A. van Oudenaarden in \cite{thattai01}.
 
 \section{Single gene}
 \label{sec:mas-single_gene}
-For the process of transcription and translation the number $d$ of DNA copies of certain gene is taken to be constant and the rate $k_r$ of production of RNA ($n_1$) is proportional to $d$. In the same way, the rate $k_p$ of production of proteins ($n_2$) per mRNA is constant. There is also a degradation rate for each molecule proportional to their concentration. The model is ilustrated in fig. \ref{fig:mas-dogma}.
+Consider the processes of transcription and translation of a certain gene. Let the number of mRNA molecules and proteins be $n_1$ and $n_2$, respectively. The assumptions of the model are the following: the number $d$ of copies of certain gene is a constant, the rate $k_r$ of synthesis of mRNA per copy of the gene is a constant. In the same way, the rate $k_p$ of production of proteins per mRNA molecule is a constant. There is also a degradation rate for each molecule proportional to its concentration labeled as $\gamma_r$ and $\gamma_p$ for mRNAs and proteins,respectively. The model is schematized in fig. \ref{fig:mas-dogma}. The mentioned assumptions hold for many genetic systems.
+
+\todo[inline]{Cite something here}
 
 \begin{figure}[H]
   \centering
@@ -15,7 +20,7 @@ For the process of transcription and translation the number $d$ of DNA copies of
   \caption[Model of gene expression for a single gene]{\label{fig:mas-dogma} Steps of gene expression considered in the model. Taken from \cite{thattai01}.}
 \end{figure}
 
-The deterministic equations describing these processes are therefore given by
+According to the assumptions, the deterministic equations for $n_1$ and $n_2$ are
 
 \begin{align}
   \dot{n_1}(t) &= k_rd-\gamma_rn_1(t)\label{eq:mas-simple_det_1},\\
@@ -24,14 +29,16 @@ The deterministic equations describing these processes are therefore given by
 
 Hence, on steady state
 
+\todo[inline]{Explain steady state on concepts, what does it mean?}
+
 \begin{align}
-  \langle n_1 \rangle_s &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
-  \langle n_2 \rangle_s &= \frac{k_p}{\gamma_p} \langle n_1 \rangle_s = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
+   n_{1,s} &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
+   n_{2,s} &= \frac{k_p}{\gamma_p} n_{1,s} = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
 \end{align}
 
-But these are numbers of molecules which are discrete, and on that discreteness lies part of the stochastic behaviour of those kind of systems. The molecules are created and degradated one at a time at a certain average rate but the timing between each creation or degradation should not match exactly the rates. 
+The solutions of the differential equations \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2} are continous functions of time that are uniquely determined for some given initial conditions. However, in the reality $n_1$ and $n_2$ are discrete numbers. This fact determines an important part of their stochastic behaviour. Also, the synthesis and degradation of the molecules are, at a fundamental level, a consequence of random collisions of molecules that are difussing through the cell (e.g. mRNA polymerases with the promoter and enzymes with their substrates).
 
-To model the intrinsic noise, we will consider each pair of values of $(n_1,n_2)$ as a possible state for the system. There are transitions between the possible states which are proportional to the rates of creation and degradation as can be seen on figure \ref{fig:mas-trans_single}.
+With this in mind, to account for the noise the quantities $n_1(t)$ and $n_2(t)$ are defined as stochastic processes instead of deterministic functions. Also, they only take values on $\mathbb{N}$ instead of $\mathbb{R}^+$. In the ME aproach, the system can be thought as a set of states labeled with all the possible pairs $(n_1,n_2)$. The rates of synthesis and degradation are thought as the probabilities per unit time of a transition between states occuring. Figure \ref{fig:mas-trans_single} shows the possible transitions from and into the state $(n_1,n_2)$.
 
 \begin{figure}[H]
   \centering
@@ -39,9 +46,9 @@ To model the intrinsic noise, we will consider each pair of values of $(n_1,n_2)
   \caption[Transitions between states for a single gene]{\label{fig:mas-trans_single} Scheme of the possible transitions involving $n_1$ RNA molecules and $n_2$ protein molecules.}
 \end{figure}
 
-The transitions shown in figure \ref{fig:mas-trans_single} are the ways in which $(n_1,n_2)$ can change. This transitions can be interpreted probabilistically. There is a probability $p(n_1,n_2,t)$ of being at the state $(n_1,n_2)$ at time $t$ which changes according to the probabilities of being in the adjacent states and the transition probabilities given by the reaction rates. The reaction rates are interpreted as the probabilities per unit time for a reaction to occur. For instance, in a small time $\mathrm{d}t$, the probability of creating a mRNA molecule is $k_r\mathrm{d}t$. For the other it is analogous. Also, it is assumed that the probabilities $p$ of being at a state are independent of the transition probabilities.
+The transitions shown in figure \ref{fig:mas-trans_single} can be interpreted as follows: there is a probability $p(n_1,n_2,t)$ of being at the state $(n_1,n_2)$ at time $t$ which changes according to the probabilities of being in the adjacent states and the transition probabilities given by the reaction rates. Also, it is assumed that the probability of being at a state is independent of the transition probabilities. Formally speaking, applying the master equation approach implies that the processes are Markovian.
 
-With this in mind, we can write a difference-differential equation for the probability distribution $p$ which is called the master equation. It is a difference equation in the number of species $(n_1,n_2)$, and differential in time $t$. In this case it is given by
+Therefore, to completely characterize the system under this scheme, the PMF $p(n_1,n_2,t)$ must be found for all possible $n_1$, $n_2$ and $t$. We can write a difference-differential equation for $p$ called the Master Equation, it is given by
 
 \begin{equation}
   \label{eq:master}
@@ -49,13 +56,15 @@ With this in mind, we can write a difference-differential equation for the proba
     \frac{\mathrm{d}p(n_1,n_2,t)}{\mathrm{d}t} &= k_rdp(n_1-1,n_2,t) - k_rdp(n_1,n_2,t)\\
 &+ k_pn_1p(n_1,n_2-1,t) - k_pn_1p(n_1,n_2,t)\\
 &+ \gamma_r(n_1+1)p(n_1+1,n_2,t) - \gamma_rn_1p(n_1,n_2,t)\\
-&+ \gamma_p(n_2+1)p(n_1,n_2+1,t) - \gamma_pn_2p(n_1,n_2+1,t)
+&+ \gamma_p(n_2+1)p(n_1,n_2+1,t) - \gamma_pn_2p(n_1,n_2+1,t).
   \end{split}
 \end{equation}
 
-Notice that the first term refers to a transition from state $(n_1-1,n_2,t)$ to $(n_1,n_2,t)$ by a creation of a mRNA molecule, whereas the second term involves a transition $(n_1,n_2,t) \rightarrow (n_1+1,n_2,t)$ also by mRNA synthesis. The third and fourth terms have the meaning but related to protein synthesis. The other terms are related to transitions due to degradation.
+The first term refers to a transition from state $(n_1-1,n_2,t)$ to $(n_1,n_2,t)$ via a creation of a mRNA molecule, whereas the second term involves a transition $(n_1,n_2,t) \rightarrow (n_1+1,n_2,t)$ via mRNA synthesis. The third and fourth terms have the meaning but related to protein synthesis. The other terms are related to transitions due to degradation.
 
-We will write the master equation in terms of the moment generating function $F(z_1,z_2)$, as defined in eq. \eqref{def:mom_gen} on page \pageref{def:mom_gen}. Multiplying by $z_1^{n_1}z_2^{n_2}$ and summing over $n_1$ and $n_2$, both from $0$ to $\infty$ we obtain for the left hand side simply $\dot{F}(z_1,z_2)$. For the first term on the right hand side we obtain \footnote{The time dependence is not shown for simplicity.}
+\todo[inline]{Define moments}
+
+The PMF can be found from the ME for certain systems. Nevertheless, to find the noise we only need the first and second moments. To do that we write the master equation in terms of the moment generating function $F(z_1,z_2)$, defined in eq. \eqref{def:mom_gen}. Multiplying by $z_1^{n_1}z_2^{n_2}$ and summing over $n_1$ and $n_2$, both from $0$ to $\infty$ we obtain for the left hand side simply $\dot{F}(z_1,z_2)$. For the first term on the right hand side we obtain \footnote{The time dependence is not shown for simplicity.}
 
 \begin{equation*}
   \sum_{\mathclap{n_1=0,n_2=0}}^\infty z_1^{n_1}z_2^{n_2}f(n_1-1,n_2) = \sum_{\mathclap{n_1=-1,n_2=0}}^\infty z_1^{n_1+1}z_2^{n_2}f(n_1,n_2),
@@ -98,7 +107,7 @@ The other terms are treated in a similar fashion. Putting all of this together i
   \end{split}
 \end{equation}
 
-We thus transformed a difference equation in $(n_1,n_2)$ into a partial differential equation in $(z_1,z_2)$. Instead of solving completely, we will use the properties of $F$ (eqs. \eqref{eq:con-mom_gen_1} - \eqref{eq:con-mom_gen_d1d1}) to find the moments. Taking the derivative with respect to $z_1$ we obtain
+We transformed a difference equation in $(n_1,n_2)$ into a partial differential equation in $(z_1,z_2)$. The PMF $p$ can be found by solving for $F$ and transforming back. However, in this case we will use the properties of $F$ (eqs. \eqref{eq:con-mom_gen_1} - \eqref{eq:con-mom_gen_d1d1}) to find only the first two moments. Differentiating with respect to $z_1$
 
 \begin{equation}
   \label{eq:dz1}
@@ -108,7 +117,7 @@ We thus transformed a difference equation in $(n_1,n_2)$ into a partial differen
   \end{split}
 \end{equation}
 
-and taking the derivative of eq. \eqref{eq:masterF} with respect to $z_2$
+and with respect to $z_2$
 
 \begin{equation}
   \label{eq:dz2}
@@ -125,7 +134,7 @@ Evaluating eqs. \eqref{eq:dz1} and \eqref{eq:dz2} at $z_1 = z_2 = 1$ and using p
 \dot{\langle n_2 \rangle}&= k_p\langle n_1 \rangle - \gamma_p \langle n_2 \rangle.
 \end{align*}
 
-Therefore, the averages follow the deterministic equations given by eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. The steady state values are thus given by eqs. \eqref{eq:mas-simple_ss_1} and \eqref{eq:mas-simple_ss_2}. The deterministic equations reproduce the average behavior. 
+Which are the same as eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. Therefore, the averages follow the deterministic behavior and the steady state values are thus given by eqs. \eqref{eq:mas-simple_ss_1} and \eqref{eq:mas-simple_ss_2}. 
 
 Differentiating eq. \eqref{eq:dz1} with respect to $z_2$, eq. \eqref{eq:dz1} with respect to $z_1$ and eq. \eqref{eq:dz2} with respect to $z_2$ and evaluating at $z_1 = z_2 = 1$ we obtain, respectively
 
@@ -135,23 +144,21 @@ Differentiating eq. \eqref{eq:dz1} with respect to $z_2$, eq. \eqref{eq:dz1} wit
   \dot{\langle n_2(n_2-1)\rangle} &= 2k_p\langle n_1n_2 \rangle - 2\gamma_p\langle n_2(n_2-1)\rangle. \label{eq:dz2z2}
 \end{align}
 
-We will treat the previous equations in steady state, that is, with their time derivatives equal to zero. From  eq. \eqref{eq:dz1z1}, we get
+The previous equations will be treated in steady state. From  eq. \eqref{eq:dz1z1}
 
 \begin{equation}
   \label{eq:pren1}
   0 = k_rd \langle n_1 \rangle_s -\gamma_r \left(\langle n_1^2 \rangle_s - \langle n_1 \rangle_s \right) \Rightarrow \langle n_1^2 \rangle_s = \frac{k_rd}{\gamma_r}\langle n_1 \rangle_s + \langle n_1 \rangle_s = \langle n_1 \rangle_s^2 + \langle n_1 \rangle_s.
 \end{equation}
 
-Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano factor and the CV squared for the mRNA are given by
+Therefore, in steady state $\sigma_1^2 = \langle n_1 \rangle$. Hence, the Fano factor and the squared CV for the mRNA are given by
 
 \begin{equation}
   \label{noise1}
-  \boxed{\nu_1 = 1}, \quad\quad \boxed{\eta_1^2 = \frac{1}{\langle n_1 \rangle}}.
+  \nu_1 = 1, \quad\quad \eta_1^2 = \frac{1}{\langle n_1 \rangle}.
 \end{equation}
 
-Which is the noise for a Poisson process as we saw on eq. \eqref{eq:con-poisson_noise}. This makes sense since the assumptions made for the mRNA dynamics correspond to the ones made for the Poisson process in section \ref{sec:poisson}.
-
-\todo[inline]{Explain this in a more concrete way?}
+Which is the noise for a Poisson process as we saw on eq. \eqref{eq:con-poisson_noise}. This makes sense since the assumptions made for the mRNA dynamics correspond to the ones made for the Poisson process in section \ref{sec:poisson}. In \textit{E. coli}, $\langle n_1\rangle_s ~ 5$ mRNA molecules. Since the number is low, the mRNA number present large fluctuations.
 
 From eq. \eqref{eq:dz1z2} we have
 
@@ -179,7 +186,7 @@ From eq. \eqref{eq:mas-simple_ss_1} the first and third term of the numerator ca
   \boxed{\text{cov}(n_1,n_2)_s = \langle n_2 \rangle_s\frac{\frac{\gamma_p}{\gamma_r}}{1+\frac{\gamma_p}{\gamma_r}}}.
 \end{equation}
 
-From eq. \ref{eq:dz2z2} we have in steady state
+From eq. \ref{eq:dz2z2} we have
 
 \begin{equation*}
 kp\langle n_1n_2\rangle_s = \gamma_p\langle n_2^2\rangle_s-\gamma_p\langle n_2\rangle_s
@@ -192,7 +199,7 @@ Replacing eq. \ref{eq:cov12} in the previous equation we get after rearranging
   &=\langle n_2^2\rangle_s+\frac{k_p\langle n_2\rangle_s}{\gamma_r+\gamma_p}+\langle n_2 \rangle_s.
 \end{align*}
 
-Hence substracting $\langle n_2\rangle_s^2$ from the previous equation we obtain, in steady state,
+Hence substracting $\langle n_2\rangle_s^2$ from the previous equation we obtain
 
 \begin{equation*}
   \sigma_2^2 = \langle n_2\rangle\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
@@ -202,10 +209,12 @@ Therefore, the noise for the proteins in steady state is given by
 
 \begin{equation}
   \label{eq:noise2}
-  \boxed{\nu_2 = \frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1}, \quad \quad \boxed{\eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right)}.
+  \nu_2 = \frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
 \end{equation}
 
-As can be noticed, the noise in the proteins is bigger than Poissonian. Define $b\coloneqq \nicefrac{k_p}{\gamma_r}$, the average number of proteins produced during a lifetime of a transcript, called the burst size. and taking the degradation rate for a protein to be much smaller than for RNA, we have $\nicefrac{\gamma_p}{\gamma_r} \ll 1$ reducing the noise reduces to
+As can be noticed, the noise in the proteins is bigger than Poissonian. Define $b\coloneqq \nicefrac{k_p}{\gamma_r}$, the average number of proteins produced during a lifetime of a transcript, commonly called the \textit{burst size}. Taking the degradation rate for a protein to be much smaller than for RNA, we have $\nicefrac{\gamma_p}{\gamma_r} \ll 1$\footnote{Usually proteins are more stable than mRNAs, for \textit{E. coli}, $\gamma_r~ 1/(5$ min$)$ and $\gamma_p~ 1/(30$ min$)$}. Thus, the noise reduces to
+
+\todo[inline]{Machete?}
 
 \begin{equation*}
   \nu_2 = b+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(b+1\right).
