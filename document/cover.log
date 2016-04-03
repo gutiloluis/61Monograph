@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  3 APR 2016 00:37
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  3 APR 2016 11:02
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1339,74 +1339,74 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 (amsmath)                \frac or \genfrac should be used instead
 (amsmath)                 on input line 70.
 
-[59] [60] [61]) [62]
+[59] [60] [61] [62]) [63]
 \openout2 = `langevin1.aux'.
 
- (./langevin1.tex
+ (./langevin1.tex [64
+
+
+
+]
 Chapter 4.
 
 Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
 []\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
  []
 
-[63
-
-
-
-] [64] [65] [66] <img/lan-circuit.png, id=898, 1370.11874pt x 157.58875pt>
+[65] [66] [67] [68] <img/lan-circuit.png, id=908, 1370.11874pt x 157.58875pt>
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
 Package pdftex.def Info: img/lan-circuit.png used on input line 129.
 (pdftex.def)             Requested size: 426.79134pt x 49.08765pt.
- [67 <./img/lan-circuit.png>] [68] [69] [70] [71]
-[72] [73] [74] <img/lan-noise_sources.png, id=988, 1307.88625pt x 436.63126pt>
+ [69 <./img/lan-circuit.png>] [70] [71] [72] [73]
+[74] [75] [76] <img/lan-noise_sources.png, id=997, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
 Package pdftex.def Info: img/lan-noise_sources.png used on input line 390.
 (pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
-) [75 <./img/lan-noise_sources.png>]
+) [77 <./img/lan-noise_sources.png>]
 \openout2 = `bursting.aux'.
 
 
-(./bursting.tex [76
+(./bursting.tex [78
 
 
 
 ]
 Chapter 5.
-[77] [78] [79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90]) [91]
-[92]
+[79] [80] [81] [82] [83] [84] [85] [86] [87] [88] [89] [90] [91] [92]) [93]
+[94]
 \openout2 = `division.aux'.
 
  (./division.tex
 Chapter 6.
-[93
+[95
 
 
 
-] [94] [95] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106]
-[107]
+] [96] [97] [98] [99] [100] [101] [102] [103] [104] [105] [106] [107]
+[108] [109]
 Overfull \hbox (50.7592pt too wide) in paragraph at lines 545--545
 [] 
  []
 
-[108]) [109]
+[110]) [111]
 \openout2 = `final.aux'.
 
- (./final.tex [110
+ (./final.tex [112
 
 
 
 ]
 Chapter 7.
-) [111] [112
+) [113] [114
 
 
-] [113]
+] [115]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [114]
+ [116]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./cover.aux (./introduction.aux) (./concepts.aux)
 (./master1.aux) (./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux)
@@ -1424,9 +1424,9 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26917 strings out of 494966
- 490070 string characters out of 6179559
- 893120 words of memory out of 5000000
+ 26919 strings out of 494966
+ 490086 string characters out of 6179559
+ 893125 words of memory out of 5000000
  29139 multiletter control sequences out of 15000+600000
  15161 words of font info for 60 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
@@ -1497,10 +1497,10 @@ onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (114 pages, 2927168 bytes).
+Output written on cover.pdf (116 pages, 2929189 bytes).
 PDF statistics:
- 1533 PDF objects out of 1728 (max. 8388607)
- 1346 compressed objects within 14 object streams
- 447 named destinations out of 1000 (max. 500000)
+ 1543 PDF objects out of 1728 (max. 8388607)
+ 1354 compressed objects within 14 object streams
+ 449 named destinations out of 1000 (max. 500000)
  477 words of extra memory for PDF output out of 10000 (max. 10000000)
 

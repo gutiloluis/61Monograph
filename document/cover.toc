@@ -44,54 +44,54 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {3.3}Time averaging}{62}{section.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {3.4}The logarithmic gain}{62}{section.3.4}
+\contentsline {section}{\numberline {3.4}The logarithmic gain}{63}{section.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {4}Cascade of regulation - The Langevin equation}{63}{chapter.4}
+\contentsline {chapter}{\numberline {4}Cascade of regulation - The Langevin equation}{65}{chapter.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.1}Intrinsic noise in a single gene using the Langevin approach}{63}{section.4.1}
+\contentsline {section}{\numberline {4.1}Intrinsic noise in a single gene using the Langevin approach}{65}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Model circuit for the cascade}{67}{section.4.2}
+\contentsline {section}{\numberline {4.2}Model circuit for the cascade}{69}{section.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.3}Mathematical derivations}{68}{section.4.3}
+\contentsline {section}{\numberline {4.3}Mathematical derivations}{70}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Explicit expressions for the logarithmic gain}{75}{section.4.4}
+\contentsline {section}{\numberline {4.4}Explicit expressions for the logarithmic gain}{77}{section.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.5}Analysis and implications}{75}{section.4.5}
+\contentsline {section}{\numberline {4.5}Analysis and implications}{77}{section.4.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {5}Effects of bursting and senescence}{77}{chapter.5}
+\contentsline {chapter}{\numberline {5}Effects of bursting and senescence}{79}{chapter.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.1}mRNA bursts}{77}{section.5.1}
+\contentsline {section}{\numberline {5.1}mRNA bursts}{79}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{80}{section.5.2}
+\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{82}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Decay of molecules}{86}{section.5.3}
+\contentsline {section}{\numberline {5.3}Decay of molecules}{88}{section.5.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.4}Senescence of mRNA}{90}{section.5.4}
+\contentsline {section}{\numberline {5.4}Senescence of mRNA}{92}{section.5.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {6}Effects of cell division}{93}{chapter.6}
+\contentsline {chapter}{\numberline {6}Effects of cell division}{95}{chapter.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.1}Characterizing the noise arising from cell division}{93}{section.6.1}
+\contentsline {section}{\numberline {6.1}Characterizing the noise arising from cell division}{95}{section.6.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.2}Independent segregation}{95}{section.6.2}
+\contentsline {section}{\numberline {6.2}Independent segregation}{97}{section.6.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.3}Disordered segregation}{96}{section.6.3}
+\contentsline {section}{\numberline {6.3}Disordered segregation}{98}{section.6.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.1}General case}{96}{subsection.6.3.1}
+\contentsline {subsection}{\numberline {6.3.1}General case}{98}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{99}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{101}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{99}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{101}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{103}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{105}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ordered segregation}{104}{section.6.4}
+\contentsline {section}{\numberline {6.4}Ordered segregation}{106}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{104}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{106}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{104}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{106}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{107}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{109}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusions}{111}{chapter.7}
+\contentsline {chapter}{\numberline {7}Conclusions}{113}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{114}{chapter*.56}
+\contentsline {chapter}{Bibliography}{116}{chapter*.56}

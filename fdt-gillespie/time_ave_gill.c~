@@ -1,0 +1,9 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <gsl/gsl_rng.h>
+
+const gsl_rng_type *T;
+gsl_rng *R;
+
+void step(double *t, double *r, double *p

@@ -8,16 +8,16 @@ Consider a (genetic) system with $N$ species whose concentrations are $n_1,\dots
 
 \begin{equation}
   \label{eq:fdt-fdt1}
-  \frac{\mathrm{d}\mathbf{\sigma}}{\mathrm{d}t} = \mathbf{A\sigma} + \mathbf{\sigma A^T}+\mathbf{B},
+  \frac{\mathrm{d}\mathbf{\sigma}}{\mathrm{d}t} = \mathbf{A\sigma} + \mathbf{\sigma A^T}+\mathbf{B}.
 \end{equation}
 
-where,
+The elements of $\mathbf{A}$ are,
 
 \begin{equation*}
-  A_{ij} \coloneqq \frac{\partial}{\partial \langle n_j}\frac{\partial \langle n_i\rangle}{\partial t}
+  A_{ij} \coloneqq \frac{\partial}{\partial \langle n_j\rangle}\frac{\partial \langle n_i\rangle}{\partial t} = \frac{\partial}{\partial \langle n_j\rangle}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right).
 \end{equation*}
 
-and
+where $J_i^\pm$ are the total fluxes of synthesis and degradation of species $i$. For $\mathbf{B}$
 
 \begin{equation*}
   B_{ij} = \sum_k v_{jk}v_{ik}R_k,
@@ -92,7 +92,7 @@ First, we need to write the matrices $\mathbf{A}$ and $\mathbf{B}$, according to
 
 \begin{equation*}
   \begin{split}
-    A_{11} &= \partial_{n_1}\dot{\langle n_1\rangle} = -\frac{1}{\tau_1},\\
+    A_{11} &= \partial_{n_1}\dot{\langle n_1\rangle} =-\frac{1}{\tau_1},\\
     A_{12} &= \partial_{n_1}\dot{\langle n_2\rangle} = k_2^+
   \end{split}
 \end{equation*}
@@ -177,8 +177,14 @@ In the first case $\tau_2\ll\tau_1$, thus the time averaging term goes to $1$ an
 
 \todo[inline]{Add figures}
 
+For the number of proteins $n_3$ we can see in eq. \eqref{eq:fdt-eta3} that the squared noise is the sum of its intrinsic Poisson noise ($(1/n_3)$), the propagated noise from mRNA that is modulated by a time average factor and the noise from gene activation that is propagated first to the mRNAs and then to proteins. This two-step propagation explains the more complex time averaging factor.
+
+Altought the noise in mRNA is usually large due to its low numbers. The effect of time averaging could reduce considerably the noise in the number of proteins with respect to the noise in mRNA. Without this, the reliability of biological circuits would be very low. Besides, since a time average factor takes values between $0$ and $1$, the noise propagated across multiple steps is reduced with the number of steps. This could be another strategy for noise reduction.
 
 \section{The logarithmic gain}
-
-A quantity that will be very important for the analysis of genetic circuits is the logarithmic gain or elasticity $H_{ij}$. 
 \label{sec:log_gain}
+An important quantity for the analysis of genetic circuits is the logarithmic gain or elasticity $H_{ij}$. It measures the amount by which changes in the quantities of the $j$th component produces changes in the $i$th component. It is defined as
+
+\begin{equation*}
+  H_{ij} = \frac{\partial }{\partial}
+\end{equation*}
