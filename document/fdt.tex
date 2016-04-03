@@ -1,21 +1,17 @@
 \chapter{The Fluctuation-Dissipation theorem (FDT)}
 
-This chapter is based on the work of J. Paulsson in \cite{paulsson04} and \cite{paulsson05}
-
-\todo[inline]{Do this chapter}
+This chapter is based on the work of J. Paulsson in \cite{paulsson04} and \cite{paulsson05}.
 
 \section{Statement of the FDT}
-
-\todo[inline]{Prove it}
 
 Consider a (genetic) system with $N$ species whose concentrations are $n_1,\dotsc,n_N$. The FDT states that if $\mathbf{\sigma}$ is the matrix of covariances (i.e. $\sigma_{ij} \coloneqq \langle n_i-\langle n_i\rangle\rangle\langle n_j-\langle n_j\rangle\rangle$), then it follows that 
 
 \begin{equation}
   \label{eq:fdt-fdt1}
-  \frac{\mathrm{d}\mathbf{\sigma}}{\mathrm{d}t} = \mathbf{A\sigma} + \mathbf{\sigma A^T}+\mathbf{B}.
+  \frac{\mathrm{d}\mathbf{\sigma}}{\mathrm{d}t} = \mathbf{A\sigma} + \mathbf{\sigma A^T}+\mathbf{B},
 \end{equation}
 
-Where,
+where,
 
 \begin{equation*}
   A_{ij} \coloneqq \frac{\partial}{\partial \langle n_j}\frac{\partial \langle n_i\rangle}{\partial t}
@@ -36,35 +32,63 @@ In steady state, the FDT becomes
   \mathbf{A\sigma}+\mathbf{\sigma A^T}+\mathbf{B} = 0
 \end{equation}
 
-where $\mathbf{A}$ and $\mathbf{B}$ are now evaluated at steady state. We will illustrate the concept with an example in the next section.
+where $\mathbf{A}$ and $\mathbf{B}$ are now evaluated at steady state. We illustrate the concept with an example in the next section.
 
 \section{Example: simple gene}
 
-Consider a single gene system such as the one of section \ref{sec:mas-single_gene}. We will treat the same case without the suposition of a fixed number of active copies of the gene. In this case, there is a fixed number $n_1^{\text{max}}$ and $n_1$ copies that are active, that is, they are available for transcription. There are several ways in which genes can be turned on and off including binding of transcription factors or chromatin remodeling.
+Consider a single gene such as the explained on section \ref{sec:mas-single_gene}. We will treat the same case without the suposition of a fixed number of active copies of the gene. In this case, there is a fixed number $n_1^{\text{max}}$ and $n_1$ copies that are active, that is, that are available for transcription. There are several ways in which genes can be turned on and off including binding of transcription factors or chromatin remodeling.
 
 \todo[inline]{Explain chromatin remodeling}
 
-We will approximate the activation of genes in the following scheme, each gene can switch independenty from \textit{off} to \textit{on} with rate $k_1^+$ and in the opposite sense with rate $k_1^-$.
+We assume that the activation and activation for each gene follows a telegraph process, i.e. each gene switches from \textit{off} to \textit{on} with rate $k_1^+$ and in the opposite sense with rate $k_1^-$. This can be illustrated as
 
-\todo[inline]{Explain telegraph process}
+\begin{equation*}
+  \text{off}\ce{<=>[k_1^+][k_1^-]}\text{on}.
+\end{equation*}
 
-The number of active genes $n_1$ follows a binomial distribution with the probability of being on given by $P_{\text{on}}=k_1^+/(k_1^++k_1^-)$.
+Let $P_\text{on}(t)$ and $P_\text{off}(t)$ be the probabilities for a gene to be active or inactive, respectively. Clearly $P_\text{on}(t) + P_\text{off}(t) = 1$ and the ME for $P_\text{on}(t)$ is given by
 
-For the number of mRNA $n_2$ and proteins $n_3$, we will use the same scheme as on section \ref{sec:mas-single_gene}. Recalling that the averages satisfy the deterministic equations, they follow
+\begin{equation*}
+  \dot{P}_\text{on}(t)=k_1^+P_\text{off}(t)-k_1^-P_\text{on}(t).
+\end{equation*}
 
-\todo[inline]{Explain the eq for n1, define tau1}
+In steady state,
+
+\begin{equation*}
+  P_\text{on} = \frac{k_1^+}{k_1^-}P_\text{off} = \frac{k_1^+}{k_1^-}(1-P_\text{on}),
+\end{equation*}
+
+hence,
+
+\begin{equation*}
+  P_\text{on} = \frac{k_1^+}{k_1^++k_1^-}.
+\end{equation*}
+
+Besides, suppose that the $n_1^\text{max}$ copies of the gene are independent. Then, in steady state $n_1$ follows a binomial distribution
+
+\begin{equation*}
+  P(n_1) = {n_1^\text{max}\choose n_1} P_\text{on}^{n_1}(1-P_\text{on})^{n_1^\text{max}-n_1}.
+\end{equation*}
+
+Recalling that the averages satisfy the deterministic equations, $\langle n_1\rangle$ follows
+
+\begin{equation*}
+  \dot{\langle n_1\rangle} = k_1^+(n_1^\text{max}-\langle n_1\rangle) - k_1^-\langle n_1\rangle = k_1^+n_1^\text{max} - (k_1^++k_1^-)\langle n_1\rangle.
+\end{equation*}
+
+For the number of mRNA $n_2$ and proteins $n_3$, we use the same equations as on section \ref{sec:mas-single_gene}. To make the analysis clearer, we define $\tau_i\coloneqq 1/\gamma_i$, for $i=2,3$ and $\tau_1\coloneqq (k_1^++k_1^-)^{-1}$, then
 
 \begin{equation}
   \begin{split}
-    \dot{\langle n_1\rangle} &= k_1^+n_1^\text{max} - \frac{1}{\tau_1}\langle n_1\rangle\\
-    \dot{\langle n_2\rangle} &= k_2^+\langle n_1\rangle - \frac{1}{\tau_2}\langle n_2\rangle\\
-    \dot{\langle n_3\rangle} &= k_3^+\langle n_2\rangle - \frac{1}{\tau_3}\langle n_2\rangle
+    \dot{\langle n_1\rangle} &= k_1^+n_1^\text{max} - \frac{1}{\tau_1}\langle n_1\rangle,\\
+    \dot{\langle n_2\rangle} &= k_2^+\langle n_1\rangle - \frac{1}{\tau_2}\langle n_2\rangle,\\
+    \dot{\langle n_3\rangle} &= k_3^+\langle n_2\rangle - \frac{1}{\tau_3}\langle n_2\rangle.
   \end{split}
 \end{equation}
 
-Here $k_2$ and $k_3$ are the rates of transcription per active gene and translation per mRNA, respectively. Here we write the degradation in terms of $\tau_i\coloneqq 1/\gamma_i$, for $i=2,3$ with the purpose of making the subsequent interpretations clearer. A master equation can be easily written and treated using the methods presented on chapter \ref{ch:master}. Here we will use the FDT in order illustrate it.
+$k_2$ and $k_3$ are the rates of transcription per active gene and translation per mRNA, respectively. A master equation can be easily written and treated using the methods presented on chapter \ref{ch:master}, but we will use the FDT instead.
 
-First we need to write the matrices $\mathbf{A}$ and $\mathbf{B}$, according to their definition, we have for instance
+First, we need to write the matrices $\mathbf{A}$ and $\mathbf{B}$, according to their definition, we have for instance
 
 \begin{equation*}
   \begin{split}
@@ -102,7 +126,7 @@ The rates $R_k$ are given by the deterministic equations. In steady state the ra
   B_{22} \coloneqq \sum_kv_{2k}^2R_k = \sum_kR_k = k_2\langle n_1\rangle + \frac{1}{\tau_2}\langle n_2\rangle = \frac{2\langle n_2\rangle}{\tau_2},
 \end{equation*}
 
-where the last equality holds for the steady state assumption. For $B_{33}$ it is analogous. For $B_{11}$,
+where the last equality holds from the steady state assumption. For $B_{33}$ it is analogous. For $B_{11}$,
 
 \begin{equation*}
   B_{11} = k_1^+(n_1^\text{max}-\langle n_1\rangle)+k_1^-\langle n_1\rangle = 2k_1^-\langle n_1\rangle = 2\frac{1-P_\text{on}}{\tau_1}\langle n_1\rangle,
@@ -126,7 +150,7 @@ Putting all the expressions together, $\mathbf{B}$ becomes
   \end{pmatrix}.\\
 \end{equation}
 
-Replacing on \eqref{eq:fdt-fdtss} we obtain a linear system that can be solved for $\mathbf{\sigma}$ using a computer program. The diagonal elements are the variances, from which the noises can be found. The next expressions for the coefficients of variation can be trivially found following the procedure, although the calculation may be tedious. The results are
+Replacing on \eqref{eq:fdt-fdtss} we obtain a linear system that can be solved for $\mathbf{\sigma}$ using a computer program. The diagonal elements are the variances, from which the noises can be found. The next expressions for the coefficients of variation can be trivially found following the procedure, although the calculation are quite extensive. The results are
 
 \begin{align}
   \eta_1^2 &= \frac{1-P_\text{on}}{\langle n_1\rangle}, \label{eq:fdt-eta1}\\
@@ -134,11 +158,25 @@ Replacing on \eqref{eq:fdt-fdtss} we obtain a linear system that can be solved f
   \eta_3^2 &= \frac{1}{\langle n_3\rangle} + \frac{1}{\langle n_2\rangle}\frac{\tau_2}{\tau_2+\tau_3}+\frac{1-P_\text{on}}{\langle n_1\rangle}\frac{\tau_2}{\tau_2+\tau_3}\frac{\tau_1}{\tau_1+\tau_3}\frac{\tau_1+\tau_3+\tau_1\tau_3/\tau_2}{\tau_1+\tau_2}. \label{eq:fdt-eta3}.
 \end{align}
 
-For eq. \eqref{eq:fdt-eta1} the relative width of the distribution is smaller that Poissonian for a given value of $\langle n_1\rangle$. If $P_\text{on}$ is close to $1$ the noise could be low even if $n_1$ is small. This is characteristic of a binomial process.
+For eq. \eqref{eq:fdt-eta1} the relative width of the distribution is smaller that Poissonian for a given value of $\langle n_1\rangle$. If $P_\text{on}$ is close to $1$ the noise could be low even if $n_1$ is small.
 
-The first term in eq. \eqref{eq:fdt-eta2} is the Poissonian noise (see eq. \eqref{eq:con-poisson_noise}). The second term is the noise arising from gene activation multiplied by a factor of time averaging. That depends on the decay rates of
+The first term in eq. \eqref{eq:fdt-eta2} is the Poissonian noise (see eq. \eqref{eq:con-poisson_noise}). The second term is the noise arising from gene activation multiplied by a factor of time averaging. That depends on the decay rates of each molecule. Due to its importance, we will devote a section to this phenomenon.
 
-\todo[inline]{Time average}
+\section{Time averaging}
+\label{sec:fdt-time-ave}
+
+ We have seen in sec. \ref{sec:mas-single_gene} that the response time depends on the degradation rate and that its inverse is proportional to the speed for the levels of some molecule to reach its steady state levels. In this example, the fluctuations in the number of active genes $n_1$ change the steady state levels of the number of mRNA molecules. The mRNA therefore continuously has to reach its new stationary level with a timescale given by $\tau_2$. Hence, if $\tau_2$ is small relative to $\tau_1$, the mRNAs respond quickly to fluctuations in the number of active genes, increasing noise in mRNA. In the opposite case, what occurs is that in a time of $\tau_2$ the number of active genes fluctuated many times. Since the mRNA levels is unable to follow all of them, it makes a time average that reduces its fluctuations.
+
+This can be seen in the term of time averaging of eq. \eqref{eq:fdt-eta2}:
+
+\begin{equation*}
+  \frac{\tau_1}{\tau_1+\tau_2} = \frac{1}{1+\tau_2/\tau_1}
+\end{equation*}
+
+In the first case $\tau_2\ll\tau_1$, thus the time averaging term goes to $1$ and the noise in $n_1$ is fully propagated. In the second case $\tau_2\gg\tau_1$, then the term goes to zero, and there is no propagated noise from $n_1$ to $n_2$.
+
+\todo[inline]{Add figures}
+
 
 \section{The logarithmic gain}
 

@@ -3,7 +3,8 @@
 
 In this chapter, we develop a model of a genetic system considering only the intrinsic noise using the master equation (ME). This is an approach where there are certain states in which the system can be found and it evolves probabilistically between those states according to some determined transition rates. In the context of genetic circuits the possible states are characterized by number of mRNAs and proteins and the transitions by their rates of creation and degradation.
 
-We introduce the ME approach applying it to the simplest possible genetic circuit: a single gene with regulated by a constitutive promoter. Next we explain a generalization of the analytic method that can be applied to an arbitrary genetic circuit that satisfies certain conditions. Finally, we ilustrate the general method using it on an negatively autorregulated gene.                                      
+We introduce the ME approach applying it to the simplest possible genetic circuit: a single gene with regulated by a constitutive promoter. Next we explain a generalization of the analytic method that can be applied to an arbitrary genetic circuit that satisfies certain conditions. Finally, we ilustrate the general method using it on an negatively autorregulated gene.
+
 \todo[inline]{Define constitutive promoter}
 
 This chapter is based on the work done by M. Thattai and A. van Oudenaarden in \cite{thattai01}.
@@ -35,6 +36,30 @@ Hence, on steady state
    n_{1,s} &= \frac{k_r}{\gamma_r} \label{eq:mas-simple_ss_1}, \\
    n_{2,s} &= \frac{k_p}{\gamma_p} n_{1,s} = \frac{k_pk_r}{\gamma_p\gamma_r} \label{eq:mas-simple_ss_2}.
 \end{align}
+
+Let $n_1(0) = n_2(0) = 0$. Then, the solutions of the differential equation for $n_1$ is
+
+\begin{equation*}
+  n_1(t) = n_{1,s}\left(1-e^{-\gamma_rt}\right).
+\end{equation*}
+
+Also, assuming $n_1$ is fixed at some value $n_1^*$, the solution for $n_2$ is similar
+
+\begin{equation*}
+  n_2(t) = n_{2,s}\left(1-e^{-\gamma_rt}\right),
+\end{equation*}
+
+with $n_{2,s}=\frac{k_p}{\gamma_p}n_1^*$. Figure \ref{fig:mas-detSol} shows a plot of the solution.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{mas-detSol}
+  \caption[Deterministic solution for the number of proteins]{\label{fig:mas-detSol} Deterministic solution for the number of proteins as a function of time for a fixed number of mRNAs. The time for reaching half the steady state value, $\ln 2/\gamma_p$, and the steady state value are marked with dashed lines.}
+\end{figure}
+
+The number of protein reaches half its steady state in a time of $\ln 2/\gamma_p$. Then, the speed at which $n_2$ reaches its steady state is proportional to $1/\gamma_p$ and it is the same independently of whether the levels start above or below $n_{2,s}$. If the number of mRNA molecules changes, the steady state level for $n_2$ also changes and the proteins reach the new steady state within a timescale of $1/\gamma_p$. This fact is very important in noise propagation as we will see in the next chapter.
+
+A parameters that living beings might want to tune in their genetic circuits is their response time. In an unregulated gene $\gamma_p$ must be increased to have a faster response time. To do that, proteins must be actively destroyed and this raises the energetic cost. However, there are more sophisticated mechanisms to control the response time such as feed forward loops and autorregulation \cite{alon06}.
 
 The solutions of the differential equations \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2} are continous functions of time that are uniquely determined for some given initial conditions. However, in the reality $n_1$ and $n_2$ are discrete numbers. This fact determines an important part of their stochastic behaviour. Also, the synthesis and degradation of the molecules are, at a fundamental level, a consequence of random collisions of molecules that are difussing through the cell (e.g. mRNA polymerases with the promoter and enzymes with their substrates).
 
@@ -209,34 +234,34 @@ Therefore, the noise for the proteins in steady state is given by
 
 \begin{equation}
   \label{eq:noise2}
-  \nu_2 = \frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{\nicefrac{k_p}{\gamma_r}}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
+  \nu_2 = \frac{b}{1+\nicefrac{\gamma_p}{\gamma_r}}+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(\frac{b}{1+\nicefrac{\gamma_p}{\gamma_r}}+1\right).
 \end{equation}
 
-As can be noticed, the noise in the proteins is bigger than Poissonian. Define $b\coloneqq \nicefrac{k_p}{\gamma_r}$, the average number of proteins produced during a lifetime of a transcript, commonly called the \textit{burst size}. Taking the degradation rate for a protein to be much smaller than for RNA, we have $\nicefrac{\gamma_p}{\gamma_r} \ll 1$\footnote{Usually proteins are more stable than mRNAs, for \textit{E. coli}, $\gamma_r~ 1/(5$ min$)$ and $\gamma_p~ 1/(30$ min$)$}. Thus, the noise reduces to
+\todo[inline]{Explain something about orders of magnitude}
 
-\todo[inline]{Machete?}
+where $b\coloneqq k_p/\gamma_r$ is the average number of proteins that are produced during the lifetime of a transcript, often called the \textit{burst size}. The second part ($1$ in $\nu_p$) is the Poisson noise, which measured as the CV is negligible because the average number of proteins for a given gene is usually large (of the order of $1000$ to $10000$ in \textit{E. coli}).
 
-\begin{equation*}
-  \nu_2 = b+1, \quad \quad \eta_2^2 = \frac{1}{\langle n_2\rangle}\left(b+1\right).
-\end{equation*}
+The first part is the contribution to the noise that arises in mRNA fluctuations and is propagated to the proteins since they are related by the rate of production of proteins $k_pn_1$. The noise in the number of proteins is thus much larger than Poissonian since $b$ is about $15$ proteins/mRNA. The factor $1/(1+\gamma_p/\gamma_r)$ represent the so called time averaging of fluctuations, it takes values between $0$ and $1$. Usually $\gamma_p<\gamma_r$, meaning that fluctuations in mRNA number happen on a characteristic timescale $\tau_r \propto 1/\gamma_r$  that is smaller than the response time of the proteins $\tau_p \propto 1/\gamma_p$. The proteins are thus unable to respond immediately to the mRNA fluctuations. As a consequence, the protein make a time average over many ups and downs of mRNA. This process reduces fluctuations in the number of proteins. This very important phenomenon will be considered with more detain in section \ref{sec:fdt-time-ave}.
 
-The analytical results are compared with simulations in fig. \ref{fig:mas-sim_simple}. It can be noticed that the noise is strongly dependent on the burst size $b$, independent of $k_r$ and weakly dependent on the protein half-life $\tau_p = \ln2/\gamma_r$.
-
-\todo[inline]{Explain here the effect of time averaging or leave it to another section?}
+The analytical results are compared with the results of Gillespie simulations in fig. \ref{fig:mas-sim_simple}. It can be seen that the Fano factor is strongly dependent on the burst size $b$, independent of $k_r$ and dependent on the protein half-life $\tau_p = \ln2/\gamma_r$ only for low values of $\langle p\rangle$. Also, $\nu_p$ can become much larger than $1$ for biologically relevant parameters, verifying that the noise of proteins is much larger than Poisson.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{mas-sim_simple}
-  \caption[Noise in proteins: comparing analytical results and simulations]{\label{fig:mas-sim_simple} Comparison between the results of the simulations (dots) and the analytical results (lines) given by eq. \eqref{eq:noise2}. The Fano factor is plotted vs. the mean. The legend indicates which parameter is varied while the others are fixed.}
+  \includegraphics[width=13cm]{mas-sim_simple}
+  \caption[Noise in proteins: comparing analytical results and Gillespie simulations]{\label{fig:mas-sim_simple} Comparison between the results of Gillespie simulations (dots) and the analytical results (lines) given by eq. \eqref{eq:noise2}. The Fano factor is plotted vs. the mean number of proteins in steady state. The base values of the parameters are $\tau_r = \ln2/\gamma_r = 2$ min,  $b=20$ proteins/mRNA $k_r = 0.01$ mRNA/s and $\tau_p = \ln2/\gamma_p = 1$ h. For each curve, the parameter indicated in the legend is varied while the others are fixed. $b$ is varied between $5$ and $40$ proteins/mRNA; $k_r$ varies between $0.0025$ and $0.02$ mRNA/s; and $\tau_p$ varies from $15$ min to $2$ h. Each point correspond to $10000$ trials where each one was evolved until a time of $10\tau_p$ in order to be sure that the system has reached its steady state \footnotemark.}
 \end{figure}
 
-Therefore, the noise and the steady state average can be controlled independently by controlling the burst size $b$. If a cell produces many mRNAs and a few proteins per transcript (small $b$), the noise is reduced. On the contrary, the same average number of proteins can be reached by producing a few mRNAs and many proteins per mRNA (large $b$). In this case the noise is larger. Nevertheless there is an additional factor, reducing noise in this case requires a constant synthesis and degradation of mRNA. This is inefficient for the cells since they are inverting energy in the production of mRNAs from which there will be little proteins translated, representing a disadvantage in fitness. 
+\todo[inline]{Define the thing with kr and krd}
 
-This analysis suggests that there is a pay-off between fitness and noise reduction in the cells that has been tuned by evolution according to the necessity of reliability of the particular genetic component. However, we will see that there are other mechanisms, like negative autorregulation, that allow cells to reduce noise in a more efficient way (see sec. \ref{sec:mas-neg_autorreg}).
+\footnotetext{The simulations were programmed in C and the graphics were done with Wolfram Mathematica. The scripts can be found \href{https://github.com/gutiloluis/61Monograph/tree/master/mas-gillespie}{here}.} 
+
+The noise and the steady state average in protein numbers can be controlled independently by controlling the burst size $b$. If a cell produces many mRNAs and a few proteins per transcript (small $b$), the noise is reduced. On the contrary, the same average number of proteins can be reached by producing a few mRNAs and many proteins per mRNA (large $b$). In this case the noise is larger. Nevertheless, reducing noise in this case requires a constant synthesis and degradation of many mRNAs. This is inefficient for the cells since they are spending energy in the production of mRNAs from which there will be only a few proteins translated. This suggests that there is an interchange between fitness and noise reduction in the cells that has been tuned by evolution according to the necessity of reliability of the particular genetic component. However, we will see that there are other mechanisms, like negative autorregulation (sec. \ref{sec:mas-neg_autorreg}), that allow cells to reduce noise in a more efficient way.
+
+\todo[inline]{Define fitness, word for pay-off}
 
 \section{Several species with linear interactions}
 
-In this section we generalize the previous results to arbitrary genetic network in which the interactions between its components are linear. To introduce the model, consider eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. In matrix notation, they can be written as
+In this section we generalize the previous results to arbitrary genetic network in which the interactions between its components are linear. Consider eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}. In matrix notation, they can be written as
 
 \begin{equation}
   \label{eq:matdet}
@@ -244,6 +269,8 @@ In this section we generalize the previous results to arbitrary genetic network 
 \end{equation}
 
 where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ are defined as
+
+\todo[inline]{Try to write eqs. on the same line}
 
 \begin{align}
   \mathbf{A} &=
@@ -260,40 +287,32 @@ where $\mathbf{n}^T=(d,n_1,n_2)$ is the vector of chemical species and the matri
   \end{pmatrix} \label{eq:mas_G_single}. 
 \end{align}
 
-Hence, $\mathbf{A}$ contains the creation rates and represents how each rate depends on the different species and $\mathbf{\Gamma}$ has the degradation rates, which is diagonal whenever the degradation is not mediated by interactions with other molecules.
+$\mathbf{A}$ contains the creation rates and describes how each rate depends on the different species and $\mathbf{\Gamma}$ has the degradation rates, which is diagonal whenever the degradation is not mediated by interactions among different kinds of molecules.
 
-Now, for an arbitrary circuit with an arbitrary number $N$ of species and linear interaction between them, we can write its deterministic equations in the form of eq. \eqref{eq:matdet}. Also, the state state space will have $N$ dimensions in the general case (see fig. \ref{fig:mas-trans_many}).
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=9cm]{mas-trans_many}
-  \caption[Transitions between states in general] {\label{fig:mas-trans_many} Scheme of the possible transitions in the case of three species.}
-\end{figure}
-
-According to fig. \ref{fig:mas-trans_many}, in the general case the master equation will have as many terms as there are transitions involving the state $\mathbf{n}$. The master equation can thus be written in general as follows
+For an arbitrary circuit with an arbitrary number $N$ of species and linear interaction between them, we can write its deterministic equations in the form of eq. \eqref{eq:matdet}. In the ME approach for genetic circuits, the state space has now $N$ dimensions and the ME has now $4N$ terms. This is because for each kind of molecule there are two transitions given by synthesis and two given by degradation as can be seen in fig. \ref{fig:mas-trans_single}. With this in mind, the ME is given by \footnote{To reduce the complexity of the expressions, we define $p(n_i) \coloneqq p(\mathbf{n}) = p(n_1,\dotsc,n_i,\dotsc,n_N)$, and $p(n_i\pm1)\coloneqq p(n_1,\dotsc,n_i\pm1,\dotsc,n_N)$. The same convention is used for $F(z_i)$.}
 
 \begin{equation}
-\label{eq:masterg1}
-\dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \sum_{j=1}^N \Gamma_{ij}((n_j+1)p(n_i+1)-n_jp(n_i))\right)
+  \label{eq:masterg1}
+  \dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \sum_{j=1}^N \Gamma_{ij}((n_j+1)p(n_i+1)-n_jp(n_i))\right)
 \end{equation}
 
 When for a fixed specie $i$, the terms in parentheses represent having $n_i-1$ molecules of the $i$th type and creating one; having $n_i$ and creating one; having $n_i+1$ and destroying one; and having $n_i$ and destroying one, respectively. Since this is possible for each of the $N$ types of molecules, we must sum over $i$ as well.
 
-Assuming that degradation does not involve interactions between various molecules, the matrix $\Gamma$ can be taken to be diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \eqref{eq:masterg1} becomes \footnote{To reduce the complexity of the expressions, we define $p(n_i) \coloneqq p(\mathbf{n}) = p(n_1,\dotsc,n_i,\dotsc,n_N)$, and $p(n_i\pm1)\coloneqq p(n_1,\dotsc,n_i\pm1,\dotsc,n_N)$. The same convention will be used for $F(z_i)$.}
+Assuming that degradation does not involve interactions between various molecules, the matrix $\Gamma$ can be taken to be diagonal, i.e. $\Gamma_{ij}=\delta_{ij}\Gamma_j$. With this eq. \eqref{eq:masterg1} becomes
 
 \begin{equation}
 \label{eq:masterg2}
 \dot{p}(n_i) =  \sum_{i=1}^N\left(\sum_{j=1}^N A_{ij}n_j \left( p(n_i-1) - p(n_i) \right) + \Gamma_{i}((n_i+1)p(n_i+1)-n_ip(n_i))\right).
 \end{equation}
 
-We will follow the same procedure of the previous section, i.e. write the master equation in terms of the moment generating function and use its properties to find expressions for the moments. To get an equation for the moment generating functions, we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. At first, we will consider the term in parentheses of eq. \eqref{eq:masterg2} and later we will sum over $i$. For the first term we obtain the following expression \footnote{Again, to avoid having unnecesarily long expressions, we write $\sum$ refering to $\sum_{n_1=0}^\infty\dotsi\sum_{n_N=0}^\infty$.}
+To find the mean and variances, we write the master equation in terms of the moment generating function and use its properties to find equations for the moments. In this case we multiply by $z_1^{n_1}\dotsm z_N^{n_N}$ and sum over $n_1,\dotsc n_N$, all from $0$ to $\infty$. First we will consider the term in parentheses of eq. \eqref{eq:masterg2} and later we will perform the outer sum over $i$. For the first term we obtain the following expression \footnote{To avoid unnecesarily long expressions, we write $\sum$ refering to $\sum_{n_1=0}^\infty\dotsi\sum_{n_N=0}^\infty$.}
 
 \begin{equation}
   \label{eq:momg1}
   \sum n_j z_1^{n_1}\dotsm z_i^{n_i}\dotsm z_j^{n_j}\dotsm z_N^{n_N} f(n_i) = z_iz_j\sum n_jz_j^{n_j-1}z_i^{n_i}f(n_i) = z_iz_j\frac{\partial F}{\partial z_j}. 
 \end{equation} 
 
-Where the same trick done previously to change indexes was used. Similarly, for the second term
+Where the index switching trick used previously was used. Similarly, for the second term
 
 \begin{equation}
   \label{eq:momg2}
@@ -304,7 +323,7 @@ For the third and fourth terms
 
 \begin{equation}
   \label{eq:momg3}
-  \sum (n_i+1)z_i^{n_i}f(n_i+1) = \sum n_i z_i^{n_i-1}f(n_i) = \frac{\partial F}{\partial z_i}.
+  \sum (n_i+1)z_i^{n_i}f(n_i+1) = \sum n_i z_i^{n_i-1}f(n_i) = \frac{\partial F}{\partial z_i},
 \end{equation}
 
 \begin{equation}
@@ -312,7 +331,7 @@ For the third and fourth terms
   \sum n_iz_i^{n_i}f(n_i) = z_i\frac{\partial F}{\partial z_i}.
 \end{equation}
 
-Replacing eqs. \eqref{eq:momg1} - \eqref{eq:momg4} in eq. \eqref{eq:masterg2} we obtain the equation for the moment generating function
+Replacing eqs. \eqref{eq:momg1} - \eqref{eq:momg4} in eq. \eqref{eq:masterg2} yields the equation for the moment generating function
 
 \begin{equation}
 \dot{F}(z_i) = \sum_i\left( z_i\sum_jA_{ij}\frac{\partial F}{\partial z_j} - \sum_jA_{ij} z_j \frac{\partial F}{\partial z_j} + \Gamma_i\frac{\partial F}{\partial z_i} - \Gamma_iz_i\frac{\partial F}{\partial z_i}\right),
@@ -351,10 +370,10 @@ and writing in matrix form
 
 \begin{equation}
   \label{eq:mas-general_ave}
-  \dot{\langle \mathbf{n}\rangle} = (\mathbf{A}-\mathbf{\Gamma})\langle \mathbf{n}\rangle.
+  \dot{\langle \mathbf{n}\rangle} = (\mathbf{A}-\mathbf{\Gamma})\langle \mathbf{n}\rangle,
 \end{equation}
 
-Which has the form of eq. \eqref{eq:matdet}, but for the averages as expected. Now differentiating again with respect to $z_m$ and doing some algebra
+as expected. It has the same form of the deterministic equations \eqref{eq:matdet}. Differentiating again with respect to $z_m$ and doing some algebra
 
 \begin{equation*}
   \begin{split}
@@ -364,49 +383,62 @@ Which has the form of eq. \eqref{eq:matdet}, but for the averages as expected. N
   \end{split}
 \end{equation*}
 
-Evaluating at $z_i=1$ for all $i$ we obtain
+Evaluating at $z_i=1$ for all $i$
 
 \begin{equation*}
   \frac{\partial^2\dot{F}}{\partial z_l \partial z_m} = \sum_jA_{mj}z_j\frac{\partial^2F}{\partial z_j\partial z_l}+A_{ml}\frac{\partial F}{\partial z_l} - \Gamma_m\frac{\partial^2F}{\partial z_l\partial z_m} + A_{lm}\frac{\partial F}{\partial z_m} + \sum_jA_{lj}z_j\frac{\partial^2F}{\partial z_j\partial z_m}-\Gamma_l\frac{\partial^2F}{\partial z_l\partial z_m}.
 \end{equation*}
 
-Which can be rewritten as
+Rearranging the previous eq. and using again the fact that $\mathbf{\Gamma}$ is diagonal
 
 \begin{equation*}
   \begin{split}
     \frac{\partial^2\dot{F}}{\partial z_l \partial z_m} &= \sum_j\left(A_{mj}z_j-\Gamma_{mj}\right)\frac{\partial^2F}{\partial z_j\partial z_l} + \sum_jA_{mj}\delta_{jl}\frac{\partial F}{\partial z_j}\\
-    &+\sum_j\left(A_{lj}z_j-\Gamma_{lj}\right)\frac{\partial^2F}{\partial z_j\partial z_m} + \sum_jA_{lj}\delta_{jm}\frac{\partial F}{\partial z_j}.
+    &+\sum_j\left(A_{lj}z_j-\Gamma_{lj}\right)\frac{\partial^2F}{\partial z_j\partial z_m} + \sum_jA_{lj}\delta_{jm}\frac{\partial F}{\partial z_j},
   \end{split}
 \end{equation*}
 
-Which is valid for all $l$ and $m$, evaluating at $z_i=1$ for all $i$ we get after writing in matrix form
+This is valid for all $l$ and $m$. Evaluating at $z_i=1$ for all $i$ we get in matrix form
 
 \begin{equation}
   \label{eq:mas-general}
-  \boxed{\nabla\nabla^T\dot{F}|_1 = \left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)+\left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)^T}
+  \nabla\nabla^T\dot{F}|_1 = \left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)+\left(\left(\mathbf{\Gamma} - \mathbf{A}\right)\nabla\nabla^TF|_1 - \mathbf{A}\mathbf{\Theta} F|_1\right)^T,
 \end{equation}
 
-\todo[inline]{Do I have to include more steps? or to explain the expression with more detail?}
+where $\Theta_{ij} \coloneqq \delta_{ij}\frac{\partial}{\partial z_i}$. The set of linear equations can be solved for the moments and correlation using a computer program. Given the specific form of the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$, we only have to replace on eq. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} to find the moments and the noise.
 
-Where $\Theta_{ij} \coloneqq \delta_{ij}\frac{\partial}{\partial z_i}$. The set of linear equations can be solved for the moments and correlation using a computer program. Therefore, given the specific form of the matrices $\mathbf{A}$ and $\mathbf{\Gamma}$, we only have to replace on eq. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} to find the moments and the noise. In the next section we will apply them to a particular case.
-
-\section{Several species with non-linear interactions - Negative autorregulation}
+\section{Application to non-linear interactions: negative autorregulation}
 \label{sec:mas-neg_autorreg}
 
-As we have seen on sec. \ref{sec:hill}, the interactions between the component of a genetic circuits are non-linear. As a consequence, there might be several fixed points. To use this approach we need to identify the stable fixed points, linearize about each of them, each linearization yields to a pair of matrices $\mathbf{A}$ and $\mathbf{\Gamma}$ and we solve for each of them eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general}.
+As we have seen on sec. \ref{sec:hill}, the interactions between the component of a genetic circuits are non-linear. A consequence of this is that there might be several steady states. To apply the developed linear approach to such kind of systems we need to identify the stable fixed points, linearize about each of them, each linearization yields to a pair of matrices $\mathbf{A}$ and $\mathbf{\Gamma}$  that are replaced on eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} to find the noise.
 
-We will consider the case of negative autorregulation, in this case $k_r$ is now a Hill function for a repressor (eq. \eqref{eq:con-hillac}) that depends on the number of proteins of the same gene, taking the case with no basal transcription rate, the deterministic equations are
+We will consider the case of negative autorregulation, in this case $k_r$ is now a Hill function for a repressor (eq. \eqref{eq:con-hillac}) that depends on the number of proteins of the same gene. Assuming that the basal transcription rate is $0$, the deterministic equations are
 
-\begin{align*}
-  \dot{n_1}(t) &= \frac{k_r^{\text{max}}}{1+\left(\frac{n_2(t)}{K_d}\right)^n}d - \gamma_rn_1(t),\\
-  \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t).
-\end{align*}
+\begin{equation}
+  \label{eq:mas-autorr_det}
+  \begin{split}
+    \dot{n_1}(t) &= k_r(n_2)d - \gamma_rn_1(t),\\
+    \dot{n_2}(t) &= k_pn_1(t)-\gamma_pn_2(t),
+  \end{split}
+\end{equation}
 
-\todo[inline]{Include histogram and plot of Hill function to explain qualitatively why does it reduces noise, average and has only one fixed point}
+where
 
-Making a first order Taylor expansion of $k_r$ about its value at the steady state we get
+\begin{equation*}
+  k_r(n_2) \coloneqq \frac{k_r^{\text{max}}}{1+\left(\frac{n_2(t)}{K_d}\right)^n}.
+\end{equation*}
 
-\todo[inline]{Recall the machete que ellos meten ahi, d must be constant}
+Since the protein represses the transcription of his own gene, it is expected that the steady state number of proteins $\langle n_2\rangle_s$ is reduced with respect to the unrepressed case. To evidence this, fig. \ref{fig:mas-sim_hist} shows the distributions at steady state for the number of proteins of an unregulated and a negatively autorregulated gene resulting from Gillespie simulations. Both the average and the noise (width of the distribution) is reduced. The reduction of the noise occurs because a fluctuation that, for instance, increases the number of protein above the steady state level also increases the repression. This lowers the production rate, thus driving the levels back to the steady state with more strenght than in the unrepressed case. The effect is analogous for a random decrease of the level of proteins below steady state.
+
+\todo[inline]{See if noise is actually reduced (reducing the width)}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=13cm]{mas-hist}
+  \caption[Histograms for protein number for a constitutive gene and a negatively autorregulated gene]{\label{fig:mas-sim_hist}Distribution for the number of proteins for an autorrepressed gene (eq. \ref{eq:mas-autorr_det}, blue), and an unrepressed gene (eqs. \ref{eq:mas-simple_det_1} and \ref{eq:mas-simple_det_2} with $k_r = k_r^\text{max}$, orange). The  values of the parameters are $\tau_r=2$ min, $\tau_p=1$ h, $b=10$ proteins/mRNA, $n=2$, $K_d=800$ proteins, and the average number of proteins without repression $\langle p\rangle_\text{unrep} \coloneqq k_r^\text{max}k_p/(\gamma_r\gamma_p) = 1200$ proteins. A sample of $10000$ cells (trials) evolved until a time of $10\tau_p$ was run on each histogram.}
+\end{figure}
+
+Next we find the average and Fano factor of $n_2$ according to the linearized model. Making a first order Taylor expansion of $k_r(n_2)$ about its value at the steady state $k_r(\langle n_2\rangle_s)$
 
 \begin{equation}
   \begin{split}
@@ -433,23 +465,30 @@ Therefore, the matrix $\mathbf{A}$ becomes
   \end{pmatrix}
 \end{equation*}
 
-and $\mathbf{\Gamma}$ is the same as in \eqref{eq:mas_G_single}. Solving eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} we get
+and $\mathbf{\Gamma}$ is the same as in \eqref{eq:mas_G_single}. Solving eqs. \eqref{eq:mas-general_ave} and \eqref{eq:mas-general} we get for the proteins in steady state
 
 \begin{equation}
   \label{eq:mas-autorreg_final}
-  \boxed{\langle n_2\rangle_s = \frac{1}{1+b\phi}\frac{k_0b}{\gamma_p}},\quad\quad \boxed{\nu_2 = \frac{1-\phi}{1+b\phi}\frac{b}{1+\frac{\gamma_p}{\gamma_r}}+1},
+  \boxed{\langle n_2\rangle = \frac{1}{1+b\phi}\frac{k_0b}{\gamma_p}},\quad\quad \boxed{\nu_2 = \frac{1-\phi}{1+b\phi}\frac{b}{1+\frac{\gamma_p}{\gamma_r}}+1},
 \end{equation}
 
-\todo[inline]{Specify more about the solution?}
-
-with $\phi\coloneqq k_1/\gamma_p$ representing the strength of the feedback. In figure \ref{fig:mas-sim_autorreg}, we compare eq. \eqref{eq:mas-autorreg_final}  with a Gillespie simulation using the exact rates. Altought the analytic expressions are approximate, there is an excellent match with the simulations.
+with $\phi\coloneqq k_1/\gamma_p$ represents the strength of the feedback. In figure \ref{fig:mas-sim_autorreg}, we compare eq. \eqref{eq:mas-autorreg_final}  with a Gillespie simulation using the exact rates. Altought the analytic expressions are approximate, there is an excellent match with the simulations.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=11cm]{mas-sim_autorreg}
-  \caption[Autorregulation simulation results]{\label{fig:mas-sim_autorreg} Fano factor vs. average number of proteins. The solid lines correspond to eq \eqref{eq:mas-autorreg_final}, while the point represent the Gillespie simulations. In the blue part $n$ was varied and in the orange $K_d$ was varied.}
+  \includegraphics[width=13cm]{mas-sim_autorreg}
+  \caption[Fano factor of protein number for a negatively autorregulated gene]{\label{fig:mas-sim_autorreg} Comparison between the results of Gillespie simulations (dots) using the exact eqs. \eqref{eq:mas-autorr_det} and the analytical results given by eq. \eqref{eq:mas-autorreg_final}. The Fano factor is plotted vs. the mean number of proteins in steady state. The base values of the parameters are the same as in fig. \ref{fig:mas-sim_hist}. For each curve, the parameter indicated in the legend is varied while the others are fixed. $K_d$ is varied from $100$ to $2000$ in increments of $100$ and from $2000$ to $5000$ in increments of $1000$, while $n$ is varied from $0$ to $20$ in unit increments. Each point correspond to 10000 trials. Each one evolved until a time of $10\tau_p$.}
 \end{figure}
 
-\section{Final remarks and further applications}
+For a given average number of proteins, this circuit has a more efficient control of fluctuations than the one for the unrepressed gene. In this case, the random fluctuations are controlled by the same number of proteins and there is no need to spend energy in unused mRNA molecules. Evolution might have developed circuits of this kind, and more sophisticated, to tune the noise according to the function of the circuits trying to reduce the cost in fitness.
 
-\todo[inline]{Write this section}
+\section{Limitations of the model}
+
+The linearized model has reliably reproduced the noise in steady state of two simple genetic circuits. We have also seen that it allows to consider an arbitrary number of species, allowing then to treat networks of arbitrary complexity. However, the model have some limitations. If the system is nonlinear, The nonlinearities should be such that the linearization correctly reproduces the behavior near the fixed points i.e. the nonlinearities should not be too large. Besides, this approach does not work for oscillating systems or unstable steady state points because in both mechanisms there may be large sudden changes in the average values that are not reproducible with a linear model.
+
+However, phenomena such that big nonlinearities and oscillations is common in biological circuits and has allowed living beings to have many complex and interesting behaviors. Those features can not be studied with this model. Also, for many systems it would be important to model the complete time dynamics of noise, not just the steady state values. For example, the stochastic switching between different steady state values. 
+
+\todo[inline]{Define fixed points, write a better justification in the above paragraph}
+
+Regardless of its limitations, the linearized ME approach can be used to model a variety of biological circuits and has enligthened some important facts about the mechanisms by which living beings control noise. In the following chapters more sources of noise will be included in the models and additional mathematical tools will be applied.
+
