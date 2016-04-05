@@ -451,7 +451,7 @@ Replacing eqs. \eqref{eq:lan-hill_g} - \eqref{eq:lan-H_det} we obtain explicit e
   \caption[Logarithmic gains for the genes of a cascade]{\label{fig:lan-Hs}. Plot of $H_{21}$ and $H_{10}$ as a function of [IPTG] given by eq. \eqref{eq:lan-H_det} . The vertical line marks the maximum of $H_{21}$.}
 \end{figure}
 
-The maximum value in $H_{21}$ represents the concentration of [IPTG] at which $y_2$ is more affected by changes in $y_1$. This corresponds to the point of the transfer function where the slope is greater. At this level of [IPTG] the noise transmitted from $y_1$ to $y_2$ is increased.
+The maximum value in $H_{21}$ represents the concentration of [IPTG] at which $y_2$ is more affected by changes in $y_1$. This corresponds to the point of the transfer function where the slope is greater.
 
 Figure \ref{fig:lan-noise_corr_full} shows the noises and correlations for certain set of values of the parameters as a function of the concentration of IPTG when there is no ATC.
 
@@ -461,11 +461,17 @@ Figure \ref{fig:lan-noise_corr_full} shows the noises and correlations for certa
   \caption[Noises and correlation for the genes of a cascade]{\label{fig:lan-noise_corr_full}. Plot of noises (eqs. \eqref{eq:etagene3} and \eqref{eq:etagene3}) and correlations (\eqref{eq:lan-correl}) as a function of [IPTG] for genes $1$ to $3$ with [ATC]=0. The vertical line shows the IPTG concentration at which $H_{21}$ reaches its greater value.}
 \end{figure}
 
-The noise in $\eta_3$ is constant since it is not part of the cascade. Also, the noise in gene $1$ is reduced as IPTG is increased because . The noise in gene $2$ has its maximum almost at the point of greater logarithmic gain as we said earlier. This evidences the fact that the noise is strongly dependent on the propagation from interacting components. It does not match exactly as a consequence of the other sources of noise.
+The noises and correlations behave in a nonintuitive manner. For instance, $\eta_1$ and $\eta_2$ are very different altough they are both regulated by an upstream component. The correlations are also very different for each pair of genes. Recalling that gene $3$ is not regulated in the cascade, it is expected that the correlations $C_{13}$ and $C_{23}$ are independent of IPTG. The graphics show that this is not the case. The noise in $\eta_3$ is constant as intuitively expected.
 
-From eqs. \eqref{eq:etagene1} and \eqref{eq:etagene2} it can be seen that the intrinsic propagated noise always depends on the square of the logarithmic gain while the global propagated noise has terms that depend on its sign. This is a consequence of the correlation of the global noise among all the genes.
+Another important aspect to notice is that altough there are components that do not interact directly, in the expression for the noises and correlations the interaction between them is clear. For instance, in eq. \eqref{eq:etagene2} can be observed that $\eta_2$ depends explicitely on $H_{10}$ and on the intrinsic noise of gene $0$. For this reason, noise in a regulation cascade can not be trivially added. All the upstream components contribute to the downstream components with a strenght that depends of the time average and the way the genes interact, measured by the logarithmic gain.
 
-ANALYZE THE CORRELATION BETWEEN GENE 1 AND 3, AMAZING.
+The vertical line in the graphic for $\eta_2$ shows that at the IPTG concentration at which $H_{21}$ is larger, the maximum of the noise almost coincides with this level. A larger value of $H$ indicates that $x_2$ is more sensitive to fluctuations in $x_1$. This explains the correspondent peak in $\eta_2$. The match is not exact due to the additional dependences in eq. \eqref{eq:etagene2}. 
+
+From eqs. \eqref{eq:etagene1} and \eqref{eq:etagene2} it can be seen that the intrinsic propagated noise always depends on the square of the logarithmic gain while the global propagated noise has terms that depend on its sign. This is a consequence of the correlation of the global noise among all the genes. For instance, a sudden change in all the creation rates caused by global noise will, for instance, increase both $x_1$ and $x_2$ expressions. Since $x_1$ represses $x_2$ this will also decrease the expression of $x_2$ proportional to the coupling between them ($H$). In the hypothetical case where $x_1$ activates $x_2$ the effect would be that the expression of $x_2$ would be increased further. In this way the correlations determine how global noise is modulated. The sign dependence on the global propagated noise is also explained by this example. 
+
+The previous analysis also explains the non constant correlation $C_{13}$ and $C_{23}$. Global fluctuations to gene $3$ have only the direct component, while to gene $1$ or $2$ have both the direct and transmitted component that depends on the interactions with upstream genes. Global noise will thus be reduced of increased in genes $1$ and $2$ with respect to the unregulated gene $3$ in an amount that depends on the signs and strenghts of the log. gains. This yields correlations that varies with iPTG.
+
+Fig. \ref{fig:lan-eta2det} shows each of the components of $\eta_2$. The intrinsic squared noise varies as the inverse of the mean. When [IPTG] is large, $x_{0A}$, making $x_1$ large and thus $x_2$ low. Therefore, the intrinsic noise should be larger at large IPTG concentration. The transmitted intrinsic noise corresponds approximately to the square of the logarithmic gain times the noise in the upstream components (including both genes $0$ and $1$). Its maximum corresponds roughly to the maximum in $H_{21}$ (vertical dashed line). The global component depends also on the correlations as explained above. Comparing the total noise with the components it is clear how important are the network interactions in determining the noise.
 
 \begin{figure}[H]
   \centering
@@ -473,6 +479,7 @@ ANALYZE THE CORRELATION BETWEEN GENE 1 AND 3, AMAZING.
   \caption[Components of the noise]{\label{fig:lan-eta2det}. Plot of each component of $\eta_2^2$ (eq. \eqref{eq:etagene2}) as a function of [IPTG] with [ATC]=0. The vertical line shows the IPTG concentration at which $H_{21}$ reaches its greater value.}
 \end{figure}
 
+The coupling between genes $1$ and $2$ is regulated with ATC. If [ATC] is large, the coupling is low and viceversa. Fig. \ref{fig:lan-eta2_corrATC} shows how $\eta_2$ and $C_{12}$ change as a function of IPTG for different concentrations of ATC.
 
 \begin{figure}[H]
   \centering
@@ -480,7 +487,11 @@ ANALYZE THE CORRELATION BETWEEN GENE 1 AND 3, AMAZING.
   \caption[Noise in gene $2$ for varying ATC concentrations]{\label{fig:lan-eta2_corrATC}. Plots of $\eta_2$ (eq. \eqref{eq:etagene2}) and $C_{12}$ (eq. \eqref{eq:lan-correl}) as a function of [IPTG] for different ATC concentration shown in the legend.}
 \end{figure}
 
-As it can be noticed in eqs. \eqref{eq:etagene0}, \eqref{eq:etagene1} and \eqref{eq:etagene2}, the noise propagation follows the sequence of fig. \ref{fig:lan-noise_sources}. For each gene there is an independent intrinsic noise a correlated global noise, and both the transmitted global and intrinsic noise between the genes of the cascade whose strenght is determined by the logarithmic gain $H$.
+This reconfirms the high sensitivity of the noise to the coupling of the network. For small changes in concentration of ATC, the noise shows huge changes in its behavior. At a concentration of [ATC] = $1$ mM (fig. \ref{fig:lan-eta2_corrATC}, red curve), the only considerable contributions to $\eta_2$ are the intrinsic and the directly recieved global noise.
+
+\section{Conclusions and implications}
+
+Fig. \ref{fig:lan-noise_sources} summarizes how noise propagates through a cascade of regulation. Each gene has its own intrinsic noise and recieves contributions to its total noise directly from correlated global sources, and indirectly from propagated global and intrinsic fluctuations of upstream genes. The effect of the propagated noise is modulated by the logarithmic gains between the directly connected genes. Altough not shown in the figure, the time average also regulates the transmitted noise.
 
 \begin{figure}[H]
   \centering
@@ -488,6 +499,6 @@ As it can be noticed in eqs. \eqref{eq:etagene0}, \eqref{eq:etagene1} and \eqref
   \caption[Propagation of noise through a cascade]{\label{fig:lan-noise_sources} Different sources of noise and their propagation along the cascade of regulation (from \cite{pedraza05}).}
 \end{figure}
 
-\todo[inline]{TODO: Analyze the results physically (recall SysBio class), reproduce the graphics and analyze them}
+The limitations of the model are related to the ones for the ME approach. It is also a stationary and linearized model that does not account for the time dynamics of fluctuations. In spite of that, it is remarkable how the Langevin approach enabled the authors to write the expressions for the noises in a way that is very easy to interpret. Also, the match of the experimental results with the model is excellent \cite{pedraza05} \cite{pedraza06}.
 
-This approach enables us to calculate the coefficient of variation for a cascade of regulation and separate the different sources of noise. Also, it enables to write the effect of the upstream genes in terms of the logarithmic gain, making it very intuitive. The results of the theoretical model were tested with experiments where the genes that are part of the cascade are transcribed bicistronicaly with fluorescent reporters. The fluctuations in the intensity of the reporters was used to measure the noise in the population of cells.
+We have introduced the three basic approaches that have been used to model noise in genetic circuits: the master equation, the fluctuation-dissipation theorem and the Langevin equation. The following chapter will focus on analyzing how noise behaves when some additional factors are considered.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  5 APR 2016 07:56
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  5 APR 2016 14:55
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1144,11 +1144,11 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
  [7]
 [8
 
-] (./cover.lof [9])
+] (./cover.lof)
 \tf@lof=\write7
 \openout7 = `cover.lof'.
 
- [10] (./cover.lot)
+ [9] [10] (./cover.lot)
 \tf@lot=\write8
 \openout8 = `cover.lot'.
 
@@ -1168,7 +1168,7 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 Chapter 1.
 Package hyperref Info: bookmark level for unknown todo defaults to 0 on input l
 ine 3.
-<img/con-dogma.jpg, id=377, 319.1925pt x 390.45876pt>
+<img/con-dogma.jpg, id=380, 319.1925pt x 390.45876pt>
 File: img/con-dogma.jpg Graphic file (type jpg)
  <use img/con-dogma.jpg>
 Package pdftex.def Info: img/con-dogma.jpg used on input line 13.
@@ -1179,14 +1179,14 @@ Package pdftex.def Info: img/con-dogma.jpg used on input line 13.
 
 
 ] [16 <./img/con-dogma.jpg>]
-<img/con-tf_simple.jpg, id=393, 538.6524pt x 118.041pt>
+<img/con-tf_simple.jpg, id=396, 538.6524pt x 118.041pt>
 File: img/con-tf_simple.jpg Graphic file (type jpg)
 
 <use img/con-tf_simple.jpg>
 Package pdftex.def Info: img/con-tf_simple.jpg used on input line 27.
 (pdftex.def)             Requested size: 341.43306pt x 74.8255pt.
 
-<img/con-lac_operon.png, id=398, 552.0625pt x 459.7175pt>
+<img/con-lac_operon.png, id=401, 552.0625pt x 459.7175pt>
 File: img/con-lac_operon.png Graphic file (type png)
 
 <use img/con-lac_operon.png>
@@ -1205,14 +1205,14 @@ Underfull \hbox (badness 10000) in paragraph at lines 38--38
  []
 
 [17 <./img/con-tf_simple.jpg>]
-<img/con-parts_of_DNA.png, id=408, 602.25pt x 430.60875pt>
+<img/con-parts_of_DNA.png, id=411, 602.25pt x 430.60875pt>
 File: img/con-parts_of_DNA.png Graphic file (type png)
 
 <use img/con-parts_of_DNA.png>
 Package pdftex.def Info: img/con-parts_of_DNA.png used on input line 43.
 (pdftex.def)             Requested size: 284.52756pt x 203.44398pt.
  [18 <./img/con-lac_operon.png> <./img/con-parts_of_DNA.png>] <img/con-biocircu
-its_conv.png, id=418, 364.36125pt x 325.215pt>
+its_conv.png, id=421, 364.36125pt x 325.215pt>
 File: img/con-biocircuits_conv.png Graphic file (type png)
 
 <use img/con-biocircuits_conv.png>
@@ -1224,7 +1224,7 @@ Underfull \hbox (badness 1184) in paragraph at lines 52--52
  cir-cuits used in Sys-tems Bi-
  []
 
-<img/con-biocircuits_comp.jpg, id=422, 752.8125pt x 400.49625pt>
+<img/con-biocircuits_comp.jpg, id=425, 752.8125pt x 400.49625pt>
 File: img/con-biocircuits_comp.jpg Graphic file (type jpg)
 
 <use img/con-biocircuits_comp.jpg>
@@ -1232,14 +1232,14 @@ Package pdftex.def Info: img/con-biocircuits_comp.jpg used on input line 57.
 (pdftex.def)             Requested size: 341.43306pt x 181.64552pt.
  [19 <./img/con-biocircuits_conv.png>]
 [20 <./img/con-biocircuits_comp.jpg>] [21]
-<img/con-hill_act.png, id=459, 803.0pt x 483.8075pt>
+<img/con-hill_act.png, id=462, 803.0pt x 483.8075pt>
 File: img/con-hill_act.png Graphic file (type png)
 
 <use img/con-hill_act.png>
 Package pdftex.def Info: img/con-hill_act.png used on input line 121.
 (pdftex.def)             Requested size: 341.43306pt x 205.71512pt.
 
-<img/con-hill_rep.png, id=460, 803.0pt x 483.8075pt>
+<img/con-hill_rep.png, id=463, 803.0pt x 483.8075pt>
 File: img/con-hill_rep.png Graphic file (type png)
 
 <use img/con-hill_rep.png>
@@ -1265,21 +1265,21 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
 Chapter 2.
-[35] <img/mas-dogma.png, id=579, 689.57625pt x 555.07375pt>
+[35] <img/mas-dogma.png, id=582, 689.57625pt x 555.07375pt>
 File: img/mas-dogma.png Graphic file (type png)
 
 <use img/mas-dogma.png>
 Package pdftex.def Info: img/mas-dogma.png used on input line 20.
 (pdftex.def)             Requested size: 227.62204pt x 183.22571pt.
  [36 <./img/mas-dogma.png>]
-<img/mas-detSol.png, id=590, 1003.75pt x 656.4525pt>
+<img/mas-detSol.png, id=593, 1003.75pt x 656.4525pt>
 File: img/mas-detSol.png Graphic file (type png)
  <use img/mas-detSol.png>
 Package pdftex.def Info: img/mas-detSol.png used on input line 56.
 (pdftex.def)             Requested size: 369.88582pt x 241.912pt.
 
 [37] [38 <./img/mas-detSol.png (PNG copy)>]
-<img/mas-trans_single.jpg, id=607, 2601.72pt x 1461.46pt>
+<img/mas-trans_single.jpg, id=610, 2601.72pt x 1461.46pt>
 File: img/mas-trans_single.jpg Graphic file (type jpg)
 
 <use img/mas-trans_single.jpg>
@@ -1293,7 +1293,7 @@ n[]; t\OT1/cmr/m/n/12 )$
  []
 
 [39 <./img/mas-trans_single.jpg>] [40] [41] [42] [43] [44]
-<img/mas-sim_simple.png, id=676, 1003.75pt x 657.45625pt>
+<img/mas-sim_simple.png, id=679, 1003.75pt x 657.45625pt>
 File: img/mas-sim_simple.png Graphic file (type png)
 
 <use img/mas-sim_simple.png>
@@ -1308,14 +1308,14 @@ it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
 /m/n/12 ^^@[][]\OML/cmm/m/it/12 :
  []
 
-[50] [51] <img/mas-hist.png, id=758, 1003.75pt x 636.3775pt>
+[50] [51] <img/mas-hist.png, id=761, 1003.75pt x 636.3775pt>
 File: img/mas-hist.png Graphic file (type png)
 
 <use img/mas-hist.png>
 Package pdftex.def Info: img/mas-hist.png used on input line 437.
 (pdftex.def)             Requested size: 369.88582pt x 234.51408pt.
  [52 <./img/mas-hist.png (PNG copy)>]
-<img/mas-sim_autorreg.png, id=776, 1003.75pt x 657.45625pt>
+<img/mas-sim_autorreg.png, id=779, 1003.75pt x 657.45625pt>
 File: img/mas-sim_autorreg.png Graphic file (type png)
 
 <use img/mas-sim_autorreg.png>
@@ -1350,7 +1350,7 @@ Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
 []\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
  []
 
-[67] [68] [69] [70] <img/lan-circuit.png, id=935, 1370.11874pt x 157.58875pt>
+[67] [68] [69] [70] <img/lan-circuit.png, id=938, 1370.11874pt x 157.58875pt>
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
@@ -1378,24 +1378,13 @@ Type  H <return>  for immediate help.
 l.460 ...graphics[width=15cm]{lan-noise_corr_full}
                                                   
 ? 
-[81]
-
-! LaTeX Error: File `lan-noise_comp' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.472 ...cludegraphics[width=15cm]{lan-noise_comp}
-                                                  
-? 
-<img/lan-eta2det.png, id=1071, 1003.75pt x 679.53876pt>
+[81] [82] <img/lan-eta2det.png, id=1076, 1003.75pt x 679.53876pt>
 File: img/lan-eta2det.png Graphic file (type png)
 
 <use img/lan-eta2det.png>
-Package pdftex.def Info: img/lan-eta2det.png used on input line 480.
+Package pdftex.def Info: img/lan-eta2det.png used on input line 478.
 (pdftex.def)             Requested size: 426.79134pt x 288.94014pt.
-
+ [83 <./img/lan-eta2det.png (PNG copy)>]
 
 ! LaTeX Error: File `lan-eta2_corrATC' not found.
 
@@ -1403,57 +1392,56 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.487 ...udegraphics[width=15cm]{lan-eta2_corrATC}
+l.486 ...udegraphics[width=15cm]{lan-eta2_corrATC}
                                                   
 ? 
-[82 <./img/lan-eta2det.png (PNG copy)>]
-<img/lan-noise_sources.png, id=1087, 1307.88625pt x 436.63126pt>
+<img/lan-noise_sources.png, id=1090, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
-Package pdftex.def Info: img/lan-noise_sources.png used on input line 495.
+Package pdftex.def Info: img/lan-noise_sources.png used on input line 498.
 (pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
-) [83 <./img/lan-noise_sources.png>]
+ [84 <./img/lan-noise_sources.png>]) [85]
 \openout2 = `bursting.aux'.
 
 
-(./bursting.tex [84
+(./bursting.tex [86
 
 
 
 ]
 Chapter 5.
-[85] [86] [87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98]) [99]
-[100]
+[87] [88] [89] [90] [91] [92] [93] [94] [95] [96] [97] [98] [99] [100])
+[101] [102]
 \openout2 = `division.aux'.
 
  (./division.tex
 Chapter 6.
-[101
+[103
 
 
 
-] [102] [103] [104] [105] [106] [107] [108] [109] [110] [111] [112]
-[113] [114] [115]
+] [104] [105] [106] [107] [108] [109] [110] [111] [112] [113] [114]
+[115] [116] [117]
 Overfull \hbox (50.7592pt too wide) in paragraph at lines 545--545
 [] 
  []
 
-[116]) [117]
+[118]) [119]
 \openout2 = `final.aux'.
 
- (./final.tex [118
+ (./final.tex [120
 
 
 
 ]
 Chapter 7.
-) [119] [120
+) [121] [122
 
 
-] [121]
+] [123]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 105.
- [122]
+ [124]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
  (./cover.aux (./introduction.aux) (./concepts.aux)
 (./master1.aux) (./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux)
@@ -1461,7 +1449,7 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 105.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 105.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 105.
 Package rerunfilecheck Info: File `cover.out' has not changed.
-(rerunfilecheck)             Checksum: 8C090B336831E05D7A99EFB0E64004F4;3385.
+(rerunfilecheck)             Checksum: 676342908F99DE3D39C0FF935F1A0030;3460.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -1471,10 +1459,10 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26976 strings out of 494966
- 490781 string characters out of 6179559
- 894128 words of memory out of 5000000
- 29160 multiletter control sequences out of 15000+600000
+ 26975 strings out of 494966
+ 490736 string characters out of 6179559
+ 894023 words of memory out of 5000000
+ 29159 multiletter control sequences out of 15000+600000
  15329 words of font info for 61 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,82p,10368b,1102s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1551,10 +1539,10 @@ onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
 hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
 are/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (122 pages, 3031570 bytes).
+Output written on cover.pdf (124 pages, 3034803 bytes).
 PDF statistics:
- 1638 PDF objects out of 1728 (max. 8388607)
- 1430 compressed objects within 15 object streams
- 468 named destinations out of 1000 (max. 500000)
- 474 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1648 PDF objects out of 1728 (max. 8388607)
+ 1441 compressed objects within 15 object streams
+ 469 named destinations out of 1000 (max. 500000)
+ 482 words of extra memory for PDF output out of 10000 (max. 10000000)
 
