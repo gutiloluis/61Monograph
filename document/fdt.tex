@@ -1,5 +1,5 @@
 \chapter{The Fluctuation-Dissipation theorem (FDT)}
-
+\label{ch:fdt}
 This chapter is based on the work of J. Paulsson in \cite{paulsson04} and \cite{paulsson05}.
 
 \section{Statement of the FDT}
@@ -13,13 +13,15 @@ Consider a (genetic) system with $N$ species whose concentrations are $n_1,\dots
 
 The elements of $\mathbf{A}$ are,
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:fdt-Adef}
   A_{ij} \coloneqq \frac{\partial}{\partial \langle n_j\rangle}\frac{\partial \langle n_i\rangle}{\partial t} = \frac{\partial}{\partial \langle n_j\rangle}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right).
-\end{equation*}
+\end{equation}
 
 where $J_i^\pm$ are the total fluxes of synthesis and degradation of species $i$. For $\mathbf{B}$
 
 \begin{equation*}
+  \label{eq:fdt-Bdef}
   B_{ij} = \sum_k v_{jk}v_{ik}R_k,
 \end{equation*}
 
@@ -97,7 +99,7 @@ First, we need to write the matrices $\mathbf{A}$ and $\mathbf{B}$, according to
   \end{split}
 \end{equation*}
 
-and so on, notice that there are several terms that are zero, including $A_{12}$, $A_{13}$, $A_{21}$, etc. Evaluating all the elements results in
+and so on. In this case, the fluxes of synthesis of degradation are $\langle J_1^+\rangle = (n_1^\text{max}-\langle n_1\rangle)$ and $\langle J_i^-\rangle = \langle n_1\rangle/\tau_1$ (the minus sign is not included in $\langle J_i^-\rangle$). The definition is analogous for the other species. Notice that there are several terms that are zero, including $A_{12}$, $A_{13}$, $A_{21}$, etc. Evaluating all the elements results in
 
 \begin{equation}
   \label{eq:fdt-A}
@@ -185,6 +187,72 @@ Altought the noise in mRNA is usually large due to its low numbers. The effect o
 \label{sec:log_gain}
 An important quantity for the analysis of genetic circuits is the logarithmic gain or elasticity $H_{ij}$. It measures the amount by which changes in the quantities of the $j$th component produces changes in the $i$th component. It is defined as
 
+\begin{equation}
+  \label{eq:fdt-def_H}
+  H_{ij} = \frac{\partial \ln (\langle J_i^-\rangle/\langle J_i^+\rangle)}{\partial \ln \langle n_j\rangle}.
+\end{equation}
+
+Recall that $\partial \ln x = \partial x/x$. Thus, $H_{ij}$ measures by how fractional changes in $\langle n_j\rangle$ cause the levels of species $i$ to decrease due to fractional changing its degradation to synthesis ratio $\langle J_i^+\rangle/\langle J_i^-\rangle$. If $H_{ij} = h$, then a $1\%$ increase in $n_j$ will increase the degradation to synthesis ratio by approximately $h\%$.
+
+\todo[inline]{Include figure of the stepness}
+
+Eq. \eqref{eq:fdt-fdtss} can be rewritten in terms of the logarithmic gain to a more compact form using the following definitions
+
 \begin{equation*}
-  H_{ij} = \frac{\partial }{\partial}
+  \eta_{ij}\coloneqq\frac{\sigma_{ij}}{\langle n_i\rangle\langle n_j\rangle}, \quad M_{ij}\coloneqq\frac{\langle n_j\rangle}{\langle n_i\rangle}A_{ij}, \quad D_{ij}\coloneqq\frac{B_{ij}}{\langle n_i\rangle\langle n_j\rangle}.
 \end{equation*}
+
+It can be easily shown that in steady state the equation
+
+\begin{equation}
+  \label{eq:fdt-fdtss2}
+  \mathbf{M\eta}+\mathbf{\eta M}^T+\mathbf{D}=0
+\end{equation}
+
+corresponds to eq. \eqref{eq:fdt-fdtss} after dividing by $\langle n_i\rangle\langle n_j\rangle$. The diagonal terms of $\mathbf{\eta}$ are the squared CVs. Therefore, using these definitions it is more direct to calculate them. The elements of $\mathbf{M}$ can be written in terms of the logarithmic gain. From eq. \eqref{eq:fdt-Adef}
+
+\begin{equation}
+  \begin{split}
+    A_{ij}&=\frac{\partial}{\partial \langle n_j\rangle}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right) = \frac{1}{\langle n_j\rangle}\frac{\partial}{\frac{\partial \langle n_j\rangle}{\langle n_j\rangle}}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right)\\
+    &=\frac{1}{\langle n_j\rangle}\left(\frac{\langle J_i^+\rangle\frac{\partial \langle J_i^+\rangle}{\langle J_i^+\rangle}}{\partial\ln \langle n_j\rangle} - \frac{\langle  J_i^-\rangle\frac{\partial \langle J_i^-\rangle}{\langle J_i^-\rangle}}{\partial\ln \langle n_j\rangle} \right) = \frac{1}{\langle n_j\rangle}\left(\frac{\langle J_i^+\rangle \partial\ln\langle J_i^+\rangle}{\partial\ln \langle n_j\rangle} - \frac{\langle  J_i^-\rangle\partial\ln\langle J_i^-\rangle}{\partial\ln \langle n_j\rangle} \right)\\
+    &=\frac{\langle J_i\rangle}{\langle n_j\rangle}\left(\frac{\partial\ln\langle J_i^+\rangle}{\partial\ln \langle n_j\rangle} - \frac{\partial\ln\langle J_i^-\rangle}{\partial\ln \langle n_j\rangle} \right) =-\frac{\langle J_i\rangle}{\langle n_j\rangle}\frac{\partial\ln \left( \langle J_i^-\rangle/\langle J_i^+\rangle \right)}{\partial\ln \langle n_j\rangle} = -\frac{\langle J_i\rangle}{\langle n_j\rangle}H_{ij}.
+  \end{split}
+\end{equation}
+
+In steady state, $\langle J_i^+\rangle = \langle J_i^-\rangle \coloneqq \langle J_i\rangle$ and for the kind of systems considered the flux of degradation is of the form $\langle J_i^-\rangle = \frac{\langle n_i\rangle}{\tau_i}$. Hence replacing on the previous eq. and on the definition of $\mathbf{M}$ we get
+
+\begin{equation*}
+  M_{ij} = -\frac{H_{ij}}{\tau_i}.
+\end{equation*}
+
+Also, for genetic systems of this kind, where there are not reactions producing several components and the relations are linear. The only nonzero elements of the matrix $\mathbf{D}$ are the diagonal, which according to eq. \eqref{eq:fdt-Bdef} are
+
+\begin{equation*}
+ D_{ii} = \frac{\sum_k R_k}{\langle n_i\rangle^2} =  \frac{\langle J_i^+\rangle + \langle J_i^-\rangle}{\langle n_i\rangle^2} = 2\frac{\langle J_i\rangle}{\langle n_i\rangle^2} = \frac{2}{\langle n_i\rangle\tau_i}.
+\end{equation*}
+
+In the example used in this chapter. The matrices can be easily found using the previous results
+
+\begin{equation*}
+  \mathbf{H} = \begin{pmatrix}
+    -1 & 0 & 0 \\
+    1 & -1 & 0 \\
+    0 & 1 & -1
+  \end{pmatrix},\quad\quad
+  \mathbf{M} = \begin{pmatrix}
+    -1/\tau_1 & 0 & 0 \\
+    1/\tau_2 & -1/\tau_2 & 0 \\
+    0 & 1/\tau_3 & -1/\tau_3
+  \end{pmatrix},\quad  
+\end{equation*}
+\begin{equation*}
+  \mathbf{D} = \begin{pmatrix}
+    2/\langle n_1\rangle\tau_1 & 0 & 0 \\
+    0 & 2/\langle n_2\rangle\tau_2 & 0 \\
+    0 & 0 & -1/\langle n_3\rangle\tau_3
+  \end{pmatrix}.
+\end{equation*}
+
+Replacing in eq. \eqref{eq:fdt-fdtss2} we obtain equivalently eqs. \eqref{eq:fdt-eta1} - \eqref{eq:fdt-eta3}.
+
+In this example the logarithmic gain only takes values $\pm 1$ so its effect in noise propagation is not so clear. In the next chapter we will consider a model that involves nonlinear interaction of Hill type between different species where it becomes explicit that the noise propagation between different species depens on the intrinsic noise of each species, the effect of time averaging, and the logarithmic gain, If the logarithmic gain is high in absolute value, the noise will be amplified as it is propagated and viceversa.

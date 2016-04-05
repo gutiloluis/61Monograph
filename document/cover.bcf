@@ -1969,12 +1969,15 @@
     <bcf:citekey order="26">paulsson04</bcf:citekey>
     <bcf:citekey order="27">paulsson05</bcf:citekey>
     <bcf:citekey order="28">pedraza05</bcf:citekey>
-    <bcf:citekey order="29">elowitz02</bcf:citekey>
-    <bcf:citekey order="30">pedraza05</bcf:citekey>
+    <bcf:citekey order="29">pedraza06</bcf:citekey>
+    <bcf:citekey order="30">elowitz02</bcf:citekey>
     <bcf:citekey order="31">pedraza05</bcf:citekey>
     <bcf:citekey order="32">pedraza05</bcf:citekey>
-    <bcf:citekey order="33">pedraza08</bcf:citekey>
-    <bcf:citekey order="34">huh11b</bcf:citekey>
+    <bcf:citekey order="33">pedraza05</bcf:citekey>
+    <bcf:citekey order="34">pedraza05</bcf:citekey>
+    <bcf:citekey order="35">pedraza05</bcf:citekey>
+    <bcf:citekey order="36">pedraza08</bcf:citekey>
+    <bcf:citekey order="37">huh11b</bcf:citekey>
     <bcf:citekey order="0">*</bcf:citekey>
   </bcf:section>
   <bcf:sortlist section="0" type="entry" label="none">

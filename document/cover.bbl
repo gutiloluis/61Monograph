@@ -372,6 +372,24 @@
       \field{year}{2004}
       \field{pages}{415\bibrangedash 418}
     \endentry
+    \entry{pedraza06}{thesis}{}
+      \name{labelname}{1}{}{%
+        {{hash=8a78043e7cc06456a187986b1e8e0f91}{Pedraza}{P\bibinitperiod}{J\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8a78043e7cc06456a187986b1e8e0f91}{Pedraza}{P\bibinitperiod}{J\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+      }
+      \list{institution}{1}{%
+        {Massachusetts Institute of Technology}%
+      }
+      \strng{namehash}{8a78043e7cc06456a187986b1e8e0f91}
+      \strng{fullhash}{8a78043e7cc06456a187986b1e8e0f91}
+      \field{sortinit}{0}
+      \field{labeltitle}{Signal and noise propagation in genetic circuits}
+      \field{title}{Signal and noise propagation in genetic circuits}
+      \field{type}{phdthesis}
+      \field{year}{2006}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput
