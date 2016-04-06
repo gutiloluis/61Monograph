@@ -78,15 +78,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}General case}{106}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{109}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{108}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{109}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{113}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ordered segregation}{114}{section.6.4}
+\contentsline {section}{\numberline {6.4}Ordered segregation}{113}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{114}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{113}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{114}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
@@ -94,4 +94,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{121}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{124}{chapter*.53}
+\contentsline {chapter}{Bibliography}{124}{chapter*.45}

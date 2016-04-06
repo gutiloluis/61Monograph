@@ -112,8 +112,6 @@ where $n$ stands for the number of creation events and $F$ is the cumulative dis
 
 where the asterisk denotes the convolution product. Following a similar argument, we obtain for an arbitrary number of events
 
-\todo[inline]{TODO: Add section in concepts of sum of random variables and convolution?}
-
 \begin{equation}
   \label{eq:nconvs}
   \begin{split}
@@ -158,16 +156,12 @@ Where the geometric series convereges in this case because $\hat{f}(s)\leq1$ and
 
 It could also be proven that
 
-\todo[inline]{Prove this?}
-
 \begin{equation}
   \label{eq:lapfprop}
   \hat{f}(0) = 1, \quad \left.\frac{\mathrm{d}\hat{f}(s)}{\mathrm{d}s}\right|_0=-\langle t\rangle,\quad \left.\frac{\mathrm{d}^2\hat{f}(s)}{\mathrm{d}s^2}\right|_0=\langle t^2\rangle.
 \end{equation}
 
 Therefore applying the inverse Laplace transform to eqs. \eqref{eq:lapavn} and \eqref{eq:lapvarn}, and using properties \eqref{eq:lapfprop} we could obtain the moments. 
-
-\todo[inline]{Understand and explain (?) the Bromwich integral}
 
 \begin{equation}
   \langle n\rangle(t) = \mathcal{L}^{-1}(\langle\hat{n}\rangle(s))=\frac{1}{2i\pi}\oint e^{st}\frac{\hat{f}(s)}{s(1-\hat{f}(s))}\mathrm{d}s
@@ -249,8 +243,6 @@ Now we will include the effect of bursts of creation. Let $n$ be the number of c
 
 representing the total number of molecules created on the given time interval. (It is a sum of a random number of random variables). We will denote the probability mass function of $x$ as $P_x(x)$.
 
-\todo[inline]{Abuse of notation, it is important to difference the rv x from it possible values?}
-
 We will use the properties of the characteristic function $\phi(s)$ and find the moments using its properties (see sec. \ref{sec:con-charac_func}). From its definition
 
 \begin{equation*}
@@ -291,7 +283,7 @@ Replacing this result in eq. \eqref{eq:charac1} we obtain
   \phi(s) = \sum_{n=0}^\infty \langle e^{sb}\rangle_b^n P(n) = \left\langle\langle e^{sb}\rangle_b^n\right\rangle_n
 \end{equation*}
 
-Where $\langle \rangle_n$ denotes average with respect to the distribution of events $P_n$.
+Where $\langle\quad\rangle_n$ denotes average with respect to the distribution of events $P_n$.
 
 We proceed to obtain the moments, using the properties of the characteristic function (eqs. \eqref{eq:con-char_2} - \eqref{eq:con-char_2})
 
@@ -345,7 +337,7 @@ This result holds for a pure birth process.
 
 We include the effects of decay of molecules considering a binomial partitioning during cell division. Let $P_\text{Dr}(l|m)$ be the probability of finding $l$ molecules in volume fraction $r$ given that there are $m$ molecules before division.
 
-Assuming that each molecule segregates independently\footnote{We will see in chapter \ref{ch:div} that segregation could be much more complicated than that.}, and that the probability of arriving at a volume is proportional to it we obtain a binomial distribution
+Assuming that each molecule segregates independently, and that the probability of arriving at a volume is proportional to it we obtain a binomial distribution
 
 \begin{equation}
   P_\text{Dr}(l|m) = {m\choose l}r^l(1-r)^{m-l}.
@@ -371,8 +363,6 @@ Multiplying by $z^l$ and summing we get the moment generating function $G_\text{
 where we used the binomial expansion formula on the last step.
 
 The number of molecules of at the end of a growth stage (following $P_\text{Br}$) equals the number of molecules at the beginning (following $P_\text{Ar}$) plus the number of molecules created during the cycle (following $P_{x,\tau} \coloneqq P_x|_{t=\tau}$). Assuming both random variables as independent and recalling that the probability mass function of the sum of random variables is the convolution of the individual PMFs we have
-
-\todo[inline]{TODO: Again, add a section in concepts about sum of random variables and convolution product}
 
 \begin{equation*}
   P_\text{Br}(m) = P_\text{Ar}\ast P_{x,\tau}(m)
@@ -430,8 +420,6 @@ but from eq. \ref{eq:binomG}
 
 For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - \langle x\rangle + \langle x\rangle^2$. Using this on eqs. \ref{eq:2Br} and \ref{eq:2Ar} we get
 
-\todo[inline]{See if it would be useful to give more detail in the next two steps}
-
 \begin{equation*}
   \begin{split}
   \sigma^2_\text{Br}- \langle m\rangle_\text{Br} + \langle m\rangle^2_\text{Br} &= \left( \sigma^2_{x,\tau} - \langle m\rangle_{x,\tau} + \langle m\rangle_{x,\tau}^2\right)\\
@@ -465,8 +453,6 @@ Also, from eqs. \ref{eq:2Ar} and \ref{eq:sigmaBr} we get
 \end{equation}
 
 Using eq. \ref{eq:aveBrAr} and after a little algebra we get
-
-\todo[inline]{Do this algebra?}
 
 \begin{equation}
   \sigma^2_\text{Ar} = \frac{r^2}{1-r^2}\sigma^2_{x,\tau}+\frac{1}{1+r}\langle m\rangle_\text{Ar},
