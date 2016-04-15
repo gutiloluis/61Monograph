@@ -6,6 +6,8 @@
 
 The central dogma explains how genetic information flows within a living being. It states that DNA, the molecule that stores the genetic information, is replicated by the enzyme DNA Polymerase. Also, RNA Polymerase produces messenger RNA (mRNA) from DNA in a process called transcription. Finally, the ribosome build the proteins following the sequence of the mRNA and according to a genetic code that translates from the language of nucleotides (the structural blocks of DNA and RNA) to the language of aminoacids, the structural blocks of proteins \cite{alberts13}.
 
+In prokaryotes, DNA molecules exist in the form of chromosomes and plasmids. The former are the main genetic material that has the essential information to make the organism. There is a single copy of the chromosome for prokaryotes. The latter are shorter molecules that confer additional characteristics such as antibiotic resistance. There could be several copies in a cell and they can be transferred between organisms. Plasmids are extensively used in synthetic biology because they are easier to introduce in cells.
+
 Proteins are the structural and functional elementary units of living beings. Therefore, according to the proteins that are being produced in a certain cell it will develop certain functions. The central dogma is summarized in fig. \ref{fig:con-dogma}.
 
 \begin{figure}[H]
@@ -30,7 +32,7 @@ Those differences lie on the genes that each cell is expressing at a certain tim
 
 The mechanisms of gene regulation can be very complex. For example, a molecule can change the conformation of another protein that when affected by the first, inhibits the transcription of certain gene. Those molecules may be signals from the environment and with mechanisms of this type, the cell process environmental signals to express the optimal genes according to the environment. It is also important to point out that the inhibition and activation is not necessarily done individually. A certain gene may need more than one different protein to enhance its activity, or there may be genes that are activated by a protein and inhibited by others, whose production is in turn mediated by other molecules and transcription factors, a well studied case is the \textit{lac} operon in \textit{E. coli} whose mechanism is explained on fig. \ref{fig:con-lac_operon}.
 
-From the biochemical point of view, transcription factors bind specific sites on the \textit{promoter}, a region of the DNA which is upstream the gene (or set of genes for prokaryotes), and it is where the RNA Polymerase binds to initiate transcription (see fig. \ref{fig:con-parts_of_DNA}). The binding of the transcription factor may enhance or obstruct the binding of RNA Polymerase to the promoter.
+From the biochemical point of view, transcription factors bind specific sites on the \textit{promoter}, a region of the DNA which is upstream the gene (or set of genes for prokaryotes), and it is where the RNA Polymerase binds to initiate transcription (see fig. \ref{fig:con-parts_of_DNA}). The binding of the transcription factor may enhance or obstruct the binding of RNA Polymerase to the promoter. A promoter that is not regulated by transcription factor is called a \textit{constitutive promoter}.
 
 \begin{figure}[H]
   \centering
@@ -134,8 +136,6 @@ Notice in both graphs that as $n\rightarrow\infty$, the function appears more li
 
 Consider an experiment in which the set of possible outcomes is clearly known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. For a discrete random variable, $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.} 
 
-\todo[inline]{TODO: Explain CDFs?}
-
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
 \begin{equation*}
@@ -194,6 +194,14 @@ From the previous equation it can be seen that for a constant $c$
   \label{eq:con-var_const}
   \sigma^2(cX) = c^2\sigma^2(X)
 \end{equation}
+
+The $\mathbf{n}$\textbf{th moment} of the random variable $X$ is given by
+
+\begin{equation*}
+  \langle X^n\rangle \coloneqq \sum_xx^nP(x).
+\end{equation*}
+
+Hence, the expected value is the first moment and the variance can be written in terms of the first and second moments.
 
 If $X$ and $Y$ are independent, it can be shown that
 
@@ -372,15 +380,13 @@ Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\ma
     \end{equation*}
 \end{itemize}
 
-It can be proven that according to the previous properties, $P(k,\tau)$ is given by
-
-\todo[inline]{Prove it? Is that really true?}
+According to the previous properties, $P(k,\tau)$ is given by
 
 \begin{equation*}
   P(k,\tau) = e^{-\lambda\tau}\frac{(\lambda\tau)^k}{k!},\quad k=0,1,\dotsc
 \end{equation*}
 
-which is a Poisson distribution, using the definition for the expected value and variance (eqs. \eqref{eq:con-var_nice} and \eqref{eq:con-ave_def}), letting $N_\tau$ be the number of arrivals during a time interval $\tau$  we get after a little algebra
+which is a Poisson PMF, using the definition for the expected value and variance (eqs. \eqref{eq:con-var_nice} and \eqref{eq:con-ave_def}), letting $N_\tau$ be the number of arrivals during a time interval $\tau$  we get after a little algebra
 
 \begin{equation*}
   \langle N_\tau\rangle = \sigma^2(N_\tau) = \lambda \tau.
@@ -410,7 +416,7 @@ Differentiating and applying the fundamental theorem of calculus, we get the \te
 
 Therefore, the time $T$ until the first arrival follows an exponential distribution. 
 
-The exponential distribution is \textbf{memoryless} in the following sense: suppose an arrival happened at time $t'$, therefore, the probability distribution for the remaining time until the next arrival is an exponential with the same rate. \todo[inline]{Explain better, prove it?}. With this in mind, not only the time until the first arrival, but all the interarrival times (the times between arrivals), follow the distribution given by eq. \eqref{eq:con-exp_pdf}.
+The exponential distribution is \textbf{memoryless} in the following sense: suppose an arrival happened at time $t'$, therefore, the probability distribution for the remaining time until the next arrival is an exponential with the same rate. With this in mind, not only the time until the first arrival, but all the interarrival times (the times between arrivals), follow the distribution given by eq. \eqref{eq:con-exp_pdf}.
 
 Suppose we $k$ independent Poisson processes with rates $\lambda_1,\dotsc,\lambda_k$ and we record an arrival each time an arrival occur in either process. This merged process is also a Poisson process with rate $\Lambda\coloneqq\sum_{i=1}^k\lambda_i$. Also, any arrival of the merged process has a probability $\lambda_i/\Lambda$, $i=1,\dotsc,k$ of being an arrival of the $i$th process.
 
@@ -423,8 +429,6 @@ To simulate the models we will use the Gillespie algorithm \cite{gillespie77} wh
 In the brute-force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
 
 In the Gillespie algorithm, we take advantage of the mentioned properties of the Poisson process \cite{bertsekas08}. There are not fixed time intervals in this case, a random number is sampled with an exponential distribution whose rate $\Lambda$ is the sum of the rates of the individual processes to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. Using the properties of the exponential CDF, to sample an exponential random number $X$ with parameter $\Lambda$ from an uniform $U$ between $0$ and $1$ we apply the following equation
-
-\todo[inline]{Prove it?}
 
 \begin{equation}
   X = -\frac{1}{\Lambda}\ln(U).

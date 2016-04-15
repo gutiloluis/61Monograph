@@ -115,9 +115,6 @@ The calculations shown in this chapter are based in the work of J. M. Pedraza an
 
 We will consider a set of genes whose interactions are shown on figure \ref{fig:lan-circuit} considering both intrinsic and global sources of noise. The intrinsic part refers to the inherent noise due to the low number of molecules and the nature of the reactions. This was the only source of noise consider on the previous chapter. The extrinsic part arises from another factors, such as environmental fluctuations or variations in intracellular concentrations due to sudden changes on cell volume. These factors causes fluctuations in every component of the cell and thus extrinsic noise is correlated among the different genes, while intrinsic noise is not \cite{elowitz02}.
 
-\todo[inline]{Explain intrinsic/extrinsic noise in a section on concepts.}
-\todo[inline]{Explain plasmid and chromosomal DNA, and constitutive promoter.}
-
 Fig. \ref{fig:lan-circuit} shows a genetic circuit built from four genes to be used on bacteria. Gene $0$ is located in the chromosome while genes $1$ to $3$ are located in plasmids, hence, their expression is subjected to noise caused by plasmid number fluctuations altought we will neglect this source of noise \footnote{We will fix the plasmid number at $1$. This makes calculations easier to follow and does not disrupt the analysis, the results with variable number of plasmids can be found in \cite{pedraza05}}. Genes $0$ codifies for \textit{LacI} and $3$ for the red fluorescent protein \textit{rfp}. Both are regulated by a constitutive promoter, gene $1$ has the promoter P$_\text{lac}$, which regulates the expression of \textit{tetR} and \text{cfp} (cyan fluorescent protein). The transcription from P$_\text{lac}$ is repressed by \textit{LacI}. Also, the repressing effect of \textit{LacI} is inhibited by IPTG.
 
 \begin{figure}[H]
@@ -172,8 +169,6 @@ where $\eta_G$ is the strenght of the global noise, a parameter that is measured
 \langle\mu_0(t)\xi_0(t+\tau)\rangle = 0.
 \end{equation}
 
-\todo[inline]{Understand and explain more the constants and the assumption of white noise}
-
 We will derive the constant term in eq. \eqref{eq:corin0}. Notice that we can not use eq. \eqref{eq:lan-q_form} to find the factor $q$ in the correlations since with the assumptions made in eq. \eqref{eq:detgene0}, protein creation is not a one step Poisson process. From the results of section \label{sec:lan-single} we obtain comparing with eq. \eqref{eq:lan-qrel1}
 
 \begin{equation*}
@@ -206,8 +201,6 @@ In terms of $\delta x_0 \coloneqq x_0 - \bar{x}_0$, eq. \eqref{eq:gene0} becomes
 \end{equation}
 
 We will Fourier transform the equation, find its square norm and use the Wiener-Khinchin theorem (eq. \eqref{eq:con-wkth}) to find the autocorrelations in terms of the power spectrum and to write the power spectrum of $\mu(t)$ and $\xi(t)$ in terms of their autocorrelations.
-
-OJO
 
 Fourier transforming and recalling that $[\mathscr{F}(\frac{\mathrm{d}x(t)}{\mathrm{d}t})](\omega) = i\omega \mathscr{F}(x(t))(\omega)$ for a function of time $x(t)$, we obtain after solving for $\hat{\delta x_0}$
 
@@ -274,8 +267,6 @@ but the extrinsic parts of the noise of genes $0$ and $1$ are correlated. In ana
 \begin{equation}
   \langle\xi_0(t)\xi_1(t+\tau)\rangle = 2\gamma\eta_G^2\bar{x_0}\bar{x_1}\delta(\tau).
 \end{equation}
-
-\todo[inline]{Also, understand and explain the q term here}
 
 We proceed in a similar way to gene $0$. Defining $\delta x_1(t) \coloneqq x_1(t) - \bar{x_1}$, writing eq. \eqref{eq:gene1} in terms of $\delta x_1$, $\delta x_{0A}$, and making a Taylor expansion of $k_1$ to first order in $x_{0A}$ about $\bar{x}_{0A}$ we obtain.
 
@@ -352,8 +343,6 @@ Recall the definition of the logarithmic gain from eq. \eqref{eq:fdt-def_H}
 \end{equation*}
 
 From eq. \eqref{eq:gene1}, we have $\langle J_1^+\rangle = k_1(\bar{x}_{0A})$ and $\langle J_i^-\rangle = \gamma \bar{x}_1$. Then,
-
-\todo[inline]{Aqui que con el promedio si la func es nonlinear}
 
 \begin{equation*}
   H_{10} = \frac{\partial \ln\left(\frac{\gamma\bar{x}_1}{k1(\bar{x}_{0A})}\right)}{\partial \ln  \bar{x}_0} = -\frac{\frac{\gamma \bar{x}_1}{k_1(\bar{x}_{0A})}\partial\left(\frac{k_1(\bar{x}_{0A})}{\gamma \bar{x}_1}\right)}{\frac{\partial \bar{x}_{0A}}{\bar{x}_{0A}}} = -\frac{\bar{x}_{0A}}{k_1(\bar{x}_{0A})}\frac{\mathrm{d} k_1(\bar{x}_{0A})}{\mathrm{d} \bar{x}_{0A}} = -\frac{c_1 \bar{x}_{0A}}{\gamma\bar{x}_1}.

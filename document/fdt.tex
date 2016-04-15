@@ -38,9 +38,7 @@ where $\mathbf{A}$ and $\mathbf{B}$ are now evaluated at steady state. We illust
 
 \section{Example: simple gene}
 
-Consider a single gene such as the explained on section \ref{sec:mas-single_gene}. We will treat the same case without the suposition of a fixed number of active copies of the gene. In this case, there is a fixed number $n_1^{\text{max}}$ and $n_1$ copies that are active, that is, that are available for transcription. There are several ways in which genes can be turned on and off including binding of transcription factors or chromatin remodeling.
-
-\todo[inline]{Explain chromatin remodeling}
+Consider a single gene such as the explained on section \ref{sec:mas-single_gene}. We will treat the same case without the suposition of a fixed number of active copies of the gene. In this case, there is a fixed number $n_1^{\text{max}}$ and $n_1$ copies that are active, that is, that are available for transcription. There are several ways in which genes can be turned on and off including binding of transcription factors or chromatin remodeling in eukaryotes.
 
 We assume that the activation and activation for each gene follows a telegraph process, i.e. each gene switches from \textit{off} to \textit{on} with rate $k_1^+$ and in the opposite sense with rate $k_1^-$. This can be illustrated as
 
@@ -177,8 +175,6 @@ This can be seen in the term of time averaging of eq. \eqref{eq:fdt-eta2}:
 
 In the first case $\tau_2\ll\tau_1$, thus the time averaging term goes to $1$ and the noise in $n_1$ is fully propagated. In the second case $\tau_2\gg\tau_1$, then the term goes to zero, and there is no propagated noise from $n_1$ to $n_2$.
 
-\todo[inline]{Add figures}
-
 For the number of proteins $n_3$ we can see in eq. \eqref{eq:fdt-eta3} that the squared noise is the sum of its intrinsic Poisson noise ($(1/n_3)$), the propagated noise from mRNA that is modulated by a time average factor and the noise from gene activation that is propagated first to the mRNAs and then to proteins. This two-step propagation explains the more complex time averaging factor.
 
 Altought the noise in mRNA is usually large due to its low numbers. The effect of time averaging could reduce considerably the noise in the number of proteins with respect to the noise in mRNA. Without this, the reliability of biological circuits would be very low. Besides, since a time average factor takes values between $0$ and $1$, the noise propagated across multiple steps is reduced with the number of steps. This could be another strategy for noise reduction.
@@ -193,8 +189,6 @@ An important quantity for the analysis of genetic circuits is the logarithmic ga
 \end{equation}
 
 Recall that $\partial \ln x = \partial x/x$. Thus, $H_{ij}$ measures by how fractional changes in $\langle n_j\rangle$ cause the levels of species $i$ to decrease due to fractional changing its degradation to synthesis ratio $\langle J_i^+\rangle/\langle J_i^-\rangle$. If $H_{ij} = h$, then a $1\%$ increase in $n_j$ will increase the degradation to synthesis ratio by approximately $h\%$.
-
-\todo[inline]{Include figure of the stepness}
 
 Eq. \eqref{eq:fdt-fdtss} can be rewritten in terms of the logarithmic gain to a more compact form using the following definitions
 

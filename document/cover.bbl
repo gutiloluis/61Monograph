@@ -19,29 +19,6 @@
 
 \refsection{0}
   \sortlist{entry}{none}
-    \entry{kaern05}{article}{}
-      \name{labelname}{4}{}{%
-        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{a6568ea702acb0279718221122009c5e}
-      \strng{fullhash}{12201fa0310e011c93afd19203b4a21d}
-      \field{sortinit}{0}
-      \field{labeltitle}{Stochasticity in gene expression: from theories to phenotypes}
-      \field{journaltitle}{Nat. Rev. Genet.}
-      \field{title}{Stochasticity in gene expression: from theories to phenotypes}
-      \field{volume}{6}
-      \field{year}{2005}
-      \field{pages}{451\bibrangedash 464}
-    \endentry
     \entry{elowitz02}{article}{}
       \name{labelname}{4}{}{%
         {{hash=ad0c220f04581b1710ebde922437a6bc}{Elowitz}{E\bibinitperiod}{M\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
@@ -84,46 +61,6 @@
       \field{year}{1965--1969}
       \field{pages}{2005}
     \endentry
-    \entry{paulsson05}{article}{}
-      \name{labelname}{1}{}{%
-        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{8fc0cd9519414f5cfb55220eb058e289}
-      \strng{fullhash}{8fc0cd9519414f5cfb55220eb058e289}
-      \field{sortinit}{0}
-      \field{labeltitle}{Models of stochastic gene expression}
-      \field{journaltitle}{Phys. Life Rev.}
-      \field{title}{Models of stochastic gene expression}
-      \field{volume}{2}
-      \field{year}{2005}
-      \field{pages}{157\bibrangedash 175}
-    \endentry
-    \entry{alon99}{article}{}
-      \name{labelname}{4}{}{%
-        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
-        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
-        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{5273499c884be803feee841168b31a79}
-      \strng{fullhash}{5b6344ac0061c4b6decff689312c0926}
-      \field{sortinit}{0}
-      \field{labeltitle}{Robustness in bacterial chemotaxis}
-      \field{journaltitle}{Nature}
-      \field{title}{Robustness in bacterial chemotaxis}
-      \field{volume}{397}
-      \field{year}{1999}
-      \field{pages}{168\bibrangedash 171}
-    \endentry
     \entry{arkin98}{article}{}
       \name{labelname}{3}{}{%
         {{hash=837d16c828bdea202af7a53867a825eb}{Arkin}{A\bibinitperiod}{A}{A\bibinitperiod}{}{}{}{}}%
@@ -144,6 +81,75 @@
       \field{volume}{149}
       \field{year}{1998}
       \field{pages}{1633\bibrangedash 1648}
+    \endentry
+    \entry{alberts08}{book}{}
+      \name{labelname}{6}{}{%
+        {{hash=fb62457c285c73db074f895ec8f95805}{Alberts}{A\bibinitperiod}{Bruce}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=f99df14c1f32023184c881c2b99105bd}{Johnson}{J\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=e04101f253d0dec7e91f2944209c1d40}{Lewis}{L\bibinitperiod}{Julian}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=0312c5684b42a3225b0b0ea32937a033}{Raff}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=079205eca33fb4f81cd49113f2b13d21}{Roberts}{R\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=d294d1b9c5a5cc7ba17eaedc2c9f8915}{Walters}{W\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{6}{}{%
+        {{hash=fb62457c285c73db074f895ec8f95805}{Alberts}{A\bibinitperiod}{Bruce}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=f99df14c1f32023184c881c2b99105bd}{Johnson}{J\bibinitperiod}{Alexander}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=e04101f253d0dec7e91f2944209c1d40}{Lewis}{L\bibinitperiod}{Julian}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=0312c5684b42a3225b0b0ea32937a033}{Raff}{R\bibinitperiod}{Martin}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=079205eca33fb4f81cd49113f2b13d21}{Roberts}{R\bibinitperiod}{Keith}{K\bibinitperiod}{}{}{}{}}%
+        {{hash=d294d1b9c5a5cc7ba17eaedc2c9f8915}{Walters}{W\bibinitperiod}{Peter}{P\bibinitperiod}{}{}{}{}}%
+      }
+      \list{location}{1}{%
+        {New York}%
+      }
+      \list{publisher}{1}{%
+        {Garland Science}%
+      }
+      \strng{namehash}{e9a8f9a71c33ec6ac86a6beb3554e231}
+      \strng{fullhash}{3506d9bb20f976f85b80b519a8e3b5e0}
+      \field{sortinit}{0}
+      \field{labeltitle}{Molecular Biology of the Cell}
+      \field{title}{Molecular Biology of the Cell}
+      \field{year}{2008}
+    \endentry
+    \entry{kussell05}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=de8ff4f1bd7d8a66fad16ff36197e801}{Kussell}{K\bibinitperiod}{Edo}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=326f9ff59f7abd4a7d6257864345a5e1}{Leibler}{L\bibinitperiod}{Stanislas}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=de8ff4f1bd7d8a66fad16ff36197e801}{Kussell}{K\bibinitperiod}{Edo}{E\bibinitperiod}{}{}{}{}}%
+        {{hash=326f9ff59f7abd4a7d6257864345a5e1}{Leibler}{L\bibinitperiod}{Stanislas}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{155fdb010a0d9e7ccbbb4d11dd49ee37}
+      \strng{fullhash}{155fdb010a0d9e7ccbbb4d11dd49ee37}
+      \field{sortinit}{0}
+      \field{labeltitle}{Phenotypic Diversity, Population Growth, and Information in Fluctuationg Environments}
+      \field{journaltitle}{Science}
+      \field{title}{Phenotypic Diversity, Population Growth, and Information in Fluctuationg Environments}
+      \field{volume}{309}
+      \field{year}{2005}
+      \field{pages}{2075\bibrangedash 2078}
+    \endentry
+    \entry{mcadams99}{article}{}
+      \name{labelname}{2}{}{%
+        {{hash=f4bb3fea8da6ffe23d233449d578e54b}{McAdams}{M\bibinitperiod}{Harley\bibnamedelima H.}{H\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{hash=0d94f85ea094997684e64923d01bb20b}{Arkin}{A\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{2}{}{%
+        {{hash=f4bb3fea8da6ffe23d233449d578e54b}{McAdams}{M\bibinitperiod}{Harley\bibnamedelima H.}{H\bibinitperiod\bibinitdelim H\bibinitperiod}{}{}{}{}}%
+        {{hash=0d94f85ea094997684e64923d01bb20b}{Arkin}{A\bibinitperiod}{Adam}{A\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{31fb8784a2c0aec077681fe326f94477}
+      \strng{fullhash}{31fb8784a2c0aec077681fe326f94477}
+      \field{sortinit}{0}
+      \field{labeltitle}{It's a noisy business! Genetic regulation at the nanomolar scale}
+      \field{journaltitle}{Trends Genet.}
+      \field{number}{2}
+      \field{title}{It's a noisy business! Genetic regulation at the nanomolar scale}
+      \field{volume}{15}
+      \field{year}{1999}
+      \field{pages}{65\bibrangedash 69}
     \endentry
     \entry{thattai01}{article}{}
       \name{labelname}{2}{}{%
@@ -220,6 +226,46 @@
       \field{volume}{108}
       \field{year}{2011}
       \field{pages}{15004\bibrangedash 15009}
+    \endentry
+    \entry{kaern05}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a6568ea702acb0279718221122009c5e}
+      \strng{fullhash}{12201fa0310e011c93afd19203b4a21d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Stochasticity in gene expression: from theories to phenotypes}
+      \field{journaltitle}{Nat. Rev. Genet.}
+      \field{title}{Stochasticity in gene expression: from theories to phenotypes}
+      \field{volume}{6}
+      \field{year}{2005}
+      \field{pages}{451\bibrangedash 464}
+    \endentry
+    \entry{paulsson05}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8fc0cd9519414f5cfb55220eb058e289}
+      \strng{fullhash}{8fc0cd9519414f5cfb55220eb058e289}
+      \field{sortinit}{0}
+      \field{labeltitle}{Models of stochastic gene expression}
+      \field{journaltitle}{Phys. Life Rev.}
+      \field{title}{Models of stochastic gene expression}
+      \field{volume}{2}
+      \field{year}{2005}
+      \field{pages}{157\bibrangedash 175}
     \endentry
     \entry{alberts13}{book}{}
       \name{labelname}{8}{}{%
@@ -389,6 +435,29 @@
       \field{title}{Signal and noise propagation in genetic circuits}
       \field{type}{phdthesis}
       \field{year}{2006}
+    \endentry
+    \entry{alon99}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
+        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
+        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
+        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
+        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{5273499c884be803feee841168b31a79}
+      \strng{fullhash}{5b6344ac0061c4b6decff689312c0926}
+      \field{sortinit}{0}
+      \field{labeltitle}{Robustness in bacterial chemotaxis}
+      \field{journaltitle}{Nature}
+      \field{title}{Robustness in bacterial chemotaxis}
+      \field{volume}{397}
+      \field{year}{1999}
+      \field{pages}{168\bibrangedash 171}
     \endentry
   \endsortlist
 \endrefsection
