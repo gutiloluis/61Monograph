@@ -1,12 +1,10 @@
 \chapter{Effects of bursting and senescence}
 
-There are many different phenomena that could have an effect on noise. Most of the models that have been based on assumptions and have made fits of the data obatined with fluorescent proteins according to those assumptions. Nevertheless, we will see in this chapter that noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the systems according to their noise.
-
-We will use the Fluctuation-Dissipation theorem as we used it on chapter \ref{ch:fdt} to analyize the effects of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules over many steps) on noise.
+There are many different phenomena that could have an effect on noise. Most of the models that have been based on assumptions and have made fits of the data obatined with fluorescent proteins according to those assumptions. Nevertheless, we will see in this chapter that noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the systems according to their noise. We will use the Fluctuation-Dissipation theorem as we used it on chapter \ref{ch:fdt} to analyize the effects of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules over many steps) on noise.
 
 This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
 
-Transcription and translation does not occur necessarily as single step Poisson processes. Due to the complexity of gene regulation, their statistics may not be so simple. There are cases where many copies of mRNA are created in short periods of time (bursting). Also, promoters may take several steps to become active (gestation), and mRNAs and proteins to degrade (senescence). Figure \ref{bur-examples} shows some examples of bursting and senescence.
+Transcription and translation does not occur necessarily as single step Poisson processes. Due to the complexity of gene regulation, their statistics may not be so simple. There are cases where many copies of mRNA are created in short periods of time (bursting). Also, promoters may take several steps to become active (gestation), and mRNAs and proteins to degrade (senescence). Figure \ref{fig:bur-examples} shows some examples of bursting and senescence.
 
 \begin{figure}[H]
   \centering
@@ -14,7 +12,7 @@ Transcription and translation does not occur necessarily as single step Poisson 
   \caption[Examples of bursting and senescence in gene expression]{\label{fig:bur-examples} Examples of bursting and senescene in gene expression.(left) Example of a promoter where many transcription factors bind in successive steps taking a random time $T$. When the complex is bound to the promoter, A random number $b$ of transcription events occur in a time much shorter than $T$.(right) Senescene in eukaryotic mRNAs occurs when their poly(A) tail\footnotemark is sequentially removed before the part that is translated is degraded. Translation can occur while the poly(A) tail is removed. Taken from \cite{pedraza08}.}
 \end{figure}
 
-\footnote{The poly(A) tail is an additional stretch of mRNA that is not part of the protein coding sequence. It is important for the processing of mRNA.}
+\footnotetext{The poly(A) tail is an additional stretch of mRNA that is not part of the protein coding sequence. It is important for the processing of mRNA.}
 
 \section{mRNA bursts}
 Let the mRNA be produced with bursts of random size $b$, the degradation and protein creation is done one at a time with exponential waiting times (single-step Poisson processes). In this case the only modification with respect to the ``standard model'' (eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}) is the $D_{11}$ term of the matrix $\mathbf{D}$, which by definition is
@@ -93,23 +91,23 @@ The matrices then become
   \end{pmatrix}.
 \end{equation*}
 
-With $D_{11}$ given by eq. \eqref{eq:d11} And solving the linear system $\mathbf{M}\mathbf{\eta} + \mathbf{\eta M}^T+\mathbf{D}=0$ (see sec. \ref{sec:log_gain}), we obtain the following expression for the noise in the proteins
+With $D_{11}$ given by eq. \eqref{eq:d11} And solving the linear system $\mathbf{M}\mathbf{\eta} + \mathbf{\eta M}^T+\mathbf{D}=0$ (see sec. \ref{sec:log_gain}), we obtain the following expression for the noise in proteins
 
 \begin{equation}
   \boxed{\eta_{22}=\frac{1}{\langle n_2\rangle} + \frac{1}{\langle n_1\rangle} \frac{\tau_1}{\tau_1 + \tau_2} \frac{\langle b\rangle\left(1+\nicefrac{\sigma_b^2}{\langle b\rangle^2}\right)+1}{2}}.
 \end{equation}
 
-\todo[inline]{TODO: Analysis of the equations, independence on details of the distribution}
+Recall that this holds under the assumption that the times between creation events are exponentially distributed. The noise in the number of proteins does not depend on the details of the distribution of $b$, but only on its noise. In the noise propagated from mRNA, apart from the time averaging factor, there is a \textit{coarse graining} factor that captures how fluctuations are generated. In the following sections we will derive the protein for arbitrary waiting times.
 
 \section{Arbitrary distribution of creation times}
 
-Suppose a creation event happened at $t=0$, and let $f(t)$ be the probability density function of a creation event happening at time $t$ (meaning a time $t$ after the last event), i.e. $P(t\in[T,T+dt])=f(T)dt$. According to that, the following properties are satisfied
+Suppose a creation event happened at $t=0$, and let $f(t)$ be the PDF of a creation event happening at time $t$ after the last event, i.e. $P(t\in[T,T+dt])=f(T)dt$. According to that, the following properties are satisfied
 
 \begin{equation*}
 P(n=0|t=T) = P(t>T) = 1 - P(t<T) = 1 - F(T)
 \end{equation*}
 
-where $n$ stands for the number of creation events and $F$ is the cumulative distribution function associated to $f(t)$. Also, for one creation event to have happened before time $t=T$, there must be a creation on a time $t_1$ such that $0<t_1<T$ and no creation events on the remaining ($T-t_1$) time. This leads to the following equation
+where $n$ is number of creation events and $F$ is the CDF associated to $f(t)$. Also, for one creation event to have happened before time $t=T$, there must be a creation on a time $t_1$ such that $0<t_1<T$ and no creation events on the remaining ($T-t_1$) time. This leads to the following equation
 
 \begin{equation*}
   \begin{split}
@@ -293,7 +291,7 @@ Replacing this result in eq. \eqref{eq:charac1} we obtain
 
 Where $\langle\quad\rangle_n$ denotes average with respect to the distribution of events $P_n$.
 
-We proceed to obtain the moments, using the properties of the characteristic function (eqs. \eqref{eq:con-char_2} - \eqref{eq:con-char_2})
+We proceed to obtain the moments, using the properties of the characteristic function
 
 \begin{equation}
   \label{eq:avex}
@@ -384,9 +382,10 @@ Therefore,
 
 Finding the moments by using the properties of $G$ and the previous equation we obtain
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:bur-aveBr}
   \langle n\rangle_\text{Br} = \left.\frac{\partial G_\text{Br}(z)}{\partial z}\right|_1 = G_\text{Ar}(1)\left.\frac{\partial G_{x,\tau}(z)}{\partial z}\right|_1 + \left.\frac{\partial G_\text{Ar}(z)}{\partial z}\right|_1G_{x,\tau}(1) = \langle m\rangle_{x,\tau} + \langle m\rangle_\text{Ar},
-\end{equation*}
+\end{equation}
 
 from eq. \ref{eq:binomG} 
 
@@ -445,6 +444,7 @@ After some algebra we obtain
 Dividing by $\langle m\rangle_\text{Br}^2$ and using eq. \ref{eq:aveBrAr} we get
 
 \begin{equation}
+  \label{eq:bur-etaBr}
   \begin{split}
     \eta_\text{Br}^2 &= \frac{1}{1-r^2}\sigma_{x,\tau}^2\frac{(1-r)^2}{\langle m\rangle_{x,\tau}^2} + \frac{r}{1+r}\langle m\rangle_\text{Br}\\
     & = \frac{1-r}{1+r}\eta_{x,\tau}^2+\frac{r}{1+r}\frac{1}{\langle n\rangle_\text{Br}}
@@ -466,7 +466,7 @@ Using eq. \ref{eq:aveBrAr} and after a little algebra we get
   \sigma^2_\text{Ar} = \frac{r^2}{1-r^2}\sigma^2_{x,\tau}+\frac{1}{1+r}\langle m\rangle_\text{Ar},
 \end{equation}
 
-hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \ref{eq:aveBrAr} we get
+hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \eqref{eq:aveBrAr} we get
 
 \begin{equation}
   \begin{split}
@@ -475,13 +475,31 @@ hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \ref{eq:aveBrAr}
   \end{split}
 \end{equation}
 
-\todo[inline]{Understand the intermediate steps here and complete}
+From eqs. \eqref{eq:bur-aveBr} and \eqref{eq:aveBrAr}, we have $\langle n\rangle_{x,\tau}=\langle n\rangle_{Br}(1-r)$. Replacing on eq. \eqref{eq:noisex}
+
+\begin{equation*}
+  \eta^2_{x,\tau} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b)}{(1-r)\langle n\rangle_{Br}}.
+\end{equation*}
+
+Replacing on eq. \eqref{eq:bur-etaBr}
+
+\begin{equation*}
+  \eta^2_{Br} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + r}{(1+r)\langle n\rangle_{Br}}.
+\end{equation*}
+
+The continuous decay of molecules can be approximated by considering division in the limit where $r\to 1$, that is, when the lost volume fraction is very small. In this case,
+
+\begin{equation*}
+  \eta^2 = \lim_{r\to_1}\eta^2_{Br} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + 1}{2\langle n\rangle}.
+\end{equation*}
+
+In the model of transcription and translation this corresponds to the noise in mRNA number. The noise in protein number can be found immediately keeping in mind that, as we saw on chapter \ref{ch:fdt}, the noise in the number of protein has its intrinsic Poissonian component ($1/\langle p\rangle$), and the transmitted noise from mRNA modulated by the time averaging factor, i.e.
 
 \begin{equation}
-  \boxed{\eta^2 = \frac{\langle b\rangle\left(\eta^2_t + \eta^2_b\right)+1}{2\langle n\rangle}}
+  \eta^2_p = \frac{1}{\langle p\rangle} + \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + 1}{2}\frac{1}{\langle m\rangle}\frac{\tau_m}{\tau_m+\tau_p}.
 \end{equation}
 
-\todo[inline]{Complete and analyze here also}
+Therefore, by considering the bursting and general random timing between creation events in the number of mRNAs, an additional factor arises. The authors of \cite{pedraza08} have called it coarse graining factor because it is overlooked with the usual approximations. According to the previous eq. noise can be reduced by having narrowly distributed gestation period (e.g. by introducing more steps). Also, there are many ways in which the same noise is obtained, e.g. with a narrow distribution of times and a wide one of bursts, or viceversa. Hence, the models that overlook these variables and have estimated quantities based on some prior assumptions may be wrong. For example, the noise that has been attributted to a high number of mRNAs, or to the effect of time averaging could have been caused by a narrowly distributed time between events.
 
 \section{Senescence of mRNA}
 
@@ -491,7 +509,7 @@ Suppose that mRNAs are created at a constant rate $\lambda_1$ and that they sene
   \text{Transcription} \rightarrow X_1 \rightarrow X_2 \rightarrow \dots \rightarrow X_N \rightarrow \text{Degradation}
 \end{equation}
 
-The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N$. Also, assume that the rates of transcription $\beta_1$ per mRNA between the states are the same. The possible transtions in the state space are thus
+The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N$. Let the rate of transcription be $\lambda_1$ and assume that the rates of transition $\beta_1$ per mRNA between the states are the same. The possible transtions in the state space are thus
 
 \begin{equation}
   \begin{split}
@@ -501,7 +519,7 @@ The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N
   \end{split}
 \end{equation}
 
-Where the first line denotes transcription, the second denotes transitions between states and the third stands for degradation. Now, denote as $x_{N+1}$ the number of proteins in a cell and suppose that independently of the current state of the mRNA molecules, they are translated with the same rate $\lambda_2$ per mRNA. Also, denoting the degradation rate per protein as $\beta_2$ the possible transitions for the proteins are
+Where the first line denotes transcription, the second denotes transitions between states and the third stands for degradation. Now, denote as $x_{N+1}$ the number of proteins in a cell and suppose that independently of the current state of the mRNA molecules, they are translated with the same rate $\lambda_2$ per mRNA. Denoting the degradation rate per protein as $\beta_2$ the possible transitions for the proteins are
 
 \begin{equation}
   \begin{split}
@@ -514,7 +532,7 @@ Then, the average dynamics are
 
 \begin{equation}
   \begin{split}
-    \dot{\langle x_1\rangle} &= \lambda-1 -\beta_1\langle x_1\rangle,\\
+    \dot{\langle x_1\rangle} &= \lambda_1 -\beta_1\langle x_1\rangle,\\
     \dot{\langle x_{i+1}\rangle} &= \beta_1\left(\langle x_i\rangle - \langle x_{i+1}\rangle\right)\quad\text{for}\quad 1\leq i\leq N,\\
     \dot{\langle x_{N+1}\rangle} &= \lambda_2\sum_{i=1}^N\langle x_i\rangle-\beta_2\langle x_{N+1}\rangle.
   \end{split}
@@ -536,8 +554,27 @@ Therefore,
   \langle x_i\rangle = \lambda_1\tau_1\quad\text{for}\quad 1\leq i\leq N,
 \end{equation}
 
-where $\tau_1 \coloneqq \nicefrac{1}{\beta_1}$.
+where $\tau_1 \coloneqq 1/\beta_1$.
 
-Denoting the total mRNA as $m$, then $m=\sum_{i=1}^Nx_i$ and taking the average
+Denoting the total mRNA as $m=\sum_{i=1}^Nx_i$ and taking the average we get
 
-\todo[inline]{Complete this}
+\begin{equation*}
+  \langle m\rangle = \sum_{i=1}^N\langle x_i\rangle = \lambda_1\tau_1n = \lambda_1\tau_m
+\end{equation*}
+
+where $\tau_m\coloneqq n\tau_1$. With these dynamics the coefficients of the matrices $\mathbf{M}$ and $\mathbf{D}$ of the FDT can be found. Following this procedure and solving for the noise in the number of proteins one finds
+
+\begin{equation}
+  \eta_p^2= \frac{1}{\langle p\rangle}+\frac{1}{\langle m\rangle} \left[1+\frac{\tau_p}{\tau_m}\left(\left(\frac{\tau_pN}{\tau_m+\tau_pN}\right)^N-1\right)\right].
+\end{equation}
+
+The noise for the total mRNA can be found using the properties of time averaging. If we let $\tau_p\ll\tau_m$, in this case, the proteins respond immediately to changes in mRNA and thus completely reproduce their fluctuations. Ignoring also the Poisson noise for the proteins yields
+
+\begin{equation}
+  \eta_m^2 = \frac{1}{\langle m\rangle}.
+\end{equation}
+
+This is a very surprising result, by letting the mRNA senesce through multiple steps before being degraded, $\eta_m$ remains Poissonian but the time averaging factor in $\eta_p$ is modified. The noise is reduced with a larger number of senescence steps $N$ and viceversa, as can be proved taking the limits as $N\to 0$ and $N\to \infty$ and plotting as a function of $N$. If proteins senesce, the noise would instead be increased with a larger number of steps by affecting also the time averaging factor.
+
+This nonintuitive result reasserts the conclusion given on previous section. There are many mechanisms that affect the noise. Therefore, it is not correct to fit the parameters and the variables of some models under assumptions that may not hold with a high probability. Altough with this method the models predict the experimental results, the origin of the noise is attributed to factors that may not be the actual ones. For instance, noise that arises due to a wide mRNA burst distribution can be attributed to a low number of mRNAs.
+

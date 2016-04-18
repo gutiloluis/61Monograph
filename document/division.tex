@@ -42,20 +42,18 @@ is the noise arising from cell division. Eq. \eqref{eq:div-noises} states that t
 The term $Q_x$ can be interpreted in another way. From the definition of variance and eq. \eqref{eq:div-even}
 
 \begin{equation*}
-  Q_x^2 = \frac{1}{\langle l\rangle^2}\left\langle\left(l-\langle l\rangle\right)^2|x,v\right\rangle = \frac{4}{\langle x\rangle^2}\left\langle\left.\left(l-\frac{x}{2}\right)^2\right|x,v\right\rangle
+  Q_x^2 = \frac{1}{\langle l\rangle^2}\left\langle\left\langle\left(l-\langle l\rangle\right)^2|x,v\right\rangle\right\rangle = \frac{4}{\langle x\rangle^2}\left\langle\left\langle\left.\left(l-\frac{x}{2}\right)^2\right|x,v\right\rangle\right\rangle
 \end{equation*}
 
 but $l - \frac{x}{2} = \frac{1}{2}(2l-(l-r)) = \frac{l-r}{2}$, then
 
 \begin{equation*}
-   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\left.\left(\frac{l-r}{2}\right)^2\right|x,v\right\rangle  = \frac{1}{\langle x\rangle^2}\left\langle\left(l-r\right)^2\right\rangle.
+   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\left\langle\left.\left(\frac{l-r}{2}\right)^2\right|x,v\right\rangle\right\rangle  = \frac{1}{\langle x\rangle^2}\left\langle\left(l-r\right)^2\right\rangle.
 \end{equation*}
 
-\todo[inline]{Check notation, they seem to skip to suddenly switch from conditional expectations to unconditional ones. Is it abuse of notation or is correct?}
+Therefore, the term $Q_x^2$ can be interpreted as the average square deviation between the quantities of the molecules of each daughter cell. For a perfect division $l=r$, making $Q_x=0$. On the contrary, the most noisy case is when one daughter recieves $x$ moleucles and the other does not recieve any molecule.
 
-Therefore, the term $Q_x^2$ can be interpreted as the average square deviation between the quantities of the molecules of each daughter cell. For a perfect division $l=r$, making $Q_x=0$. On the contrary, the most noisy case is when one daughter recieves $x$ moleucles and the other $0$ molecule.
-
-\todo[inline]{TODO: Analysis of the general framework and mock processes}
+In the subsequent derivations, the diverse mechanisms related to cell division will be considered. To simplify the derivations, the particular assumptions used may not match the exact dynamics of the process, but they yield the same noise statistics. For instance, when molecules are grouped in vesicles before being segregated to each half, they are first segregated randomly into vesicles and then vesicles are distributed between the daughters. We will see that for the derivations it will be better to invert the order of the process. Altough this does not correspond to the reality, the same noise is obtained more easily. The authors called those specific models mock processes.
 
 \section{Independent segregation}
 
@@ -247,12 +245,10 @@ Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles in one o
 
 \begin{equation}
   \begin{split}
-    l&\xrightarrow{n(x_{n+1}+\dotsb+x_{v})}l+1\\
-    l&\xrightarrow{(v-n)(x_1+\dotsb+x_n)}l-1
+    l&\xrightarrow{n(x_{n+1}+\dotsb+x_{v})}l+1,\\
+    l&\xrightarrow{(v-n)(x_1+\dotsb+x_n)}l-1.
   \end{split}
 \end{equation}
-
-\todo[inline]{TODO: Analisis}
 
 This can be simplified to
 
@@ -289,8 +285,6 @@ and replacing on eq. \eqref{eq:div-clus-Qx1} results in
   \boxed{Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(\left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle \right)}
 \end{equation}
 
-\todo[inline]{TODO: Explain the terms of the eq.}
-
 If $x$ and $v$ are independent we can write it as
 
 \begin{equation*}
@@ -315,9 +309,7 @@ After replacing $Q_x$ becomes
   \boxed{Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{(1+\eta_x^2)(1+\eta_v^2)}{\langle v\rangle}}
 \end{equation*}
 
-When $x\ll 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning erros.
-
-\todo[inline]{Understand and explain the assumptions}
+When $x\gg 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning error.
 
 Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \eqref{eq:div-clus-Qx2} becomes by definition of expected value
 
@@ -349,9 +341,6 @@ And if $(1-q)$ is very small (or $0$ as in the case of a Poissonian), we can app
 
 \subsection{Upper limit of the partitioning error}
 
-\todo[inline]{Check the order of this subsection}
-\todo[inline]{The following contents are not revised}
-
 There is an upper bound for the partitioning error corresponding to the case when one daughter cells keeps all the molecules. There is an equal probability of each daughter to keep all of them, hence
 
 \begin{equation}
@@ -361,7 +350,7 @@ There is an upper bound for the partitioning error corresponding to the case whe
 Therefore
 
 \begin{equation}
-  Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}{\langle x^2\rangle}{4} = \eta_x^2+1.
+  Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{\langle x^2\rangle}{4} = \eta_x^2+1.
 \end{equation}
 
 It only depends on the prior heterogeneity of the mother cells.
@@ -495,16 +484,14 @@ Assume that in each cell there are $z$ pairs of molecules and $m$ independent mo
   \end{split}
 \end{equation}
 
-where the subscripts 'p' and 'u' stand for 'paired' and 'unpaired' and $P(2z,x)$ is the PMF of having $z$ pairs and a total of $x$ molecules before division. The variances can be added in that way because for independent random variables, the variance of a sum is the sum of the variances (IS THIS THE REASON?).
-
-Now We will proceed to find each one of the variances. The unpaired molecules segregate independently, therefore, by comparison with eq. \eqref{eq:div-var_ind} we get
+where the subscripts 'p' and 'u' stand for 'paired' and 'unpaired' and $P(2z,x)$ is the PMF of having $z$ pairs and a total of $x$ molecules before division. Now We will proceed to find each one of the variances. The unpaired molecules segregate independently, therefore, by comparison with eq. \eqref{eq:div-var_ind} we get
 
 \begin{equation}
   \label{eq:div-u}
   \sigma^2_\text{u}(l|x-2z) = \frac{x-2z}{4}.
 \end{equation}
 
-For the paired molecules, assume that each pair is split to separate daughters with probability $p$ and to the same daughter with probability $1-p$. MORE COMMENTS
+For the paired molecules, assume that each pair is split to separate daughters with probability $p$ and to the same daughter with probability $1-p$. If the second case happends, there is an equal probability of ending in each daughter. Let $M$ be the number of unsorted molecules, and $L$ and $R$ the number of sorted molecules to each cell half. The sorting process of the pairs can be modeled with the following process
 
 \begin{equation}
   \begin{split}
@@ -514,12 +501,7 @@ For the paired molecules, assume that each pair is split to separate daughters w
   \end{split}
 \end{equation}
 
-where the first line represents a succesfull split and the other two unsuccesful ones.
-
-EXPLAIN ALL THE FDR, AND THE MATRICES, ETC.
-----------------------------------
-
-we get
+where the first line represents a succesfull split and the other two unsuccesful ones. With this relations, the matrices $\mathbf{A}$ and $\mathbf{B}$ of the time dependent FDT can be found and solved for the variances. To represent a sorting of $2z$ molecules, the initial conditions are $M(0) = 2z$, $L(0) = R(0)=0$, and all the entries of the covariance matrix are zero. The variance of the paired molecules after the sorting process is complete corresponds to the limit where the time of the mock process goes to infinity. After some algebraic steps the result is
 
 \begin{equation}
   \label{eq:div-p}
@@ -530,16 +512,19 @@ Replacing eqs. \eqref{eq:div-u} and \eqref{eq:div-p} in eq. \eqref{eq:div-pu} we
 
 \begin{equation}
   \begin{split}
-    \left\langle\sigma^2(l|x)\right\rangle &=\sum_{x}\left[\sum_z\left((1-p)z+\frac{x-2z}{4}\right)P(2z|x)\right]P(x) = \sum_x\left(\frac{1-p}{2}\langle 2z|x\rangle+\frac{x-\langle 2z|x\rangle}{4}\right)P(x)\\
+    \left\langle\sigma^2(l|x)\right\rangle &=\sum_{x}\left[\sum_z\left((1-p)z+\frac{x-2z}{4}\right)P(2z|x)\right]P(x)\\
+&=\sum_x\left(\frac{1-p}{2}\langle 2z|x\rangle+\frac{x-\langle 2z|x\rangle}{4}\right)P(x)\\
     &=\frac{1}{4}\sum_x\left(2(1-p)\langle 2z|x\rangle+x-\langle 2z|x\rangle\right)P(x) = \frac{1}{4}\sum_x\left(x-(2p-1)\langle 2z|x\rangle\right)P(x)\\
     &=\frac{1}{4}\left(\langle x\rangle - (2p-1)\langle 2z\rangle\right).
   \end{split}
 \end{equation}
 
-Hence, (POR QUE EL SOBRE 2, SUSTITUCION?)
+Hence,
 
 \begin{equation}
   \boxed{Q_x^2 = \frac{1 - (2p-1)k}{\langle x\rangle}}
 \end{equation}
 
-where $k\coloneqq\langle 2z\rangle/\langle x\rangle$ is the average fraction of molecules that are in pairs. If $k=0$ there is independent segregation and $Q_x = 1/\langle x\rangle$ on the previous equation. For the segregation into pairs to be 'ordered', $p$ must be greater than $1/2$, in the opposite case, the paired molecules have a higher chance of not being split, increasing segregation error with respect to the independent case.
+where $k\coloneqq\langle 2z\rangle/\langle x\rangle$ is the average fraction of molecules that are in pairs. If $k=0$ there is independent segregation and $Q_x = 1/\langle x\rangle$ on the previous equation. For the segregation into pairs to be ordered, $p$ must be greater than $1/2$, in the opposite case, the paired molecules have a higher chance of not being split, increasing segregation error with respect to the independent case.
+
+\section{Final remarks}
