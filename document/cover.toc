@@ -80,13 +80,13 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{113}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{113}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{114}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{117}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ordered segregation}{117}{section.6.4}
+\contentsline {section}{\numberline {6.4}Ordered segregation}{118}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{117}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{118}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{118}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
