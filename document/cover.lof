@@ -1,62 +1,62 @@
 \boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {I.1}{\ignorespaces Examples of noise in gene expression}}{14}{figure.0.0.1}
+\contentsline {figure}{\numberline {I.1}{\ignorespaces Examples of noise in gene expression}}{12}{figure.0.0.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {I.2}{\ignorespaces Life cycle of lambda phage}}{16}{figure.0.0.2}
+\contentsline {figure}{\numberline {I.2}{\ignorespaces Life cycle of lambda phage}}{13}{figure.0.0.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {I.3}{\ignorespaces Stochastic switching strategy in fluctuating environments}}{17}{figure.0.0.3}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Central dogma of molecular biology}}{22}{figure.1.1.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.1}{\ignorespaces Transcription factors}}{23}{figure.1.2.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.2}{\ignorespaces Example of gene regulation}}{24}{figure.1.2.2}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.3}{\ignorespaces Parts of a gene}}{24}{figure.1.2.3}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.4}{\ignorespaces Systems biology conventions}}{25}{figure.1.2.4}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.2.5}{\ignorespaces Example of a biological circuit}}{26}{figure.1.2.5}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill function for an activator}}{28}{figure.1.3.1}
-\defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3.2}{\ignorespaces Hill function for a repressor}}{29}{figure.1.3.2}
+\contentsline {figure}{\numberline {I.3}{\ignorespaces Stochastic switching strategy in fluctuating environments}}{14}{figure.0.0.3}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Model of gene expression for a single gene}}{42}{figure.2.1.1}
+\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Central dogma of molecular biology}}{18}{figure.1.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Deterministic solution for the number of proteins}}{44}{figure.2.1.2}
+\contentsline {figure}{\numberline {1.2.1}{\ignorespaces Transcription factors}}{20}{figure.1.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.3}{\ignorespaces Transitions between states for a single gene}}{45}{figure.2.1.3}
+\contentsline {figure}{\numberline {1.2.2}{\ignorespaces Example of gene regulation}}{21}{figure.1.2.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.4}{\ignorespaces Noise in proteins: comparing analytical results and Gillespie simulations}}{51}{figure.2.1.4}
+\contentsline {figure}{\numberline {1.2.3}{\ignorespaces Parts of a gene}}{22}{figure.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Histograms for protein number for a constitutive gene and a negatively autorregulated gene}}{58}{figure.2.3.1}
+\contentsline {figure}{\numberline {1.2.4}{\ignorespaces Systems biology conventions}}{22}{figure.1.2.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of protein number for a negatively autorregulated gene}}{60}{figure.2.3.2}
+\contentsline {figure}{\numberline {1.2.5}{\ignorespaces Example of a biological circuit}}{23}{figure.1.2.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill function for an activator}}{25}{figure.1.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {1.3.2}{\ignorespaces Hill function for a repressor}}{26}{figure.1.3.2}
+\defcounter {refsection}{0}\relax 
+\addvspace {10\p@ }
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1.1}{\ignorespaces Model of gene expression for a single gene}}{38}{figure.2.1.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Deterministic solution for the number of proteins}}{40}{figure.2.1.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1.3}{\ignorespaces Transitions between states for a single gene}}{41}{figure.2.1.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.1.4}{\ignorespaces Noise in proteins: comparing analytical results and Gillespie simulations}}{47}{figure.2.1.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Histograms for protein number for a constitutive gene and a negatively autorregulated gene}}{54}{figure.2.3.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of protein number for a negatively autorregulated gene}}{56}{figure.2.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Circuit used for the Langevin model}}{77}{figure.4.2.1}
+\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Circuit used for the Langevin model}}{73}{figure.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Logarithmic gains for the genes of a cascade}}{87}{figure.4.4.1}
+\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Logarithmic gains for the genes of a cascade}}{83}{figure.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Noises and correlation for the genes of a cascade}}{88}{figure.4.4.2}
+\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Noises and correlation for the genes of a cascade}}{84}{figure.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Components of the noise}}{90}{figure.4.4.3}
+\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Components of the noise}}{86}{figure.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.4}{\ignorespaces Noise in gene $2$ for varying ATC concentrations}}{91}{figure.4.4.4}
+\contentsline {figure}{\numberline {4.4.4}{\ignorespaces Noise in gene $2$ for varying ATC concentrations}}{87}{figure.4.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5.1}{\ignorespaces Propagation of noise through a cascade}}{92}{figure.4.5.1}
+\contentsline {figure}{\numberline {4.5.1}{\ignorespaces Propagation of noise through a cascade}}{88}{figure.4.5.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.0.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{94}{figure.5.0.1}
+\contentsline {figure}{\numberline {5.0.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{90}{figure.5.0.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
