@@ -2,68 +2,59 @@
 
 \section{The central dogma of molecular biology}
 
-The central dogma explains how genetic information flows within a living being. It states that DNA, the molecule that stores the genetic information, is replicated by the enzyme DNA Polymerase. Also, RNA Polymerase produces messenger RNA (mRNA) from DNA in a process called transcription. Finally, the ribosome build the proteins following the sequence of the mRNA and according to a genetic code that translates from the language of nucleotides (the structural blocks of DNA and RNA) to the language of aminoacids, the structural blocks of proteins \cite{alberts13}.
+The central dogma explains how genetic information flows within a living being. It states that DNA, the molecule that stores the genetic information, is replicated by the enzyme DNA Polymerase. Also, RNA Polymerase produces messenger RNA (mRNA) from DNA in a process called transcription. Finally, the ribosomes read the sequence of the mRNA while they bind aminoacids to build the proteins. This process is called translation because ribosomes use a genetic code to translate from the language of nucleotides, the structural blocks of DNA and RNA, to the language of aminoacids, the structural blocks of proteins. \cite{alberts13}. Fig. \ref{fig:con-dogma} summarizes the central dogma.
 
-In prokaryotes, DNA molecules exist in the form of chromosomes and plasmids. The former are the main genetic material that has the essential information to make the organism. There is a single copy of the chromosome for prokaryotes. The latter are shorter molecules that confer additional characteristics such as antibiotic resistance. There could be several copies in a cell and they can be transferred between organisms. Plasmids are extensively used in synthetic biology because they are easier to introduce in cells.
+In prokaryotes, DNA molecules exist in the form of chromosomes and plasmids. The former are the main genetic material that has the essential information to make the organisms. Prokaryotes have only a single copy of it, while eukaryotes may have several (e.g. we have $23$ pairs). The latter are shorter molecules that confer additional characteristics such as antibiotic resistance. There could be several copies in a cell and they can be transferred between organisms. Plasmids are extensively used in synthetic biology because they are easier to introduce in cells.
 
-Proteins are the structural and functional elementary units of living beings. Therefore, according to the proteins that are being produced in a certain cell it will develop certain functions. The central dogma is summarized in fig. \ref{fig:con-dogma}.
+Proteins are the structural and functional elementary units of living beings. Therefore, according to the proteins that are being produced in a certain cell it will have certain form and develop certain functions. 
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{con-dogma}
-  \caption[Central dogma of molecular biology]{\label{fig:con-dogma} Scheme of the central dogma of molecular biology. By Dhorspool at en.wikipedia, CC BY-SA 3.0, \$3.}
+  \caption[The central dogma of molecular biology]{\label{fig:con-dogma} The central dogma of molecular biology.}
 \end{figure}
 
-An important fact is that the central dogma is valid for all the living beings. The encoding of information in DNA and the mechanisms by which proteins are made according to that information, including the genetic code, are very similar between different organisms.
+The encoding of information in DNA and the mechanisms by which proteins are made according to that information, including the genetic code, are very similar between different organisms. In eukaryotes, for instance there are more sophisticated processes of gene expression and regulation, but the mechanisms in general are the same for every living being. This remarkable fact supports the idea of a common ancestor for all the living beings and makes it possible, for instance, to use genes from different organisms to build synthetic biological circuits.
 
 \section{Gene regulation and biological circuits}
 
-DNA contains all the information necessary to build a living being and let him develop his functions. But genetically identical cells may differ a lot. For example, our neurons are very different in form and function than our skin cells, even though they have the same DNA and thus the same genetic information. This differentiation happens because they are expressing different sets of genes. The genetic information encoded in the DNA is called genotype, while the observable characteristics of an organism are called phenotype. In this terminology, both kinds of cells have the same genotype but differ in their genotypes \cite{alberts13} \cite{alon06}.
+DNA contains all the information necessary to build a living being and let him develop his functions. However, genetically identical cells may differ a lot. For example, our neurons are very different in form and function than our skin cells, even though they have the same genetic information. This differentiation happens because they are expressing different sets of genes at different levels. Moreover, cells are not static, they are constantly interacting with their surroundings and adjusting their gene expression according to the environment. To perform these functions, living beings have several mechanisms that allow them to regulate the rate of expression of their genes.
 
-Those differences lie on the genes that each cell is expressing at a certain time and how much they are being expressed (measured in the rate of production of proteins corresponding to a gene). There are proteins (and even RNA molecules) that inhibit the production of other protein by stoping transcription of the corresponding gene. On the contrary, there are proteins that enhance the production of other proteins by increasing the rate of transcription. Both activators and inhibitors are called \textit{transcription factors}, both cases can be seen on fig. \ref{fig:con-tf_simple}.
+The genetic information encoded in the DNA is called genotype, while the observable characteristics of an organism are called phenotype. In this terminology, our neurons and our skin cells have the same genotype but differ in their genotypes \cite{alberts13} \cite{alon06}.
+
+For each gene, or group of genes, there is a region located upstream the sequence that encodes for the protein called the promoter. mRNA Polymerase binds the promoter to initiate transcription. Also, there are proteins, called transcription factors (TFs), that bind specific sites in the promoter changing the rate of transcription. They may be either repressors or activators. The former reduce the transcription rate, while the latter increase it. Fig. \ref{fig:con-tf_simple} shows how the expression of some gene is enhanced by activators. Repressors also bind to the promoter but they lower the affinity between it and the RNApol, or actively obstruct the RNApol from binding to the DNA. There are promoters that are not regulated by any TF, they are called constitutive promoters.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{con-tf_simple}
-  \caption[Transcription factors]{\label{fig:con-tf_simple} Scheme of the mechanisms of transcription factors. Retrieved from: \url{http://biowiki.ucdavis.edu}}
+  \caption[Scheme of transcriptional activation]{\label{fig:con-tf_simple} Scheme of transcriptional activation. (A) Transcription factors bind to specific regions in the promoter. (B) When the activators bind the promoter, they increase the affinity between the RNA Polymerase and the promoter. (C) Then, transcription starts more easily when the activators are bound to the promoter.}
 \end{figure}
 
-The mechanisms of gene regulation can be very complex. For example, a molecule can change the conformation of another protein that when affected by the first, inhibits the transcription of certain gene. Those molecules may be signals from the environment and with mechanisms of this type, the cell process environmental signals to express the optimal genes according to the environment. It is also important to point out that the inhibition and activation is not necessarily done individually. A certain gene may need more than one different protein to enhance its activity, or there may be genes that are activated by a protein and inhibited by others, whose production is in turn mediated by other molecules and transcription factors, a well studied case is the \textit{lac} operon in \textit{E. coli} whose mechanism is explained on fig. \ref{fig:con-lac_operon}.
 
-From the biochemical point of view, transcription factors bind specific sites on the \textit{promoter}, a region of the DNA which is upstream the gene (or set of genes for prokaryotes), and it is where the RNA Polymerase binds to initiate transcription (see fig. \ref{fig:con-parts_of_DNA}). The binding of the transcription factor may enhance or obstruct the binding of RNA Polymerase to the promoter. A promoter that is not regulated by transcription factor is called a \textit{constitutive promoter}.
+The mechanisms of gene regulation can be very complex. For example, a protein can inhibit the transcription of certain gene only when another molecule is bound to it. These molecules are called inducers and they are in some cases environmental signals. This is how gene expression responds to the surroundings of the cell. Besides, since TFs are proteins, they are codified by genes whose expression is controlled by other TFs and so on. In this way, different genes are connected between them and with the environment to allow the cells to take decisions in many sophisticated ways.
 
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=10cm]{con-lac_operon}
-  \caption[Example of gene regulation]{\label{fig:con-lac_operon} Example of gene regulation (Lac operon). Retrieved from \url{upload.wikimedia.org/wikipedia/commons/thumb/d/d2/Lac_operon-2010-21-01.png/550px-Lac_operon-2010-21-01.png}}
-\end{figure}
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=10cm]{con-parts_of_DNA}
-  \caption[Parts of a gene]{\label{fig:con-parts_of_DNA} The promoter, RBS, stop codon are shown. Retrieved from \url{http://2013.igem.org/wiki/images/c/c6/HIT-Harbin_Project_Schematic.png}}
-\end{figure}
-
-Therefore, in addition to the genotype, gene expression is very important for the cells to develop properly. And, together with the genetic information, defines its structure and behavior. With this in mind, and the fact that those networks may be very large and complex, the approach that Systems Biology is proposing consists on focusing on the interactions between the different genes and components of a cell rather than on the details of the structure of the molecules involved. The set of interactions may be visualized as biological circuits, that are groups of genes that regulate each other's expression. Figure \ref{fig:con-biocircuits_conv} shows some of the conventions used in the schemes of biological circuits.
+This is the principle of biological circuits, which are groups of genes and external signals that are connected by mechanisms such as the explained above, and develop some function in the cell. The approach to biological circuits that Systems Biology proposes is based on focusing on the interactions between the different genes and components from a quantitative point of view, rather than on specific details about the chemistry of the molecules involved. To illustrate this point, fig. \ref{fig:con-biocircuits_conv} shows some of the conventions used in Systems Biology to represent biological circuits. Synthetic circuits are usually simple, but natural circuits may be very complex, for instance, fig. \ref{fig:con-biocircuits_comp} shows a scheme of the circuit that controls the decision between the lytic and lysogenic pathways in lambda phage.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{con-biocircuits_conv}
-  \caption[Systems biology conventions]{\label{fig:con-biocircuits_conv} Typical conventions for biological circuits used in Systems Biology. Retrieved from \url{http://beacon-center.org/wp-content/uploads/2012/10/SyntheticGeneCircuit.png}}
+  \caption[Conventions used to represent biological circuits]{\label{fig:con-biocircuits_conv} Typical conventions used to represent biological circuits in Systems Biology. The lines are segments of DNA. $P_1$-$P_3$ are promoters, $A-D$ represent coding regions of the genes, the RBS (ribosome binding sites) are the sequences that bind the ribosome to start translation in the mRNA, and the regions labeled as Ter. are called transcriptional terminators and mark the end of transcription. In this case, $P_1$ is a constitutive promoter, protein $A$ represses the promoter $P_3$ and its repressing effect is in turn inhibited by the inductor $S_1$. Also, protein $C$ inhibits $P_2$ and thus the expression of its own gene, this is called negative autorregulation.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{con-biocircuits_comp}
-  \caption[Example of a biological circuit]{\label{fig:con-biocircuits_comp} Example of a biological circuit. Retrieved from \url{http://www.nature.com/nrg/journal/v13/n6/images/nrg3227-i2.jpg}}
+  \caption[Example of a biological circuit]{\label{fig:con-biocircuits_comp} Biological circuit that regulates the decision between lytic and lysogenic pathways in the life cycle of phage lambda. The scheme shows the complexity of natural genetic circuits.}
 \end{figure}
+
+In scheme such as the shown in fig. \ref{fig:con-biocircuits_conv}, the interacting components and the kind of interactions may be represented. However, to completely characterize these interactions, their strenghts must be given. A widely used model to quantify the strenght of gene regulation is the Hill equation.
 
 \section{Hill functions}
 \label{sec:hill}
 
-To model the regulation on a gene by a transcription factor, a widely used model is the Hill equation. We will derive it for a particular case that allows a phenomenological understanding of the principles \cite{alon06}.
+To model the regulation on a gene by a transcription factor, a widely used model is the Hill equation. We will derive it for a simple case that gives an intuitive understanding of the basic principles \cite{alon06}.
 
-Consider a transcription factor $X$ that binds to the promoter of some gene, we will label the promoter (gene) as $D$. Also, suppose that $X$ has $n$ binding sites on the promoter and ignore the intermediate states, where less than $n$ molecules of $X$ are bound. The chemical equation is
+Consider a transcription factor $X$ that binds to the promoter of some gene, we will label the promoter (gene) as $D$. Also, suppose that $X$ can bind to $n$ sites in the promoter and ignore the intermediate states where less than $n$ molecules of $X$ are bound. The chemical equation is
 
 \begin{equation*}
   \ce{n[X] + [D]} \ce{<=>[k_+][k_-]} \ce{[nXD]}.
@@ -82,7 +73,7 @@ which in steady state yields
   [X]^n[D] = \frac{k_-}{k_+}[nXD].
 \end{equation}
 
-Taking the total number $D_T$ of copies of the gene (promoter and DNA molecules) as a constant we obtain
+Taking the total number $D_T$ of copies of the gene as a constant we obtain
 
 \begin{equation*}
   [D_T] = [D]+[nXD].
@@ -94,13 +85,13 @@ Solving for the free DNA concentration $[D]$ and replacing in eq. \eqref{eq:hill
   [X]^n\left([D_T]-[nXD]\right) = \frac{k_-}{k_+}[nXD].
 \end{equation*}
 
-$[nXD]/[D_T]$ and $[D]/[D_T]$ are the fractions of DNA bound and unbound to the transcription factor, respectively, solving for those quantities we obtain
+$[nXD]/[D_T]$ and $[D]/[D_T]$ are the fractions of DNA bound and unbound to the transcription factor, respectively, solving for these quantities we obtain
 
 \begin{equation*}
   \frac{[nXD]}{[D_T]} = \frac{[X]^n}{K_d^n+[X]^n}, \quad\quad\quad\quad\quad  \frac{[D]}{[D_T]} = \frac{K_d^n}{K_d^n+[X]^n} = \frac{1}{1+\left(\frac{[X]}{K_d}\right)^n},
 \end{equation*}
 
-where $K_d^n \coloneqq k_-/k_+$. In a timescale such that many bindings and unbindings of the transcription factor to the promoter have occurred, those fractions can be interpreted as the probability of having $n$ bound molecules of $X$, and the probability for being unbound, respectively. If the increasing in transcription rate with respect to the basal rate $a$ is proportional to the probabilities of being bound for an activator, and of being unbound for a repressor, the net rates are
+where $K_d^n \coloneqq k_-/k_+$. In a timescale such that many bindings and unbindings of the transcription factor to the promoter have occurred, the fractions can be interpreted as the probability for the promoter to be bound to $n$ molecules of $X$ and unbound, respectively. If we assume that the increment in the transcription rate with respect to the basal rate $a$ is proportional to the probabilities of being bound for an activator, and of being unbound for a repressor, the net rates are
 
 \begin{equation}
   \label{eq:con-hillac}
@@ -114,25 +105,25 @@ for an activator, and
   f([X]) = a + b \frac{1}{1+\left(\frac{[X]}{K_d}\right)^n}.
 \end{equation}
 
-for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the \textit{dissociation constant}, which is the concentration of $[X]$ needed for half activation or repression. Biologically it represents the chemical affinity between $x$ and the promoter.  $n$ is called the \textit{Hill coefficient} and from the derivation can be said that it is related to the cooperativity of the transcription factor, being larger if the binding of a molecule of $[X]$ enhances more the binding of another one. A larger value of $n$ give a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show the shape of typical Hill functions given by eqs. \eqref{eq:con-hillac} and \eqref{eq:con-hillrep}.
+for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the dissociation constant, which is the concentration of $[X]$ needed for half activation or repression. Biologically it represents the chemical affinity between $X$ and the promoter. $n$ is called the Hill coefficient and it is related to the cooperativity of the transcription factor. It is large if the binding of a molecule of $X$ enhances the binding of another one and this results in a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show a typical Hill curve.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{con-hill_act}
-  \caption[Hill function for an activator]{\label{fig:con-hill_act} Hill functions for an activator. Various values of $n$ are shown. The dashed line shows the point of half activation corresponding to $[X]=K_d$. All have the same value of $K_d$, $a$ and $b$ with $\nicefrac{b}{a}=10$.}
+  \caption[Hill functions for an activator]{\label{fig:con-hill_act} Hill functions for an activator given by eq. \eqref{eq:con-hillac}. Various values of $n$ are shown. The dashed line shows the point of half activation corresponding to $[X]=K_d$. All have the same value of $K_d$, $a$ and $b$ with $b/a=10$.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=12cm]{con-hill_rep}
-  \caption[Hill function for a repressor]{\label{fig:con-hill_rep} Hill functions for a repressor. With the same parameters as fig. \ref{fig:con-hill_act}.}
+  \caption[Hill functions for a repressor]{\label{fig:con-hill_rep} Hill functions for a repressor given by eq. \eqref{eq:con-hillrep}. The same parameters as in fig. \ref{fig:con-hill_act} are used.}
 \end{figure}
 
-Notice in both graphs that as $n\rightarrow\infty$, the function appears more like a Heaviside function with the step in $[X] = K_d$. This approximation can be very useful on a first qualitative analysis of biological circuits but such high values of $n$ are biologically unrealistic. The case $n=1$ corresponds to the Michaelis-Menten equation.
+Notice in both graphs that as $n\rightarrow\infty$, the function approaches a Heaviside function with the step in $[X] = K_d$. This approximation is useful on a first qualitative analysis of biological circuits but such high values of $n$ are biologically unrealistic. The case $n=1$ corresponds to the Michaelis-Menten equation \cite{alon06}.
 
 \section{Probability}
 
-Consider an experiment in which the set of possible outcomes is clearly known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. For a discrete random variable, $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.} 
+Consider an experiment in which the set of possible outcomes is known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.} 
 
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
@@ -140,19 +131,19 @@ For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)
   P(x_1,\dotsc,x_n) = P(x_1)\dotsm P(x_n)
 \end{equation*}
 
-The conditional probability of the r. v.s $X_1,\dotsc,X_k$ given the variables $X_{k+1},\dotsc,X_n$ is denoted by $P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n)$ and it is defined as
+The conditional probability of the random variables $X_1,\dotsc,X_k$ given the variables $X_{k+1},\dotsc,X_n$ is denoted by $P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n)$ and it is defined as
 
 \begin{equation*}
   P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) \coloneqq \frac{P(x_1,\dotsc,x_n)}{P(x_{k+1},\dotsc,x_n)},
 \end{equation*}
 
-provided that the denominator is different from $0$. It can be thought as the probability of a certain outcome for $x_1,\dotsc,x_k$ when certain given values of $x_{k+1},\dotsc,x_n$ have been obtained. Notice that if all the random variables are independent it reduces to
+provided that the denominator is different from $0$. It can be thought as the probability of a certain outcome for $X_1,\dotsc,X_k$ when certain given values for $X_{k+1},\dotsc,X_n$ have been obtained. Notice that if all the random variables are independent it reduces to
 
 \begin{equation*}
   P(x_1,\dotsc,x_k|x_{k+1},\dotsc,x_n) = P(x_1,\dotsc,x_k).
 \end{equation*}
 
-The conditional and unconditional probabilities are equal, meaning that the outcome of $(x_{k+1},\dotsc,x_n)$ does not affect the outcome of $(x_1,\dotsc,x_k)$.
+The conditional and unconditional probabilities are equal, meaning that the outcome of $(X_{k+1},\dotsc,X_n)$ does not affect the outcome of $(X_1,\dotsc,X_k)$.
 
 To find the probability of a certain outcome of $X$, sometimes it is easier to use the \textbf{total probability theorem}
 
@@ -160,7 +151,7 @@ To find the probability of a certain outcome of $X$, sometimes it is easier to u
   P(x) = \sum_y P(x,y) = \sum_y P(x|y)P(y).
 \end{equation*}
 
-The \textbf{expected value} (also called average) of a function of a random variable $f(X)$ is defined as
+The \textbf{expected value} (also called mean or average) of a function of a random variable $f(X)$ is defined as
 
 \begin{equation}
   \label{eq:con-ave_def}
@@ -186,7 +177,7 @@ It can be easily shown that
   \sigma^2(X) = \langle X^2\rangle - \langle X\rangle^2.
 \end{equation}
 
-From the previous equation it can be seen that for a constant $c$
+For a constant $c$, the variance has the property
 
 \begin{equation}
   \label{eq:con-var_const}
@@ -201,14 +192,14 @@ The $\mathbf{n}$\textbf{th moment} of the random variable $X$ is given by
 
 Hence, the expected value is the first moment and the variance can be written in terms of the first and second moments.
 
-If $X$ and $Y$ are independent, it can be shown that
+If $X$ and $Y$ are independent,
 
 \begin{equation}
   \label {eq:con-mom_ind}
   \langle XY\rangle = \langle X\rangle\langle Y\rangle \quad\text{and}\quad \sigma^2(X+Y) = \sigma^2(X)+\sigma^2(Y).
 \end{equation}
 
-The conditional expectation of $X$ given a random variable $Y$, $\langle X|Y\rangle$ is itself a random variable which depends on $Y$, which when $Y$ is fixed in some $y$ is given by
+The conditional expectation of $X$ given a random variable $Y$, $\langle X|Y\rangle$ is itself a random variable which depends on $Y$. When $Y$ is fixed in some $y$ it is given by
 
 \begin{equation*}
   \langle X|y\rangle \coloneqq \sum_xxP(x|y),
@@ -221,11 +212,11 @@ and it follows that
   \left\langle\langle X|Y\rangle\right\rangle = \left\langle X\right\rangle
 \end{equation}
 
-which is the \textbf{law of total expectation}, for the variance there is an analogous theorem, called the \textbf{law of total variance}
+which is the \textbf{law of total expectation}, for the variance there is an analogous theorem called the \textbf{law of total variance}
 
 \begin{equation}
   \label{eq:con-total_var}
-  \sigma^2(x) = \left\langle\sigma^2(x|y)\right\rangle + \sigma^2\left(\langle x|y\rangle\right)
+  \sigma^2(x) = \left\langle\sigma^2(x|y)\right\rangle + \sigma^2\left(\langle x|y\rangle\right).
 \end{equation}
 
 The \textbf{covariance} of $X$ and $Y$ is defined as
@@ -234,11 +225,11 @@ The \textbf{covariance} of $X$ and $Y$ is defined as
   \text{cov}(X,Y) \coloneqq \left\langle\left(X-\langle X\rangle\right)\left(Y-\langle Y\rangle\right)\right\rangle = \langle XY\rangle - \langle X\rangle\langle Y\rangle.
 \end{equation*}
 
-It can be thought as a measure of how correlated is their behaviour. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme case, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent by eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
+It is as a measure of how correlated is the behaviour of $X$ and $Y$. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme cases, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent, by eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
 
 \section{Noise}
 \label{sec:con-noise}
-Intuitively, we may expect that a random variable is more 'random' or noisy, when the deviations relative to the expected value are bigger. With this in mind, the noise in a random variable $X$ must increase as the variance increases and decrease as the mean increases (the same deviation from a smaller expected value contributes more to the noise than from a bigger one). The quantities that have benn used to measure noise in biology are the Fano factor $\nu$ and the coefficient of variation $\eta$, which are defined by
+Intuitively, we may expect that a random variable is more ``random'' or noisy when its deviations relative to its expected value are larger. With this in mind, the noise in a random variable $X$ must increase as the variance increases and decrease as the mean increases (the same deviation from a smaller expected value is more notorious than from a larger one). The quantities that have benn used to measure noise in biology are the Fano factor $\nu$ and the coefficient of variation (CV) $\eta$, which are defined by
 
 \begin{equation}
   \label{eq:con-fano_def}
@@ -250,7 +241,7 @@ Intuitively, we may expect that a random variable is more 'random' or noisy, whe
   \eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
 \end{equation}
 
-The Fano factor has been used in the first studies of noise in biology since it had the particular property that for a random variable with a Poisson distribution $\nu_X=1$ and hence it measures deviations from a Poissonian behavior. In more recent studies the coefficient of variation is being used because it is dimensionless and for that reason it does not depend on the units used for the random variable. For this reason, the generic term 'noise' is now used to refer to $\eta$.
+The Fano factor has been used in the first studies of noise in biology because it measures the deviations from a Poissonian behavior. For a random variable with a Poisson PMF, $\nu_X=1$. In more recent studies the coefficient of variation is being used because it is dimensionless, so it does not depend on the units that are used. For this reason, the generic term 'noise' is now used refering to $\eta$.
 
 \section{Moment generating functions}
 

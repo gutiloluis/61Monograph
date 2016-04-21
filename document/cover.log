@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  20 APR 2016 14:15
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  20 APR 2016 22:48
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1152,21 +1152,21 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ]
-<img/int-noise1.png, id=363, 1142.01656pt x 569.87906pt>
+<img/int-noise1.png, id=359, 1142.01656pt x 569.87906pt>
 File: img/int-noise1.png Graphic file (type png)
 
 <use img/int-noise1.png>
 Package pdftex.def Info: img/int-noise1.png used on input line 15.
 (pdftex.def)             Requested size: 426.79134pt x 212.97368pt.
  [12 <./img/int-noise1.png>]
-<img/int-lambda.png, id=377, 595.22375pt x 639.38875pt>
+<img/int-lambda.png, id=373, 595.22375pt x 639.38875pt>
 File: img/int-lambda.png Graphic file (type png)
 
 <use img/int-lambda.png>
 Package pdftex.def Info: img/int-lambda.png used on input line 25.
 (pdftex.def)             Requested size: 369.88582pt x 397.32425pt.
  [13 <./img/int-lambda.png>]
-<img/int-environments1.png, id=387, 1347.0325pt x 508.90125pt>
+<img/int-environments1.png, id=383, 1347.0325pt x 508.90125pt>
 File: img/int-environments1.png Graphic file (type png)
 
 <use img/int-environments1.png>
@@ -1178,117 +1178,87 @@ Package pdftex.def Info: img/int-environments1.png used on input line 33.
 
  (./concepts.tex
 Chapter 1.
-<img/con-dogma.png, id=416, 732.336pt x 425.4294pt>
-File: img/con-dogma.png Graphic file (type png)
- <use img/con-dogma.png>
-Package pdftex.def Info: img/con-dogma.png used on input line 13.
-(pdftex.def)             Requested size: 426.79134pt x 247.93716pt.
-
 [17
 
 
 
-] [18 <./img/con-dogma.png>]
-<img/con-tf_simple.png, id=431, 450.0012pt x 527.0892pt>
+] <img/con-dogma.png, id=417, 732.336pt x 425.4294pt>
+File: img/con-dogma.png Graphic file (type png)
+
+<use img/con-dogma.png>
+Package pdftex.def Info: img/con-dogma.png used on input line 13.
+(pdftex.def)             Requested size: 426.79134pt x 247.93716pt.
+ [18 <./img/con-dogma.png>]
+<img/con-tf_simple.png, id=427, 450.0012pt x 527.0892pt>
 File: img/con-tf_simple.png Graphic file (type png)
 
 <use img/con-tf_simple.png>
-Package pdftex.def Info: img/con-tf_simple.png used on input line 27.
+Package pdftex.def Info: img/con-tf_simple.png used on input line 29.
 (pdftex.def)             Requested size: 341.43306pt x 399.91637pt.
  [19] [20 <./img/con-tf_simple.png>]
-<img/con-lac_operon.png, id=449, 552.0625pt x 459.7175pt>
-File: img/con-lac_operon.png Graphic file (type png)
-
-<use img/con-lac_operon.png>
-Package pdftex.def Info: img/con-lac_operon.png used on input line 37.
-(pdftex.def)             Requested size: 284.52756pt x 236.94304pt.
-
-Underfull \hbox (badness 2538) in paragraph at lines 38--38
-[]\OT1/cmr/m/n/12 Figure 1.2.2: [][] Ex-am-ple of gene reg-u-la-tion (Lac opero
-n). Re-trieved from
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 38--38
-[]$\OT1/cmtt/m/n/12 upload . wikimedia . org / wikipedia / commons / thumb / d 
-/ d2 / Lac _ operon-[]2010-[]21-[]01 .
- []
-
-<img/con-parts_of_DNA.png, id=452, 602.25pt x 430.60875pt>
-File: img/con-parts_of_DNA.png Graphic file (type png)
-
-<use img/con-parts_of_DNA.png>
-Package pdftex.def Info: img/con-parts_of_DNA.png used on input line 43.
-(pdftex.def)             Requested size: 284.52756pt x 203.44398pt.
- [21 <./img/con-lac_operon.png>]
-<img/con-biocircuits_conv.png, id=461, 723.1818pt x 219.7008pt>
+<img/con-biocircuits_conv.png, id=441, 723.1818pt x 219.7008pt>
 File: img/con-biocircuits_conv.png Graphic file (type png)
 
 <use img/con-biocircuits_conv.png>
-Package pdftex.def Info: img/con-biocircuits_conv.png used on input line 51.
+Package pdftex.def Info: img/con-biocircuits_conv.png used on input line 40.
 (pdftex.def)             Requested size: 369.88582pt x 112.3711pt.
 
-Underfull \hbox (badness 1184) in paragraph at lines 52--52
-[]\OT1/cmr/m/n/12 Figure 1.2.4: [][] Typ-i-cal con-ven-tions for bi-o-log-i-cal
- cir-cuits used in Sys-tems Bi-
- []
-
-<img/con-biocircuits_comp.png, id=464, 816.80156pt x 691.08188pt>
+<img/con-biocircuits_comp.png, id=442, 816.80156pt x 691.08188pt>
 File: img/con-biocircuits_comp.png Graphic file (type png)
 
 <use img/con-biocircuits_comp.png>
-Package pdftex.def Info: img/con-biocircuits_comp.png used on input line 57.
+Package pdftex.def Info: img/con-biocircuits_comp.png used on input line 46.
 (pdftex.def)             Requested size: 341.43306pt x 288.88155pt.
- [22 <./img/con-parts_of_DNA.png> <./img/con-biocircuits_conv.png>] [23 <./img/
-con-biocircuits_comp.png>] [24]
-<img/con-hill_act.png, id=501, 803.0pt x 483.8075pt>
+ [21 <./img/con-biocircuits_conv.png>]
+[22 <./img/con-biocircuits_comp.png>] [23]
+<img/con-hill_act.png, id=471, 803.0pt x 483.8075pt>
 File: img/con-hill_act.png Graphic file (type png)
 
 <use img/con-hill_act.png>
-Package pdftex.def Info: img/con-hill_act.png used on input line 121.
+Package pdftex.def Info: img/con-hill_act.png used on input line 112.
 (pdftex.def)             Requested size: 341.43306pt x 205.71512pt.
 
-<img/con-hill_rep.png, id=502, 803.0pt x 483.8075pt>
+<img/con-hill_rep.png, id=474, 803.0pt x 483.8075pt>
 File: img/con-hill_rep.png Graphic file (type png)
 
 <use img/con-hill_rep.png>
-Package pdftex.def Info: img/con-hill_rep.png used on input line 127.
+Package pdftex.def Info: img/con-hill_rep.png used on input line 118.
 (pdftex.def)             Requested size: 341.43306pt x 205.71512pt.
- [25 <./img/con-hill_act.png (PNG copy)>] [26 <./img/con-hill_rep.png (PNG copy
-)>] [27] [28] [29] [30] [31] [32]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 363.
+ [24 <./img/con-hill_act.png (PNG copy)>] [25 <./img/con-hill_rep.png (PNG copy
+)>] [26] [27] [28] [29] [30] [31]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 354.
 
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 363.
- [33] [34] [35])
-[36]
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 354.
+ [32] [33] [34])
+[35]
 \openout2 = `master1.aux'.
 
- (./master1.tex
+ (./master1.tex [36
+
+
+
+]
 Chapter 2.
-[37
-
-
-
-] <img/mas-dogma.png, id=615, 688.0104pt x 337.7418pt>
+[37] <img/mas-dogma.png, id=597, 688.0104pt x 337.7418pt>
 File: img/mas-dogma.png Graphic file (type png)
 
 <use img/mas-dogma.png>
 Package pdftex.def Info: img/mas-dogma.png used on input line 16.
 (pdftex.def)             Requested size: 369.88582pt x 181.57391pt.
  [38 <./img/mas-dogma.png>]
-<img/mas-detSol.png, id=628, 1003.75pt x 656.4525pt>
+<img/mas-detSol.png, id=609, 1003.75pt x 656.4525pt>
 File: img/mas-detSol.png Graphic file (type png)
  <use img/mas-detSol.png>
 Package pdftex.def Info: img/mas-detSol.png used on input line 52.
 (pdftex.def)             Requested size: 369.88582pt x 241.912pt.
 
 [39] [40 <./img/mas-detSol.png (PNG copy)>]
-<img/mas-trans_single.png, id=644, 644.1666pt x 302.0886pt>
+<img/mas-trans_single.png, id=626, 644.1666pt x 302.0886pt>
 File: img/mas-trans_single.png Graphic file (type png)
 
 <use img/mas-trans_single.png>
@@ -1302,7 +1272,7 @@ n[]; t\OT1/cmr/m/n/12 )$
  []
 
 [41 <./img/mas-trans_single.png>] [42] [43] [44] [45] [46]
-<img/mas-sim_simple.png, id=712, 1003.75pt x 657.45625pt>
+<img/mas-sim_simple.png, id=694, 1003.75pt x 657.45625pt>
 File: img/mas-sim_simple.png Graphic file (type png)
 
 <use img/mas-sim_simple.png>
@@ -1317,14 +1287,14 @@ it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
 /m/n/12 ^^@[][]\OML/cmm/m/it/12 :
  []
 
-[51] [52] <img/mas-hist.png, id=786, 1003.75pt x 636.3775pt>
+[51] [52] <img/mas-hist.png, id=768, 1003.75pt x 636.3775pt>
 File: img/mas-hist.png Graphic file (type png)
 
 <use img/mas-hist.png>
 Package pdftex.def Info: img/mas-hist.png used on input line 422.
 (pdftex.def)             Requested size: 369.88582pt x 234.51408pt.
  [53] [54 <./img/mas-hist.png (PNG copy)>]
-<img/mas-sim_autorreg.png, id=809, 1003.75pt x 657.45625pt>
+<img/mas-sim_autorreg.png, id=791, 1003.75pt x 657.45625pt>
 File: img/mas-sim_autorreg.png Graphic file (type png)
 
 <use img/mas-sim_autorreg.png>
@@ -1359,42 +1329,42 @@ Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
 []\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
  []
 
-[69] [70] [71] [72] <img/lan-circuit.png, id=965, 1370.11874pt x 157.58875pt>
+[69] [70] [71] [72] <img/lan-circuit.png, id=947, 1370.11874pt x 157.58875pt>
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
 Package pdftex.def Info: img/lan-circuit.png used on input line 122.
 (pdftex.def)             Requested size: 426.79134pt x 49.08765pt.
  [73 <./img/lan-circuit.png>] [74] [75] [76] [77]
-[78] [79] [80] [81] [82] <img/lan-Hs.png, id=1071, 904.88063pt x 325.215pt>
+[78] [79] [80] [81] [82] <img/lan-Hs.png, id=1053, 904.88063pt x 325.215pt>
 File: img/lan-Hs.png Graphic file (type png)
 
 <use img/lan-Hs.png>
 Package pdftex.def Info: img/lan-Hs.png used on input line 439.
 (pdftex.def)             Requested size: 426.79134pt x 153.38701pt.
 
-<img/lan-noise_corr_full.png, id=1075, 904.88063pt x 853.68938pt>
+<img/lan-noise_corr_full.png, id=1057, 904.88063pt x 853.68938pt>
 File: img/lan-noise_corr_full.png Graphic file (type png)
 
 <use img/lan-noise_corr_full.png>
 Package pdftex.def Info: img/lan-noise_corr_full.png used on input line 449.
 (pdftex.def)             Requested size: 426.79134pt x 402.6409pt.
  [83 <./img/lan-Hs.png>] [84 <./img/lan-noise_corr_full.png>] [85] <img/lan-eta
-2det.png, id=1105, 1003.75pt x 679.53876pt>
+2det.png, id=1086, 1003.75pt x 679.53876pt>
 File: img/lan-eta2det.png Graphic file (type png)
 
 <use img/lan-eta2det.png>
 Package pdftex.def Info: img/lan-eta2det.png used on input line 467.
 (pdftex.def)             Requested size: 426.79134pt x 288.94014pt.
 
-<img/lan-eta2_corrATC.png, id=1109, 1508.63625pt x 513.41812pt>
+<img/lan-eta2_corrATC.png, id=1090, 1508.63625pt x 513.41812pt>
 File: img/lan-eta2_corrATC.png Graphic file (type png)
 
 <use img/lan-eta2_corrATC.png>
 Package pdftex.def Info: img/lan-eta2_corrATC.png used on input line 475.
 (pdftex.def)             Requested size: 426.79134pt x 145.24457pt.
  [86 <./img/lan-eta2det.png (PNG copy)>]
-<img/lan-noise_sources.png, id=1120, 1307.88625pt x 436.63126pt>
+<img/lan-noise_sources.png, id=1102, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
@@ -1405,7 +1375,7 @@ Package pdftex.def Info: img/lan-noise_sources.png used on input line 487.
 
  (./bursting.tex
 Chapter 5.
-<img/bur-examples.png, id=1136, 1337.74782pt x 551.05875pt>
+<img/bur-examples.png, id=1118, 1337.74782pt x 551.05875pt>
 File: img/bur-examples.png Graphic file (type png)
 
 <use img/bur-examples.png>
@@ -1472,11 +1442,11 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26939 strings out of 494966
- 490095 string characters out of 6179559
- 893133 words of memory out of 5000000
- 29150 multiletter control sequences out of 15000+600000
- 15329 words of font info for 61 fonts, out of 8000000 for 9000
+ 26923 strings out of 494966
+ 489748 string characters out of 6179559
+ 892073 words of memory out of 5000000
+ 29139 multiletter control sequences out of 15000+600000
+ 15160 words of font info for 60 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,82p,10368b,1101s stack positions out of 5000i,500n,10000p,200000b,80000s
 pdfTeX warning (dest): name{Hfootnote.22} has been referenced but does not ex
@@ -1558,13 +1528,12 @@ ic/amsfonts/cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
 onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 /cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/s
-hare/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (128 pages, 5376861 bytes).
+/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
+usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
+Output written on cover.pdf (128 pages, 5178221 bytes).
 PDF statistics:
- 1673 PDF objects out of 1728 (max. 8388607)
- 1443 compressed objects within 15 object streams
- 440 named destinations out of 1000 (max. 500000)
- 525 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1651 PDF objects out of 1728 (max. 8388607)
+ 1426 compressed objects within 15 object streams
+ 438 named destinations out of 1000 (max. 500000)
+ 515 words of extra memory for PDF output out of 10000 (max. 10000000)
 
