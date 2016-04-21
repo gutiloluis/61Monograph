@@ -105,17 +105,17 @@ for an activator, and
   f([X]) = a + b \frac{1}{1+\left(\frac{[X]}{K_d}\right)^n}.
 \end{equation}
 
-for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the dissociation constant, which is the concentration of $[X]$ needed for half activation or repression. Biologically it represents the chemical affinity between $X$ and the promoter. $n$ is called the Hill coefficient and it is related to the cooperativity of the transcription factor. It is large if the binding of a molecule of $X$ enhances the binding of another one and this results in a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show a typical Hill curve.
+for a repressor. $b+a$ is the maximum transcription rate, wich happens when $[X]\rightarrow\infty$ for the case of an activator, and when $[X]=0$ for the repressor. $K_d$ is called the dissociation constant, which is the concentration of $X$ needed for half activation or repression. Biologically it represents the chemical affinity between $X$ and the promoter. $n$ is called the Hill coefficient and it is related to the cooperativity of the transcription factor. It is large if the binding of a molecule of $X$ enhances the binding of another one and this results in a more step-like Hill function. Figures \ref{fig:con-hill_act} and \ref{fig:con-hill_rep} show a typical Hill curve.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{con-hill_act}
+  \includegraphics[width=14cm]{con-hill_act}
   \caption[Hill functions for an activator]{\label{fig:con-hill_act} Hill functions for an activator given by eq. \eqref{eq:con-hillac}. Various values of $n$ are shown. The dashed line shows the point of half activation corresponding to $[X]=K_d$. All have the same value of $K_d$, $a$ and $b$ with $b/a=10$.}
 \end{figure}
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{con-hill_rep}
+  \includegraphics[width=14cm]{con-hill_rep}
   \caption[Hill functions for a repressor]{\label{fig:con-hill_rep} Hill functions for a repressor given by eq. \eqref{eq:con-hillrep}. The same parameters as in fig. \ref{fig:con-hill_act} are used.}
 \end{figure}
 
@@ -233,12 +233,7 @@ Intuitively, we may expect that a random variable is more ``random'' or noisy wh
 
 \begin{equation}
   \label{eq:con-fano_def}
-  \nu_X \coloneqq \frac{\sigma^2(X)}{\langle X \rangle}.
-\end{equation}
-
-\begin{equation}
-  \label{eq:con-cv_def}
-  \eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
+  \nu_X \coloneqq \frac{\sigma^2(X)}{\langle X \rangle},\quad\quad\eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
 \end{equation}
 
 The Fano factor has been used in the first studies of noise in biology because it measures the deviations from a Poissonian behavior. For a random variable with a Poisson PMF, $\nu_X=1$. In more recent studies the coefficient of variation is being used because it is dimensionless, so it does not depend on the units that are used. For this reason, the generic term 'noise' is now used refering to $\eta$.
@@ -381,7 +376,7 @@ which is the Poisson PMF. Let $N_\tau$ be the number of arrivals during a time i
   \langle N_\tau\rangle = \sigma^2(N_\tau) = \lambda \tau.
 \end{equation*}
 
-The average number of arrivals in a time $\tau$ is, as one may expect, the arrival rate times the length of the interval. From eqs. \eqref{eq:con-fano_def} and \eqref{eq:con-cv_def}, the noise and Fano factor for $N_\tau$ are
+The average number of arrivals in a time $\tau$ is, as one may expect, the arrival rate times the length of the interval. From eq. \eqref{eq:con-fano_def}, the noise and Fano factor for $N_\tau$ are
 
 \begin{equation*}
   %\label{eq:con-poisson_noise}
