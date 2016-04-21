@@ -123,7 +123,7 @@ Notice in both graphs that as $n\rightarrow\infty$, the function approaches a He
 
 \section{Probability}
 
-Consider an experiment in which the set of possible outcomes is known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization. \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.} 
+Consider an experiment in which the set of possible outcomes is known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.}.
 
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
@@ -179,10 +179,10 @@ It can be easily shown that
 
 For a constant $c$, the variance has the property
 
-\begin{equation}
-  \label{eq:con-var_const}
+\begin{equation*}
+  %\label{eq:con-var_const}
   \sigma^2(cX) = c^2\sigma^2(X)
-\end{equation}
+\end{equation*}
 
 The $\mathbf{n}$\textbf{th moment} of the random variable $X$ is given by
 
@@ -207,17 +207,17 @@ The conditional expectation of $X$ given a random variable $Y$, $\langle X|Y\ran
 
 and it follows that
 
-\begin{equation}
-  \label{eq:con-total_exp}
+\begin{equation*}
+  %\label{eq:con-total_exp}
   \left\langle\langle X|Y\rangle\right\rangle = \left\langle X\right\rangle
-\end{equation}
+\end{equation*}
 
 which is the \textbf{law of total expectation}, for the variance there is an analogous theorem called the \textbf{law of total variance}
 
-\begin{equation}
-  \label{eq:con-total_var}
+\begin{equation*}
+  %\label{eq:con-total_var}
   \sigma^2(x) = \left\langle\sigma^2(x|y)\right\rangle + \sigma^2\left(\langle x|y\rangle\right).
-\end{equation}
+\end{equation*}
 
 The \textbf{covariance} of $X$ and $Y$ is defined as
 
@@ -225,7 +225,7 @@ The \textbf{covariance} of $X$ and $Y$ is defined as
   \text{cov}(X,Y) \coloneqq \left\langle\left(X-\langle X\rangle\right)\left(Y-\langle Y\rangle\right)\right\rangle = \langle XY\rangle - \langle X\rangle\langle Y\rangle.
 \end{equation*}
 
-It is as a measure of how correlated is the behaviour of $X$ and $Y$. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme cases, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent, by eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
+It is as a measure of how correlated is the behaviour of $X$ and $Y$. For example, if the value of $Y$ is known, the value of $X$ will be more likely to be known if the covariance is high in absolute value. The covariance will be $0$ if it does not give us any information. Consider the extreme cases, if $Y=X$, $\text{cov}(X,X) = \sigma^2(X)$, while if $X$ and $Y$ are independent, from eq. \eqref{eq:con-mom_ind} we get $\text{cov}(X,Y) = 0$.
 
 \section{Noise}
 \label{sec:con-noise}
@@ -245,52 +245,52 @@ The Fano factor has been used in the first studies of noise in biology because i
 
 \section{Moment generating functions}
 
-Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n_1,\dotsc,n_N)$ be the joint probability mass function. The moment generating function $F(z_1,\dotsc,z_N)$ is defined as \footnote{Not to be confused with the cumulative distribution function}
+Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n_1,\dotsc,n_N)$ be their joint PMF. The moment generating function $F(z_1,\dotsc,z_N)$ is defined as
 
 \begin{equation}
   \label{def:mom_gen}
   F(z_1,\dotsc,z_N) \coloneqq \sum_{\mathclap{n_1=0}}^{\infty} \dotsi \sum_{\mathclap{n_N=0}}^{\infty} z_1^{n_1} \dotsm z_N^{n_N} f(n_1,\dotsc,n_N).
 \end{equation}
 
-Evaluating the function on $z_1 = \dotsb = z_N = 1$ (denoted by $\left. \right|_1$) we obtain
+Evaluating the function at $z_1 = \dotsb = z_N = 1$ (denoted by $\left. \right|_1$)
 
-\begin{equation}
-  \label{eq:con-mom_gen_1}
-  \left.F\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}}f(n_1,\dotsc,n_N) = 1.
-\end{equation}
+\begin{equation*}
+  %\label{eq:con-mom_gen_1}
+  \left.F\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}}f(n_1,\dotsc,n_N) = 1
+\end{equation*}
 
-by the axiom of normalization. Taking the derivative of eq. \ref{def:mom_gen} with respect to $z_i$, $i = 1,\dotsc,N$ we get
+by the axiom of normalization. Taking the derivative of eq. \eqref{def:mom_gen} with respect to $z_i$, $i = 1,\dotsc,N$ we get
 
-\begin{equation}
-  \label{eq:con-mom_gen_d1}
+\begin{equation*}
+  %\label{eq:con-mom_gen_d1}
   \left.\frac{\partial F}{\partial z_i}\right|_1 = \left.\sum_{\mathclap{n_1,\dotsc,n_N}}n_i z_1^{n_1}\dotsm z_i^{n_i-1}\dotsm z_N^{n^N}f(n_1,\dotsc,n_N)\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}} n_i f(n_1,\dotsc,n_N) = \langle n_i \rangle.
-\end{equation}
+\end{equation*}
 
-Differentiating again with respect to $z_j$, $j=1,\dotsc,N$ with $j\neq i$ we obtain
+Differentiating again with respect to $z_j$, $j=1,\dotsc,N$ with $j\neq i$
 
-\begin{equation}
-  \label{eq:con-mom_gen_d1d2}
+\begin{equation*}
+  %\label{eq:con-mom_gen_d1d2}
   \left. \frac{\partial F}{\partial z_i z_j} \right|_1 = \langle n_i n_j \rangle.
-\end{equation}
+\end{equation*}
 
-Differentiating eq. \ref{def:mom_gen} twice with respect to $z_i$ we obtain similarly
+Differentiating eq. \eqref{def:mom_gen} twice with respect to $z_i$ we obtain similarly
 
-\begin{equation}
-  \label{eq:con-mom_gen_d1d1}
+\begin{equation*}
+  %\label{eq:con-mom_gen_d1d1}
   \left. \frac{\partial^2F}{\partial z_i^2}\right|_1 = \langle n_i(n_i-1) \rangle.
-\end{equation}
+\end{equation*}
 
 These properties will be very useful in the next sections to find the noise of a genetic system.
 
 \section{Characteristic function}
 \label{sec:con-charac_func}
-Another transformation of the PMF that has properties similar to the mentioned for the moment generating function is the characteristic function. It is defined for a $N$-tuple of random variables $(X_1,\dotsc,X_N)$ as\footnote{We will consider here the case with the real exponent}.
+Another quantity that is used to find the moments of a random variable is the characteristic function. For a $N$-tuple of random variables $(X_1,\dotsc,X_N)$ with PMF $f$, it is defined as
 
 \begin{equation*}
-  \phi(s_1,\dotsc,s_N)\coloneqq \left\langle e^{\sum_{i=1}^Ns_ix_i}\right\rangle = \sum_{x_1}\dotsi\sum_{x_N}\exp\left(\sum_{i=1}^Ns_ix_i\right).
+  \phi(s_1,\dotsc,s_N)\coloneqq \left\langle e^{\sum_{i=1}^Ns_ix_i}\right\rangle = \sum_{x_1}\dotsi\sum_{x_N}\exp\left(\sum_{i=1}^Ns_ix_i\right)f(x_1,\dotsc,x_N).
 \end{equation*}
 
-We will denote the evaluation at $s_1=\dotsb=s_N=0$ by $|_0$ It is easy to see that by normalization
+Denote the evaluation at $s_1=\dotsb=s_N=0$ by $|_0$. From the axiom of normalization
 
 \begin{equation*}
   \phi(s)|_0 = 1.
@@ -298,23 +298,23 @@ We will denote the evaluation at $s_1=\dotsb=s_N=0$ by $|_0$ It is easy to see t
 
 Differentiating once with respect to $s_i$ for $i=1,\dotsc,N$.
 
-\begin{equation}
-  \label{eq:con-char_1}
+\begin{equation*}
+  %\label{eq:con-char_1}
   \left.\frac{\partial\phi(s_1,\dotsc,s_N)}{\partial s_i}\right|_0 = \left.\left\langle x_i e^{\sum_{i=1}^Ns_ix_i}\right\rangle\right|_0 = \langle x_i\rangle.
-\end{equation}
+\end{equation*}
 
 Each differentiation with respect to $s_i$ produces a factor $x_i$ in the average, hence
 
-\begin{equation}
-  \label{eq:con-char_2}
+\begin{equation*}
+  %\label{eq:con-char_2}
   \left.\frac{\partial^2\phi(s_1,\dotsc,s_N)}{\partial s_i \partial s_j}\right|_0 = \langle x_ix_j\rangle.
-\end{equation}
+\end{equation*}
 
-This equation is valid for any $i,j=1,\dotsc,N$, even for the case $i=j$. In that case the right hand side becomes $\langle x_i^2\rangle$. By calculating higher order derivatives we can find higher order moments in the same way.
+This equation is valid for any $i,j=1,\dotsc,N$, even for the case $i=j$. In that case the right hand side becomes $\langle x_i^2\rangle$. By calculating higher order derivatives higher order moments can be found.
   
 \section{Stochastic processes}
 
-A stochastic process $X(t)$ \footnote{or $\{X\}_n$ if the time steps are discrete} is a set of random variables indexed by another variable, which usually is taken to be the time. An outcome of the stochastic process is a function of time which varies randomly between different repetitions of the experiment \cite{vankampen92} \cite{gardiner03}.
+A stochastic process $X(t)$\footnote{or $\{X\}_n$ if the time steps are discrete} is a set of random variables indexed by another variable, which in many cases is the time. An outcome of the stochastic process is a function of time which varies randomly between different repetitions of the experiment \cite{vankampen92} \cite{gardiner03}.
 
 The \textbf{autocorrelation} $C_X$ of a stochastic process $X(t)$ is given by
 
@@ -322,33 +322,33 @@ The \textbf{autocorrelation} $C_X$ of a stochastic process $X(t)$ is given by
   C_X(t,t') \coloneqq \langle X(t)X(t')\rangle.
 \end{equation*}
 
-It measures the degree of correlation between outcomes of the random variables at different times. If the process $X$ is \textbf{stationary}, the autocorrelation only depends on the time difference, i.e.
+It measures the degree of correlation between outcomes of the random variables at different times. If the process $X(t)$ is \textbf{stationary}, the autocorrelation only depends on the time difference, i.e.
 
 \begin{equation*}
-  C(\tau) \coloneqq \langle X(t)X(t+\tau)\rangle,
+  C_X(\tau) \coloneqq \langle X(t)X(t+\tau)\rangle,
 \end{equation*}
 
 where $\tau \coloneqq t'-t$.
 
-The \textbf{power spectrum} $S_X$ of a stochastic process is defined as average of the square norm of its the Fourier transform
+The \textbf{power spectrum} $S_X$ of a stochastic process is defined as average of the square norm of its the Fourier transform, i.e.
 
 \begin{equation*}
-  S_X(\omega) \coloneqq \left|\langle\hat X\rangle\right|^2,
+  S_X(\omega) \coloneqq \left|\langle\hat X\rangle\right|^2.
 \end{equation*}
 
-where the hat denotes Fourier transform. A mathematical tool that will be very useful in the calculations is the \textbf{Wiener-Khinchin theorem} It states that the power spectrum and the autocorrelation are Fourier-Transform pairs, that is
+The Fourier transform and the power spectrum are related by the \textbf{Wiener-Khinchin theorem}. It states that the power spectrum and the autocorrelation are Fourier-Transform pairs, i.e.
 
-\begin{equation}
-  \label{eq:con-wkth}
+\begin{equation*}
+  %\label{eq:con-wkth}
   \mathscr{F}(C_X(\tau)) = S_X(\omega),\quad\text{and}\quad \mathscr{F}^{-1}(S_X(\omega)) = C_X(\tau).
-\end{equation}
+\end{equation*}
 
 \section{The Poisson process}
 \label{sec:poisson}
 
-Many of the processes of creation and destruction that occur in this context are modeled as Poisson processes. For example, the creation and destruction of mRNA and proteins.The Poisson process is a continous-time stochastic process that is used to model arrivals when there is some known arrival rate and when the arrivals at different time intervals are independent.
+The processes of creation and destruction involving gene expression are usually modeled as Poisson processes. For example, the creation and destruction of mRNA molecules and proteins. The Poisson process is a continous-time stochastic process that is used to model arrivals when there is some known arrival rate and when the arrivals at different time intervals are independent.
 
-Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\mathbb{Z}$ arrivals during a time interval $\tau$ and assume that it is the same for any interval of the same length. We denote by $\lambda$ the arrival rate for the process. The Poisson process satisfy the following properties
+Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\mathbb{N}$ arrivals during a time interval $\tau$. Letting $\lambda$ be the arrival rate, the Poisson process satisfy the following properties
 
 \begin{itemize}
   \item  $P(k,\tau)$ is the same for all intervals of length $\tau$.
@@ -362,7 +362,7 @@ Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\ma
       \end{split}
     \end{equation*}
     
-    Where $o_k(\tau)$, $k=0,1,\dotsc$ are functions that become negligible compared to $\tau$ as it becomes small, that is
+    Where $o_k(\tau)$, $k=0,1,\dotsc$ are functions that become negligible compared to $\tau$ as it becomes small, i.e.
 
     \begin{equation*}
       \lim_{\tau\to 0}\frac{o_k(\tau)}{\tau}=0.
@@ -375,22 +375,22 @@ According to the previous properties, $P(k,\tau)$ is given by
   P(k,\tau) = e^{-\lambda\tau}\frac{(\lambda\tau)^k}{k!},\quad k=0,1,\dotsc
 \end{equation*}
 
-which is a Poisson PMF, using the definition for the expected value and variance (eqs. \eqref{eq:con-var_nice} and \eqref{eq:con-ave_def}), letting $N_\tau$ be the number of arrivals during a time interval $\tau$  we get after a little algebra
+which is the Poisson PMF. Let $N_\tau$ be the number of arrivals during a time interval $\tau$. Then, using the definition for the expected value and variance [eqs. \eqref{eq:con-ave_def} and \eqref{eq:con-var_nice}] we get
 
 \begin{equation*}
   \langle N_\tau\rangle = \sigma^2(N_\tau) = \lambda \tau.
 \end{equation*}
 
-The average number of arrivals in a time $\tau$ is, as intuitively expected, the arrival rate times the length of the interval. From eqs. \eqref{eq:con-fano_def} and \eqref{eq:con-cv_def}, the noise and Fano factor for $N_\tau$ are
+The average number of arrivals in a time $\tau$ is, as one may expect, the arrival rate times the length of the interval. From eqs. \eqref{eq:con-fano_def} and \eqref{eq:con-cv_def}, the noise and Fano factor for $N_\tau$ are
 
-\begin{equation}
-  \label{eq:con-poisson_noise}
+\begin{equation*}
+  %\label{eq:con-poisson_noise}
   \nu(N_\tau) = 1,\quad\quad \eta(N_\tau) = \frac{1}{\sqrt{N_\tau}}.
-\end{equation}
+\end{equation*}
 
-This proves what was said on section \ref{sec:con-noise} about the previous use of the Fano factor as the standard measure of noise. From the form of $\eta$ we conclude that if the number of events is large, the Poisson noise is negligible. But for a biological system, for instance, the average number of copies of mRNA of a given gene is of the order of $10$. This makes the effect of noise a significant factor. Also, altought the mean number of proteins is of the order of $1000$, the Poisson noise is negligible, but there is an important contribution of noise coming from the RNA and other sources, as we will see on chapter \ref{ch:master}.
+If the number of arrivals is very large, the Poisson noise is negligible. However, for a biological system this is not always the case. For instance, the average number of copies of mRNA of a given gene is of the order of only $10$. Moreover, although the mean number of proteins is of the order of $1000$, their Poisson noise is very small. In spite of that, there is an important contribution of noise transmitted from mRNA and other sources as we will see in chapter \ref{ch:master}.
 
-Now we will find the time between events, by now let $t=0$ the time of the last event and let $t=T$ the time of the next event, then
+Now we find the PDF $f_T(t)$ for the time between events, by now let $t=0$ be the time at which the last event occured, and let $t=T$ the time until the next event, then
 
 \begin{equation*}
   P(T\leq t) =\int_0^tf_T(t')dt'=1-P(T>t) = 1 - P(0,t) = 1 - e^{-\lambda t}.
@@ -398,29 +398,27 @@ Now we will find the time between events, by now let $t=0$ the time of the last 
 
 Differentiating and applying the fundamental theorem of calculus, we get the \textbf{exponential PDF}, which is given by
 
-\begin{equation*}
+\begin{equation}
   \label{eq:con-exp_pdf}
   f_T(t) = \lambda e^{-\lambda t}.
-\end{equation*}
+\end{equation}
 
-Therefore, the time $T$ until the first arrival follows an exponential distribution. 
+The exponential PDF is \textbf{memoryless} in the following sense: suppose an arrival happened at time $t'$, then the probability distribution for the remaining time until the next arrival is an exponential with the same rate. With this in mind, not only the time until the first arrival, but all the interarrival times (the times between arrivals), follow the distribution given by eq. \eqref{eq:con-exp_pdf}.
 
-The exponential distribution is \textbf{memoryless} in the following sense: suppose an arrival happened at time $t'$, therefore, the probability distribution for the remaining time until the next arrival is an exponential with the same rate. With this in mind, not only the time until the first arrival, but all the interarrival times (the times between arrivals), follow the distribution given by eq. \eqref{eq:con-exp_pdf}.
+Consider $k$ independent Poisson processes with rates $\lambda_1,\dotsc,\lambda_k$, and consider also a merged process in which an arrival is recorded each time an arrival occurs in either of the $k$ processes. The merged process is also Poissonian with rate $\Lambda\coloneqq\sum_{i=1}^k\lambda_i$. Besides, any arrival of the merged process has a probability $\lambda_i/\Lambda$, $i=1,\dotsc,k$ of corresponding to the $i$th process.
 
-Suppose we $k$ independent Poisson processes with rates $\lambda_1,\dotsc,\lambda_k$ and we record an arrival each time an arrival occur in either process. This merged process is also a Poisson process with rate $\Lambda\coloneqq\sum_{i=1}^k\lambda_i$. Also, any arrival of the merged process has a probability $\lambda_i/\Lambda$, $i=1,\dotsc,k$ of being an arrival of the $i$th process.
-
-In the models we will consider there might be several creation and destruction events which are Poissonian and independent, for example, the synthesis and degradation of different kinds of RNA and protein, the binding of transcription factors, etc. For these models, we can take advantage of the merging properties of Poisson processes to make efficient and precise simulations.
+For the models explained in this work there might be several creation and destruction events which are Poissonian and independent, e.g. the synthesis and degradation of molecules, the binding of transcription factors, etc. Using the memorylessness and the merging properties of the Poisson process, precise and efficient simulations can be developed.
 
 \section{The Gillespie algorithm}
 
-To simulate the models we will use the Gillespie algorithm \cite{gillespie77} which improves speed a lot with respect to brute-force stochastic algorithms. It is used to simulate simultaneous Poissonian events that occur with a certain rate (probability per unit time), e.g. synthesis and degradation of RNA or proteins, binding of an enzyme to a substrate, etc.
+To make simulations of the chemical equation that determine gene regulation we use the Gillespie algorithm \cite{gillespie77}. It is used to simulate simultaneous Poissonian events that occur with a certain rate (probability per unit time), e.g. synthesis and degradation of molecules, binding of an enzyme to a substrate, etc.
 
-In the brute-force approach we consider a fixed time interval that must be sufficiently small, and for every possible event we sample a random number that depending on the probabilities of the events, will tell us which of the events happened or if nothing happened at that interval. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we must sample as many random numbers as events, this approach is computationally inefficient.
+In the brute-force method we fix a time interval that must be sufficiently small. Then, for every possible event we sample a random number that according to the probabilities of the events, tells us which one occured. This procedure is repeated for all the intervals. Since time intervals must be small and for each interval we sample as many random numbers as events, this approach is very inefficient.
 
-In the Gillespie algorithm, we take advantage of the mentioned properties of the Poisson process \cite{bertsekas08}. There are not fixed time intervals in this case, a random number is sampled with an exponential distribution whose rate $\Lambda$ is the sum of the rates of the individual processes to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. Using the properties of the exponential CDF, to sample an exponential random number $X$ with parameter $\Lambda$ from an uniform $U$ between $0$ and $1$ we apply the following equation
+The Gillespie algorithm is by far more efficeint as it takes advantage of the merging and memorylessness properties of the Poisson process. A random number is sampled from an exponential distribution whose rate $\Lambda$ is the sum of the rates of the individual processes to find the time of occurence of the next event and another uniform one is sampled to evaluate which of the events occured. Using the properties of the exponential CDF, to obtain a number $X$ from an exponential distribution with parameter $\Lambda$ by sampling a number $U$ from an uniform distribution between $0$ and $1$ we apply the following equation
 
-\begin{equation}
+\begin{equation*}
   X = -\frac{1}{\Lambda}\ln(U).
-\end{equation}
+\end{equation*}
 
-The Gillespie algorithm is by far more efficient. First, it does not need to have a fixed small time interval, it finds the time intervals between events. Second, the number of random numbers sampled per time interval in the brute-force approach is equal to the number of events (which can be large), and many of the intervals there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to go forward in time in many fewer steps. Finally, a very important aspect is that the Gillespie algorithm is that it is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.
+The Gillespie algorithm is better than the brute-force method for several reasons. First, it does not defines a fixed small time interval, it finds the time intervals between events. Second, the number of random numbers sampled per time interval in the brute-force approach is equal to the number of events (which can be large), and many of the intervals there will not be an event, while in the Gillespie algorithm only two random numbers are sampled by event and the way in which the time interval is sampled allows to go forward in time in many fewer steps. Finally, a very important aspect to notice is that the Gillespie algorithm is exact, while the precision of the brute-force algorithm depends on how small is the time interval in consideration.

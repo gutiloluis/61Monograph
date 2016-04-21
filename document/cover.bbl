@@ -19,6 +19,29 @@
 
 \refsection{0}
   \sortlist{entry}{none}
+    \entry{kaern05}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
+        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{a6568ea702acb0279718221122009c5e}
+      \strng{fullhash}{12201fa0310e011c93afd19203b4a21d}
+      \field{sortinit}{0}
+      \field{labeltitle}{Stochasticity in gene expression: from theories to phenotypes}
+      \field{journaltitle}{Nat. Rev. Genet.}
+      \field{title}{Stochasticity in gene expression: from theories to phenotypes}
+      \field{volume}{6}
+      \field{year}{2005}
+      \field{pages}{451\bibrangedash 464}
+    \endentry
     \entry{elowitz02}{article}{}
       \name{labelname}{4}{}{%
         {{hash=ad0c220f04581b1710ebde922437a6bc}{Elowitz}{E\bibinitperiod}{M\bibnamedelima B}{M\bibinitperiod\bibinitdelim B\bibinitperiod}{}{}{}{}}%
@@ -227,46 +250,6 @@
       \field{year}{2011}
       \field{pages}{15004\bibrangedash 15009}
     \endentry
-    \entry{kaern05}{article}{}
-      \name{labelname}{4}{}{%
-        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=ce3e62d0dffb30cbf74648f53c9951ac}{Kaern}{K\bibinitperiod}{M}{M\bibinitperiod}{}{}{}{}}%
-        {{hash=43280773c65d69b3159d1edf8acb4142}{Elston}{E\bibinitperiod}{T\bibnamedelima C}{T\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
-        {{hash=3a93f23c5efe3bd1916ff7af22a45850}{Blake}{B\bibinitperiod}{W\bibnamedelima J}{W\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-        {{hash=6605a954dd214f66b2fe169d6dc4acef}{Collins}{C\bibinitperiod}{J\bibnamedelima J}{J\bibinitperiod\bibinitdelim J\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{a6568ea702acb0279718221122009c5e}
-      \strng{fullhash}{12201fa0310e011c93afd19203b4a21d}
-      \field{sortinit}{0}
-      \field{labeltitle}{Stochasticity in gene expression: from theories to phenotypes}
-      \field{journaltitle}{Nat. Rev. Genet.}
-      \field{title}{Stochasticity in gene expression: from theories to phenotypes}
-      \field{volume}{6}
-      \field{year}{2005}
-      \field{pages}{451\bibrangedash 464}
-    \endentry
-    \entry{paulsson05}{article}{}
-      \name{labelname}{1}{}{%
-        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{1}{}{%
-        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{8fc0cd9519414f5cfb55220eb058e289}
-      \strng{fullhash}{8fc0cd9519414f5cfb55220eb058e289}
-      \field{sortinit}{0}
-      \field{labeltitle}{Models of stochastic gene expression}
-      \field{journaltitle}{Phys. Life Rev.}
-      \field{title}{Models of stochastic gene expression}
-      \field{volume}{2}
-      \field{year}{2005}
-      \field{pages}{157\bibrangedash 175}
-    \endentry
     \entry{alberts13}{book}{}
       \name{labelname}{8}{}{%
         {{hash=fb62457c285c73db074f895ec8f95805}{Alberts}{A\bibinitperiod}{Bruce}{B\bibinitperiod}{}{}{}{}}%
@@ -418,6 +401,23 @@
       \field{year}{2004}
       \field{pages}{415\bibrangedash 418}
     \endentry
+    \entry{paulsson05}{article}{}
+      \name{labelname}{1}{}{%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{1}{}{%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{8fc0cd9519414f5cfb55220eb058e289}
+      \strng{fullhash}{8fc0cd9519414f5cfb55220eb058e289}
+      \field{sortinit}{0}
+      \field{labeltitle}{Models of stochastic gene expression}
+      \field{journaltitle}{Phys. Life Rev.}
+      \field{title}{Models of stochastic gene expression}
+      \field{volume}{2}
+      \field{year}{2005}
+      \field{pages}{157\bibrangedash 175}
+    \endentry
     \entry{pedraza06}{thesis}{}
       \name{labelname}{1}{}{%
         {{hash=8a78043e7cc06456a187986b1e8e0f91}{Pedraza}{P\bibinitperiod}{J\bibnamedelima M}{J\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
@@ -435,29 +435,6 @@
       \field{title}{Signal and noise propagation in genetic circuits}
       \field{type}{phdthesis}
       \field{year}{2006}
-    \endentry
-    \entry{alon99}{article}{}
-      \name{labelname}{4}{}{%
-        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
-        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \name{author}{4}{}{%
-        {{hash=d7cd874397922b0575ebef1731bf5b4e}{Alon}{A\bibinitperiod}{U}{U\bibinitperiod}{}{}{}{}}%
-        {{hash=dfbe66844294c0ee7c3ee6b4ad04d183}{Surette}{S\bibinitperiod}{M\bibnamedelima G}{M\bibinitperiod\bibinitdelim G\bibinitperiod}{}{}{}{}}%
-        {{hash=eeb368047946a4bb0ff2960a6be4bbbc}{Barkai}{B\bibinitperiod}{N}{N\bibinitperiod}{}{}{}{}}%
-        {{hash=5b12ce6126ed99c60788d172ed7e458e}{Leibler}{L\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
-      }
-      \strng{namehash}{5273499c884be803feee841168b31a79}
-      \strng{fullhash}{5b6344ac0061c4b6decff689312c0926}
-      \field{sortinit}{0}
-      \field{labeltitle}{Robustness in bacterial chemotaxis}
-      \field{journaltitle}{Nature}
-      \field{title}{Robustness in bacterial chemotaxis}
-      \field{volume}{397}
-      \field{year}{1999}
-      \field{pages}{168\bibrangedash 171}
     \endentry
   \endsortlist
 \endrefsection
