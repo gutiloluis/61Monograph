@@ -62,7 +62,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.1}mRNA bursts}{88}{section.5.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{91}{section.5.2}
+\contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{90}{section.5.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.3}Decay of molecules}{97}{section.5.3}
 \defcounter {refsection}{0}\relax 

@@ -1,28 +1,24 @@
 \chapter{Effects of bursting and senescence}
 
-There are many different phenomena that could have an effect on noise. Most of the models that have been based on assumptions and have made fits of the data obatined with fluorescent proteins according to those assumptions. Nevertheless, we will see in this chapter that noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the systems according to their noise. We will use the Fluctuation-Dissipation theorem as we used it on chapter \ref{ch:fdt} to analyize the effects of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules over many steps) on noise.
+There are many different phenomena that could have an effect on noise. Most of the models have been developed based on assumptions and have made fits of the data obatined with fluorescent proteins according to those assumptions. Nevertheless, we will see in this chapter that noise coming from different mechanisms could have the same general behaviors, making it difficult to predict characteristics of the systems from their noise. We will use the Fluctuation-Dissipation theorem as we used it on chapter \ref{ch:fdt} to analyize the effects of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules over many steps) on noise. This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
 
-This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
-
-Transcription and translation does not occur necessarily as single step Poisson processes. Due to the complexity of gene regulation, their statistics may not be so simple. There are cases where many copies of mRNA are created in short periods of time (bursting). Also, promoters may take several steps to become active (gestation), and mRNAs and proteins to degrade (senescence). Figure \ref{fig:bur-examples} shows some examples of bursting and senescence.
+Transcription and translation do not occur necessarily as single step Poisson processes. Due to the complexity of gene regulation, their statistics may not be so simple. There are cases where many copies of mRNA are created in short periods of time (bursting). Also, promoters may take several steps to become active (gestation), and mRNAs and proteins to degrade (senescence). Figure \ref{fig:bur-examples} shows some examples of these mechanisms.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=15cm]{bur-examples}
-  \caption[Examples of bursting and senescence in gene expression]{\label{fig:bur-examples} Examples of bursting and senescene in gene expression.(left) Example of a promoter where many transcription factors bind in successive steps taking a random time $T$. When the complex is bound to the promoter, A random number $b$ of transcription events occur in a time much shorter than $T$.(right) Senescene in eukaryotic mRNAs occurs when their poly(A) tail\footnotemark is sequentially removed before the part that is translated is degraded. Translation can occur while the poly(A) tail is removed. Taken from \cite{pedraza08}.}
+  \includegraphics[width=16cm]{bur-examples}
+  \caption[Examples of bursting and senescence in gene expression]{\label{fig:bur-examples} Examples of bursting and senescene in gene expression. (Left) Example of a promoter where many transcription factors bind in successive steps taking a random time $T$. When the complex is bound to the promoter, a random number $b$ of transcription events occur in a time much shorter than $T$. (Right) Senescene in eukaryotic mRNA occurs when their poly(A) tail (an additional stretch of mRNA that is not part of the protein coding sequence) is sequentially removed before the coding sequence is degraded. Translation can occur while the poly(A) tail is removed. From \cite{pedraza08}.}
 \end{figure}
 
-\footnotetext{The poly(A) tail is an additional stretch of mRNA that is not part of the protein coding sequence. It is important for the processing of mRNA.}
-
 \section{mRNA bursts}
-Let the mRNA be produced with bursts of random size $b$, the degradation and protein creation is done one at a time with exponential waiting times (single-step Poisson processes). In this case the only modification with respect to the ``standard model'' (eqs. \eqref{eq:mas-simple_det_1} and \eqref{eq:mas-simple_det_2}) is the $D_{11}$ term of the matrix $\mathbf{D}$, which by definition is
+Let the mRNA be produced with bursts of random size $b$, the degradation and protein creation is done one at a time with exponential waiting times (single-step Poisson processes). In this case the only modification with respect to the ``standard model'' [eq. \eqref{eq:mas-simple_det_1}] is the $D_{11}$ term of the matrix $\mathbf{D}$ of the FDT, which by definition is
 
 \begin{equation}
   \label{eq:mrnab1}
   D_{11}=\frac{1}{\langle n_1\rangle^2}\sum_k(s_1^k)^2r_k(\mathbf{n}).
 \end{equation}
 
-All the possible $k$ reactions include all the creation bursts and the reaction of degradation, which has rate $\nicefrac{\langle n_1 \rangle}{\tau_1}$ and $s_1=-1$, therefore
+All the possible $k$ reactions include all the creation bursts and the reaction of degradation, which has rate $\langle n_1 \rangle/\tau_1$ and $s_1=-1$, then
 
 \begin{equation}
   \label{eq:mrnab2}
