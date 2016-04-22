@@ -455,27 +455,27 @@ From eqs. \eqref{eq:etagene1} and \eqref{eq:etagene2} it can be seen that the in
 
 The previous analysis also explains the non constant correlation $C_{13}$ and $C_{23}$. Global fluctuations to gene $3$ have only the direct component, while to gene $1$ or $2$ have both the direct and transmitted component that depends on the interactions with upstream genes. Global noise will thus be reduced of increased in genes $1$ and $2$ with respect to the unregulated gene $3$ in an amount that depends on the signs and strenghts of the logarithmic gains.
 
-Fig. \ref{fig:lan-eta2det} shows each of the components of $\eta_2$. The intrinsic squared noise varies as the inverse of the mean. When [IPTG] is large, $x_{0A}$, making $x_1$ large and thus $x_2$ low. Therefore, the intrinsic noise should be larger at large IPTG concentration. The transmitted intrinsic noise corresponds approximately to the square of the logarithmic gain times the noise in the upstream components (including both genes $0$ and $1$). Its maximum corresponds roughly to the maximum in $H_{21}$ (vertical dashed line). The global component depends also on the correlations as explained above. Comparing the total noise with the components it is clear how important are the network interactions in determining the noise.
+Fig. \ref{fig:lan-eta2det} shows each of the components of $\eta_2$. The intrinsic squared noise varies as the inverse of the mean. When [IPTG] is large, $x_{0A}$ is small, making $x_1$ large and $x_2$ small. Therefore, the intrinsic noise should be larger as [IPTG] increases. The transmitted intrinsic noise corresponds approximately to the square of the logarithmic gain times the noise in the upstream components (including both genes $0$ and $1$). Its maximum corresponds roughly to the maximum in $H_{21}$ (vertical dashed line). The global component depends also on the correlations as explained above. When comparing the total noise with its components it becomes clear how important are the network interactions for determining the form of the noise.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{lan-eta2det}
-  \caption[Components of the noise]{\label{fig:lan-eta2det}. Plot of each component of $\eta_2^2$ (eq. \eqref{eq:etagene2}) as a function of [IPTG] with [ATC]=0. The vertical line shows the IPTG concentration at which $H_{21}$ reaches its greater value.}
+  \caption[Components of the noise]{\label{fig:lan-eta2det}. Plot of each component of $\eta_2^2$ [eq. \eqref{eq:etagene2}] as a function of [IPTG] with [ATC]=0. The vertical line shows the IPTG concentration at which $H_{21}$ reaches its greater value.}
 \end{figure}
 
-The coupling between genes $1$ and $2$ is regulated with ATC. If [ATC] is large, the coupling is low and viceversa. Fig. \ref{fig:lan-eta2_corrATC} shows how $\eta_2$ and $C_{12}$ change as a function of IPTG for different concentrations of ATC.
+The coupling between genes $1$ and $2$ is regulated with ATC. If [ATC] is large, the coupling is low and viceversa. Fig. \ref{fig:lan-eta2_corrATC} shows how $\eta_2$ and $C_{12}$ change as a function of IPTG for different [ATC] concentrations.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{lan-eta2_corrATC}
-  \caption[Noise in gene $2$ for varying ATC concentrations]{\label{fig:lan-eta2_corrATC}. Plots of $\eta_2$ (eq. \eqref{eq:etagene2}) and $C_{12}$ (eq. \eqref{eq:lan-correl}) as a function of [IPTG] for different ATC concentration shown in the legend.}
+  \caption[Noise in gene $2$ for varying ATC concentrations]{\label{fig:lan-eta2_corrATC}. Plots of $\eta_2$ [eq. \eqref{eq:etagene2}] and $C_{12}$ [eq. \eqref{eq:lan-correl}] as a function of [IPTG] for different ATC concentration shown in the legend.}
 \end{figure}
 
 This reconfirms the high sensitivity of the noise to the coupling of the network. For small changes in concentration of ATC, the noise shows huge changes in its behavior. At a concentration of [ATC] = $1$ mM (fig. \ref{fig:lan-eta2_corrATC}, red curve), the only considerable contributions to $\eta_2$ are the intrinsic and the directly recieved global noise.
 
 \section{Conclusions and implications}
 
-Fig. \ref{fig:lan-noise_sources} summarizes how noise propagates through a cascade of regulation. Each gene has its own intrinsic noise and recieves contributions to its total noise directly from correlated global sources, and indirectly from propagated global and intrinsic fluctuations of upstream genes. The effect of the propagated noise is modulated by the logarithmic gains between the directly connected genes. Altough not shown in the figure, the time average also regulates the transmitted noise.
+Fig. \ref{fig:lan-noise_sources} summarizes how noise propagates through a cascade of regulation. For the number of proteins of each gene, the noise can be decomposed on its own intrinsic noise and recieves contributions to its total noise directly from correlated global sources, and indirectly from propagated global and intrinsic fluctuations of upstream genes. The effect of the propagated noise is modulated by the logarithmic gains between the directly connected genes. Altough not shown in the figure, the time average also regulates the transmitted noise.
 
 \begin{figure}[H]
   \centering
@@ -485,4 +485,6 @@ Fig. \ref{fig:lan-noise_sources} summarizes how noise propagates through a casca
 
 The limitations of the model are related to the ones for the ME approach. It is also a stationary and linearized model that does not account for the time dynamics of fluctuations. In spite of that, it is remarkable how the Langevin approach enabled the authors to write the expressions for the noises in a way that is very easy to interpret. Also, the match of the experimental results with the model is excellent \cite{pedraza05} \cite{pedraza06}.
 
-We have introduced the three basic approaches that have been used to model noise in genetic circuits: the master equation, the fluctuation-dissipation theorem and the Langevin equation. The following chapter will focus on analyzing how noise behaves when some additional factors are considered.
+To write the ME, all the possible states of the system and the transitions must be specified. Therefore, we need to know with detail which components are producing fluctuations and the ways in which they interact. However, in the Langevin equation the specific details are not necessary. For example, the global noise arises as a consequence of many phenomena that affects all the components in the cell. There could be many of them and it would be very difficult to model all of them explicitely. In the Langevin equation we include global noise only with the assumption that it is correlated among the different components, and this apparently simple assumption led to results that match the experiments \cite{pedraza05}.
+
+We have introduced the three basic approaches that have been used to model noise in genetic circuits: the master equation, the fluctuation-dissipation theorem and the Langevin equation. The following chapter focuses on analyzing how noise behaves when some additional factors are considered.
