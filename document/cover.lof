@@ -30,32 +30,32 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1.4}{\ignorespaces Noise in proteins: comparing analytical results and Gillespie simulations}}{47}{figure.2.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Histograms for protein number for a constitutive gene and a negatively autorregulated gene}}{54}{figure.2.3.1}
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Distribution of proteins for a constitutive gene and a negatively autorregulated gene}}{53}{figure.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of protein number for a negatively autorregulated gene}}{56}{figure.2.3.2}
-\defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of protein number for a negatively autorregulated gene}}{55}{figure.2.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Circuit used for the Langevin model}}{73}{figure.4.2.1}
+\addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Logarithmic gains for the genes of a cascade}}{83}{figure.4.4.1}
+\contentsline {figure}{\numberline {4.2.1}{\ignorespaces Circuit used for the Langevin model}}{71}{figure.4.2.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Noises and correlation for the genes of a cascade}}{84}{figure.4.4.2}
+\contentsline {figure}{\numberline {4.4.1}{\ignorespaces Logarithmic gains for the genes of a cascade}}{81}{figure.4.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Components of the noise}}{86}{figure.4.4.3}
+\contentsline {figure}{\numberline {4.4.2}{\ignorespaces Noises and correlation for the genes of a cascade}}{82}{figure.4.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.4.4}{\ignorespaces Noise in gene $2$ for varying ATC concentrations}}{87}{figure.4.4.4}
+\contentsline {figure}{\numberline {4.4.3}{\ignorespaces Components of the noise}}{84}{figure.4.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {4.5.1}{\ignorespaces Propagation of noise through a cascade}}{88}{figure.4.5.1}
+\contentsline {figure}{\numberline {4.4.4}{\ignorespaces Noise in gene $2$ for varying ATC concentrations}}{85}{figure.4.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {4.5.1}{\ignorespaces Propagation of noise through a cascade}}{86}{figure.4.5.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {5.0.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{90}{figure.5.0.1}
+\contentsline {figure}{\numberline {5.0.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{88}{figure.5.0.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{113}{figure.6.3.1}
+\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Examples of bursting and senescence in gene expression}}{111}{figure.6.3.1}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }

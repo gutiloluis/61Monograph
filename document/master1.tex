@@ -416,16 +416,17 @@ We will consider the case of negative autorregulation, in this case $k_r$ is now
 where
 
 \begin{equation*}
-  k_r(n_2) \coloneqq \frac{k_r^{\text{max}}}{1+\left(\frac{n_2(t)}{K_d}\right)^n}.
+  k_r(n_2) \coloneqq \frac{k_r^{\text{max}}}{1+\left(\frac{n_2}{K_d}\right)^n}.
 \end{equation*}
-
-Since the protein represses the transcription of his own gene, it is expected that the steady state number of proteins $\langle n_2\rangle_s$ is reduced with respect to the unrepressed case. To evidence this, fig. \ref{fig:mas-sim_hist} shows the distributions at steady state for the number of proteins of an unregulated and a negatively autorregulated gene resulting from Gillespie simulations. Both the average and the noise (width of the distribution) is reduced. The reduction of the noise occurs because a fluctuation that, for instance, increases the number of protein above the steady state level also increases the repression. This lowers the production rate, thus driving the levels back to the steady state with more strenght than in the unrepressed case. The effect is analogous for a random decrease of the level of proteins below steady state.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{mas-hist}
-  \caption[Histograms for protein number for a constitutive gene and a negatively autorregulated gene]{\label{fig:mas-sim_hist}Distribution for the number of proteins for an autorrepressed gene (eq. \ref{eq:mas-autorr_det}, blue), and an unrepressed gene (eqs. \ref{eq:mas-simple_det_1} and \ref{eq:mas-simple_det_2} with $k_r = k_r^\text{max}$, orange). The  values of the parameters are $\tau_r=2$ min, $\tau_p=1$ h, $b=10$ proteins/mRNA, $n=2$, $K_d=800$ proteins, and the average number of proteins without repression $\langle p\rangle_\text{unrep} \coloneqq k_r^\text{max}k_p/(\gamma_r\gamma_p) = 1200$ proteins. A sample of $10000$ cells (trials) evolved until a time of $10\tau_p$ was run on each histogram.}
+  \includegraphics[width=15cm]{mas-hist}
+  \caption[Distribution of proteins for a constitutive gene and a negatively autorregulated gene]{\label{fig:mas-sim_hist}Distribution for the number of proteins for an autorrepressed gene [eq. \eqref{eq:mas-autorr_det}, blue], and an unrepressed gene [eq. \eqref{eq:mas-simple_det_1} with $k_r = k_r^\text{max}$, orange]. The  values of the parameters are $\tau_r=2$ min, $\tau_p=1$ h, $b=10$ proteins/mRNA, $n=2$, $K_d=800$ proteins, and the average number of proteins without repression $\langle p\rangle_\text{unrep} \coloneqq k_r^\text{max}k_p/(\gamma_r\gamma_p) = 1200$ proteins. A sample of $10000$ cells (trials) evolved until a time of $10\tau_p$ was run on each histogram.}
 \end{figure}
+
+Since the protein represses the transcription of his own gene, it is expected that the steady state number of proteins $\langle n_2\rangle_s$ is reduced with respect to the unrepressed case. To evidence this, fig. \ref{fig:mas-sim_hist} shows the distributions at steady state for the number of proteins of an unregulated and a negatively autorregulated gene resulting from Gillespie simulations. Both the average and the noise (width of the distribution) are reduced. The decrease of the noise occurs because a fluctuation that, for instance, increases the number of protein above the steady state level also increases the repression. This lowers the production rate, thus driving the levels back to the steady state with more strenght than in the unrepressed case. The effect is analogous for a random reduction of the level of proteins below steady state.
+
 
 Next we find the average and Fano factor of $n_2$ according to the linearized model. Making a first order Taylor expansion of $k_r(n_2)$ about its value at the steady state $k_r(\langle n_2\rangle_s)$
 
@@ -458,23 +459,23 @@ and $\mathbf{\Gamma}$ is the same as in \eqref{eq:mas_G_single}. Solving eqs. \e
 
 \begin{equation}
   \label{eq:mas-autorreg_final}
-  \langle n_2\rangle = \frac{1}{1+b\phi}\frac{k_0b}{\gamma_p},\quad\quad \nu_2 = \frac{1-\phi}{1+b\phi}\frac{b}{1+\frac{\gamma_p}{\gamma_r}}+1,
+  \langle n_2\rangle_s = \frac{1}{1+b\phi}\frac{k_0b}{\gamma_p},\quad\quad \nu_{2,s} = \frac{1-\phi}{1+b\phi}\frac{b}{1+\gamma_p/\gamma_r}+1,
 \end{equation}
 
 with $\phi\coloneqq k_1/\gamma_p$ represents the strength of the feedback. In figure \ref{fig:mas-sim_autorreg}, we compare eq. \eqref{eq:mas-autorreg_final}  with a Gillespie simulation using the exact rates. Altought the analytic expressions are approximate, there is an excellent match with the simulations.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{mas-sim_autorreg}
+  \includegraphics[width=15cm]{mas-sim_autorreg}
   \caption[Fano factor of protein number for a negatively autorregulated gene]{\label{fig:mas-sim_autorreg} Comparison between the results of Gillespie simulations (dots) using the exact eqs. \eqref{eq:mas-autorr_det} and the analytical results given by eq. \eqref{eq:mas-autorreg_final}. The Fano factor is plotted vs. the mean number of proteins in steady state. The base values of the parameters are the same as in fig. \ref{fig:mas-sim_hist}. For each curve, the parameter indicated in the legend is varied while the others are fixed. $K_d$ is varied from $100$ to $2000$ in increments of $100$ and from $2000$ to $5000$ in increments of $1000$, while $n$ is varied from $0$ to $20$ in unit increments. Each point correspond to 10000 trials. Each one evolved until a time of $10\tau_p$.}
 \end{figure}
 
-For a given average number of proteins, this circuit has a more efficient control of fluctuations than the one for the unrepressed gene. In this case, the random fluctuations are controlled by the same number of proteins and there is no need to spend energy in unused mRNA molecules. Evolution might have developed circuits of this kind, and more sophisticated, to tune the noise according to the function of the circuits trying to reduce the cost in fitness.
+For a given average number of proteins, this circuit has a more efficient control of fluctuations than the one for the unrepressed gene. In this case, the random fluctuations are controlled by the number of proteins and there is no need to spend energy in unused mRNA molecules. Evolution might have developed circuits of this kind with the purpose of tuning the noise according to the function of the circuits while reducing the energetic cost.
 
 \section{Limitations of the model}
 
-The linearized model has reliably reproduced the noise in steady state of two simple genetic circuits. We have also seen that it allows to consider an arbitrary number of species, allowing then to treat networks of arbitrary complexity. However, the model have some limitations. If the system is nonlinear, The nonlinearities should be such that the linearization correctly reproduces the behavior near the fixed points i.e. the nonlinearities should not be too large. Besides, this approach does not work for oscillating systems or unstable steady state points because in both mechanisms there may be large sudden changes in the average values that are not reproducible with a linear model.
+The linearized model has reliably reproduced the noise in steady state of two simple genetic circuits. We have also seen that it allow us to consider an arbitrary number of species, and thus networks of arbitrary complexity. However, the model have some limitations. If the system is nonlinear, the nonlinearities should enable the respective linearization to correctly reproduce the behavior near the fixed points, i.e. the nonlinearities should not be too large. Besides, this approach does not work for oscillating systems or unstable steady state points because in both mechanisms the average values may have continous changes that are not reproducible with a linear model.
 
-However, phenomena such that big nonlinearities and oscillations is common in biological circuits and has allowed living beings to have many complex and interesting behaviors. Those features can not be studied with this model. Also, for many systems it would be important to model the complete time dynamics of noise, not just the steady state values. For example, the stochastic switching between different steady state values.
+Moreover, phenomena such that big nonlinearities and oscillations is common in biological circuits and has allowed living beings to have many complex and interesting behaviors. Those features can not be studied with this model. Also, for many systems it would be important to model the complete time dynamics of noise, not just the steady state values. For example, in the stochastic switching between different steady state values.
 
-Regardless of its limitations, the linearized ME approach can be used to model a variety of biological circuits and has enligthened some important facts about the mechanisms by which living beings control noise. In the following chapters more sources of noise will be included in the models and additional mathematical tools will be applied.
+Regardless of its limitations, the linearized ME approach can be used to model a variety of biological circuits and has enligthened some important facts about the mechanisms by which living beings control noise. In the following chapters more sources of noise are included in the models and additional mathematical tools are applied.
