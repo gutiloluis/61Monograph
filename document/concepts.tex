@@ -249,31 +249,31 @@ Let $n_1,\dotsc,n_N$ be discrete random variables over $\mathbb{N}$ and let $f(n
 
 Evaluating the function at $z_1 = \dotsb = z_N = 1$ (denoted by $\left. \right|_1$)
 
-\begin{equation*}
-  %\label{eq:con-mom_gen_1}
+\begin{equation}
+  \label{eq:con-mom_gen_1}
   \left.F\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}}f(n_1,\dotsc,n_N) = 1
-\end{equation*}
+\end{equation}
 
 by the axiom of normalization. Taking the derivative of eq. \eqref{def:mom_gen} with respect to $z_i$, $i = 1,\dotsc,N$ we get
 
-\begin{equation*}
-  %\label{eq:con-mom_gen_d1}
+\begin{equation}
+  \label{eq:con-mom_gen_d1}
   \left.\frac{\partial F}{\partial z_i}\right|_1 = \left.\sum_{\mathclap{n_1,\dotsc,n_N}}n_i z_1^{n_1}\dotsm z_i^{n_i-1}\dotsm z_N^{n^N}f(n_1,\dotsc,n_N)\right|_1 = \sum_{\mathclap{n_1,\dotsc,n_N}} n_i f(n_1,\dotsc,n_N) = \langle n_i \rangle.
-\end{equation*}
+\end{equation}
 
 Differentiating again with respect to $z_j$, $j=1,\dotsc,N$ with $j\neq i$
 
-\begin{equation*}
-  %\label{eq:con-mom_gen_d1d2}
+\begin{equation}
+  \label{eq:con-mom_gen_d1d2}
   \left. \frac{\partial F}{\partial z_i z_j} \right|_1 = \langle n_i n_j \rangle.
-\end{equation*}
+\end{equation}
 
 Differentiating eq. \eqref{def:mom_gen} twice with respect to $z_i$ we obtain similarly
 
-\begin{equation*}
-  %\label{eq:con-mom_gen_d1d1}
+\begin{equation}
+  \label{eq:con-mom_gen_d1d1}
   \left. \frac{\partial^2F}{\partial z_i^2}\right|_1 = \langle n_i(n_i-1) \rangle.
-\end{equation*}
+\end{equation}
 
 These properties will be very useful in the next sections to find the noise of a genetic system.
 
