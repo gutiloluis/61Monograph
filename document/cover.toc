@@ -78,7 +78,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}General case}{108}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{111}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{110}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{111}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
@@ -96,4 +96,4 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{123}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{126}{chapter*.5}
+\contentsline {chapter}{Bibliography}{126}{chapter*.9}

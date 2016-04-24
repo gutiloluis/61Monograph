@@ -1,7 +1,7 @@
 \chapter{Effects of cell division}
 \label{ch:div}
 
-When the cell divides, all the components (organelles, proteins, genetic material, etc.) must be distributed among the daughter cells. Nevertheless, the assymetries on partition are an important source of noise even for components present at high numbers. In this chapter we will explore some general mechanisms of partition of molecules during cell division and how they can affect noise statistics.
+When the cell divides, all the components (organelles, proteins, genetic material, etc.) must be distributed among the daughter cells. The partition of these components is not even. In fact, the assymetries on partition are a considerable source of noise even for components present at high numbers. In this chapter we will explore some general mechanisms of partition of molecules during cell division and how they affect noise statistics.
 
 This chapter follows the work done by D. Huh and J. Paulsson in \cite{huh11b}.
 
@@ -14,30 +14,27 @@ Let $x = l+r$ be the number of copies of some component (e.g. a certain protein)
   \langle l\rangle = \langle r\rangle = \frac{\langle x\rangle}{2}.
 \end{equation}
 
-We will find the noise for $l$ \footnote{It does not matter if we choose $r$ or $l$ since there is not preference for one of the daughter cells}. Using the law of total variance (eq. \eqref{eq:con-total_var}), the variance of $l$ is given by
+We will find the noise for $l$\footnote{It does not matter if we choose $r$ or $l$ since there is not preference for one of the daughter cells.}. Using the law of total variance [eq. \eqref{eq:con-total_var}], the variance of $l$ is given by
 
 \begin{equation*}
   \sigma^2(l) = \sigma^2\left(\langle l|x,v\rangle\right) + \left\langle\sigma^2(l|x,v)\right\rangle.
 \end{equation*}
 
-From eq. \eqref{eq:div-even}, $\langle l|x,v\rangle = \frac{x}{2}$, using this and dividing by $\langle l\rangle^2 = \frac{\langle x\rangle^2}{4}$ we get
+From eq. \eqref{eq:div-even}, $\langle l|x,v\rangle = x/2$. Hence, dividing by $\langle l\rangle^2 = \langle x\rangle^2/4$ we get
 
 \begin{equation}
   \label{eq:div-noises}
-  \begin{split}
-    \eta^2(l) &= 4\frac{\sigma^2\left(\nicefrac{x}{2}\right)}{\langle x\rangle^2}+\frac{\langle\sigma^2(L|x,v)\rangle}{\langle L\rangle^2}\\
-    &=\eta^2(x) + Q_x^2,
-  \end{split}
+  \eta^2(l) = 4\frac{\sigma^2\left(\nicefrac{x}{2}\right)}{\langle x\rangle^2}+\frac{\langle\sigma^2(L|x,v)\rangle}{\langle L\rangle^2}=\eta^2(x) + Q_x^2,
 \end{equation}
 
-where we used eq. \eqref{eq:con-var_const}. The term $Q_x$, defined as
+The term $Q_x$, defined as
 
 \begin{equation}
   \label{eq:div-Q}
-  Q_x^2 \coloneqq \frac{\langle\sigma^2(L|x,v)\rangle}{\langle L\rangle^2},
+  Q_x^2 \coloneqq \frac{\langle\sigma^2(l|x,v)\rangle}{\langle l\rangle^2},
 \end{equation}
 
-is the noise arising from cell division. Eq. \eqref{eq:div-noises} states that the noise after cell division is the sum of the noise before division and the noise arising at the division process (all squared).
+is the noise arising from cell division. Eq. \eqref{eq:div-noises} states that the squared noise after cell division is the sum of the squared noise before division and the squared noise arising at the division process.
 
 The term $Q_x$ can be interpreted in another way. From the definition of variance and eq. \eqref{eq:div-even}
 
@@ -51,13 +48,13 @@ but $l - \frac{x}{2} = \frac{1}{2}(2l-(l-r)) = \frac{l-r}{2}$, then
    Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\left\langle\left.\left(\frac{l-r}{2}\right)^2\right|x,v\right\rangle\right\rangle  = \frac{1}{\langle x\rangle^2}\left\langle\left(l-r\right)^2\right\rangle.
 \end{equation*}
 
-Therefore, the term $Q_x^2$ can be interpreted as the average square deviation between the quantities of the molecules of each daughter cell. For a perfect division $l=r$, making $Q_x=0$. On the contrary, the most noisy case is when one daughter recieves $x$ moleucles and the other does not recieve any molecule.
+Therefore, $Q_x^2$ is the average square deviation between the number of copies each daughter cell receives. For a perfect division $l=r$, making $Q_x=0$. Conversely, the most noisy case occurs when one daughter recieves all of the $x$ moleucles.
 
-In the subsequent derivations, the diverse mechanisms related to cell division will be considered. To simplify the derivations, the particular assumptions used may not match the exact dynamics of the process, but they yield the same noise statistics. For instance, when molecules are grouped in vesicles before being segregated to each half, they are first segregated randomly into vesicles and then vesicles are distributed between the daughters. We will see that for the derivations it will be better to invert the order of the process. Altough this does not correspond to the reality, the same noise is obtained more easily. The authors called those specific models mock processes.
+In the subsequent derivations, the diverse mechanisms related to cell division will be considered. To simplify the derivations, the particular assumptions used may not match the exact dynamics of the process, but they yield the same noise statistics. For instance, when molecules are grouped in vesicles before being segregated to each half, they are first segregated randomly into vesicles and then vesicles are distributed between the daughters. We will see that for the derivations it will be easier to invert the order of the process. Altough this does not correspond to the reality, the same noise is obtained.
 
 \section{Independent segregation}
 
-In the case of independent segregation, each molecule has an equal probability per unit time to switch from a cell half to another. Assuming there are $l$ and $x-l$ molecules in each half, a process that can describe this statistic is given by
+In the case of independent segregation, each molecule has an equal probability per unit time to migrate from a cell half to another. Assuming there are $l$ and $x-l$ molecules in each half, a process that is consistent with this supposition is
 
 \begin{equation}
   \label{eq:div-arr_ind}
@@ -67,35 +64,35 @@ In the case of independent segregation, each molecule has an equal probability p
   \end{split}
 \end{equation}
 
-Using the FDT, the jacobian and diffusion $1\times1$ matrices are given by
+Using the FDT, the jacobian and diffusion $1\times1$ matrices are
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \mathbf{A} &= \partial_l\left((x-l)-l\right) = -2,\\
     \mathbf{B} &= (x-l)+l = x.
   \end{split}
-\end{equation}
+\end{equation*}
 
 Solving for the covariance matrix, which in this case is the variance, we obtain in steady state
 
 \begin{equation}
   \label{eq:div-var_ind}
-  \sigma^2(l|x) = \frac{x}{4},
+  \sigma^2(l|x) = \frac{x}{4}.
 \end{equation}
 
-and averaging and using eq. \eqref{eq:div-Q} we get
+Averaging and using eq. \eqref{eq:div-Q} we get
 
 \begin{equation}
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{\langle x\rangle}{4} = \frac{1}{\langle x\rangle}.
 \end{equation}
 
-In the following sections, we will find the noise for some common division mechanisms and compare it to the case of independent segregation. The mechanisms that increase the noise with respect to it are included in what we call ``disordered segregation'', and we call those that decrease it ``ordered segregation''.
+In the following sections we find the noise for some common division mechanisms and compare it to the case of independent segregation. The mechanisms that increase the noise with respect to it were labeled by the authors as ``disordered segregation'', while those that can decrease as ``ordered segregation'' \cite{huh11b}.
 
 \section{Disordered segregation}
 
 \subsection{General case}
 
-First we will consider a general case in which the rate with which each molecules goes from a cell half to the other is proportional to the available space generated by the upstream component. For a fixed number $v$ of molecules of the upstream component, there are $n$ and $v-n$ available spaces in each daughter cell independently of $x$. Therefore, the process can be written as
+First we consider a general case in which the rate with which each molecules goes from a cell half to the other is proportional to the available space generated by some additional component such as vacuoles. For a fixed number $v$ of molecules the other component, there are $n$ and $v-n$ available spaces in each daughter cell independently of $x$. Then, the process can be written as
 
 \begin{equation}
   \label{eq:div-arr_disg}
@@ -105,53 +102,53 @@ First we will consider a general case in which the rate with which each molecule
   \end{split}
 \end{equation}
 
-From the law of total variance we have
+From the law of total variance,
 
 \begin{equation}
   \label{eq:div-varlgxv}
-  \sigma^2(l|x,v) = \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)}+\sigma^2\left(\langle l|x,v,n\rangle\right)_{(n|v)}
+  \sigma^2(l|x,v) = \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)}+\sigma^2\left(\langle l|x,v,n\rangle\right)_{(n|v)},
 \end{equation}
 
-Where the subscript $(n|v)$ denotes that averages and variances are evaluated over the conditional PDF of $n$ given $x$. Notice that taking averages over $(n|v)$ and over $(n|x,v)$ is the same in this case by the assumption that $n$ is independent of $x$. Also, by symmetry we can assume that $\langle n|v\rangle = \frac{v}{2}$.
+where the subscript $(n|v)$ denotes that averages and variances are evaluated over the conditional PMF of $n$ given $x$. Notice that taking averages over $(n|v)$ and over $(n|x,v)$ is the same in this case by the assumption that $n$ is independent of $x$. Also, by symmetry we can assume that $\langle n|v\rangle = \frac{v}{2}$.
 
-Therefore, by finding the first and second moments for $(l|x,v,n)$, we can use eq. \eqref{eq:div-varlgxv} to find the variance for $l$ given $x$ and $v$. We will use the method of the moment generating function on $P(l|x,v,n)$. The master equation for this PDF is given by
+By finding the first and second moments of $(l|x,v,n)$, we can use eq. \eqref{eq:div-varlgxv} to find its variance. The ME for its PMF $P(l|x,v,n)$ is
 
-\begin{equation}
-  \partial_tP(l|x,v,n) = n(x-(l-1))P(l-1|x,v,n) - (v-n)lP(l|x,v,n).
-\end{equation}
+\begin{equation*}
+  \dot{P}(l|x,v,n) = n(x-(l-1))P(l-1|x,v,n) - (v-n)lP(l|x,v,n).
+\end{equation*}
 
-Writing the moment generating function as defined on eq. \eqref{def:mom_gen} we get
+Recall that the moment generating function is given by
 
 \begin{equation}
   \label{eq:div-Gdef}
   G(z) \coloneqq \sum_{l=0}^xz^lP(l|x,v,n).
 \end{equation}
 
-The master eq. in terms of $G$ is thus given by \footnote{A detailed derivation of this step is done on section \ref{sec:mas-single_gene} for a more complex master equation.}
+The master eq. in terms of $G$ is thus given by
 
 \begin{equation*}
-  \partial_tG(z) = nxzG(z) - (v-n+nz)z\partial_zG(z)
+  \frac{G}(z) = nxzG(z) - (v-n+nz)z\frac{\partial G(z)}{\partial z}
 \end{equation*}
 
-At steady state we have
+Hence, in steady state
 
-\begin{equation}
-  \partial_zG(z) = \frac{nxz}{(v-z+nz)z}G(z)
-\end{equation}
+\begin{equation*}
+  \frac{\partial G(z)}{\partial z} = \frac{nxz}{(v-z+nz)z}G(z).
+\end{equation*}
 
 Solving with the boundary condition $G(1) = 1$, which follows from the normalization of the PDF, we find
 
-\begin{equation}
+\begin{equation*}
   G(z) = \left(1+\frac{n}{v}\left(s-1\right)\right)^x = \sum_{l=0}^x {x\choose l}\left(\frac{n}{v}\right)^l\left(1-\frac{n}{v}\right)^{x-l}z^l.
-\end{equation}
+\end{equation*}
 
-Comparing with eq. \eqref{eq:div-Gdef} we get
+Comparing with eq. \eqref{eq:div-Gdef},
 
 \begin{equation*}
   P(l|x,v,n) = {x\choose l}\left(\frac{n}{v}\right)^l\left(1-\frac{n}{v}\right)^{x-l},
 \end{equation*}
 
-which is a binomial distribution. Its average and variance are given by \footnote{In this case it was easy to find the distribution in terms of $G$, but we could have found the moments by differentiating and using the properties of $G$ as well.}
+which is a binomial distribution. Its average and variance are given by\footnote{In this case it was easy to find the PMF from the moment generating function, but we could have found the moments by differentiating and using the properties of $G$ as well.}
 
 \begin{equation*}
   \langle l|x,v,n\rangle = \frac{n}{v}x, \quad\quad \sigma^2(L|x,v,n) = \frac{n}{v}\left(1-\frac{n}{v}\right)x.
@@ -166,14 +163,14 @@ Taking the average of the conditional variance we get
   \end{split}
 \end{equation*}
 
-Where we replaced $\langle n^2|v\rangle = \sigma^2(n|v) + \langle n|v\rangle^2$. Now since $\langle n|v\rangle = \nicefrac{v}{2}$
+In the last step we replaced $\langle n^2|v\rangle = \sigma^2(n|v) + \langle n|v\rangle^2$. Since $\langle n|v\rangle = v/2$
 
 \begin{equation}
   \label{eq:div-varofavel}
   \left\langle\sigma^2(l|x,v,n)\right\rangle_{(n|v)} = \left(\frac{1}{2} - \frac{\sigma^2(n|v)}{v^2} + \frac{1}{4}\right)x = \frac{x}{4}\left(1-Q_v^2\right),
 \end{equation}
 
-where $Q_v^2 \coloneqq \nicefrac{4\sigma^2(n|v)}{v^2}$. On the other hand, the variance of the conditional mean is given by
+where $Q_v^2 \coloneqq 4\sigma^2(n|v)/v^2$ is the partitioning error of the relative available volume. On the other hand, the variance of the conditional mean is given by
 
 \begin{equation}
   \label{eq:div-aveofvarl}
@@ -186,7 +183,7 @@ Replacing eqs. \eqref{eq:div-varofavel} and \eqref{eq:div-aveofvarl} on eq. \eqr
   \sigma^2(l|x,v) = \frac{x}{4}(1-Q_v^2)+\frac{x^2}{4}Q_v^2,
 \end{equation*}
 
-averaging and multiplying by $\nicefrac{4}{\langle x\rangle^2}$
+and averaging and multiplying by $4/\langle x\rangle^2$
 
 \begin{equation}
   \label{eq:div-Qdis}
@@ -197,26 +194,28 @@ We will use this equation to calculate the partitioning error $Q_x^2$ at differe
 
 \subsection{Random size and random accessible volume}
 
-Consider an available volume for the molecules that varies randomly. Let $n$ be the fraction of available volume in one of the daughter cells and assume that each molecule is equally likely to occupy any volume unit. Hence, the probability per unit time of each molecule leaving its cell half is proportional to the available volume in the other cell half. Therefore the process is
+Consider an available volume for the molecules that varies randomly. Let $n$ be the fraction of available volume in one of the daughter cells and assume that each molecule is equally likely to occupy any volume unit. Hence, the probability per unit time of each molecule leaving its cell half is proportional to the available volume in the other cell half. A process consistent with these suppositions is
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     l&\xrightarrow{n(x-l)}l+1\\
     l&\xrightarrow{(1-n)l}l-1
   \end{split}
-\end{equation}
+\end{equation*}
 
 This is the general case with $v=1$. Assuming the volume variance is independent of $x$, eq. \eqref{eq:div-Qdis} becomes
 
-\begin{equation}
+\begin{equation*}
   Q_x^2 = \frac{1}{\langle x\rangle} - \frac{Q_v^2}{\langle x\rangle^2}\left(\langle x\rangle  - \langle x^2\rangle\right) = \frac{1}{\langle x\rangle}\left(1-\langle Q_v^2\rangle\right) + \langle Q_v^2\rangle\frac{\langle x^2\rangle}{\langle x\rangle^2},
-\end{equation}
+\end{equation*}
 
-but $\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{(\sigma^2(x) + \langle x\rangle^2)}{\langle x\rangle^2} = \eta_x^2 + 1$. Also, recalling the definition  $Q_v^2 \coloneqq \frac{4\sigma^2(n|v)}{v^2}$. In this case $v=1$ and it is fixed. Denoting it as $Q^2_\text{vol}$ we have = $Q^2_\text{vol} = Q_v^2 = \langle Q_v^2\rangle = \frac{\sigma^2(n)}{\langle n\rangle^2}$, therefore
+but $\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{\sigma^2(x) + \langle x\rangle^2}{\langle x\rangle^2} = \eta_x^2 + 1$. Recall the definition  $Q_v^2 \coloneqq \frac{4\sigma^2(n|v)}{v^2}$. In this case $v$ is fixed at $1$. Then, $Q_{v=1}^2 = \langle Q_{v=1}^2\rangle = \sigma^2(n)/\langle n\rangle^2$, and defining $Q^2_\text{vol}\coloneqq Q_{v=1}^2$ we obtain
 
-\begin{equation}
-  \boxed{Q_x^2 = \frac{1-Q_\text{vol}^2}{\langle x\rangle} + Q_\text{vol}^2(\eta^2_x+1)}.
-\end{equation}
+\begin{equation*}
+  Q_x^2 = \frac{1-Q_\text{vol}^2}{\langle x\rangle} + Q_\text{vol}^2(\eta^2_x+1).
+\end{equation*}
+
+\todo[inline]{Add figure}
 
 \begin{figure}[H]
   \centering
@@ -228,42 +227,42 @@ but $\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{(\sigma^2(x) + \langl
 
 The clustering of molecules into vesicles could increase randomness in cell division. Let $x$ and $v$ be the total number of molecules and vesicles in a cell before division, respectively, and let $x_i$ be the number of molecules in vesicle $i$, then $\sum_{i=0}^vx_i=x$. There are two processes that produce randomness: the migration of the molecules between vesicles and the partition of the vesicles into each daughter cells.
 
-In the first part, a vesicle loses a molecule with a probability proportional to its number of molecules.
+In the first process, a vesicle loses a molecule with a probability proportional to its number of molecules, i.e.
 
 \begin{equation}
   \label{eq:div-vesicle_switch}
   (x_1,\dotsc,x_i,\dotsc,x_j,\dotsc x_v) \xrightarrow{x_i} (x_1,\dotsc,x_i-1,\dotsc,x_j+1,\dotsc, x_v),\quad \text{for all } j\neq i.
 \end{equation}
 
-In the second part, let $n$ be the number of vesicles in one of the daughters, then similarly to the previous sections.
+In the second part, let $n$ be the number of vesicles in one of the daughters, then
 
 \begin{equation}
   \label{eq:div-arr_clust}
   \begin{split}
-    n &\xrightarrow{v-n} n+1\\
-    n &\xrightarrow{n} n-1
+    n &\xrightarrow{v-n} n+1,\\
+    n &\xrightarrow{n} n-1.
   \end{split}
 \end{equation}
 
-If we assume both processes are independent, they could be done in any order to calculate the analytical expressions. i.e. it is the same to first distribute the molecules in each vesicle and then distribute the vesicles into each cell than to first distribute the empty vesicles between cells and then distribute the molecules. We will follow the second approach.
+If we assume both processes are independent, they can be done in any order to calculate the analytical expressions. i.e. it is the same to first distribute the molecules in each vesicle and then distribute the vesicles into each cell than to first distribute the empty vesicles between cells and then distribute the molecules. We will follow the second approach.
 
-Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles in one of the daughter cells and $x_{n+1},\dotsc,x_v$ be the number of molecules in the vesicles of the other daughter cell. As usual, let $l$ be the number of molecules in one of the cells, then $l = \sum_{i=1}^nx_i$, and $r = x-l = \sum_{i=n+1}^vx_i$. Therefore, among all the possible transitions of eq. \eqref{eq:div-vesicle_switch}, the transitions coming from $x_i$ and entering into $x_j$, for $i,j=1,\dotsc,n$, or $i,j=n+1,\dotsc,v$, both with $i\neq j$ does not change the number of molecules. The net effect on the number of molecules in one of the daughter cells is
+Let $x_1,\dotsc,x_n$ be the number of molecules in each of the vesicles of one of the daughter cells and $x_{n+1},\dotsc,x_v$ be the number of molecules in the vesicles of the other daughter cell. As usual, let $l$ be the number of molecules in one of the cells, then $l = \sum_{i=1}^nx_i$, and $r = x-l = \sum_{i=n+1}^vx_i$. Therefore, among all the possible transitions of eq. \eqref{eq:div-vesicle_switch}, the transitions from $x_i$ into $x_j$, for $i,j=1,\dotsc,n$, or $i,j=n+1,\dotsc,v$, both with $i\neq j$ does not change the number of molecules. The net effect on the number of molecules in one of the daughter cells is given by
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     l&\xrightarrow{n(x_{n+1}+\dotsb+x_{v})}l+1,\\
-    l&\xrightarrow{(v-n)(x_1+\dotsb+x_n)}l-1.
+    l&\xrightarrow{(v-n)(x_1+\dotsb+x_n)}l-1,
   \end{split}
-\end{equation}
+\end{equation*}
 
-This can be simplified to
+This is equivalent to
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
-    l&\xrightarrow{n(x-l)}l+1\\
+    l&\xrightarrow{n(x-l)}l+1,\\
     l&\xrightarrow{(v-n)l}l-1,
   \end{split}
-\end{equation}
+\end{equation*}
 
 which is the same as eq. \eqref{eq:div-arr_disg}. Hence, from eq. \eqref{eq:div-Qdis}
 
@@ -272,35 +271,36 @@ which is the same as eq. \eqref{eq:div-arr_disg}. Hence, from eq. \eqref{eq:div-
   Q_x^2 = \frac{1}{\langle x\rangle} - \frac{\langle Q_v^2x\rangle}{\langle x\rangle^2} + \frac{\langle Q_v^2x^2\rangle}{\langle x\rangle^2}.
 \end{equation}
 
-Also, a correspondence can be established between eq. \eqref{eq:div-arr_ind} and eq. \eqref{eq:div-arr_clust} by switching $l\leftrightarrow n$ and $x\leftrightarrow v$. Using this correspondence on eq. \eqref{eq:div-var_ind} we get 
+Also, a correspondence can be established between eq. \eqref{eq:div-arr_ind} and eq. \eqref{eq:div-arr_clust} by replacing $l$ by $n$ and $x$ by $v$. Replacing on eq. \eqref{eq:div-var_ind} we get
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(n|v) = \frac{v}{4}.
-\end{equation}
+\end{equation*}
 
 Recalling that $Q_v^2 \coloneqq \frac{4\sigma^2(n|v)}{v^2}$ we have in this case
 
-\begin{equation}
+\begin{equation*}
   Q_v^2 = \frac{4}{v^2}\frac{v}{4} = \frac{1}{v},
-\end{equation}
+\end{equation*}
 
-and replacing on eq. \eqref{eq:div-clus-Qx1} results in
+and replacing on eq. \eqref{eq:div-clus-Qx1},
 
 \begin{equation}
   \label{eq:div-clus-Qx2}
-  \boxed{Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(\left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle \right)}
+  Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(\left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle \right)
 \end{equation}
 
-If $x$ and $v$ are independent we can write it as
+If $x$ and $v$ are independent we can simplify further
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:div-Qx_vesic_almost}
   \begin{split}
     Q_x^2 &= \frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle}\left\langle\frac{1}{v}\right\rangle + \frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle = \frac{1}{\langle x\rangle}\left(1-\left\langle\frac{1}{v}\right\rangle\right)+\frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle\\
   &\approx \frac{1}{\langle x\rangle} + \frac{\langle x^2\rangle}{\langle x\rangle^2}\left\langle\frac{1}{v}\right\rangle = \frac{1}{\langle x\rangle} + \left(1+\eta_x^2\right)\left\langle\frac{1}{v}\right\rangle,
   \end{split}
-\end{equation*}
+\end{equation}
 
-under the assumption that $\langle 1/v\rangle \ll 1$. This also allow us to do a Taylor expansion of $\langle 1/v\rangle$ around $\langle v\rangle$ obtaining
+under the assumption that $\langle 1/v\rangle \ll 1$. This also allow us to do a Taylor expansion of $\langle 1/v\rangle$ about $\langle v\rangle$ obtaining
 
 \begin{equation*}
   \begin{split}
@@ -309,57 +309,75 @@ under the assumption that $\langle 1/v\rangle \ll 1$. This also allow us to do a
   \end{split}
 \end{equation*}
 
-After replacing $Q_x$ becomes
+By replacing in eq. \eqref{eq:div-Qx_vesic_almost} we obtain an approximate expression for the partition noise
 
 \begin{equation*}
-  \boxed{Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{(1+\eta_x^2)(1+\eta_v^2)}{\langle v\rangle}}
+  Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{(1+\eta_x^2)(1+\eta_v^2)}{\langle v\rangle}.
 \end{equation*}
 
 When $x\gg 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning error.
 
-Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \eqref{eq:div-clus-Qx2} becomes by definition of expected value
+\todo[inline]{Add figure here}
 
-\begin{equation}
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{div-examples}
+  \caption[FILL]{\label{fig:div-examples2} From \cite{pedraza08}.}
+\end{figure}
+
+Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \eqref{eq:div-clus-Qx2} becomes
+
+\begin{equation*}
   \begin{split}
     \left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle &= \sum_{x,v}\left( \frac{x^2}{v}- \frac{x}{v}\right)P(x,v) = \sum_v\frac{1}{v}\left[\sum_x\left(x^2- x\right)P(x|v)\right]P(v)\\
-    &=\sum_v\frac{1}{v}\left(\langle\ x^2|v\rangle - \langle x|v\rangle\right)P(v)=\sum_v\frac{1}{v}\left(\sigma^2(x|v) + \langle x|v\rangle^2-\langle x|v\rangle\right)P(v)\\
+    &=\sum_v\frac{1}{v}\left(\langle x^2|v\rangle - \langle x|v\rangle\right)P(v)=\sum_v\frac{1}{v}\left(\sigma^2(x|v) + \langle x|v\rangle^2-\langle x|v\rangle\right)P(v)\\
     &=\sum_v\frac{1}{v}\left(\frac{sv\sigma^2(x|v)}{\langle x|v\rangle} + s^2v^2-sv\right)P(v) = s\left\langle\frac{\sigma^2(x|v)}{\langle x|v\rangle}\right\rangle + s^2\langle v\rangle - s
   \end{split}
-\end{equation}
+\end{equation*}
 
-Defining $q\coloneqq\sigma^2(x|v)/\langle x|v\rangle$ and recalling that by the law of total expectation (eq. \eqref{eq:con-total_exp})  $\langle x\rangle = \left\langle\langle x|v\rangle\right\rangle = s\langle v\rangle$, we get
+Defining $q\coloneqq\sigma^2(x|v)/\langle x|v\rangle$ and recalling that by the law of total expectation $\langle x\rangle = \left\langle\langle x|v\rangle\right\rangle = \langle sv\rangle =s\langle v\rangle$, we get
 
-\begin{equation}
+\begin{equation*}
   \left\langle \frac{x^2}{v}\right\rangle-\left\langle \frac{x}{v}\right\rangle = s\langle x\rangle+s(q-1).
-\end{equation}
+\end{equation*}
 
- in eq. \eqref{eq:div-clus-Qx2} we get
+Replacing in eq. \eqref{eq:div-clus-Qx2} we get
 
-\begin{equation}
+\begin{equation*}
   Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(s\langle x\rangle+s(q-1)\right)
-\end{equation}
+\end{equation*}
 
-And if $(1-q)$ is very small (or $0$ as in the case of a Poissonian), we can approximate it as
+And if $(1-q)$ is very small we can approximate it as
 
-\begin{equation}
+\begin{equation*}
   Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{s}{\langle x\rangle}
-\end{equation}
+\end{equation*}
+
+This result is exact if given $v$, $x$ follows a Poisson distribution.
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{div-examples3}
+  \caption[FILL]{\label{fig:div-examples3} From \cite{pedraza08}.}
+\end{figure}
+
+\todo[inline]{Include figure here}
 
 \subsection{Upper limit of the partitioning error}
 
-There is an upper bound for the partitioning error corresponding to the case when one daughter cells keeps all the molecules. There is an equal probability of each daughter to keep all of them, hence
+There is an upper bound for the partitioning error corresponding to the case when all the molecules migrate to one of the daughter cells. There is an equal probability for each daughter to keep all of them, thus
 
-\begin{equation}
-  \sigma^2(L|x) = \left\langle\left(l-\frac{x}{2}\right)^2\right\rangle = \frac{1}{2}\left(0-\frac{x}{2}\right)^2+\frac{1}{2}\left(x-\frac{x}{2}\right)^2 = \frac{x^2}{4}
-\end{equation}
+\begin{equation*}
+  \sigma^2(l|x) = \left\langle\left(l-\frac{x}{2}\right)^2\right\rangle = \frac{1}{2}\left(0-\frac{x}{2}\right)^2+\frac{1}{2}\left(x-\frac{x}{2}\right)^2 = \frac{x^2}{4}
+\end{equation*}
 
 Therefore
 
-\begin{equation}
+\begin{equation*}
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{\langle x^2\rangle}{4} = \eta_x^2+1.
-\end{equation}
+\end{equation*}
 
-It only depends on the prior heterogeneity of the mother cells.
+It depends on the heterogeneity of the mother cells.
 
 \section{Ordered segregation}
 
@@ -478,19 +496,18 @@ And using $v=\langle x\rangle$
 ANALYSIS, $\eta_x$ cannot exceed 1 by the symmetry of $P(x)$?
 
 \subsection{Pair formation mechanisms}
-A mechanism of ordered segregation consists in the pair formation of the molecules to be segregated and then spindles are formed which separates each molecule forming the pair into each cell half.
 
-Assume that in each cell there are $z$ pairs of molecules and $m$ independent molecules i.e. $x=m+2z$. Suppose also that the paired molecules do not interact with the unpaired ones, then
+The molecules to be segregated can form pairs than during their partition are separated using spindles into each cell half. If the splitting is reliable, it can reduce partition errors. To model this, suppose that in each cell there are $z$ pairs of molecules and $m$ independent molecules, i.e. $x=m+2z$. Also, assume that the paired molecules do not interact with the unpaired ones, then
 
 \begin{equation}
   \label{eq:div-pu}
   \begin{split}
-  \left\langle\sigma^2(l|x)\right\rangle &= \left\langle\sigma^2_\text{p}(L|2z)\right\rangle + \left\langle\sigma^2_\text{u}(l|m)\right\rangle = \sum_{x,z}\left[\sigma^2_\text{p}(l|2z) + \sigma^2_\text{u}(l|m)\right]P(2z,x)\\
-  &= \sum_{x,z}\left[\sigma^2_\text{p}(l|2z) + \sigma^2_\text{u}(l|x-2z)\right]P(2z|x)P(x)
+    \left\langle\sigma^2(l|x)\right\rangle &= \left\langle\sigma^2_\text{p}(l|2z)\right\rangle + \left\langle\sigma^2_\text{u}(l|m)\right\rangle = \sum_{x,z}\left[\sigma^2_\text{p}(l|2z) + \sigma^2_\text{u}(l|m)\right]P(2z,x)\\
+    &= \sum_{x,z}\left[\sigma^2_\text{p}(l|2z) + \sigma^2_\text{u}(l|x-2z)\right]P(2z|x)P(x),
   \end{split}
 \end{equation}
 
-where the subscripts 'p' and 'u' stand for 'paired' and 'unpaired' and $P(2z,x)$ is the PMF of having $z$ pairs and a total of $x$ molecules before division. Now We will proceed to find each one of the variances. The unpaired molecules segregate independently, therefore, by comparison with eq. \eqref{eq:div-var_ind} we get
+where the subscripts 'p' and 'u' represent the 'paired' and 'unpaired' molecules, respectively, and $P(2z,x)$ is the PMF of having $z$ pairs and a total of $x$ molecules before division. Now We will proceed to find each one of the variances. The unpaired molecules segregate independently, therefore, by comparison with eq. \eqref{eq:div-var_ind} we get
 
 \begin{equation}
   \label{eq:div-u}
@@ -499,15 +516,15 @@ where the subscripts 'p' and 'u' stand for 'paired' and 'unpaired' and $P(2z,x)$
 
 For the paired molecules, assume that each pair is split to separate daughters with probability $p$ and to the same daughter with probability $1-p$. If the second case happends, there is an equal probability of ending in each daughter. Let $M$ be the number of unsorted molecules, and $L$ and $R$ the number of sorted molecules to each cell half. The sorting process of the pairs can be modeled with the following process
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
-    (M,l,r)&\xrightarrow{pM}(M-2,l+1,r+1)\\
-    (M,l,r)&\xrightarrow{(1-p)M/2}(M-2,l+2,r)\\
-    (M,l,r)&\xrightarrow{(1-p)M/2}(M-2,l,r+2)
+    (M,l,r)&\xrightarrow{pM}(M-2,l+1,r+1),\\
+    (M,l,r)&\xrightarrow{(1-p)M/2}(M-2,l+2,r),\\
+    (M,l,r)&\xrightarrow{(1-p)M/2}(M-2,l,r+2).
   \end{split}
-\end{equation}
+\end{equation*}
 
-where the first line represents a succesfull split and the other two unsuccesful ones. With this relations, the matrices $\mathbf{A}$ and $\mathbf{B}$ of the time dependent FDT can be found and solved for the variances. To represent a sorting of $2z$ molecules, the initial conditions are $M(0) = 2z$, $L(0) = R(0)=0$, and all the entries of the covariance matrix are zero. The variance of the paired molecules after the sorting process is complete corresponds to the limit where the time of the mock process goes to infinity. After some algebraic steps the result is
+where the first line represents a succesfull split and the other two unsuccesful ones. With this relations, the matrices $\mathbf{A}$ and $\mathbf{B}$ of the time dependent FDT can be found and solved for the variances. To represent a sorting of $2z$ molecules, the initial conditions are $M(0) = 2z$, $L(0) = R(0)=0$, and all the entries of the covariance matrix are zero. The variance of the paired molecules after the sorting process is complete corresponds to the limit where the time of the process goes to infinity. After doing some algebraic steps the result is
 
 \begin{equation}
   \label{eq:div-p}
@@ -516,21 +533,29 @@ where the first line represents a succesfull split and the other two unsuccesful
 
 Replacing eqs. \eqref{eq:div-u} and \eqref{eq:div-p} in eq. \eqref{eq:div-pu} we get
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
     \left\langle\sigma^2(l|x)\right\rangle &=\sum_{x}\left[\sum_z\left((1-p)z+\frac{x-2z}{4}\right)P(2z|x)\right]P(x)\\
 &=\sum_x\left(\frac{1-p}{2}\langle 2z|x\rangle+\frac{x-\langle 2z|x\rangle}{4}\right)P(x)\\
     &=\frac{1}{4}\sum_x\left(2(1-p)\langle 2z|x\rangle+x-\langle 2z|x\rangle\right)P(x) = \frac{1}{4}\sum_x\left(x-(2p-1)\langle 2z|x\rangle\right)P(x)\\
     &=\frac{1}{4}\left(\langle x\rangle - (2p-1)\langle 2z\rangle\right).
   \end{split}
-\end{equation}
+\end{equation*}
 
-Hence,
+Hence
 
-\begin{equation}
-  \boxed{Q_x^2 = \frac{1 - (2p-1)k}{\langle x\rangle}}
-\end{equation}
+\begin{equation*}
+  Q_x^2 = \frac{1 - (2p-1)k}{\langle x\rangle},
+\end{equation*}
 
 where $k\coloneqq\langle 2z\rangle/\langle x\rangle$ is the average fraction of molecules that are in pairs. If $k=0$ there is independent segregation and $Q_x = 1/\langle x\rangle$ on the previous equation. For the segregation into pairs to be ordered, $p$ must be greater than $1/2$, in the opposite case, the paired molecules have a higher chance of not being split, increasing segregation error with respect to the independent case.
+
+\todo[inline]{Add figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{div-examples}
+  \caption[FILL]{\label{fig:div-examples4} From \cite{pedraza08}.}
+\end{figure}
 
 \section{Final remarks}
