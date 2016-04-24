@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  24 APR 2016 00:44
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  24 APR 2016 17:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -995,7 +995,11 @@ File: english.lbx 2013/11/25 v2.8a biblatex localization (PK/JW/AB)
 \@quotereset=\count330
  (./cover.aux (./introduction.aux) (./concepts.aux) (./master1.aux) (./fdt.aux)
 
-(./langevin1.aux) (./bursting.aux) (./division.aux) (./final.aux))
+(./langevin1.aux) (./bursting.aux) (./division.aux
+
+LaTeX Warning: Label `fig:div-examples3' multiply defined.
+
+) (./final.aux))
 \openout1 = `cover.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 23.
@@ -1144,21 +1148,21 @@ File: ursfs.fd 1998/03/24 rsfs font definition file (jk)
 
 
 ]
-<img/int-noise1.png, id=365, 1142.01656pt x 569.87906pt>
+<img/int-noise1.png, id=367, 1142.01656pt x 569.87906pt>
 File: img/int-noise1.png Graphic file (type png)
 
 <use img/int-noise1.png>
 Package pdftex.def Info: img/int-noise1.png used on input line 15.
 (pdftex.def)             Requested size: 426.79134pt x 212.97368pt.
  [12 <./img/int-noise1.png>]
-<img/int-lambda.png, id=379, 595.22375pt x 639.38875pt>
+<img/int-lambda.png, id=381, 595.22375pt x 639.38875pt>
 File: img/int-lambda.png Graphic file (type png)
 
 <use img/int-lambda.png>
 Package pdftex.def Info: img/int-lambda.png used on input line 25.
 (pdftex.def)             Requested size: 369.88582pt x 397.32425pt.
  [13 <./img/int-lambda.png>]
-<img/int-environments1.png, id=389, 1347.0325pt x 508.90125pt>
+<img/int-environments1.png, id=391, 1347.0325pt x 508.90125pt>
 File: img/int-environments1.png Graphic file (type png)
 
 <use img/int-environments1.png>
@@ -1174,28 +1178,28 @@ Chapter 1.
 
 
 
-] <img/con-dogma.png, id=423, 732.336pt x 425.4294pt>
+] <img/con-dogma.png, id=425, 732.336pt x 425.4294pt>
 File: img/con-dogma.png Graphic file (type png)
 
 <use img/con-dogma.png>
 Package pdftex.def Info: img/con-dogma.png used on input line 13.
 (pdftex.def)             Requested size: 426.79134pt x 247.93716pt.
  [18 <./img/con-dogma.png>]
-<img/con-tf_simple.png, id=433, 450.0012pt x 527.0892pt>
+<img/con-tf_simple.png, id=435, 450.0012pt x 527.0892pt>
 File: img/con-tf_simple.png Graphic file (type png)
 
 <use img/con-tf_simple.png>
 Package pdftex.def Info: img/con-tf_simple.png used on input line 29.
 (pdftex.def)             Requested size: 341.43306pt x 399.91637pt.
  [19] [20 <./img/con-tf_simple.png>]
-<img/con-biocircuits_conv.png, id=447, 723.1818pt x 219.7008pt>
+<img/con-biocircuits_conv.png, id=449, 723.1818pt x 219.7008pt>
 File: img/con-biocircuits_conv.png Graphic file (type png)
 
 <use img/con-biocircuits_conv.png>
 Package pdftex.def Info: img/con-biocircuits_conv.png used on input line 40.
 (pdftex.def)             Requested size: 369.88582pt x 112.3711pt.
 
-<img/con-biocircuits_comp.png, id=448, 816.80156pt x 691.08188pt>
+<img/con-biocircuits_comp.png, id=450, 816.80156pt x 691.08188pt>
 File: img/con-biocircuits_comp.png Graphic file (type png)
 
 <use img/con-biocircuits_comp.png>
@@ -1203,14 +1207,14 @@ Package pdftex.def Info: img/con-biocircuits_comp.png used on input line 46.
 (pdftex.def)             Requested size: 341.43306pt x 288.88155pt.
  [21 <./img/con-biocircuits_conv.png>]
 [22 <./img/con-biocircuits_comp.png>] [23]
-<img/con-hill_act.png, id=477, 803.0pt x 472.76625pt>
+<img/con-hill_act.png, id=479, 803.0pt x 472.76625pt>
 File: img/con-hill_act.png Graphic file (type png)
 
 <use img/con-hill_act.png>
 Package pdftex.def Info: img/con-hill_act.png used on input line 112.
 (pdftex.def)             Requested size: 398.33858pt x 234.52858pt.
 
-<img/con-hill_rep.png, id=480, 803.0pt x 472.76625pt>
+<img/con-hill_rep.png, id=482, 803.0pt x 472.76625pt>
 File: img/con-hill_rep.png Graphic file (type png)
 
 <use img/con-hill_rep.png>
@@ -1236,21 +1240,21 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
 
 ]
 Chapter 2.
-[37] <img/mas-dogma.png, id=588, 688.0104pt x 337.7418pt>
+[37] <img/mas-dogma.png, id=590, 688.0104pt x 337.7418pt>
 File: img/mas-dogma.png Graphic file (type png)
 
 <use img/mas-dogma.png>
 Package pdftex.def Info: img/mas-dogma.png used on input line 16.
 (pdftex.def)             Requested size: 369.88582pt x 181.57391pt.
  [38 <./img/mas-dogma.png>]
-<img/mas-detSol.png, id=598, 1003.75pt x 656.4525pt>
+<img/mas-detSol.png, id=600, 1003.75pt x 656.4525pt>
 File: img/mas-detSol.png Graphic file (type png)
  <use img/mas-detSol.png>
 Package pdftex.def Info: img/mas-detSol.png used on input line 58.
 (pdftex.def)             Requested size: 369.88582pt x 241.912pt.
 
 [39] [40 <./img/mas-detSol.png (PNG copy)>]
-<img/mas-trans_single.png, id=611, 644.1666pt x 302.0886pt>
+<img/mas-trans_single.png, id=613, 644.1666pt x 302.0886pt>
 File: img/mas-trans_single.png Graphic file (type png)
 
 <use img/mas-trans_single.png>
@@ -1264,7 +1268,7 @@ n[]; t\OT1/cmr/m/n/12 )$
  []
 
 [41 <./img/mas-trans_single.png>] [42] [43] [44] [45] [46]
-<img/mas-sim_simple.png, id=675, 1003.75pt x 657.45625pt>
+<img/mas-sim_simple.png, id=677, 1003.75pt x 657.45625pt>
 File: img/mas-sim_simple.png Graphic file (type png)
 
 <use img/mas-sim_simple.png>
@@ -1279,14 +1283,14 @@ it/12 A[][] \OMS/cmsy/m/n/12 ^^@ \OT1/cmr/m/n/12 ^^@[][] + \OML/cmm/m/it/12 A[]
 /m/n/12 ^^@[][]\OML/cmm/m/it/12 :
  []
 
-[51] [52] <img/mas-hist.png, id=736, 1003.75pt x 636.3775pt>
+[51] [52] <img/mas-hist.png, id=738, 1003.75pt x 636.3775pt>
 File: img/mas-hist.png Graphic file (type png)
 
 <use img/mas-hist.png>
 Package pdftex.def Info: img/mas-hist.png used on input line 424.
 (pdftex.def)             Requested size: 426.79134pt x 270.58795pt.
  [53 <./img/mas-hist.png (PNG copy)>]
-<img/mas-sim_autorreg.png, id=752, 1003.75pt x 657.45625pt>
+<img/mas-sim_autorreg.png, id=754, 1003.75pt x 657.45625pt>
 File: img/mas-sim_autorreg.png Graphic file (type png)
 
 <use img/mas-sim_autorreg.png>
@@ -1325,7 +1329,7 @@ Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
 []\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
  []
 
-[67] [68] [69] [70] <img/lan-circuit.png, id=904, 1370.11874pt x 157.58875pt>
+[67] [68] [69] [70] <img/lan-circuit.png, id=906, 1370.11874pt x 157.58875pt>
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
@@ -1337,34 +1341,34 @@ Overfull \hbox (3.55656pt too wide) in paragraph at lines 127--128
  []
 
 [71 <./img/lan-circuit.png>] [72] [73] [74] [75] [76] [77] [78] [79] [80]
-<img/lan-Hs.png, id=1011, 904.88063pt x 325.215pt>
+<img/lan-Hs.png, id=1013, 904.88063pt x 325.215pt>
 File: img/lan-Hs.png Graphic file (type png)
  <use img/lan-Hs.png>
 Package pdftex.def Info: img/lan-Hs.png used on input line 434.
 (pdftex.def)             Requested size: 426.79134pt x 153.38701pt.
 
-<img/lan-noise_corr_full.png, id=1015, 904.88063pt x 853.68938pt>
+<img/lan-noise_corr_full.png, id=1017, 904.88063pt x 853.68938pt>
 File: img/lan-noise_corr_full.png Graphic file (type png)
 
 <use img/lan-noise_corr_full.png>
 Package pdftex.def Info: img/lan-noise_corr_full.png used on input line 444.
 (pdftex.def)             Requested size: 426.79134pt x 402.6409pt.
  [81 <./img/lan-Hs.png>] [82 <./img/lan-noise_corr_full.png>] [83] <img/lan-eta
-2det.png, id=1039, 1003.75pt x 679.53876pt>
+2det.png, id=1041, 1003.75pt x 679.53876pt>
 File: img/lan-eta2det.png Graphic file (type png)
 
 <use img/lan-eta2det.png>
 Package pdftex.def Info: img/lan-eta2det.png used on input line 462.
 (pdftex.def)             Requested size: 426.79134pt x 288.94014pt.
 
-<img/lan-eta2_corrATC.png, id=1043, 1508.63625pt x 513.41812pt>
+<img/lan-eta2_corrATC.png, id=1045, 1508.63625pt x 513.41812pt>
 File: img/lan-eta2_corrATC.png Graphic file (type png)
 
 <use img/lan-eta2_corrATC.png>
 Package pdftex.def Info: img/lan-eta2_corrATC.png used on input line 470.
 (pdftex.def)             Requested size: 426.79134pt x 145.24457pt.
  [84 <./img/lan-eta2det.png (PNG copy)>]
-<img/lan-noise_sources.png, id=1054, 1307.88625pt x 436.63126pt>
+<img/lan-noise_sources.png, id=1056, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
@@ -1375,7 +1379,7 @@ Package pdftex.def Info: img/lan-noise_sources.png used on input line 482.
 
  (./bursting.tex
 Chapter 5.
-<img/bur-examples.png, id=1071, 1337.74782pt x 551.05875pt>
+<img/bur-examples.png, id=1073, 1337.74782pt x 551.05875pt>
 File: img/bur-examples.png Graphic file (type png)
 
 <use img/bur-examples.png>
@@ -1440,7 +1444,18 @@ Type  H <return>  for immediate help.
 l.360 ...ncludegraphics[width=15cm]{div-examples3}
                                                   
 ? 
-[115] [116] [117] [118] [119] [120]
+[115] [116]
+
+! LaTeX Error: File `div-examples3' not found.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.430 ...ncludegraphics[width=15cm]{div-examples3}
+                                                  
+? 
+[117] [118] [119] [120] [121]
 
 ! LaTeX Error: File `div-examples' not found.
 
@@ -1448,45 +1463,48 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.557   \includegraphics[width=15cm]{div-examples}
+l.590   \includegraphics[width=15cm]{div-examples}
                                                   
 ? 
-) [121]
+) [122]
 \openout2 = `final.aux'.
 
- (./final.tex [122
-
-
-
-]
+ (./final.tex
 Chapter 7.
-) [123] [124
+) [123
+
+
+
+] [124
 
 
 ] [125]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 104.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
  [126]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 104.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
  (./cover.aux (./introduction.aux) (./concepts.aux)
 (./master1.aux) (./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux)
 (./final.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 104.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 104.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `cover.out' has not changed.
-(rerunfilecheck)             Checksum: 42AFBBA6CBC1D2E358024B0280CC1479;3511.
+(rerunfilecheck)             Checksum: FB2DB616470AFACF266D8DB7F4C6467B;3512.
 
 
 LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: There were multiply-defined labels.
 
 Package logreq Info: Writing requests to 'cover.run.xml'.
 \openout1 = `cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26852 strings out of 494966
- 488781 string characters out of 6179559
- 890965 words of memory out of 5000000
- 29126 multiletter control sequences out of 15000+600000
+ 26850 strings out of 494966
+ 488773 string characters out of 6179559
+ 891112 words of memory out of 5000000
+ 29129 multiletter control sequences out of 15000+600000
  15160 words of font info for 60 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,82p,10368b,1101s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1550,10 +1568,10 @@ onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (126 pages, 5200601 bytes).
+Output written on cover.pdf (126 pages, 5201529 bytes).
 PDF statistics:
- 1548 PDF objects out of 1728 (max. 8388607)
- 1331 compressed objects within 14 object streams
- 379 named destinations out of 1000 (max. 500000)
+ 1545 PDF objects out of 1728 (max. 8388607)
+ 1328 compressed objects within 14 object streams
+ 374 named destinations out of 1000 (max. 500000)
  515 words of extra memory for PDF output out of 10000 (max. 10000000)
 

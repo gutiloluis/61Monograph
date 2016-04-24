@@ -88,12 +88,12 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{116}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{116}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{117}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{119}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{120}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Final remarks}{121}{section.6.5}
+\contentsline {section}{\numberline {6.5}Final remarks}{122}{section.6.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {7}Conclusions}{123}{chapter.7}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{126}{chapter*.9}
+\contentsline {chapter}{Bibliography}{126}{chapter*.11}

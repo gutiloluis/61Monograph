@@ -383,105 +383,138 @@ It depends on the heterogeneity of the mother cells.
 
 \subsection{Self-volume exclusion}
 
-By analogy to eq. FILL making the correspondence FILL. If a molecule occupy a fixed volume fraction $k$ of the total cell volume, we have
+Suppose that each molecule occupies a fixed fraction $k$ of the total cell volume. Also, assume that each volume unit is equally likely to be occupied by one of the copies of the molecule. The following model satisfies this supposition
 
-UNDERSTAND
-\begin{equation}
-  \sigma^2(l|x) = \frac{1}{4}x(1-kx),
-\end{equation}
+\begin{equation*}
+  \begin{split}
+  l&\xrightarrow{(\frac{1}{2}-kl)(x-l)}l+1,\\
+  l&\xrightarrow{(\frac{1}{2}-k(x-l))l}l-1.
+  \end{split}
+\end{equation*}
 
-so that
+It assumes that each daughter cell has exactly $1/2$ of the total cell volume. Also, the probability for a molecule to leave its cell half its proportional to the available volume in the other cell half and the number of molecules in its cell half.
+
+The $1\times 1$ matrices of the FDT are given by
+
+\begin{equation*}
+  \begin{split}
+  \mathbf{A}&=\frac{\partial}{\partial l}\left[\left(\frac{1}{2}-kl\right)\left(x-l\right)-\left(\frac{1}{2}-k\left(x-l\right)\right)l\right]=-1,\\
+  \mathbf{B}&=\left[\left(\frac{1}{2}-kl\right)\left(x-l\right)+\left(\frac{1}{2}-k\left(x-l\right)\right)l\right]_{l=\langle l|x\rangle} = \left[\frac{1}{2}x-2kxl+2kl^2\right]_{l=\langle l|x\rangle},
+  \end{split}
+\end{equation*}
+
+and by symmetry $\langle l|x\rangle = x/2$, then
+
+\begin{equation*}
+  \mathbf{B} = \frac{1}{2}x(1-kx).
+\end{equation*}
+
+Replacing in the stationary FDT and solving for the variance, we obtain
+
+\begin{equation*}
+  \sigma^2(l|x) = \frac{1}{4}x(1-kx).
+\end{equation*}
+
+Hence,
 
 \begin{equation}
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle \sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{1}{4}\left(\langle x\rangle-k\langle x^2\rangle\right) = \frac{1}{\langle x\rangle} - k\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{1}{\langle x\rangle} - k(\eta_x^2+1).
 \end{equation}
 
-COMMENTS. It can be noticed that the reduction with respect to independent segregation gets bigger when the volume fraction occupied by eac molecule is bigger. This makes sense because it makes the exclusion bigger when there are more molecules, having the net effect of reducing the uneveness.
+It can be noticed that noise is more reduced with respect to independent segregation when the volume fraction occupied by each molecule is large. This makes sense because exclusion is stronger if the volumes of the molecules are larger.
+
+\todo[inline]{Add figure}
+
+\begin{figure}[H]
+  \centering
+  \includegraphics[width=15cm]{div-examples3}
+  \caption[FILL]{\label{fig:div-examples3} From \cite{pedraza08}.}
+\end{figure}
 
 \subsection{Binding to spindle sites}
 
-Suppose each dividing cells has a random nmber of binding sites $v$ which are also distributed randomly between both daughter cells. Letting $x$ be the (random) total number of molecules of some type which are going to bind the sites before division. We will separate cells in which $v<x$ and $v\geq x$. Assume also that the binding is such that all possible molecules of $x$ are bound, that is, at equilibrium if $v<x$ all binding sites are occupied, and if $v>x$, all molecules are bound to sites.
+Suppose each dividing cells has a number $v$ of binding sites which are distributed randomly between both daughter cells. Let $x$ be the total number of molecules which are going to bind the sites before division. Also, assume that all possible molecules of $x$ are bound, i.e. at equilibrium if $v<x$ all binding sites are occupied, and if $v>x$ all molecules are bound.
 
 Let $n$ be the number of binding sites on a cell half, and suppose that it increases with a rate dependent on the number of binding sites in the other cell half, then
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
-    n\xrightarrow{f(v-n)}n+1\\
-    n\xrightarrow{f(n)}n-1
+    n\xrightarrow{f(v-n)}n+1,\\
+    n\xrightarrow{f(n)}n-1,
   \end{split}
-\end{equation}
+\end{equation*}
 
-where $f$ is some function. Also, the rate at which a molecule leaves a cell half is proportional to the number of molecules in its cell half and the number of free sites in the other cell half, obtaining
+where $f$ is some function. Also, the rate at which a molecule leaves a cell half is proportional to the number of molecules in its cell half and the number of free sites in the other cell half. With these assumptions the transitions for $l$ are
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
-    l\xrightarrow{\lambda(n-l)(x-l)}l+1\\
-    l\xrightarrow{\lambda(v-n-x+l)l}l-1
+    l\xrightarrow{\lambda(n-l)(x-l)}l+1,\\
+    l\xrightarrow{\lambda(v-n-x+l)l}l-1.
   \end{split}
-\end{equation}
+\end{equation*}
 
-UNDERSTAND AND EXPLAIN. SOLVE. Solving the FDR we get
+From the FDT, if $v\geq x$ the variance is given by
 
-\begin{equation}
+\begin{equation*}
   \sigma^2(l|x,v) =\frac{1}{4}\left(x-\frac{x^2}{v}+Q_v^2x^2\right),\quad \text{for } v\geq x,
-\end{equation}
+\end{equation*}
 
-with $Q_v^2 \coloneqq 4\sigma^2(n|v)/v^2$ as before. In the case $v<x$, the $v$ copies of the molecule that are bound segregate along with $n$, and for the remaining copies suppose they segregate independently. The result is (COMPARE?)
+with $Q_v^2 \coloneqq 4\sigma^2(n|v)/v^2$ as before. If $v<x$, the $v$ copies of the molecule that are bound segregate along with $n$, and for the remaining copies suppose they segregate independently. The result is
 
-\begin{equation}
-  \sigma^2(l|x,v) = \frac{1}{4}(x-v) + \sigma^2(n|v),\quad \text{for } v<x.
-\end{equation}
+\begin{equation*}
+  \sigma^2(l|x,v) = \frac{1}{4}(x-v) + \sigma^2(n|v) = \frac{1}{4}\left(x-v+v^2Q_v^2\right),\quad \text{for } v<x.
+\end{equation*}
 
-OJO, ERROR AQUI (CREO QUE YA CORREGIDO)
-Putting together both cases we get by definition of expectations
+Both cases are mutually exclusive, then by definition of expected value
 
 \begin{equation*}
   \begin{split}
     Q_x^2 &= \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{1}{\langle x\rangle^2}\sum_{x,v}\sigma^2(l|x)P(x,v)\\
-    &=\frac{1}{\langle x\rangle^2}\left[\sum_{v\geq x}\left(x-\frac{x^2}{v}+Q_v^2x^2\right)P(x,v) + \sum_{v<x}\left((x-v)+4\sigma^2(n|v)\right)P(x,v)\right]\\,
+    &=\frac{1}{\langle x\rangle^2}\left[\sum_{v\geq x}\left(x-\frac{x^2}{v}+Q_v^2x^2\right)P(x,v) + \sum_{v<x}\left(x-v+v^2Q_v^2\right)P(x,v)\right]\\,
   \end{split}
 \end{equation*}
 
-notice that there is an $x$ in both sums than can be taken out as a $\langle x\rangle$, also, by replacing $4\sigma^2(n|v) = v^2Q_v^2$ and separating the sums by first summing $x$ and then over all $v$s we obtain
+notice that there is an $x$ in both sums than can be taken out as a $\langle x\rangle$. Separating the sums by first summing $x$ and then over all $v$s we obtain
 
-\begin{equation}
+\begin{equation*}
   \begin{split}
      Q_x^2 &= \frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle^2}\sum_{v=0}^\infty\left[\sum_{x=0}^v\left(\frac{1}{v}-Q_v^2\right)x^2P(x,v)+\sum_{x=v+1}^\infty\left(v-v^2Q_v^2\right)P(x,v)\right]\\
      &=\frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle^2}\sum_{v=0}^\infty\left[\left(\frac{1}{v}-Q_v^2\right)\sum_{x=0}^vx^2P(x,v)+\left(v-v^2Q_v^2\right)\sum_{x=v+1}^\infty P(x,v)\right].
   \end{split}
-\end{equation}
-
-To make interpretations easier, consider a special case in which $v$ is fixed, each daughter cell recieves exactly $v/2$ binding sites, $\langle x\rangle = v$, and $P(x)$ is symmetric. With these assumptions, the previous eq. can be reduced
-
-\begin{equation*}
-  Q_x^2 = \frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle^2}\left[\frac{1}{v}\sum_{x=0}^vx^2P(x)+v\sum_{x=v+1}^{2v}P(x)\right]
 \end{equation*}
 
-where we made $Q_v^2=0$ because there is no uncertainty on $n$ since each cell recieves exactly $v/2$ sites. Also, for the sum over $v$ only survives the term corresponding to the fixed number $v$ of binding sites. Writing $x^2 = \left(x-\langle x\rangle\right)^2 + 2x\langle x\rangle - \langle x\rangle^2$ on the first sum we get 
+Consider a simpler case in which $v$ is fixed, each daughter cell recieves exactly $v/2$ binding sites, $\langle x\rangle = v$, and $P(x)$ is symmetric. With these assumptions, the previous eq. can be reduced to
 
 \begin{equation*}
-  Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{v}\sum_{x=0}^vP(x)+\frac{2\langle x\rangle}{v}\sum_{x=0}^vxP(x)-\frac{\langle x\rangle^2}{v}\sum_{x=0}^vP(x)+v\sum_{x=v+1}^{2v}P(x)\right]
+  Q_x^2 = \frac{1}{\langle x\rangle} - \frac{1}{\langle x\rangle^2}\left[\frac{1}{v}\sum_{x=0}^vx^2P(x)+v\sum_{x=v+1}^{2v}P(x)\right].
 \end{equation*}
 
-evaluating $\langle x\rangle = v$ we get
+For the sum over $v$ only survives the term corresponding to the fixed number $v$ of binding sites, and $Q_v=0$ because $n$ is now fixed. Writing $x^2 = \left(x-\langle x\rangle\right)^2 + 2x\langle x\rangle - \langle x\rangle^2$ on the first sum we get 
 
 \begin{equation*}
-  Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{v}\sum_{x=0}^vP(x)+2\sum_{x=0}^vxP(x)-v\sum_{x=0}^vP(x)+v\sum_{x=v+1}^{2v}P(x)\right],
+  Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{v}\sum_{x=0}^vP(x)+\frac{2\langle x\rangle}{v}\sum_{x=0}^vxP(x)-\frac{\langle x\rangle^2}{v}\sum_{x=0}^vP(x)+v\sum_{x=v+1}^{2v}P(x)\right],
 \end{equation*}
 
-and since $P(x)$ is symmetric about $x=v$ we have $\sum_{x=0}^vP(x) = \sum_{x=v+1}^{2v}P(x) = 1/2$
+and evaluating $\langle x\rangle = v$,
+
+\begin{equation*}
+  Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{v}\sum_{x=0}^vP(x)+2\sum_{x=0}^vxP(x)-v\sum_{x=0}^vP(x)+v\sum_{x=v+1}^{2v}P(x)\right].
+\end{equation*}
+
+Since $P(x)$ is symmetric about $x=v$, $\sum_{x=0}^vP(x) = \sum_{x=v+1}^{2v}P(x) = 1/2$, using this
 
 \begin{equation}
+  \label{eq:div-spindles_1}
   Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{2v}+2\sum_{x=0}^vxP(x)\right].
 \end{equation}
 
 The absolute deviation $\left\langle\left|x-\langle x\rangle\right|\right\rangle$ can be written using the symmetry of $P(x)$ as
 
-\begin{equation}
+\begin{equation*}
   \left\langle\left|x-\langle x\rangle\right|\right\rangle = \sum_{x=0}^\infty\left|x-\langle x\rangle\right|P(x) = 2\sum_{x=0}^v\left(\langle x\rangle-x\right)P(x) = \langle x\rangle-2\sum_{x=0}^vxP(x).
-\end{equation}
+\end{equation*}
 
-Thus, solving for the sum and replacing we get
+Replacing this result in eq. \eqref{eq:div-spindles_1},
 
 \begin{equation*}
   Q_x^2 = \frac{1}{\langle x\rangle}-\frac{1}{\langle x\rangle^2}\left[\frac{\sigma^2(x)}{2v}+\langle x\rangle-\left\langle\left|x-\langle x\rangle\right|\right\rangle\right] = \frac{\left\langle\left|x-\langle x\rangle\right|\right\rangle}{\langle x\rangle^2}-\frac{\eta_x^2}{2v}
@@ -489,11 +522,11 @@ Thus, solving for the sum and replacing we get
 
 And using $v=\langle x\rangle$
 
-\begin{equation}
-  \boxed{Q_x^2 = \frac{1}{\langle x\rangle}\left(\frac{\left\langle\left|x-\langle x\rangle\right|\right\rangle}{\langle x\rangle}-\frac{\eta_x^2}{2}\right)}
-\end{equation}
+\begin{equation*}
+  Q_x^2 = \frac{1}{\langle x\rangle}\left(\frac{\left\langle\left|x-\langle x\rangle\right|\right\rangle}{\langle x\rangle}-\frac{\eta_x^2}{2}\right)
+\end{equation*}
 
-ANALYSIS, $\eta_x$ cannot exceed 1 by the symmetry of $P(x)$?
+\todo[inline]{Include analysis}
 
 \subsection{Pair formation mechanisms}
 
@@ -542,7 +575,7 @@ Replacing eqs. \eqref{eq:div-u} and \eqref{eq:div-p} in eq. \eqref{eq:div-pu} we
   \end{split}
 \end{equation*}
 
-Hence
+Hence,
 
 \begin{equation*}
   Q_x^2 = \frac{1 - (2p-1)k}{\langle x\rangle},
