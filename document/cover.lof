@@ -56,14 +56,24 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.1}{\ignorespaces FILL}}{111}{figure.6.3.1}
+\contentsline {figure}{\numberline {6.3.1}{\ignorespaces Partition of molecules with random accessible volume}}{108}{figure.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.2}{\ignorespaces FILL}}{114}{figure.6.3.2}
+\contentsline {figure}{\numberline {6.3.2}{\ignorespaces Partition of molecules with random size of the daughter cells}}{111}{figure.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.3}{\ignorespaces FILL}}{115}{figure.6.3.3}
+\contentsline {figure}{\numberline {6.3.3}{\ignorespaces Partition noise when the sizes of the daughter cells are random}}{112}{figure.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.1}{\ignorespaces FILL}}{117}{figure.6.4.1}
+\contentsline {figure}{\numberline {6.3.4}{\ignorespaces Partition of molecules in clusters}}{113}{figure.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.2}{\ignorespaces FILL}}{122}{figure.6.4.2}
+\contentsline {figure}{\numberline {6.3.5}{\ignorespaces Noise for partition of molecules in clusters}}{116}{figure.6.3.5}
 \defcounter {refsection}{0}\relax 
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {6.3.6}{\ignorespaces Noise for partition of molecules in clusters 2}}{117}{figure.6.3.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Volume exclusion}}{118}{figure.6.4.1}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Volume exclusion}}{120}{figure.6.4.2}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4.3}{\ignorespaces Binding to spindle sites}}{120}{figure.6.4.3}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4.4}{\ignorespaces Pair formation}}{123}{figure.6.4.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {figure}{\numberline {6.4.5}{\ignorespaces Noise for pair formation}}{126}{figure.6.4.5}

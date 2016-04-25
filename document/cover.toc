@@ -78,22 +78,22 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.3.1}General case}{108}{subsection.6.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{110}{subsection.6.3.2}
+\contentsline {subsection}{\numberline {6.3.2}Random size and random accessible volume}{111}{subsection.6.3.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{111}{subsection.6.3.3}
+\contentsline {subsection}{\numberline {6.3.3}Clustered segregation}{113}{subsection.6.3.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{115}{subsection.6.3.4}
+\contentsline {subsection}{\numberline {6.3.4}Upper limit of the partitioning error}{117}{subsection.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.4}Ordered segregation}{116}{section.6.4}
+\contentsline {section}{\numberline {6.4}Ordered segregation}{118}{section.6.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{116}{subsection.6.4.1}
+\contentsline {subsection}{\numberline {6.4.1}Self-volume exclusion}{118}{subsection.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{117}{subsection.6.4.2}
+\contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{120}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{120}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{123}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {6.5}Final remarks}{122}{section.6.5}
+\contentsline {section}{\numberline {6.5}Final remarks}{126}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{\numberline {7}Conclusions}{123}{chapter.7}
+\contentsline {chapter}{Conclusions}{127}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{126}{chapter*.11}
+\contentsline {chapter}{Bibliography}{130}{chapter*.7}
