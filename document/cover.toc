@@ -90,10 +90,10 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {subsection}{\numberline {6.4.2}Binding to spindle sites}{121}{subsection.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{125}{subsection.6.4.3}
+\contentsline {subsection}{\numberline {6.4.3}Pair formation mechanisms}{124}{subsection.6.4.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.5}Final remarks}{127}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusions}{129}{chapter*.6}
+\contentsline {chapter}{Conclusions}{129}{chapter*.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{132}{chapter*.7}
+\contentsline {chapter}{Bibliography}{132}{chapter*.6}

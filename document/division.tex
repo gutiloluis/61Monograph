@@ -461,15 +461,17 @@ Figure \ref{fig:div-Pvol_exclusion} evidences that to considerably reduce partit
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Pvol_exclusion}
-  \caption[Partition noise when molecules have a non-negligible volume]{\label{fig:div-Pvol_exclusion}Partition noise $Q_X$ when molecules have a non-negligible volume [eq. \eqref{eq:div-Rvol}] normalized by the partition error of independent segregation $Q_\text{ind}$, as a function of $k\langle x\rangle$ for various values of $k$.}
+  \caption[Partition noise when molecules have a non-negligible volume]{\label{fig:div-Pvol_exclusion}Partition noise $Q_x$ when molecules have a non-negligible volume [eq. \eqref{eq:div-Rvol}] normalized by the partition error of independent segregation $Q_\text{ind}$, as a function of $k\langle x\rangle$ for various values of $k$.}
 \end{figure}
 
 \subsection{Binding to spindle sites}
 
+At the segregation process, some molecules bind to spindles that pull them to each of the daughter cells. This is characteristic for chromosome segregation during mitosis and meiosis in eukaryotes, a process that has to be very reliable. Figure \ref{fig:div-spindles} shows how this process occurs.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=4cm]{div-spindles}
-  \caption[Binding to spindle sites]{\label{fig:div-spindles} Partition of molecules when they bind to spindle sites.}
+  \caption[Partition of molecules when they bind to spindle sites]{\label{fig:div-spindles} Partition of molecules when they bind to spindle sites.}
 \end{figure}
 
 Suppose each dividing cells has a number $v$ of binding sites which are distributed randomly between both daughter cells. Let $x$ be the total number of molecules which are going to bind the sites before division. Also, assume that all possible molecules of $x$ are bound, i.e. at equilibrium if $v<x$ all binding sites are occupied, and if $v>x$ all molecules are bound.
@@ -571,17 +573,17 @@ And using $v=\langle x\rangle$
   Q_x^2 = \frac{1}{\langle x\rangle}\left(\frac{\left\langle\left|x-\langle x\rangle\right|\right\rangle}{\langle x\rangle}-\frac{\eta_x^2}{2}\right)
 \end{equation*}
 
-\todo[inline]{Include analysis}
-
 \subsection{Pair formation mechanisms}
+
+The molecules to be segregated can form pairs than during their partition are separated using spindles into each cell half. If the splitting process has a low error, it can reduce partition errors. Figure \ref{fig:div-pair}
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=4cm]{div-pair}
-  \caption[Pair formation]{\label{fig:div-pair}Pair formation.}
+  \caption[Pair formation between molecules before segregation]{\label{fig:div-pair}Pair formation between molecules before segregation. The molecules form pairs using and then are separated into each daughter cell.}
 \end{figure}
 
-The molecules to be segregated can form pairs than during their partition are separated using spindles into each cell half. If the splitting is reliable, it can reduce partition errors. To model this, suppose that in each cell there are $z$ pairs of molecules and $m$ independent molecules, i.e. $x=m+2z$. Also, assume that the paired molecules do not interact with the unpaired ones, then
+Suppose that in each cell there are $z$ pairs of molecules and $m$ independent molecules, i.e. $x=m+2z$. Also, assume that the paired molecules do not interact with the unpaired ones, then
 
 \begin{equation}
   \label{eq:div-pu}
@@ -628,16 +630,34 @@ Replacing eqs. \eqref{eq:div-u} and \eqref{eq:div-p} in eq. \eqref{eq:div-pu} we
 
 Hence,
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:div-Rpair}
   Q_x^2 = \frac{1 - (2p-1)k}{\langle x\rangle},
-\end{equation*}
+\end{equation}
 
 where $k\coloneqq\langle 2z\rangle/\langle x\rangle$ is the average fraction of molecules that are in pairs. If $k=0$ there is independent segregation and $Q_x = 1/\langle x\rangle$ on the previous equation. For the segregation into pairs to be ordered, $p$ must be greater than $1/2$, in the opposite case, the paired molecules have a higher chance of not being split, increasing segregation error with respect to the independent case.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Ppair}
-  \caption[Noise for pair formation]{\label{fig:div-Ppair}Noise for pair formation.}
+  \caption[Partition noise when molecules form pairs]{\label{fig:div-Ppair}Partition noise when molecules form pairs [eq. \eqref{eq:div-Rpair}] normalized by $Q_\text{ind}$ as a function of $k$.}
 \end{figure}
 
+Figure \ref{fig:div-Ppair} shows that for the partition error to be considerably reduced, the probability of a successful split $p$ should be very close to $1$ and the mean fraction of paired molecules $k$ must also be close to $1$.
+
 \section{Final remarks}
+
+From the analysis of the previous section, the analyzed mechanisms of ordered segregation need extreme values of the parameters to considerably reduce partition noise. Besides, we have seen that for some mechanisms, noise could be large regardless of having a high number of copies (e.g. segregation in clusters). For these reasons, partition noise is, in general, not negligible and it must be considered in the models.
+
+Besides, to effectively reduce partition errors each source of noise must be independently controlled. For example, in the case of clustered segregation. Both the number of molecules and the number of clusters must be adjusted to avoid large errors. This is different from gene expression, in which fluctuations arising from many sources can be controlled with a single negative feedback loop. In this sense, controlling partitioning error is very difficult.
+
+Finally, in this chapter we added more possible ways in which noise can be affected. It is then completely clear that it is impossible to infer parameters of a gene circuit based only on noise measurements and prior assumptions. For example, some of the mechanisms analyzed in this chapter produce a partition noise of the form
+
+\begin{equation*}
+  Q_x^2=\frac{A}{\langle x\rangle},
+\end{equation*}
+
+where $A$ depends on the specific mechanism. Many combinations of $A$ and $\langle x\rangle$ yield the same noise, and if the noise is measured, $A$ and $\langle x\rangle$ are not known separately. Consequently, the mechanism that produces the noise can not be inferred. 
+
+
+
