@@ -243,13 +243,15 @@ Figure \ref{fig:div-Prandom_size} shows the partition error with respect to inde
 
 \subsection{Clustered segregation}
 
+The clustering of molecules into vesicles could increase randomness in cell division. As can be seen on fig. \ref{fig:div-clustering}. There are two process that contribute to partition noise: the segregation of the molecules into the clusters, and the segregation of clusters into each daughter cell.
+
 \begin{figure}[H]
   \centering
   \includegraphics[width=4cm]{div-clustering}
   \caption[Partition of molecules in clusters]{\label{fig:div-clustering} Partition of molecules in clusters.}
 \end{figure}
 
-The clustering of molecules into vesicles could increase randomness in cell division. Let $x$ and $v$ be the total number of molecules and vesicles in a cell before division, respectively, and let $x_i$ be the number of molecules in vesicle $i$, then $\sum_{i=0}^vx_i=x$. There are two processes that produce randomness: the migration of the molecules between vesicles and the partition of the vesicles into each daughter cells.
+To model this mechanism, let $x$ and $v$ be the total number of molecules and vesicles in a cell before division, respectively, and let $x_i$ be the number of molecules in vesicle $i$, then $\sum_{i=0}^vx_i=x$. There are two processes that produce randomness: the migration of the molecules between vesicles and the partition of the vesicles into each daughter cells.
 
 In the first process, a vesicle loses a molecule with a probability proportional to its number of molecules, i.e.
 
@@ -335,19 +337,20 @@ under the assumption that $\langle 1/v\rangle \ll 1$. This also allow us to do a
 
 By replacing in eq. \eqref{eq:div-Qx_vesic_almost} we obtain an approximate expression for the partition noise
 
-\begin{equation*}
+\begin{equation}
+  \label{eq:div-Rclust}
   Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{(1+\eta_x^2)(1+\eta_v^2)}{\langle v\rangle}.
-\end{equation*}
+\end{equation}
 
-When $x\gg 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning error.
+When $x\gg 1$, $Q_x^2\approx(1+\eta_v^2)/\langle v\rangle$, meaning that the segregation of clusters is the more significant factor on partitioning error. Figure \ref{fig:div-Pclustering} shows the partition error compared to independent segregation. Different from the case of random accessible volume, segregation can be highly disordered if the mean number of clusters $\langle v\rangle$ is small and the mean number of molecules $\langle x\rangle$ is large.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Pclustering}
-  \caption[Noise for partition of molecules in clusters]{\label{fig:div-Pclustering} Noise for partition of molecules in clusters.}
+  \caption[Partition noise when molecules form clusters as a function of the mean number of clusters]{\label{fig:div-Pclustering} Partition noise $Q_X$ when molecules form clusters [eq. \eqref{eq:div-Rclust}] normalized by the partition error of independent segregation $Q_\text{ind}$, as a function of $\langle v\rangle$ for three values of $\langle x\rangle$. It is assumed that $v$ and $x$ follow a Poisson distribution.}
 \end{figure}
 
-Now assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \eqref{eq:div-clus-Qx2} becomes
+From the previous figure, we expect the degree of disorder to increase with the number of molecules. To evidence this, assume that $\langle x|v\rangle = sv$ where $s$ is a constant representing the average number of molecules per vesicle. The term in parentheses of eq. \eqref{eq:div-clus-Qx2} becomes
 
 \begin{equation*}
   \begin{split}
@@ -366,21 +369,22 @@ Defining $q\coloneqq\sigma^2(x|v)/\langle x|v\rangle$ and recalling that by the 
 Replacing in eq. \eqref{eq:div-clus-Qx2} we get
 
 \begin{equation*}
-  Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(s\langle x\rangle+s(q-1)\right)
+  Q_x^2 = \frac{1}{\langle x\rangle} + \frac{1}{\langle x\rangle^2}\left(s\langle x\rangle+s(q-1)\right),
 \end{equation*}
 
-And if $(1-q)$ is very small we can approximate it as
+and if $(1-q)$ is very small we can approximate it as
 
-\begin{equation*}
-  Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{s}{\langle x\rangle}
-\end{equation*}
+\begin{equation}
+  \label{eq:Rclust2}
+  Q_x^2 \approx \frac{1}{\langle x\rangle} + \frac{s}{\langle x\rangle}.
+\end{equation}
 
-This result is exact if given $v$, $x$ follows a Poisson distribution.
+This result is exact if given $v$, $x$ follows a Poisson distribution. Figure \ref{fig:div-Pclustering2} shows the degree of segregation disorder as a function of $s$. It increases with $s$ because if $\langle x\rangle$ is large, $Q_\text{ind}$ is small. But if the same number of molecules are segregated into a small number of clusters, the partition noise of the clusters contributes greatly to the total regardless of the number of molecules.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Pclustering2}
-  \caption[Noise for partition of molecules in clusters 2]{\label{fig:div-Pclustering2}Noise for partition of molecules in clusters 2.}
+  \caption[Partition noise when molecules form clusters as a function of the number of molecules per cluster]{\label{fig:div-Pclustering2}Partition noise $Q_X$ when molecules form clusters [eq. \eqref{eq:Rclust2}] normalized by the partition error of independent segregation $Q_\text{ind}$, as a function of the the mean number of molecules per cluster $s$. It is assummed that $x|v$ follows a Poisson distribution. The curve corresponds to all values of $\langle x\rangle$.}
 \end{figure}
 
 \subsection{Upper limit of the partitioning error}
@@ -397,16 +401,20 @@ Therefore
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle\sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{\langle x^2\rangle}{4} = \eta_x^2+1.
 \end{equation*}
 
-It depends on the heterogeneity of the mother cells.
+It depends on the heterogeneity of the mother cell.
 
 \section{Ordered segregation}
 
+We consider three mechanisms that reduce partitioning noise: self-volume exclusion, binding to spindles, and pair formation.
+
 \subsection{Self-volume exclusion}
+
+If the molecules to be segregated occupy a large volume, partition noise is reduced because parts of the cell with fewer copies have more available space (\ref{fig:div-vol_exclusion}).
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=4cm]{div-vol_exclusion}
-  \caption[Volume exclusion]{\label{fig:div-vol_exclusion} Partition of molecules when their volumes are not negligible.}
+  \caption[Partition with size exclusion]{\label{fig:div-vol_exclusion} Partition of molecules when their volumes are sufficiently large to have an effect in the available space.}
 \end{figure}
 
 Suppose that each molecule occupies a fixed fraction $k$ of the total cell volume. Also, assume that each volume unit is equally likely to be occupied by one of the copies of the molecule. The following model satisfies this supposition
@@ -444,15 +452,16 @@ Replacing in the stationary FDT and solving for the variance, we obtain
 Hence,
 
 \begin{equation}
+  \label{eq:div-Rvol}
   Q_x^2 = \frac{4}{\langle x\rangle^2}\left\langle \sigma^2(l|x)\right\rangle = \frac{4}{\langle x\rangle^2}\frac{1}{4}\left(\langle x\rangle-k\langle x^2\rangle\right) = \frac{1}{\langle x\rangle} - k\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{1}{\langle x\rangle} - k(\eta_x^2+1).
 \end{equation}
 
-It can be noticed that noise is more reduced with respect to independent segregation when the volume fraction occupied by each molecule is large. This makes sense because exclusion is stronger if the volumes of the molecules are larger.
+Figure \ref{fig:div-Pvol_exclusion} evidences that to considerably reduce partition noise with respect to independent segregation the volume fraction occupied by each molecule must be large. This is biologically unrealistic for many types of components.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Pvol_exclusion}
-  \caption[Volume exclusion]{\label{fig:div-Pvol_exclusion} Partition of molecules when their volumes are not negligible.}
+  \caption[Partition noise when molecules have a non-negligible volume]{\label{fig:div-Pvol_exclusion}Partition noise $Q_X$ when molecules have a non-negligible volume [eq. \eqref{eq:div-Rvol}] normalized by the partition error of independent segregation $Q_\text{ind}$, as a function of $k\langle x\rangle$ for various values of $k$.}
 \end{figure}
 
 \subsection{Binding to spindle sites}

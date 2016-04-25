@@ -64,16 +64,16 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {6.3.4}{\ignorespaces Partition of molecules in clusters}}{113}{figure.6.3.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.5}{\ignorespaces Noise for partition of molecules in clusters}}{116}{figure.6.3.5}
+\contentsline {figure}{\numberline {6.3.5}{\ignorespaces Partition noise when molecules form clusters as a function of the mean number of clusters}}{116}{figure.6.3.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.3.6}{\ignorespaces Noise for partition of molecules in clusters 2}}{117}{figure.6.3.6}
+\contentsline {figure}{\numberline {6.3.6}{\ignorespaces Partition noise when molecules form clusters as a function of the number of molecules per cluster}}{118}{figure.6.3.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Volume exclusion}}{118}{figure.6.4.1}
+\contentsline {figure}{\numberline {6.4.1}{\ignorespaces Partition with size exclusion}}{119}{figure.6.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Volume exclusion}}{120}{figure.6.4.2}
+\contentsline {figure}{\numberline {6.4.2}{\ignorespaces Partition noise when molecules have a non-negligible volume}}{121}{figure.6.4.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.3}{\ignorespaces Binding to spindle sites}}{120}{figure.6.4.3}
+\contentsline {figure}{\numberline {6.4.3}{\ignorespaces Binding to spindle sites}}{121}{figure.6.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.4}{\ignorespaces Pair formation}}{123}{figure.6.4.4}
+\contentsline {figure}{\numberline {6.4.4}{\ignorespaces Pair formation}}{125}{figure.6.4.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {6.4.5}{\ignorespaces Noise for pair formation}}{126}{figure.6.4.5}
+\contentsline {figure}{\numberline {6.4.5}{\ignorespaces Noise for pair formation}}{127}{figure.6.4.5}
