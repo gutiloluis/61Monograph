@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  25 APR 2016 16:21
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  25 APR 2016 22:25
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1321,7 +1321,7 @@ LaTeX Warning: Reference `sec:Poisson' on page 62 undefined on input line 164.
 ]
 Chapter 4.
 
-Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
+Overfull \hbox (0.88425pt too wide) in paragraph at lines 4--4
 []\OT1/cmr/bx/n/17.28 Intrinsic noise in a sin-gle gene us-ing the Langevin
  []
 
@@ -1329,10 +1329,10 @@ Overfull \hbox (0.88425pt too wide) in paragraph at lines 3--3
 File: img/lan-circuit.png Graphic file (type png)
 
 <use img/lan-circuit.png>
-Package pdftex.def Info: img/lan-circuit.png used on input line 127.
+Package pdftex.def Info: img/lan-circuit.png used on input line 128.
 (pdftex.def)             Requested size: 455.24408pt x 52.36032pt.
 
-Overfull \hbox (3.55656pt too wide) in paragraph at lines 127--128
+Overfull \hbox (3.55656pt too wide) in paragraph at lines 128--129
  [][] 
  []
 
@@ -1340,49 +1340,49 @@ Overfull \hbox (3.55656pt too wide) in paragraph at lines 127--128
 <img/lan-Hs.png, id=1027, 904.88063pt x 325.215pt>
 File: img/lan-Hs.png Graphic file (type png)
  <use img/lan-Hs.png>
-Package pdftex.def Info: img/lan-Hs.png used on input line 434.
+Package pdftex.def Info: img/lan-Hs.png used on input line 435.
 (pdftex.def)             Requested size: 426.79134pt x 153.38701pt.
 
 <img/lan-noise_corr_full.png, id=1031, 904.88063pt x 853.68938pt>
 File: img/lan-noise_corr_full.png Graphic file (type png)
 
 <use img/lan-noise_corr_full.png>
-Package pdftex.def Info: img/lan-noise_corr_full.png used on input line 444.
+Package pdftex.def Info: img/lan-noise_corr_full.png used on input line 445.
 (pdftex.def)             Requested size: 426.79134pt x 402.6409pt.
  [81 <./img/lan-Hs.png>] [82 <./img/lan-noise_corr_full.png>] [83] <img/lan-eta
 2det.png, id=1055, 1003.75pt x 679.53876pt>
 File: img/lan-eta2det.png Graphic file (type png)
 
 <use img/lan-eta2det.png>
-Package pdftex.def Info: img/lan-eta2det.png used on input line 462.
+Package pdftex.def Info: img/lan-eta2det.png used on input line 463.
 (pdftex.def)             Requested size: 426.79134pt x 288.94014pt.
 
 <img/lan-eta2_corrATC.png, id=1059, 909.3975pt x 332.74312pt>
 File: img/lan-eta2_corrATC.png Graphic file (type png)
 
 <use img/lan-eta2_corrATC.png>
-Package pdftex.def Info: img/lan-eta2_corrATC.png used on input line 470.
+Package pdftex.def Info: img/lan-eta2_corrATC.png used on input line 471.
 (pdftex.def)             Requested size: 426.79134pt x 156.1608pt.
  [84 <./img/lan-eta2det.png (PNG copy)>]
 <img/lan-noise_sources.png, id=1070, 1307.88625pt x 436.63126pt>
 File: img/lan-noise_sources.png Graphic file (type png)
 
 <use img/lan-noise_sources.png>
-Package pdftex.def Info: img/lan-noise_sources.png used on input line 482.
+Package pdftex.def Info: img/lan-noise_sources.png used on input line 483.
 (pdftex.def)             Requested size: 426.79134pt x 142.47644pt.
  [85 <./img/lan-eta2_corrATC.png>]) [86 <./img/lan-noise_sources.png>]
 \openout2 = `bursting.aux'.
 
  (./bursting.tex
 Chapter 5.
-<img/bur-examples.png, id=1087, 1337.74782pt x 551.05875pt>
+<img/bur-examples.png, id=1086, 1337.74782pt x 551.05875pt>
 File: img/bur-examples.png Graphic file (type png)
 
 <use img/bur-examples.png>
-Package pdftex.def Info: img/bur-examples.png used on input line 9.
+Package pdftex.def Info: img/bur-examples.png used on input line 10.
 (pdftex.def)             Requested size: 455.24408pt x 187.52565pt.
 
-Overfull \hbox (3.55656pt too wide) in paragraph at lines 9--10
+Overfull \hbox (3.55656pt too wide) in paragraph at lines 10--11
  [][] 
  []
 
@@ -1401,63 +1401,63 @@ Chapter 6.
 
 
 ] [106] [107]
-<img/div-random_volume.png, id=1264, 311.2428pt x 252.4632pt>
+<img/div-random_volume.png, id=1263, 311.2428pt x 252.4632pt>
 File: img/div-random_volume.png Graphic file (type png)
 
 <use img/div-random_volume.png>
 Package pdftex.def Info: img/div-random_volume.png used on input line 100.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
  [108 <./img/div-random_volume.png>] [109]
-[110] <img/div-random_size.png, id=1292, 311.2428pt x 252.4632pt>
+[110] <img/div-random_size.png, id=1291, 311.2428pt x 252.4632pt>
 File: img/div-random_size.png Graphic file (type png)
 
 <use img/div-random_size.png>
 Package pdftex.def Info: img/div-random_size.png used on input line 210.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
  [111 <./img/div-random_size.png>]
-<img/div-Prandom_size.png, id=1302, 652.4375pt x 453.695pt>
+<img/div-Prandom_size.png, id=1301, 652.4375pt x 453.695pt>
 File: img/div-Prandom_size.png Graphic file (type png)
 
 <use img/div-Prandom_size.png>
 Package pdftex.def Info: img/div-Prandom_size.png used on input line 240.
 (pdftex.def)             Requested size: 369.88582pt x 257.22427pt.
  [112 <./img/div-Prandom_size.png (PNG copy)>]
-<img/div-clustering.png, id=1313, 311.2428pt x 252.4632pt>
+<img/div-clustering.png, id=1312, 311.2428pt x 252.4632pt>
 File: img/div-clustering.png Graphic file (type png)
 
 <use img/div-clustering.png>
 Package pdftex.def Info: img/div-clustering.png used on input line 250.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
  [113 <./img/div-clustering.png>] [114]
-<img/div-Pclustering.png, id=1336, 652.4375pt x 441.65pt>
+<img/div-Pclustering.png, id=1335, 652.4375pt x 441.65pt>
 File: img/div-Pclustering.png Graphic file (type png)
 
 <use img/div-Pclustering.png>
 Package pdftex.def Info: img/div-Pclustering.png used on input line 349.
 (pdftex.def)             Requested size: 369.88582pt x 250.3953pt.
  [115] [116 <./img/div-Pclustering.png (PNG copy)>] <img/div-Pclustering2.png, 
-id=1354, 652.4375pt x 430.60875pt>
+id=1353, 652.4375pt x 430.60875pt>
 File: img/div-Pclustering2.png Graphic file (type png)
 
 <use img/div-Pclustering2.png>
 Package pdftex.def Info: img/div-Pclustering2.png used on input line 386.
 (pdftex.def)             Requested size: 369.88582pt x 244.13542pt.
  [117] [118 <./img/div-Pclustering2.png (PNG copy)>] <img/div-vol_exclusion.png
-, id=1367, 311.2428pt x 252.4632pt>
+, id=1366, 311.2428pt x 252.4632pt>
 File: img/div-vol_exclusion.png Graphic file (type png)
 
 <use img/div-vol_exclusion.png>
 Package pdftex.def Info: img/div-vol_exclusion.png used on input line 416.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
  [119 <./img/div-vol_exclusion.png>]
-<img/div-Pvol_exclusion.png, id=1374, 652.4375pt x 435.6275pt>
+<img/div-Pvol_exclusion.png, id=1373, 652.4375pt x 435.6275pt>
 File: img/div-Pvol_exclusion.png Graphic file (type png)
 
 <use img/div-Pvol_exclusion.png>
 Package pdftex.def Info: img/div-Pvol_exclusion.png used on input line 463.
 (pdftex.def)             Requested size: 369.88582pt x 246.98082pt.
  [120]
-<img/div-spindles.png, id=1383, 311.2428pt x 252.4632pt>
+<img/div-spindles.png, id=1382, 311.2428pt x 252.4632pt>
 File: img/div-spindles.png Graphic file (type png)
 
 <use img/div-spindles.png>
@@ -1465,14 +1465,14 @@ Package pdftex.def Info: img/div-spindles.png used on input line 473.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
  [121 <./img/div-Pvol_exclusion.png (PNG copy)> <./img/div-spindles.png>] [122]
  [123]
-<img/div-pair.png, id=1400, 311.2428pt x 252.4632pt>
+<img/div-pair.png, id=1399, 311.2428pt x 252.4632pt>
 File: img/div-pair.png Graphic file (type png)
  <use img/div-pair.png>
 Package pdftex.def Info: img/div-pair.png used on input line 582.
 (pdftex.def)             Requested size: 113.81102pt x 92.31587pt.
 
 [124] [125 <./img/div-pair.png>] [126]
-<img/div-Ppair.png, id=1423, 652.4375pt x 426.59375pt>
+<img/div-Ppair.png, id=1422, 652.4375pt x 426.59375pt>
 File: img/div-Ppair.png Graphic file (type png)
  <use img/div-Ppair.png>
 Package pdftex.def Info: img/div-Ppair.png used on input line 642.
@@ -1481,20 +1481,21 @@ Package pdftex.def Info: img/div-Ppair.png used on input line 642.
 [127 <./img/div-Ppair.png (PNG copy)>]) [128]
 \openout2 = `final.aux'.
 
- (./final.tex) [129
+ (./final.tex [129
 
 
 
-] [130
+] [130])
+[131] [132
 
 
-]
-[131]
+] [133]
 Package atveryend Info: Empty hook `BeforeClearDocument' on input line 109.
- [132]
+ [134]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 109.
- (./cover.aux (./introduction.aux) (./concepts.aux) (./master1.aux)
-(./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux) (./final.aux))
+ (./cover.aux (./introduction.aux) (./concepts.aux)
+(./master1.aux) (./fdt.aux) (./langevin1.aux) (./bursting.aux) (./division.aux)
+(./final.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 109.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 109.
 Package rerunfilecheck Info: File `cover.out' has not changed.
@@ -1508,10 +1509,10 @@ Package logreq Info: Writing requests to 'cover.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 26870 strings out of 494966
- 489329 string characters out of 6179559
- 892154 words of memory out of 5000000
- 29142 multiletter control sequences out of 15000+600000
+ 26880 strings out of 494966
+ 489471 string characters out of 6179559
+ 892308 words of memory out of 5000000
+ 29147 multiletter control sequences out of 15000+600000
  15160 words of font info for 60 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  63i,25n,57p,10368b,1097s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1575,10 +1576,10 @@ onts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm
 .pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt10.pfb><
 /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb></
 usr/share/texlive/texmf-dist/fonts/type1/public/rsfs/rsfs10.pfb>
-Output written on cover.pdf (132 pages, 5489913 bytes).
+Output written on cover.pdf (134 pages, 5495922 bytes).
 PDF statistics:
- 1620 PDF objects out of 1728 (max. 8388607)
- 1374 compressed objects within 14 object streams
- 384 named destinations out of 1000 (max. 500000)
+ 1642 PDF objects out of 1728 (max. 8388607)
+ 1394 compressed objects within 14 object streams
+ 389 named destinations out of 1000 (max. 500000)
  570 words of extra memory for PDF output out of 10000 (max. 10000000)
 

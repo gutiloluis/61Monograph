@@ -436,6 +436,84 @@
       \field{type}{phdthesis}
       \field{year}{2006}
     \endentry
+    \entry{golding05}{article}{}
+      \name{labelname}{4}{}{%
+        {{hash=9c1a25f4a063fecb2b4f719f65a3ff88}{Golding}{G\bibinitperiod}{I}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=eb24717a09eeb3b93b69ff631dd34db6}{Zawilski}{Z\bibinitperiod}{S\bibnamedelima M}{S\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=98570f98ed228629677f7568f74088f3}{Cox}{C\bibinitperiod}{E\bibnamedelima C}{E\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{4}{}{%
+        {{hash=9c1a25f4a063fecb2b4f719f65a3ff88}{Golding}{G\bibinitperiod}{I}{I\bibinitperiod}{}{}{}{}}%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=eb24717a09eeb3b93b69ff631dd34db6}{Zawilski}{Z\bibinitperiod}{S\bibnamedelima M}{S\bibinitperiod\bibinitdelim M\bibinitperiod}{}{}{}{}}%
+        {{hash=98570f98ed228629677f7568f74088f3}{Cox}{C\bibinitperiod}{E\bibnamedelima C}{E\bibinitperiod\bibinitdelim C\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{eaa565d5bfa9e84d102a74ee77f3f936}
+      \strng{fullhash}{5ed6362175c7b2567e9e7271df12e15c}
+      \field{sortinit}{0}
+      \field{labeltitle}{Real time Kinetics of Gene Activity in Individual Bacteria}
+      \field{journaltitle}{Cell}
+      \field{title}{Real time Kinetics of Gene Activity in Individual Bacteria}
+      \field{volume}{123}
+      \field{year}{2005}
+      \field{pages}{1025\bibrangedash 1036}
+    \endentry
+    \entry{okumus13}{article}{}
+      \name{labelname}{5}{}{%
+        {{hash=418db4491ef46b04a7a32be5f5d28c07}{Okumus}{O\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=daea80f0227de5ba80e36a07e579a924}{Fernandez-Lopez}{F\bibinithyphendelim L\bibinitperiod}{R}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=ef671091cd131fb8aed76c352a57bfad}{Landgraf}{L\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=9fc40646f2124fed4372d22614b668a7}{Huh}{H\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{5}{}{%
+        {{hash=418db4491ef46b04a7a32be5f5d28c07}{Okumus}{O\bibinitperiod}{B}{B\bibinitperiod}{}{}{}{}}%
+        {{hash=daea80f0227de5ba80e36a07e579a924}{Fernandez-Lopez}{F\bibinithyphendelim L\bibinitperiod}{R}{R\bibinitperiod}{}{}{}{}}%
+        {{hash=ef671091cd131fb8aed76c352a57bfad}{Landgraf}{L\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=9fc40646f2124fed4372d22614b668a7}{Huh}{H\bibinitperiod}{D}{D\bibinitperiod}{}{}{}{}}%
+        {{hash=8fc0cd9519414f5cfb55220eb058e289}{Paulsson}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{d55035e81ada9cb36d8aa9899eea6cdc}
+      \strng{fullhash}{fd686cdcdee5e2f5e1f661ec85606eac}
+      \field{sortinit}{0}
+      \field{labeltitle}{Microfluidic Assisted Cell Screening}
+      \field{journaltitle}{Biophys. J}
+      \field{number}{2}
+      \field{title}{Microfluidic Assisted Cell Screening}
+      \field{volume}{104}
+      \field{year}{2013}
+      \field{pages}{502a\bibrangedash 503a}
+    \endentry
+    \entry{wang10}{article}{}
+      \name{labelname}{7}{}{%
+        {{hash=f94399510b1be6d7fab7d889d00b68d8}{Wang}{W\bibinitperiod}{P}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=7ee7830b871eb98d45fcbd2ea962a987}{Robert}{R\bibinitperiod}{L}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=ac0bc50400fefb6febe2528ac42a93fc}{Pelletier}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=cc9cc7035995b93f4fc336ba68bc67fc}{Dang}{D\bibinitperiod}{W\bibnamedelima L}{W\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=f6980b9b977982a518b325f312396d26}{Taddei}{T\bibinitperiod}{F}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=d1f894cdb362d687b78c64d26eb290f9}{Wright}{W\bibinitperiod}{A}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=54a8dbc97e5559436aadd0aaf1cac366}{Jun}{J\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \name{author}{7}{}{%
+        {{hash=f94399510b1be6d7fab7d889d00b68d8}{Wang}{W\bibinitperiod}{P}{P\bibinitperiod}{}{}{}{}}%
+        {{hash=7ee7830b871eb98d45fcbd2ea962a987}{Robert}{R\bibinitperiod}{L}{L\bibinitperiod}{}{}{}{}}%
+        {{hash=ac0bc50400fefb6febe2528ac42a93fc}{Pelletier}{P\bibinitperiod}{J}{J\bibinitperiod}{}{}{}{}}%
+        {{hash=cc9cc7035995b93f4fc336ba68bc67fc}{Dang}{D\bibinitperiod}{W\bibnamedelima L}{W\bibinitperiod\bibinitdelim L\bibinitperiod}{}{}{}{}}%
+        {{hash=f6980b9b977982a518b325f312396d26}{Taddei}{T\bibinitperiod}{F}{F\bibinitperiod}{}{}{}{}}%
+        {{hash=d1f894cdb362d687b78c64d26eb290f9}{Wright}{W\bibinitperiod}{A}{A\bibinitperiod}{}{}{}{}}%
+        {{hash=54a8dbc97e5559436aadd0aaf1cac366}{Jun}{J\bibinitperiod}{S}{S\bibinitperiod}{}{}{}{}}%
+      }
+      \strng{namehash}{b4ba204dbe548373613f21acd13adf70}
+      \strng{fullhash}{c3ab74845f96fb352534fadb8c614965}
+      \field{sortinit}{0}
+      \field{labeltitle}{Robust Growth of \textit{Escherichia coli}}
+      \field{journaltitle}{Curr. Biol}
+      \field{title}{Robust Growth of \textit{Escherichia coli}}
+      \field{volume}{20}
+      \field{year}{2010}
+      \field{pages}{1099\bibrangedash 1103}
+    \endentry
   \endsortlist
 \endrefsection
 \endinput

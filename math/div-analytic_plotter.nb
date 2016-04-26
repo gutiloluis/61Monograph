@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    279182,       6208]
-NotebookOptionsPosition[    278027,       6167]
-NotebookOutlinePosition[    278360,       6182]
-CellTagsIndexPosition[    278317,       6179]
+NotebookDataLength[    279976,       6219]
+NotebookOptionsPosition[    278821,       6178]
+NotebookOutlinePosition[    279154,       6193]
+CellTagsIndexPosition[    279111,       6190]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -1799,7 +1799,7 @@ Cell[BoxData[{
       RowBox[{"Text", "[", 
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
-         RowBox[{"\"\<Q/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+         RowBox[{"\"\<Q_x/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
          "]"}], "]"}], "]"}]}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"legend4", "=", 
@@ -1897,7 +1897,8 @@ Cell[BoxData[{
   3.667952638905078*^9, 3.667952664352004*^9}, {3.670110429641736*^9, 
   3.670110446413932*^9}, {3.670111082250032*^9, 3.670111178751046*^9}, {
   3.670112471906749*^9, 3.670112553719809*^9}, {3.6701127896134567`*^9, 
-  3.670112804097384*^9}, {3.670538095310651*^9, 3.67053809542728*^9}}],
+  3.670112804097384*^9}, {3.670538095310651*^9, 3.67053809542728*^9}, {
+  3.6705810544669657`*^9, 3.67058105475597*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -2316,13 +2317,14 @@ AmATahJA+dSE88vd+z8yt2a1sWsSQCpDEW772fs/qipaSA==
           FormBox[
            StyleBox[
             TagBox[
-             FractionBox["Q", 
+             FractionBox[
+              SubscriptBox["Q", "x"], 
               SubscriptBox["Q", "ind"]], HoldForm], StripOnInput -> False], 
            TextForm]], "InlineText"], 
         Text[
          Style[
-          
-          HoldForm[$CellContext`Q/
+          HoldForm[
+          Subscript[$CellContext`Q, $CellContext`x]/
            Subscript[$CellContext`Q, $CellContext`ind]]]]], TraditionalForm], 
       None}, {
       FormBox[
@@ -2498,7 +2500,6 @@ AmATahJA+dSE88vd+z8yt2a1sWsSQCpDEW772fs/qipaSA==
          FormBox[
           InterpretationBox[
            StyleBox[
-            
             GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
              Baseline], "CacheGraphics" -> False], 
            Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
@@ -2650,6 +2651,7 @@ AmATahJA+dSE88vd+z8yt2a1sWsSQCpDEW772fs/qipaSA==
          FormBox[
           InterpretationBox[
            StyleBox[
+            
             GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
              Baseline], "CacheGraphics" -> False], 
            Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
@@ -2895,8 +2897,8 @@ AmATahJA+dSE88vd+z8yt2a1sWsSQCpDEW772fs/qipaSA==
       Frame -> {{True, True}, {True, True}}, FrameLabel -> {{
          Text[
           Style[
-           
-           HoldForm[$CellContext`Q/
+           HoldForm[
+           Subscript[$CellContext`Q, $CellContext`x]/
             Subscript[$CellContext`Q, $CellContext`ind]]]], None}, {
          Text[
           Style[
@@ -2945,7 +2947,10 @@ AmATahJA+dSE88vd+z8yt2a1sWsSQCpDEW772fs/qipaSA==
   Editable->True,
   SelectWithContents->False,
   Selectable->True]], "Output",
- CellChangeTimes->{3.670538460386574*^9}]
+ GeneratedCell->False,
+ CellAutoOverwrite->False,
+ CellChangeTimes->{3.670538460386574*^9, 3.67058105550298*^9, 
+  3.67058113132633*^9}]
 }, Open  ]],
 
 Cell[BoxData[""], "Input",
@@ -2967,7 +2972,7 @@ Cell[BoxData[{
       RowBox[{"Text", "[", 
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
-         RowBox[{"\"\<Q/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+         RowBox[{"\"\<Q_x/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
          "]"}], "]"}], "]"}]}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{"Show", "[", 
   RowBox[{
@@ -3033,7 +3038,8 @@ Cell[BoxData[{
  CellChangeTimes->{{3.667952872648774*^9, 3.667952972146708*^9}, {
   3.670080424407021*^9, 3.6700804789489202`*^9}, {3.67011128828587*^9, 
   3.67011134824648*^9}, {3.670111439871727*^9, 3.6701114602056227`*^9}, {
-  3.6701135695031757`*^9, 3.670113584620861*^9}}],
+  3.6701135695031757`*^9, 3.670113584620861*^9}, {3.670582057321113*^9, 
+  3.670582057661957*^9}}],
 
 Cell[BoxData[
  GraphicsBox[{{}, {}, 
@@ -3089,12 +3095,14 @@ kCzkijE40w8zUgsCVjck1iuSMCiqSPXLsybgP/rOFUo=
          FormBox[
           StyleBox[
            TagBox[
-            FractionBox["Q", 
+            FractionBox[
+             SubscriptBox["Q", "x"], 
              SubscriptBox["Q", "ind"]], HoldForm], StripOnInput -> False], 
           TextForm]], "InlineText"], 
        Text[
         Style[
-         HoldForm[$CellContext`Q/
+         HoldForm[
+         Subscript[$CellContext`Q, $CellContext`x]/
           Subscript[$CellContext`Q, $CellContext`ind]]]]], TraditionalForm], 
      None}, {
      FormBox[
@@ -3560,7 +3568,8 @@ kCzkijE40w8zUgsCVjck1iuSMCiqSPXLsybgP/rOFUo=
  CellChangeTimes->{{3.667952940169445*^9, 3.667952975911162*^9}, {
    3.670080427294979*^9, 3.670080479317658*^9}, 3.670082185866523*^9, 
    3.6701113500650167`*^9, {3.670111441177526*^9, 3.670111460815661*^9}, 
-   3.670113585809888*^9, 3.670113625541404*^9, 3.6705385572194443`*^9}]
+   3.670113585809888*^9, 3.670113625541404*^9, 3.6705385572194443`*^9, 
+   3.670582058657539*^9}]
 }, Open  ]],
 
 Cell[BoxData[{
@@ -3671,12 +3680,12 @@ Cell[BoxData[{
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
          RowBox[{
-         "\"\<K\\\\langle x\\\\rangle\>\"", ",", "TeXForm", ",", "HoldForm"}],
+         "\"\<k\\\\langle x\\\\rangle\>\"", ",", "TeXForm", ",", "HoldForm"}],
           "]"}], "]"}], "]"}], ",", 
       RowBox[{"Text", "[", 
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
-         RowBox[{"\"\<Q/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+         RowBox[{"\"\<Q_x/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
          "]"}], "]"}], "]"}]}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"legend6", "=", 
@@ -3691,17 +3700,17 @@ Cell[BoxData[{
            RowBox[{"Text", "[", 
             RowBox[{"Style", "[", 
              RowBox[{"ToExpression", "[", 
-              RowBox[{"\"\<K=0.001\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+              RowBox[{"\"\<k=0.001\>\"", ",", "TeXForm", ",", "HoldForm"}], 
               "]"}], "]"}], "]"}], ",", 
            RowBox[{"Text", "[", 
             RowBox[{"Style", "[", 
              RowBox[{"ToExpression", "[", 
-              RowBox[{"\"\<K=0.03\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+              RowBox[{"\"\<k=0.03\>\"", ",", "TeXForm", ",", "HoldForm"}], 
               "]"}], "]"}], "]"}], ",", 
            RowBox[{"Text", "[", 
             RowBox[{"Style", "[", 
              RowBox[{"ToExpression", "[", 
-              RowBox[{"\"\<K=0.1\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+              RowBox[{"\"\<k=0.1\>\"", ",", "TeXForm", ",", "HoldForm"}], 
               "]"}], "]"}], "]"}]}], "}"}], ",", 
          RowBox[{"LegendMarkerSize", "\[Rule]", 
           RowBox[{"{", "30", "}"}]}], ",", 
@@ -3774,7 +3783,8 @@ Cell[BoxData[{
   3.670153928740789*^9}, {3.670154001825109*^9, 3.6701541238113537`*^9}, {
   3.6701541753157*^9, 3.670154247417203*^9}, {3.670154368621957*^9, 
   3.670154368771017*^9}, {3.670155066317861*^9, 3.670155071096406*^9}, {
-  3.670538789696978*^9, 3.670538789814612*^9}}],
+  3.670538789696978*^9, 3.670538789814612*^9}, {3.670584101470255*^9, 
+  3.6705841191482*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -3960,31 +3970,31 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
           FormBox[
            StyleBox[
             TagBox[
-             RowBox[{"K", "\[LongEqual]", "0.001`"}], HoldForm], StripOnInput -> 
+             RowBox[{"k", "\[LongEqual]", "0.001`"}], HoldForm], StripOnInput -> 
             False], TextForm]], "InlineText"], 
         Text[
          Style[
-          HoldForm[K == 0.001]]]],InterpretationBox[
+          HoldForm[$CellContext`k == 0.001]]]],InterpretationBox[
         Cell[
          BoxData[
           FormBox[
            StyleBox[
             TagBox[
-             RowBox[{"K", "\[LongEqual]", "0.03`"}], HoldForm], StripOnInput -> 
+             RowBox[{"k", "\[LongEqual]", "0.03`"}], HoldForm], StripOnInput -> 
             False], TextForm]], "InlineText"], 
         Text[
          Style[
-          HoldForm[K == 0.03]]]],InterpretationBox[
+          HoldForm[$CellContext`k == 0.03]]]],InterpretationBox[
         Cell[
          BoxData[
           FormBox[
            StyleBox[
             TagBox[
-             RowBox[{"K", "\[LongEqual]", "0.1`"}], HoldForm], StripOnInput -> 
+             RowBox[{"k", "\[LongEqual]", "0.1`"}], HoldForm], StripOnInput -> 
             False], TextForm]], "InlineText"], 
         Text[
          Style[
-          HoldForm[K == 0.1]]]]},
+          HoldForm[$CellContext`k == 0.1]]]]},
       "LineLegend",
       DisplayFunction->(FormBox[
         StyleBox[
@@ -4217,11 +4227,9 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
                     True, FrameStyle -> 
                     RGBColor[
                     0.37345400000000006`, 0.461046, 0.12992333333333334`], 
-                    FrameTicks -> None, PlotRangePadding -> None, ImageSize -> 
-                    Dynamic[{
-                    Automatic, 1.35 CurrentValue["FontCapHeight"]/
-                    AbsoluteCurrentValue[Magnification]}]], 
-                    "\[InvisibleSpace]"}], 
+                    FrameTicks -> None, PlotRangePadding -> None, ImageSize -> D\
+ynamic[{Automatic, 1.35 CurrentValue["FontCapHeight"]/AbsoluteCurrentValue[
+                    Magnification]}]], "\[InvisibleSpace]"}], 
                     "RGBColor[0.560181, 0.691569, 0.194885]"], Appearance -> 
                     None, BaseStyle -> {}, BaselinePosition -> Baseline, 
                     DefaultBaseStyle -> {}, ButtonFunction :> 
@@ -4283,13 +4291,14 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
           FormBox[
            StyleBox[
             TagBox[
-             FractionBox["Q", 
+             FractionBox[
+              SubscriptBox["Q", "x"], 
               SubscriptBox["Q", "ind"]], HoldForm], StripOnInput -> False], 
            TextForm]], "InlineText"], 
         Text[
          Style[
-          
-          HoldForm[$CellContext`Q/
+          HoldForm[
+          Subscript[$CellContext`Q, $CellContext`x]/
            Subscript[$CellContext`Q, $CellContext`ind]]]]], TraditionalForm], 
       None}, {
       FormBox[
@@ -4299,13 +4308,13 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
           FormBox[
            StyleBox[
             TagBox[
-             RowBox[{"K", " ", 
+             RowBox[{"k", " ", 
                RowBox[{"\[LeftAngleBracket]", "x", "\[RightAngleBracket]"}]}],
               HoldForm], StripOnInput -> False], TextForm]], "InlineText"], 
         Text[
          Style[
-          HoldForm[K AngleBracket[$CellContext`x]]]]], TraditionalForm], 
-      None}},
+          HoldForm[$CellContext`k AngleBracket[$CellContext`x]]]]], 
+       TraditionalForm], None}},
    FrameStyle->Directive[
      GrayLevel[0], 
      Thickness[Large]],
@@ -4418,7 +4427,6 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
          FormBox[
           InterpretationBox[
            StyleBox[
-            
             GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
              Baseline], "CacheGraphics" -> False], 
            Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
@@ -4522,6 +4530,7 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
          FormBox[
           InterpretationBox[
            StyleBox[
+            
             GraphicsBox[{}, ImageSize -> {0., 0.}, BaselinePosition -> 
              Baseline], "CacheGraphics" -> False], 
            Spacer[{0., 0.}]], TraditionalForm], {0.005, 0.}, {
@@ -5103,13 +5112,13 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
       Frame -> {{True, True}, {True, True}}, FrameLabel -> {{
          Text[
           Style[
-           
-           HoldForm[$CellContext`Q/
+           HoldForm[
+           Subscript[$CellContext`Q, $CellContext`x]/
             Subscript[$CellContext`Q, $CellContext`ind]]]], None}, {
          Text[
           Style[
-           HoldForm[K AngleBracket[$CellContext`x]]]], None}}, FrameStyle -> 
-      Directive[
+           HoldForm[$CellContext`k AngleBracket[$CellContext`x]]]], None}}, 
+      FrameStyle -> Directive[
         GrayLevel[0], 
         Thickness[Large]], 
       FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
@@ -5139,13 +5148,13 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
          AbsoluteThickness[3]]}, {
         Text[
          Style[
-          HoldForm[K == 0.001]]], 
+          HoldForm[$CellContext`k == 0.001]]], 
         Text[
          Style[
-          HoldForm[K == 0.03]]], 
+          HoldForm[$CellContext`k == 0.03]]], 
         Text[
          Style[
-          HoldForm[K == 0.1]]]}, 
+          HoldForm[$CellContext`k == 0.1]]]}, 
        LabelStyle -> {FontFamily -> "Palatino Linotype", 25}, 
        LegendLayout -> {"Row", 3}, LegendMarkerSize -> {30}, Spacings -> 
        0.01]], {0.17, 0.2}, Identity]]& ],
@@ -5159,7 +5168,7 @@ HzAvN9CUxs4DoX6zq/lECV6PkA3Mu5ELidZmziN2JWicE673x9s00Jj3jvZb
    3.670154023288823*^9, {3.670154078974649*^9, 3.67015409594557*^9}, {
    3.670154212039954*^9, 3.670154248357032*^9}, 3.67015437121183*^9, {
    3.670155067208095*^9, 3.670155071753728*^9}, {3.670538791086706*^9, 
-   3.670538805106522*^9}}]
+   3.670538805106522*^9}, {3.670584113421461*^9, 3.670584119962159*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5454,12 +5463,12 @@ Cell[BoxData[{
       RowBox[{"Text", "[", 
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
-         RowBox[{"\"\<r\>\"", ",", "TeXForm", ",", "HoldForm"}], "]"}], "]"}],
+         RowBox[{"\"\<k\>\"", ",", "TeXForm", ",", "HoldForm"}], "]"}], "]"}],
         "]"}], ",", 
       RowBox[{"Text", "[", 
        RowBox[{"Style", "[", 
         RowBox[{"ToExpression", "[", 
-         RowBox[{"\"\<Q/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
+         RowBox[{"\"\<Q_x/Q_{ind}\>\"", ",", "TeXForm", ",", "HoldForm"}], 
          "]"}], "]"}], "]"}]}], "}"}]}]}], ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"legend8", "=", 
@@ -5536,7 +5545,8 @@ Cell[BoxData[{
    RowBox[{"Evaluate", "[", "imSize", "]"}]}], "]"}]}], "Input",
  CellChangeTimes->{{3.6679544157706337`*^9, 3.667954579840796*^9}, {
   3.6701544354862013`*^9, 3.6701545505762997`*^9}, {3.670154594280064*^9, 
-  3.6701546288046427`*^9}, {3.6705391053432817`*^9, 3.670539105443973*^9}}],
+  3.6701546288046427`*^9}, {3.6705391053432817`*^9, 3.670539105443973*^9}, {
+  3.670601751096417*^9, 3.670601770625502*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -5960,13 +5970,14 @@ x6Yca7Uei4jmIafE19Zuyk3lzVPvlFQeri+fPfrd2eav0oHFS3j4H7/O4fw=
           FormBox[
            StyleBox[
             TagBox[
-             FractionBox["Q", 
+             FractionBox[
+              SubscriptBox["Q", "x"], 
               SubscriptBox["Q", "ind"]], HoldForm], StripOnInput -> False], 
            TextForm]], "InlineText"], 
         Text[
          Style[
-          
-          HoldForm[$CellContext`Q/
+          HoldForm[
+          Subscript[$CellContext`Q, $CellContext`x]/
            Subscript[$CellContext`Q, $CellContext`ind]]]]], TraditionalForm], 
       None}, {
       FormBox[
@@ -5975,11 +5986,11 @@ x6Yca7Uei4jmIafE19Zuyk3lzVPvlFQeri+fPfrd2eav0oHFS3j4H7/O4fw=
          BoxData[
           FormBox[
            StyleBox[
-            TagBox["r", HoldForm], StripOnInput -> False], TextForm]], 
+            TagBox["k", HoldForm], StripOnInput -> False], TextForm]], 
          "InlineText"], 
         Text[
          Style[
-          HoldForm[$CellContext`r]]]], TraditionalForm], None}},
+          HoldForm[$CellContext`k]]]], TraditionalForm], None}},
    FrameStyle->Directive[
      GrayLevel[0], 
      Thickness[Large]],
@@ -6110,12 +6121,12 @@ x6Yca7Uei4jmIafE19Zuyk3lzVPvlFQeri+fPfrd2eav0oHFS3j4H7/O4fw=
       Frame -> {{True, True}, {True, True}}, FrameLabel -> {{
          Text[
           Style[
-           
-           HoldForm[$CellContext`Q/
+           HoldForm[
+           Subscript[$CellContext`Q, $CellContext`x]/
             Subscript[$CellContext`Q, $CellContext`ind]]]], None}, {
          Text[
           Style[
-           HoldForm[$CellContext`r]]], None}}, FrameStyle -> Directive[
+           HoldForm[$CellContext`k]]], None}}, FrameStyle -> Directive[
         GrayLevel[0], 
         Thickness[Large]], 
       FrameTicks -> {{Automatic, Automatic}, {Automatic, Automatic}}, 
@@ -6162,7 +6173,7 @@ x6Yca7Uei4jmIafE19Zuyk3lzVPvlFQeri+fPfrd2eav0oHFS3j4H7/O4fw=
  CellChangeTimes->{
   3.667954582688923*^9, 3.6701544924666977`*^9, {3.670154551172262*^9, 
    3.6701545989947166`*^9}, 3.6701546295421247`*^9, {3.670539100523115*^9, 
-   3.670539105963172*^9}}]
+   3.670539105963172*^9}, {3.670601751994233*^9, 3.670601771701703*^9}}]
 }, Open  ]]
 },
 WindowSize->{1366, 744},
@@ -6184,31 +6195,31 @@ Notebook[{
 Cell[558, 20, 3278, 82, 285, "Input"],
 Cell[CellGroupData[{
 Cell[3861, 106, 4556, 107, 270, "Input"],
-Cell[8420, 215, 76851, 1563, 500, "Output"]
+Cell[8420, 215, 76851, 1563, 467, "Output"]
 }, Open  ]],
 Cell[85286, 1781, 94, 1, 32, InheritFromParent],
 Cell[CellGroupData[{
-Cell[85405, 1786, 4385, 113, 292, "Input"],
-Cell[89793, 1901, 46545, 1046, 455, "Output"]
+Cell[85405, 1786, 4437, 114, 292, "Input"],
+Cell[89845, 1902, 46728, 1050, 455, "Output"]
 }, Open  ]],
-Cell[136353, 2950, 94, 1, 32, InheritFromParent],
+Cell[136588, 2955, 94, 1, 32, InheritFromParent],
 Cell[CellGroupData[{
-Cell[136472, 2955, 3025, 80, 180, "Input"],
-Cell[139500, 3037, 21152, 525, 444, "Output"]
+Cell[136707, 2960, 3076, 81, 180, "Input"],
+Cell[139786, 3043, 21248, 528, 444, "Output"]
 }, Open  ]],
-Cell[160667, 3565, 3134, 91, 230, "Input"],
-Cell[163804, 3658, 111, 1, 55, "Input"],
+Cell[161049, 3574, 3134, 91, 230, "Input"],
+Cell[164186, 3667, 111, 1, 55, "Input"],
 Cell[CellGroupData[{
-Cell[163940, 3663, 4418, 113, 270, "Input"],
-Cell[168361, 3778, 64190, 1383, 449, "Output"]
-}, Open  ]],
-Cell[CellGroupData[{
-Cell[232588, 5166, 960, 25, 59, "Input"],
-Cell[233551, 5193, 11189, 249, 253, "Output"]
+Cell[164322, 3672, 4467, 114, 270, "Input"],
+Cell[168792, 3788, 64368, 1382, 449, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[244777, 5447, 3551, 91, 225, "Input"],
-Cell[248331, 5540, 29680, 624, 473, "Output"]
+Cell[233197, 5175, 960, 25, 59, "Input"],
+Cell[234160, 5202, 11189, 249, 253, "Output"]
+}, Open  ]],
+Cell[CellGroupData[{
+Cell[245386, 5456, 3602, 92, 225, "Input"],
+Cell[248991, 5550, 29814, 625, 473, "Output"]
 }, Open  ]]
 }
 ]
