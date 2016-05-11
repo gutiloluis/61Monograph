@@ -1,7 +1,9 @@
 \chapter{Effects of bursting and senescence}
 \label{ch:bursting}
 
-There are many different phenomena that could have an effect on noise. For instance, transcription and translation do not occur necessarily as single step Poisson processes. Gene regulation may involve many complex mechanisms that can not be modeled with these simple assumptions. In this chapter we will use the FDT and elements of basic probability to analyze the effect of bursting (the synthesis of several molecules per creation event) and senescence (the degradation of molecules over many steps) on noise. Figure \ref{fig:bur-examples} shows some examples of these mechanisms.
+In the previous chapters we have modeled some genetic circuits that satisfy the simple assumptions of a single step Poisson process. These include the creation and degradation of mRNA molecules and proteins in single steps with times between events that are memoryless. Nevertheless, there exist many different gene expression and regulation mechanisms affecting many genetic systems, mostly in eukaryotic cells. 
+
+For instance, there may be cases of bursting in synthesis. This occurs when several molecules produced per creation events, and both the time between events and the number of molecules produced in an event is a random number following some arbitrary distribution (fig. \ref{fig:bur-examples} - left). On the other hand, some molecules can senesce before being completely degraded. That is, they transit over several steps in their process of degradation (fig. \ref{fig:bur-examples} - right). To model these phenomena, it is not enough to assume single step Poisson processes. In this chapter we will use the FDT and elements of basic probability to analyze the effect of bursting and senescence on noise.
 
 This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
 

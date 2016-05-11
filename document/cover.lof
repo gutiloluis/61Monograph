@@ -8,7 +8,7 @@
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.1.1}{\ignorespaces The central dogma of molecular biology}}{18}{figure.1.1.1}
+\contentsline {figure}{\numberline {1.1.1}{\ignorespaces Central dogma of molecular biology}}{18}{figure.1.1.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.2.1}{\ignorespaces Scheme of transcriptional activation}}{20}{figure.1.2.1}
 \defcounter {refsection}{0}\relax 
@@ -16,7 +16,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.2.3}{\ignorespaces Example of a biological circuit}}{22}{figure.1.2.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill functions for an activator}}{24}{figure.1.3.1}
+\contentsline {figure}{\numberline {1.3.1}{\ignorespaces Hill functions for an activator}}{25}{figure.1.3.1}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {1.3.2}{\ignorespaces Hill functions for a repressor}}{25}{figure.1.3.2}
 \defcounter {refsection}{0}\relax 
@@ -24,15 +24,15 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1.1}{\ignorespaces Model of gene expression for a single gene}}{38}{figure.2.1.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Deterministic equation for the number of proteins in a single gene}}{40}{figure.2.1.2}
+\contentsline {figure}{\numberline {2.1.2}{\ignorespaces Deterministic equation for the number of proteins in a single gene}}{39}{figure.2.1.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1.3}{\ignorespaces Transitions between states for a single gene}}{41}{figure.2.1.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {figure}{\numberline {2.1.4}{\ignorespaces Noise in proteins: comparing analytical results and Gillespie simulations}}{47}{figure.2.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Distribution of proteins for a constitutive gene and a negatively autorregulated gene}}{53}{figure.2.3.1}
+\contentsline {figure}{\numberline {2.3.1}{\ignorespaces Distribution of proteins for a gene with negative autorregulation}}{53}{figure.2.3.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of protein number for a negatively autorregulated gene}}{55}{figure.2.3.2}
+\contentsline {figure}{\numberline {2.3.2}{\ignorespaces Fano factor of the number of proteins for a negatively autorregulated gene}}{55}{figure.2.3.2}
 \defcounter {refsection}{0}\relax 
 \addvspace {10\p@ }
 \defcounter {refsection}{0}\relax 

@@ -1,7 +1,7 @@
 \chapter{Basic genetic circuits in steady state - The master equation}
 \label{ch:master}
 
-In this chapter, we use the Master equation (ME) to find the noise of some basic genetic circuits. In the ME approach there are certain states in which the system can be found and it evolves probabilistically between them according to some determined transition rates. In the context of genetic circuits the possible states are characterized by the number of mRNA molecules and proteins, and the transitions by their rates of creation and degradation.
+In this chapter, we use the Master equation (ME) to find the noise of some basic genetic circuits. In the ME approach there are certain states in which the system can be found and it evolves probabilistically between them according to some transition rates. In the context of genetic circuits the possible states are characterized by the number of mRNA molecules and proteins, and the transitions by their rates of creation and degradation.
 
 We introduce the ME approach applying it to the simplest possible genetic circuit: a single gene regulated by a constitutive promoter. Next we explain a generalization of the analytic method that can be applied to an arbitrary genetic circuit that satisfies certain conditions. Finally, we ilustrate the general method using it on an negatively autorregulated gene.
 
@@ -40,13 +40,10 @@ Hence, on steady state
 Typical values for the parameters in \textit{E. coli} are $k_r = 1$ mRNA$/$min, $d=1$ copy of the gene, $k_p = 30$ proteins$/($mRNA$\cdot$min$)$, $\gamma_r = 1/(5$ min$)$, and $\gamma_p = 1/(30$ min$)$ \cite{alon06}. With these values, the steady state values are $n_{1,s}=5$ mRNAs and $n_{2,s}=4500$ proteins. This values will be used in the following analysis.
 
 Let $n_1(0) = n_2(0) = 0$. Then, the solutions of the differential equation for $n_1$ is
-
 \begin{equation*}
   n_1(t) = n_{1,s}\left(1-e^{-\gamma_rt}\right).
 \end{equation*}
-
 Also, assuming $n_1$ is fixed at some value $n_1^*$, the solution for $n_2$ is similar
-
 \begin{equation*}
   n_2(t) = n_{2,s}\left(1-e^{-\gamma_pt}\right),
 \end{equation*}
@@ -55,8 +52,8 @@ with $n_{2,s}=\frac{k_p}{\gamma_p}n_1^*$. Figure \ref{fig:mas-detSol} shows a pl
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=13cm]{mas-detSol}
-  \caption[Deterministic equation for the number of proteins in a single gene]{\label{fig:mas-detSol} Deterministic function for the number of proteins as a function of time for a fixed number of mRNAs. The time to reach half the steady state value, $\ln 2/\gamma_p$, and the steady state value are marked with dashed lines.}
+  \includegraphics[width=9cm]{mas-detSol}
+  \caption[Deterministic equation for the number of proteins in a single gene]{\label{fig:mas-detSol} Deterministic number of proteins as a function of time for a fixed number of mRNAs. The time to reach half the steady state value, $\ln 2/\gamma_p$, and the steady state value are marked with dashed lines.}
 \end{figure}
 
 The number of protein reaches half its steady state in a time of $\ln 2/\gamma_p$. Then, the speed at which $n_2$ reaches its steady state is proportional to $1/\gamma_p$ and it is the same independently of whether the levels start above or below $n_{2,s}$. If the number of mRNA molecules changes, the steady state level for $n_2$ also changes and the proteins reach the new steady state within a timescale of $1/\gamma_p$. This fact is very important for noise propagation as we will see in the next chapter.
@@ -239,7 +236,21 @@ Therefore, the noise for the proteins in steady state is given by
 
 where $b\coloneqq k_p/\gamma_r$ is the average number of proteins that are produced during the lifetime of a transcript, often called the \textit{burst size}. The second term ($1$ in $\nu_p$) represents the Poisson noise, which measured as the CV is very small because the average number of proteins for a given gene is usually large (of the order of thousands in \textit{E. coli}).
 
-The first term of the noise represents the contribution to the noise that arises in mRNA fluctuations and is propagated to proteins since both molecules are related by the rate of production of proteins $k_pn_1$. The factor $1/(1+\gamma_p/\gamma_r)$ represent the so called time averaging of fluctuations, it takes values between $0$ and $1$. Usually $\gamma_p<\gamma_r$, meaning that fluctuations in mRNA number happen on a characteristic timescale $\tau_r \coloneqq 1/\gamma_r$  that is smaller than the response time of the proteins $\tau_p \coloneqq 1/\gamma_p$. The proteins are thus unable to respond immediately to the mRNA fluctuations. As a consequence, the protein make an average over many fluctuations of mRNA. This process reduces noise in the number of proteins. This very important phenomenon will be considered with more detain in section \ref{sec:fdt-time-ave}. The factor $b$ increases noise because with the estimated values given at the beginning of the chapter we have $b=150$ proteins/mRNA, resulting in a noise in proteins that is much larger than Poisson.
+The first term of the noise represents the contribution to the noise that arises in mRNA fluctuations and is propagated to proteins since both molecules are related by the rate of production of proteins $k_pn_1$. The factor $b$ considerably increases noise with respect to Poisson because with the estimated values given at the beginning of the chapter we have $b=150$ proteins/mRNA. Also, usually $\gamma_p \ll \gamma_r$, hence the noise can be approximated as
+
+\begin{equation*}
+  \nu_{2,s} = b+1, \quad \quad \eta_{2,s}^2 = \frac{1}{\langle n_2\rangle_s}\left(b+1\right).
+\end{equation*}
+
+The CV in eq. \eqref{eq:noise2} can be rewritten as
+
+\begin{equation*}
+  \eta_{2,s}^2 = \frac{1}{\langle n_2\rangle_s}+\frac{1}{\langle n_1\rangle_s}\frac{1}{1+\gamma_m/\gamma_p}.
+\end{equation*}
+
+This equation can be interpreted in the following way, the noise in the number of proteins has two parts. The first one is the Poisson noise in the number of proteins ($1/\langle n_2\rangle_s$), while the second part is the Poisson noise in mRNA numbers ($1/\langle n_1\rangle_s$) that is transmitted to proteins. The strength of the effect of mRNA fluctuations in the number of proteins is determined by the factor $(1+\gamma_m/\gamma_p)^{-1}$, which refers to the so called time averaging of fluctuations.
+
+The time average factor takes values between $0$ and $1$. As we mentioned, $\gamma_p<\gamma_r$ in most of the cases. This means that fluctuations in mRNA number happen on a characteristic timescale $\tau_r \propto 1/\gamma_r$  that is smaller than the response time of the proteins $\tau_p \propto 1/\gamma_p$. The proteins are thus unable to respond immediately to the mRNA fluctuations. As a consequence, the protein make an average over many fluctuations of mRNA. This process reduces noise in the number of proteins. This very important phenomenon will be considered with more detain in section \ref{sec:fdt-time-ave}.
 
 The analytical equations are compared with the results of Gillespie simulations in fig. \ref{fig:mas-sim_simple}. It can be seen that the Fano factor is strongly dependent on the burst size $b$, independent of $k_r$, and dependent on the protein half-life $\tau_p = \ln2/\gamma_r$ only for low values of $\langle p\rangle_s$. Also $\nu_{p,s}$ can become much larger than $1$ for biologically relevant parameters.
 
@@ -421,8 +432,8 @@ where
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=15cm]{mas-hist}
-  \caption[Distribution of proteins for a constitutive gene and a negatively autorregulated gene]{\label{fig:mas-sim_hist}Distribution for the number of proteins for an autorrepressed gene [eq. \eqref{eq:mas-autorr_det}, blue], and an unrepressed gene [eq. \eqref{eq:mas-simple_det_1} with $k_r = k_r^\text{max}$, orange]. The  values of the parameters are $\tau_r=2$ min, $\tau_p=1$ h, $b=10$ proteins/mRNA, $n=2$, $K_d=800$ proteins, and the average number of proteins without repression $\langle p\rangle_\text{unrep} \coloneqq k_r^\text{max}k_p/(\gamma_r\gamma_p) = 1200$ proteins. A sample of $10000$ cells (trials) evolved until a time of $10\tau_p$ was run on each histogram.}
+  \includegraphics[width=11cm]{mas-hist}
+  \caption[Distribution of proteins for a gene with negative autorregulation]{\label{fig:mas-sim_hist}Distribution for the number of proteins for an autorrepressed gene [eq. \eqref{eq:mas-autorr_det}, blue], and an unrepressed gene [eq. \eqref{eq:mas-simple_det_1} with $k_r = k_r^\text{max}$, orange]. The  values of the parameters are $\tau_r=2$ min, $\tau_p=1$ h, $b=10$ proteins/mRNA, $n=2$, $K_d=800$ proteins, and the average number of proteins without repression $\langle p\rangle_\text{unrep} \coloneqq k_r^\text{max}k_p/(\gamma_r\gamma_p) = 1200$ proteins. A sample of $10000$ cells (trials) evolved until a time of $10\tau_p$ was run on each histogram.}
 \end{figure}
 
 Since the protein represses the transcription of his own gene, it is expected that the steady state number of proteins $\langle n_2\rangle_s$ is reduced with respect to the unrepressed case. To evidence this, fig. \ref{fig:mas-sim_hist} shows the distributions at steady state for the number of proteins of an unregulated and a negatively autorregulated gene resulting from Gillespie simulations. Both the average and the noise (width of the distribution) are reduced. The decrease of the noise occurs because a fluctuation that, for instance, increases the number of protein above the steady state level also increases the repression. This lowers the production rate, thus driving the levels back to the steady state with more strenght than in the unrepressed case. The effect is analogous for a random reduction of the level of proteins below steady state.
@@ -466,8 +477,8 @@ with $\phi\coloneqq k_1/\gamma_p$ represents the strength of the feedback. In fi
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=15cm]{mas-sim_autorreg}
-  \caption[Fano factor of protein number for a negatively autorregulated gene]{\label{fig:mas-sim_autorreg} Comparison between the results of Gillespie simulations (dots) using the exact eqs. \eqref{eq:mas-autorr_det} and the analytical results given by eq. \eqref{eq:mas-autorreg_final}. The Fano factor is plotted vs. the mean number of proteins in steady state. The base values of the parameters are the same as in fig. \ref{fig:mas-sim_hist}. For each curve, the parameter indicated in the legend is varied while the others are fixed. $K_d$ is varied from $100$ to $2000$ in increments of $100$ and from $2000$ to $5000$ in increments of $1000$, while $n$ is varied from $0$ to $20$ in unit increments. Each point correspond to 10000 trials. Each one evolved until a time of $10\tau_p$.}
+  \includegraphics[width=14cm]{mas-sim_autorreg}
+  \caption[Fano factor of the number of proteins for a negatively autorregulated gene]{\label{fig:mas-sim_autorreg} Comparison between the results of Gillespie simulations (dots) using the exact eqs. \eqref{eq:mas-autorr_det} and the analytical results given by eq. \eqref{eq:mas-autorreg_final}. The Fano factor is plotted vs. the mean number of proteins in steady state. The base values of the parameters are the same as in fig. \ref{fig:mas-sim_hist}. For each curve, the parameter indicated in the legend is varied while the others are fixed. $K_d$ is varied from $100$ to $2000$ in increments of $100$ and from $2000$ to $5000$ in increments of $1000$, while $n$ is varied from $0$ to $20$ in unit increments. Each point correspond to 10000 trials. Each one evolved until a time of $10\tau_p$.}
 \end{figure}
 
 For a given average number of proteins, this circuit has a more efficient control of fluctuations than the one for the unrepressed gene. In this case, the random fluctuations are controlled by the number of proteins and there is no need to spend energy in unused mRNA molecules. Evolution might have developed circuits of this kind with the purpose of tuning the noise according to the function of the circuits while reducing the energetic cost.

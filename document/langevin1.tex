@@ -426,7 +426,7 @@ To find the logarithmic gains $H_{21}$ and $H_{10}$, we use eq. \eqref{lan-Hexp}
   H_{ij} = \frac{\bar{x}_{jA}}{\gamma\bar{x}_i}\frac{\mathrm{d}}{\mathrm{d} \bar{x}_{jA}}\left( \alpha_i + \frac{\beta_i}{1+(\frac{\bar{x}_{jA}}{K_{di}})^{h_i}}\right) = \frac{h_i}{\beta_i k_i(\bar{x}_{jA})}\left(k_i(\bar{x}_{jA}) - \alpha_i\right) \left(\alpha_i+\beta_i-k_i(\bar{x}_{jA})\right).
 \end{equation}
 
-The values of the parameters that will be used in the following calculations and graphics can be found in github \footnote{The equations were solved and plotted using Wolfram Mathematica. The notebook, which also contains the values for the parameters can be found in \url{https://github.com/gutiloluis/61Monograph/blob/master/math/lan-analytic_solver.nb}. Most of the parameters were fitted experimentally by Pedraza and van Oudenaarden \cite{pedraza05}}. 
+The values of the parameters that will be used in the following calculations and graphics can be found in GitHub\footnote{The equations were solved and plotted using Wolfram Mathematica. The notebook, which also contains the values for the parameters can be found in \url{https://github.com/gutiloluis/61Monograph/blob/master/math/lan-analytic_solver.nb}. Most of the parameters were fitted experimentally by Pedraza and van Oudenaarden \cite{pedraza05}}.
 
 Replacing eqs. \eqref{eq:lan-hill_g} - \eqref{eq:lan-H_det} we obtain explicit expressions for the logarithmic gains that, given the values of the parameters can be replaced in the eqs. for the noises and correlations. Fig. \ref{fig:lan-Hs} shows the logarithmic gains as a function of [IPTG] when [ATC] = 0.
 
@@ -481,7 +481,7 @@ Fig. \ref{fig:lan-noise_sources} summarizes how noise propagates through a casca
 \begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{lan-noise_sources}
-  \caption[Propagation of noise through a cascade]{\label{fig:lan-noise_sources} Different sources of noise and their propagation along the cascade of regulation (from \cite{pedraza05}).}
+  \caption[Propagation of noise through a cascade]{\label{fig:lan-noise_sources} Different sources of noise and their propagation along the cascade of regulation. From \cite{pedraza05}.}
 \end{figure}
 
 The limitations of the model are related to the ones for the ME approach. It is also a stationary and linearized model that does not account for the time dynamics of fluctuations. In spite of that, it is remarkable how the Langevin approach enabled the authors to write the expressions for the noises in a way that is very easy to interpret. Also, the match of the experimental results with the model is excellent \cite{pedraza05} \cite{pedraza06}.

@@ -233,13 +233,13 @@ but $\frac{\langle x^2\rangle}{\langle x\rangle^2} = \frac{\sigma^2(x) + \langle
   Q_x^2 = \frac{1-Q_\text{vol}^2}{\langle x\rangle} + Q_\text{vol}^2(\eta^2_x+1).
 \end{equation}
 
-Figure \ref{fig:div-Prandom_size} shows the partition error with respect to independent segregation. For a fixed value of $Q_\text{vol}$, segregation is more disordered for larger values of $\langle x\rangle$. Besides, in the experimentally measured range for $Q_\text{vol}$ of about $0.03 - 0.07$ \cite{huh11b}, variations in volume have a small impact on partition errors for various orders of magnitude of $\langle x\rangle$.
-
 \begin{figure}[H]
   \centering
   \includegraphics[width=13cm]{div-Prandom_size}
   \caption[Partition noise when the sizes of the daughter cells are random]{\label{fig:div-Prandom_size}Plot of $Q_X/Q_\text{ind}$ vs. $Q_\text{vol}$ with $Q_x$ given by eq. \eqref{eq:div-Rrandom_vol} and $Q_\text{ind}$ by eq. \eqref{div-Rindep} for two values of $\langle x\rangle$. $x$ is assumed to follow a Poisson distribution, so $\eta_x^2=1/\langle x\rangle$.}
 \end{figure}
+
+Figure \ref{fig:div-Prandom_size} shows the partition error with respect to independent segregation. For a fixed value of $Q_\text{vol}$, segregation is more disordered for larger values of $\langle x\rangle$ compared to independent segregation. Besides, in the experimentally measured range for $Q_\text{vol}$ of about $0.03 - 0.07$ \cite{huh11b}, the authors argued that variations in volume have a small impact on partition errors because they only showed the plots for $\langle x\rangle = 10$ and $\langle x\rangle = 100$. However, as we saw in chapter \ref{ch:master}, the stationary number of molecules of a protein could be in the order of $1000$ to $10000$, and with such numbers the error is considerably larger.
 
 \subsection{Clustered segregation}
 
@@ -480,8 +480,8 @@ Let $n$ be the number of binding sites on a cell half, and suppose that it incre
 
 \begin{equation*}
   \begin{split}
-    n\xrightarrow{f(v-n)}n+1,\\
-    n\xrightarrow{f(n)}n-1,
+    n&\xrightarrow{f(v-n)}n+1,\\
+    n&\xrightarrow{f(n)}n-1,
   \end{split}
 \end{equation*}
 
@@ -489,8 +489,8 @@ where $f$ is some function. Also, the rate at which a molecule leaves a cell hal
 
 \begin{equation*}
   \begin{split}
-    l\xrightarrow{\lambda(n-l)(x-l)}l+1,\\
-    l\xrightarrow{\lambda(v-n-x+l)l}l-1.
+    l&\xrightarrow{\lambda(n-l)(x-l)}l+1,\\
+    l&\xrightarrow{\lambda(v-n-x+l)l}l-1.
   \end{split}
 \end{equation*}
 
@@ -575,7 +575,7 @@ And using $v=\langle x\rangle$
 
 \subsection{Pair formation mechanisms}
 
-The molecules to be segregated can form pairs than during their partition are separated using spindles into each cell half. If the splitting process has a low error, it can reduce partition errors. Figure \ref{fig:div-pair}
+The molecules to be segregated can form pairs than during their partition are separated using spindles into each cell half. If the splitting process has a low error, it can reduce partition errors. Figure \ref{fig:div-pair} shows how this process occurs.
 
 \begin{figure}[H]
   \centering

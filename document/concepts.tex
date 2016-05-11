@@ -6,15 +6,15 @@ The central dogma explains how genetic information flows within a living being. 
 
 In prokaryotes, DNA molecules exist in the form of chromosomes and plasmids. The former are the main genetic material that has the essential information to make the organisms. Prokaryotes have only a single copy of it, while eukaryotes may have several (e.g. we have $23$ pairs). The latter are shorter molecules that confer additional characteristics such as antibiotic resistance. There could be several copies in a cell and they can be transferred between organisms. Plasmids are extensively used in synthetic biology because they are easier to introduce in cells.
 
-Proteins are the structural and functional elementary units of living beings. Therefore, according to the proteins that are being produced in a certain cell it will have certain form and develop certain functions. 
+Proteins are the structural and functional elementary units of living beings. Therefore, the form and the functions developed by a cell are determined by the proteins that are being produced in it.
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=15cm]{con-dogma}
-  \caption[The central dogma of molecular biology]{\label{fig:con-dogma} The central dogma of molecular biology.}
+  \caption[Central dogma of molecular biology]{\label{fig:con-dogma} Central dogma of molecular biology.}
 \end{figure}
 
-The encoding of information in DNA and the mechanisms by which proteins are made according to that information, including the genetic code, are very similar between different organisms. In eukaryotes, for instance there are more sophisticated processes of gene expression and regulation, but the mechanisms in general are the same for every living being. This remarkable fact supports the idea of a common ancestor for all the living beings and makes it possible, for instance, to use genes from different organisms to build synthetic biological circuits.
+The encoding of information in DNA and the mechanisms by which proteins are made according to that information, including the genetic code, are very similar between different organisms. In eukaryotes, for instance there are more sophisticated processes of gene expression and regulation, but the mechanisms in general are the same for every living being. This remarkable fact supports the idea of a common ancestor for all the living beings and makes it possible to use genes from different organisms to build synthetic biological circuits.
 
 \section{Gene regulation and biological circuits}
 
@@ -22,14 +22,13 @@ DNA contains all the information necessary to build a living being and let him d
 
 The genetic information encoded in the DNA is called genotype, while the observable characteristics of an organism are called phenotype. In this terminology, our neurons and our skin cells have the same genotype but differ in their genotypes \cite{alberts13} \cite{alon06}.
 
-For each gene, or group of genes, there is a region located upstream the sequence that encodes for the protein called the promoter. mRNA Polymerase binds the promoter to initiate transcription. Also, there are proteins, called transcription factors (TFs), that bind specific sites in the promoter changing the rate of transcription. They may be either repressors or activators. The former reduce the transcription rate, while the latter increase it. Fig. \ref{fig:con-tf_simple} shows how the expression of some gene is enhanced by activators. Repressors also bind to the promoter but they lower the affinity between it and the RNApol, or actively obstruct the RNApol from binding to the DNA. There are promoters that are not regulated by any TF, they are called constitutive promoters.
+For each gene, or group of genes, there is a region located upstream the sequence that encodes for the protein called the promoter. mRNA Polymerase binds the promoter to initiate transcription. Also, there are proteins, called transcription factors (TFs), that bind specific sites in the promoter changing the rate of transcription. They may be either repressors or activators. The former reduce the transcription rate, while the latter increase it. Fig. \ref{fig:con-tf_simple} shows how the expression of some gene is enhanced by activators. Repressors also bind to the promoter but they lower the affinity between it and the RNApol, or actively obstruct the RNApol from binding to the DNA. A promoter is said to be constitutive if it is not regulated by any TF.
 
 \begin{figure}[H]
   \centering
-  \includegraphics[width=12cm]{con-tf_simple}
+  \includegraphics[width=9cm]{con-tf_simple}
   \caption[Scheme of transcriptional activation]{\label{fig:con-tf_simple} Scheme of transcriptional activation. (A) Transcription factors bind to specific regions in the promoter. (B) When the activators bind the promoter, they increase the affinity between the RNA Polymerase and the promoter. (C) Then, transcription starts more easily when the activators are bound to the promoter.}
 \end{figure}
-
 
 The mechanisms of gene regulation can be very complex. For example, a protein can inhibit the transcription of certain gene only when another molecule is bound to it. These molecules are called inducers and they are in some cases environmental signals. This is how gene expression responds to the surroundings of the cell. Besides, since TFs are proteins, they are codified by genes whose expression is controlled by other TFs and so on. In this way, different genes are connected between them and with the environment to allow the cells to take decisions in many sophisticated ways.
 
@@ -49,18 +48,18 @@ This is the principle of biological circuits, which are groups of genes and exte
 
 In scheme such as the shown in fig. \ref{fig:con-biocircuits_conv}, the interacting components and the kind of interactions may be represented. However, to completely characterize these interactions, their strenghts must be given. A widely used model to quantify the strenght of gene regulation is the Hill equation.
 
-\section{Hill functions}
+\section{Hill equation}
 \label{sec:hill}
 
 To model the regulation on a gene by a transcription factor, a widely used model is the Hill equation. We will derive it for a simple case that gives an intuitive understanding of the basic principles \cite{alon06}.
 
-Consider a transcription factor $X$ that binds to the promoter of some gene, we will label the promoter (gene) as $D$. Also, suppose that $X$ can bind to $n$ sites in the promoter and ignore the intermediate states where less than $n$ molecules of $X$ are bound. The chemical equation is
+Consider a transcription factor $X$ that binds to the promoter of some gene, we will label the promoter (gene) as $D$. Also, suppose that $X$ can bind to $n$ sites in the promoter and ignore the intermediate states where less than $n$ molecules of $X$ are bound. The chemical equation describing this process is
 
 \begin{equation*}
   \ce{n[X] + [D]} \ce{<=>[k_+][k_-]} \ce{[nXD]}.
 \end{equation*}
 
-Hence, $[nXD]$ changes over time as
+Hence, the change over time of the concentration of molecules of the promoter bound to $n$ molecules of $X$ is given by
 
 \begin{equation*}
   \frac{\mathrm{d}[nXD]}{\mathrm{d}t} = k_+[X]^n[D] - k_-[nXD],
@@ -123,7 +122,7 @@ Notice in both graphs that as $n\rightarrow\infty$, the function approaches a He
 
 \section{Probability}
 
-Consider an experiment in which the set of possible outcomes is known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF), the analogous of the PMF.}.
+Consider an experiment in which the set of possible outcomes is known. A random variable $X$ is a quantity that can take values from that set of possible outcomes $\{x\}$ of the experiment. How likely is that any value $x$ happens in a given trial of the experiment is determined by the probability mass function (PMF) $P(x)$ if the variable is discrete. $P(x)$ represents the fraction of trials of the experiment in which $X$ has the value $x$ when the number of trials is large. The PMFs follow the axioms of nonnegativity, additivity and normalization \cite{bertsekas08} \footnote{We will focus here on discrete random variables. The continous case is very similar, it reduces almost entirely to change $\sum$ by $\int\mathrm{d}x$ and $P(x)$ by $\rho(x)$, where $\rho(x)$ is the probability density function (PDF).}.
 
 For several random variables $X_1,\dotsc,X_n$, the joint PMF  $P(x_1,\dotsc,x_n)$ is defined as the probability that $X_1=x_1,\dotsc,X_n=x_n$. The set of random variables are \textbf{independent} if
 
@@ -184,7 +183,7 @@ For a constant $c$, the variance has the property
   \sigma^2(cX) = c^2\sigma^2(X)
 \end{equation*}
 
-The $\mathbf{n}$\textbf{th moment} of the random variable $X$ is given by
+The $\mathbf{n^{\textbf{th}}}$ \textbf{moment} of the random variable $X$ is given by
 
 \begin{equation*}
   \langle X^n\rangle \coloneqq \sum_xx^nP(x).
@@ -192,7 +191,7 @@ The $\mathbf{n}$\textbf{th moment} of the random variable $X$ is given by
 
 Hence, the expected value is the first moment and the variance can be written in terms of the first and second moments.
 
-If $X$ and $Y$ are independent,
+If $X$ and $Y$ are independent it follows that
 
 \begin{equation}
   \label {eq:con-mom_ind}
@@ -236,7 +235,7 @@ Intuitively, we may expect that a random variable is more ``random'' or noisy wh
   \nu_X \coloneqq \frac{\sigma^2(X)}{\langle X \rangle},\quad\quad\eta_X \coloneqq \frac{\sigma(X)}{\langle X \rangle}.
 \end{equation}
 
-The Fano factor has been used in the first studies of noise in biology because it measures the deviations from a Poissonian behavior. For a random variable with a Poisson PMF, $\nu_X=1$. In more recent studies the coefficient of variation is being used because it is dimensionless, so it does not depend on the units that are used. For this reason, the generic term 'noise' is now used refering to $\eta$.
+The Fano factor has been used in the first studies of noise in biology because it measures the deviations from a Poissonian behavior. For a random variable with a Poisson PMF, $\nu_X=1$. In more recent studies the coefficient of variation is being used because it is dimensionless, so it does not depend on the units that are used. For this reason, the generic term ``noise'' is now used refering to $\eta$.
 
 \section{Moment generating functions}
 
@@ -341,7 +340,7 @@ The Fourier transform and the power spectrum are related by the \textbf{Wiener-K
 \section{The Poisson process}
 \label{sec:poisson}
 
-The processes of creation and destruction involving gene expression are usually modeled as Poisson processes. For example, the creation and destruction of mRNA molecules and proteins. The Poisson process is a continous-time stochastic process that is used to model arrivals when there is some known arrival rate and when the arrivals at different time intervals are independent.
+The processes of creation and destruction involving gene expression are usually modeled as Poisson processes. For example, the synthesis and degradation of mRNA molecules and proteins. The Poisson process is a continous-time stochastic process that is used to model arrivals when there is some known arrival rate and when the arrivals at different time intervals are independent.
 
 Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\mathbb{N}$ arrivals during a time interval $\tau$. Letting $\lambda$ be the arrival rate, the Poisson process satisfy the following properties
 
@@ -351,18 +350,14 @@ Mathematically, we define $P(k,\tau)$ as the probability that there are $k\in\ma
   \item $P(k,\tau)$ satisfies the following
     \begin{equation*}
       \begin{split}
-        P(0,\tau)=1-\lambda\tau+o_0(\tau),\\
-        P(1,\tau)=\lambda\tau+o_1(\tau),\\
-        P(k,\tau)=o_k(\tau).\quad\text{for } k>1.
+        P(0,\tau)&=1-\lambda\tau+o_0(\tau),\\
+        P(1,\tau)&=\lambda\tau+o_1(\tau),\\
+        P(k,\tau)&=o_k(\tau).\quad\text{for } k>1.
       \end{split}
     \end{equation*}
-    
-    Where $o_k(\tau)$, $k=0,1,\dotsc$ are functions that become negligible compared to $\tau$ as it becomes small, i.e.
-
-    \begin{equation*}
-      \lim_{\tau\to 0}\frac{o_k(\tau)}{\tau}=0.
-    \end{equation*}
 \end{itemize}
+    
+    Where $o_k(\tau)$, $k=0,1,\dotsc$ are functions that become negligible compared to $\tau$ as it becomes small.
 
 According to the previous properties, $P(k,\tau)$ is given by
 

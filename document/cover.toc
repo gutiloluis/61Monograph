@@ -2,7 +2,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{Abstract}{3}{section*.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Introduction}{11}{chapter*.4}
+\contentsline {chapter}{Introduction}{11}{chapter*.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {chapter}{\numberline {1}Preliminary concepts}{17}{chapter.1}
 \defcounter {refsection}{0}\relax 
@@ -10,11 +10,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.2}Gene regulation and biological circuits}{18}{section.1.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.3}Hill functions}{22}{section.1.3}
+\contentsline {section}{\numberline {1.3}Hill equation}{22}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Probability}{25}{section.1.4}
+\contentsline {section}{\numberline {1.4}Probability}{26}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Noise}{28}{section.1.5}
+\contentsline {section}{\numberline {1.5}Noise}{29}{section.1.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.6}Moment generating functions}{29}{section.1.6}
 \defcounter {refsection}{0}\relax 
@@ -94,6 +94,6 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {6.5}Final remarks}{127}{section.6.5}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Conclusions}{129}{chapter*.5}
+\contentsline {chapter}{Conclusions}{129}{chapter*.6}
 \defcounter {refsection}{0}\relax 
-\contentsline {chapter}{Bibliography}{134}{chapter*.6}
+\contentsline {chapter}{Bibliography}{135}{chapter*.7}
