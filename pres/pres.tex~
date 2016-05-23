@@ -1,0 +1,111 @@
+\documentclass[xcolor=dvipsnames]{beamer}
+
+%\usepackage{varwidth}
+
+\usepackage[spanish]{babel}
+\usepackage[backend=biber, style=nature, sorting=ynt]{biblatex}
+\bibliography{biblio}
+
+\setbeamertemplate{bibliography item}{%
+  \ifboolexpr{ test {\ifentrytype{book}} or test {\ifentrytype{mvbook}}
+    or test {\ifentrytype{collection}} or test {\ifentrytype{mvcollection}}
+    or test {\ifentrytype{reference}} or test {\ifentrytype{mvreference}} }
+    {\setbeamertemplate{bibliography item}[book]}
+    {\ifentrytype{online}
+       {\setbeamertemplate{bibliography item}[online]}
+       {\setbeamertemplate{bibliography item}[article]}}%
+  \usebeamertemplate{bibliography item}}
+
+\defbibenvironment{bibliography}
+  {\list{}
+     {\settowidth{\labelwidth}{\usebeamertemplate{bibliography item}}%
+      \setlength{\leftmargin}{\labelwidth}%
+      \setlength{\labelsep}{\biblabelsep}%
+      \addtolength{\leftmargin}{\labelsep}%
+      \setlength{\itemsep}{\bibitemsep}%
+      \setlength{\parsep}{\bibparsep}}}
+  {\endlist}
+  {\item}
+
+\usepackage{color}
+\definecolor{dgray}{gray}{0.30}
+\definecolor{uyellow}{RGB}{253,241,0}
+
+\usepackage{graphicx}
+\usepackage[font={scriptsize}]{caption}
+\graphicspath{{img/}}
+
+%\makeatletter
+%\newcommand{\pushright}[1]{\ifmeasuring@#1\else\omit\hfill$\displaystyle#1$\fi\ignorespaces}
+%\newcommand{\pushleft}[1]{\ifmeasuring@#1\else\omit$\displaystyle#1$\hfill\fi\ignorespaces}
+%\makeatother
+
+\usetheme{Malmoe} 
+\setbeamercolor{frametitle}{fg=Black,bg=uyellow!75}
+\setbeamercolor{section in head/foot}{bg=uyellow, fg=Black}
+\setbeamercolor{author in head/foot}{bg=uyellow, fg=Black} 
+\setbeamercolor{date in head/foot}{fg=uyellow} 
+\setbeamercolor{institute in head/foot}{fg=Black}
+\usecolortheme[named=dgray]{structure}
+
+\setbeamertemplate{}[page number]
+ 
+\title{\textbf{Modelos estoc\'asticos de circuitos gen\'eticos}}
+
+\author{Luis Alberto Guti\'errez L\'opez}
+
+\institute[{\color{Black} Universidad de los Andes}]
+{
+ \vspace{5mm} \normalsize Director: Juan Manuel Pedraza Leal \\ \vspace{6mm} 
+\small Universidad de los Andes\\
+\small Departamento de F\'isica \vspace{4mm}
+}
+\tiny
+\date{\footnotesize Mayo 24, 2016}
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+%\begin{frame}
+  %\tableofcontents
+  % You might wish to add the option [pausesections]
+%\end{frame}
+
+\section{Introducci\'on}
+\subsection{Expresi\'on gen\'etica}
+\begin{frame}
+
+\begin{columns}[c]
+\column{.5\textwidth}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics<1->[width=1\textwidth]{con-dogma}
+\end{figure}
+
+\column{.5\textwidth}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics<2->[width=1\textwidth]{con-tf_simple}
+\end{figure}
+\end{columns}
+\nocite{*}
+\end{frame}
+
+\subsection{Circuitos gen\'eticos}
+
+\section{Ecuaci\'on maestra}
+\section{Ecuaci\'on de Langevin}
+\section{Gestaci\'on y senescencia}
+\section{Divisi\'on celular}
+
+
+\begin{frame}[allowframebreaks]
+\printbibliography
+\end{frame}
+
+\end{document}

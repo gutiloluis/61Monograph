@@ -1,0 +1,187 @@
+\defcounter {refsection}{0}\relax 
+\beamer@endinputifotherversion {3.24pt}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {1}{Introducci\'on}{2}{Introducci\'on}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Expresi\'on gen\'etica}}\headcommand {\beamer@subsectionpages {2}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{1}{1}{2/2}{Expresi\'on gen\'etica}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {2}{2}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{2}{3}{Circuitos gen\'eticos}}\headcommand {\beamer@subsectionpages {2}{2}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{1}{3/3}{Circuitos gen\'eticos}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {3}{3}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{3}{4}{Ruido en circuitos gen\'eticos}}\headcommand {\beamer@subsectionpages {3}{3}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{3}{1}{4/4}{Ruido en circuitos gen\'eticos}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {4}{4}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{4}{5}{Motivaciones para el estudio del ruido}}\headcommand {\beamer@subsectionpages {4}{4}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{4}{1}{5/5}{Motivaciones para el estudio del ruido}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {5}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{4}{2}{6/6}{Motivaciones para el estudio del ruido}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {6}{6}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {2}{Ecuaci\'on maestra}{7}{Ecuaci\'on maestra}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {2}{6}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {5}{6}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{1}{7}{Gen constitutivo}}\headcommand {\beamer@subsectionpages {7}{6}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{1}{1}{7/7}{Gen constitutivo}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {7}{7}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{1}{2}{8/8}{Gen constitutivo}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {8}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{2}{9}{Generalizaci\'on del modelo}}\headcommand {\beamer@subsectionpages {7}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{1}{9/9}{Generalizaci\'on del modelo}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {9}{9}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{2}{2}{10/10}{Generalizaci\'on del modelo}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {10}{10}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{3}{11}{Autorregulaci\'on}}\headcommand {\beamer@subsectionpages {9}{10}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{3}{1}{11/11}{Autorregulaci\'on}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {11}{11}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{3}{2}{12/12}{Autorregulaci\'on}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {12}{12}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{Ecuaci\'on de Langevin}{13}{Ecuaci\'on de Langevin}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {7}{12}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {11}{12}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{3}{13/13}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {13}{13}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{1}{14}{Ecuaci\'on de Langevin - Gen 0}}\headcommand {\beamer@subsectionpages {13}{13}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{1}{1}{14/14}{Ecuaci\'on de Langevin - Gen 0}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {14}{14}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{2}{15}{Ec. de Langevin - Gen 1}}\headcommand {\beamer@subsectionpages {14}{14}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{2}{1}{15/15}{Ec. de Langevin - Gen 1}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {15}{15}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{3}{16}{Distintas fuentes de ruido y su propagaci\'on}}\headcommand {\beamer@subsectionpages {15}{15}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{3}{1}{16/16}{Distintas fuentes de ruido y su propagaci\'on}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {16}{16}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{4}{17}{Ganancia logar\'itmica}}\headcommand {\beamer@subsectionpages {16}{16}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{4}{1}{17/17}{Ganancia logar\'itmica}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {17}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{3}{5}{18}{Ruidos y correlaciones}}\headcommand {\beamer@subsectionpages {17}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{5}{1}{18/18}{Ruidos y correlaciones}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {18}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{Divisi\'on celular}{19}{Divisi\'on celular}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {13}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {18}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{4}{1}{19}{Ruido por partici\'on}}\headcommand {\beamer@subsectionpages {19}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{1}{1}{19/19}{Ruido por partici\'on}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {19}{19}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{4}{2}{20}{Segregaci\'on ordenada y desordenada}}\headcommand {\beamer@subsectionpages {19}{19}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{2}{1}{20/20}{Segregaci\'on ordenada y desordenada}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {20}{20}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{Conclusiones}{21}{Conclusiones}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {19}{20}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {20}{20}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{5}{1}{21}{Conclusiones}}\headcommand {\beamer@subsectionpages {21}{20}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{1}{1}{21/21}{Conclusiones}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {21}{21}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{5}{2}{22}{Trabajo futuro}}\headcommand {\beamer@subsectionpages {21}{21}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{1}{22/22}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {22}{22}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {6}{Referencias}{23}{Referencias}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {21}{22}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {22}{22}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/23}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/24}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{24}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/25}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{25}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/26}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{26}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/27}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{27}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{0}{2}{23/28}{Trabajo futuro}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {23}{28}}
+\headcommand {\beamer@partpages {1}{28}}
+\headcommand {\beamer@subsectionpages {22}{28}}
+\headcommand {\beamer@sectionpages {21}{28}}
+\headcommand {\beamer@documentpages {28}}
+\headcommand {\def \inserttotalframenumber {28}}

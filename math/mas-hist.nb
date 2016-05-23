@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[    435989,       8779]
-NotebookOptionsPosition[    435156,       8746]
-NotebookOutlinePosition[    435489,       8761]
-CellTagsIndexPosition[    435446,       8758]
+NotebookDataLength[    436375,       8784]
+NotebookOptionsPosition[    435542,       8751]
+NotebookOutlinePosition[    435875,       8766]
+CellTagsIndexPosition[    435832,       8763]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -79,7 +79,7 @@ Cell[BoxData[{
  RowBox[{
   RowBox[{"imSize", " ", "=", " ", 
    RowBox[{"{", 
-    RowBox[{"ImageSize", "\[Rule]", "1000"}], "}"}]}], 
+    RowBox[{"ImageSize", "\[Rule]", "600"}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{
   RowBox[{"optHrep", " ", "=", " ", 
@@ -110,7 +110,7 @@ Cell[BoxData[{
            RowBox[{"\"\<Row\>\"", ",", "4"}], "}"}]}], ",", 
          RowBox[{"Spacings", "\[Rule]", "0.2"}]}], "]"}], ",", 
        RowBox[{"{", 
-        RowBox[{"0.87", ",", "0.88"}], "}"}]}], "]"}]}], "}"}]}], 
+        RowBox[{"0.8", ",", "0.9"}], "}"}]}], "]"}]}], "}"}]}], 
   ";"}], "\[IndentingNewLine]", 
  RowBox[{"hrep", "=", 
   RowBox[{"Histogram", "[", 
@@ -129,7 +129,8 @@ Cell[BoxData[{
    3.668504838402238*^9, 3.6685048499467907`*^9}, {3.6685051628152323`*^9, 
    3.6685051634652147`*^9}, {3.668505201565331*^9, 3.66850520531896*^9}, {
    3.66860114311802*^9, 3.668601180969635*^9}, {3.668601218550561*^9, 
-   3.668601252944254*^9}}],
+   3.668601252944254*^9}, {3.6719857322735043`*^9, 3.671985732738484*^9}, {
+   3.671985780646242*^9, 3.671985824408691*^9}}],
 
 Cell[BoxData[
  TagBox[
@@ -1538,7 +1539,7 @@ Cell[BoxData[
            RowBox[{"LegendMarkerSize", "\[Rule]", 
              RowBox[{"{", "20", "}"}]}], ",", 
            RowBox[{"Spacings", "\[Rule]", "0.2`"}]}], "]"}]& )], 
-     Scaled[{0.87, 0.88}], ImageScaled[{0.5, 0.5}],
+     Scaled[{0.8, 0.9}], ImageScaled[{0.5, 0.5}],
      BaseStyle->{FontSize -> Larger},
      FormatType->StandardForm]},
    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
@@ -1808,7 +1809,7 @@ Cell[BoxData[
           Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
           Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
           Automatic, Automatic}}, LegendMarkerSize -> {20}, Spacings -> 
-       0.2], {0.87, 0.88}, Identity]}]& ],
+       0.2], {0.8, 0.9}, Identity]}]& ],
   AutoDelete->True,
   Editable->True,
   SelectWithContents->False,
@@ -1820,7 +1821,8 @@ Cell[BoxData[
    3.6685036818129597`*^9}, 3.6685037178294888`*^9, {3.6685039108007603`*^9, 
    3.668503929640136*^9}, 3.668504739070099*^9, 3.66850479656301*^9, {
    3.668504839011923*^9, 3.668504856930656*^9}, 3.668505163898828*^9, 
-   3.668601257258851*^9}]
+   3.668601257258851*^9, {3.671985707477654*^9, 3.67198573322241*^9}, {
+   3.671985793209339*^9, 3.671985830882432*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -1858,7 +1860,7 @@ Cell[BoxData[
              RowBox[{"\"\<Row\>\"", ",", "4"}], "}"}]}], ",", 
            RowBox[{"Spacings", "\[Rule]", "0.2"}]}], "]"}], ",", 
          RowBox[{"{", 
-          RowBox[{"0.8835", ",", "0.82"}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
+          RowBox[{"0.825", ",", "0.82"}], "}"}]}], "]"}]}], "}"}]}], ";"}], 
    "\[IndentingNewLine]", 
    RowBox[{"hunrep", "=", 
     RowBox[{"Histogram", "[", 
@@ -1868,12 +1870,13 @@ Cell[BoxData[
       RowBox[{"Evaluate", "[", "legendHunrep", "]"}]}], "]"}]}]}]}]], "Input",\
 
  CellChangeTimes->CompressedData["
-1:eJxTTMoPSmViYGAQBmIQLde3z1k29LUjwwtPFxA9Q0naA0Tf8PIB0zftjYNA
+1:eJxTTMoPSmViYGAQBWIQLde3z1k29LUjwwtPFxA9Q0naA0Tf8PIB0zftjYNA
 tEh+RCiI5mGOigLR5w7mRoPouE+hSSB6ReiiZBCdd3dWMYju/2dcBqJ/1HVM
 ANGKEUvA9AKGyDkgOmje9wUget1/0VUgOiTCYDWIzmJu3gWirSzdzoFo3ouz
 L4HlZ7beAtHb0i4/BtHaBw+/BNHbuZ98ANEen95+BLv7Pf8PEP3HvPgPiN6X
 IccnB6RP1e8XBNG3Sk6Kg2ienBoJEK2/LMcPRCfodYBpBbEp23yB9IFlYXtA
-dMpBvSMg+kf/7TMgGgCrKovd
+dMpBvSMg+kf/7TMgem3H97MHo1878vlKngPR5+ZNuwSm/7LdA9EAYSaevQ==
+
   "]],
 
 Cell[BoxData[
@@ -4064,7 +4067,7 @@ Cell[BoxData[
            RowBox[{"LegendMarkerSize", "\[Rule]", 
              RowBox[{"{", "20", "}"}]}], ",", 
            RowBox[{"Spacings", "\[Rule]", "0.2`"}]}], "]"}]& )], 
-     Scaled[{0.8835, 0.82}], ImageScaled[{0.5, 0.5}],
+     Scaled[{0.825, 0.82}], ImageScaled[{0.5, 0.5}],
      BaseStyle->{FontSize -> Larger},
      FormatType->StandardForm]},
    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
@@ -4454,7 +4457,7 @@ Cell[BoxData[
           Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
           Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
           Automatic, Automatic, Automatic, Automatic, Automatic, Automatic}}, 
-       LegendMarkerSize -> {20}, Spacings -> 0.2], {0.8835, 0.82}, 
+       LegendMarkerSize -> {20}, Spacings -> 0.2], {0.825, 0.82}, 
       Identity]}]& ],
   AutoDelete->True,
   Editable->True,
@@ -4462,7 +4465,8 @@ Cell[BoxData[
   Selectable->True]], "Output",
  CellChangeTimes->{{3.6685048217985067`*^9, 3.6685048591216927`*^9}, 
    3.668505166535466*^9, 3.668602343364348*^9, {3.668602405147629*^9, 
-   3.668602471571403*^9}}]
+   3.668602471571403*^9}, {3.671985723995344*^9, 3.6719857362669563`*^9}, {
+   3.671985795854693*^9, 3.671985904848713*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -5937,7 +5941,7 @@ Cell[BoxData[
             RowBox[{"LegendMarkerSize", "\[Rule]", 
               RowBox[{"{", "20", "}"}]}], ",", 
             RowBox[{"Spacings", "\[Rule]", "0.2`"}]}], "]"}]& )], 
-      Scaled[{0.87, 0.88}], ImageScaled[{0.5, 0.5}],
+      Scaled[{0.8, 0.9}], ImageScaled[{0.5, 0.5}],
       BaseStyle->{FontSize -> Larger},
       FormatType->StandardForm], InsetBox[
       TemplateBox[{"\"Unrepressed\""},
@@ -8075,7 +8079,7 @@ Cell[BoxData[
             RowBox[{"LegendMarkerSize", "\[Rule]", 
               RowBox[{"{", "20", "}"}]}], ",", 
             RowBox[{"Spacings", "\[Rule]", "0.2`"}]}], "]"}]& )], 
-      Scaled[{0.8835, 0.82}], ImageScaled[{0.5, 0.5}],
+      Scaled[{0.825, 0.82}], ImageScaled[{0.5, 0.5}],
       BaseStyle->{FontSize -> Larger},
       FormatType->StandardForm]}},
    AspectRatio->NCache[GoldenRatio^(-1), 0.6180339887498948],
@@ -8111,7 +8115,7 @@ Cell[BoxData[
    GridLinesStyle->Directive[
      GrayLevel[0.5, 0.4]],
    ImageMargins->0.,
-   ImageSize->1000,
+   ImageSize->600,
    LabelStyle->Directive[30, FontFamily -> "Palatino Linotype", 
      GrayLevel[0]],
    PlotRange->{{0, 1600}, {0, 0.15}},
@@ -8303,8 +8307,8 @@ Cell[BoxData[
               0]}}}}, {}, {}}}, {{}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
 {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, \
 {}, {}, {}, {}, {}, {}, {}, {}, {}, {}, {}}}}, {
-     ImageSize -> 1000, AspectRatio -> GoldenRatio^(-1), Axes -> {None, None},
-       AxesLabel -> {None, None}, AxesOrigin -> {429.6, 0}, Frame -> True, 
+     ImageSize -> 600, AspectRatio -> GoldenRatio^(-1), Axes -> {None, None}, 
+      AxesLabel -> {None, None}, AxesOrigin -> {429.6, 0}, Frame -> True, 
       FrameLabel -> {{
          Text[
           Style["Fraction of cells"]], None}, {
@@ -8586,7 +8590,7 @@ Cell[BoxData[
            Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
            Automatic, Automatic, Automatic, Automatic, Automatic, Automatic, 
            Automatic, Automatic, Automatic, Automatic, Automatic, Automatic}},
-         LegendMarkerSize -> {20}, Spacings -> 0.2], {0.8835, 0.82}, 
+         LegendMarkerSize -> {20}, Spacings -> 0.2], {0.825, 0.82}, 
        Identity]}]]& ],
   AutoDelete->True,
   Editable->True,
@@ -8600,7 +8604,8 @@ Cell[BoxData[
    3.6685047755923357`*^9, {3.668504817561459*^9, 3.668504862523591*^9}, 
    3.668505168928783*^9, 3.668505251164279*^9, 3.6686012788203993`*^9, 
    3.66860234625583*^9, {3.6686024098214197`*^9, 3.668602473713194*^9}, 
-   3.668602991618291*^9}]
+   3.668602991618291*^9, 3.671985738290291*^9, {3.671985798245865*^9, 
+   3.6719859062603483`*^9}}]
 }, Open  ]],
 
 Cell[CellGroupData[{
@@ -8762,24 +8767,24 @@ CellTagsIndex->{}
 Notebook[{
 Cell[558, 20, 830, 22, 55, "Input"],
 Cell[CellGroupData[{
-Cell[1413, 46, 3550, 85, 209, "Input"],
-Cell[4966, 133, 83589, 1689, 280, "Output"]
+Cell[1413, 46, 3645, 86, 209, "Input"],
+Cell[5061, 134, 83680, 1690, 280, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[88592, 1827, 1974, 49, 143, "Input"],
-Cell[90569, 1878, 130696, 2586, 280, "Output"]
+Cell[88778, 1829, 2010, 50, 143, "Input"],
+Cell[90791, 1881, 130792, 2587, 280, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[221302, 4469, 505, 13, 55, "Input"],
-Cell[221810, 4484, 208800, 4118, 649, "Output"]
+Cell[221620, 4473, 505, 13, 55, "Input"],
+Cell[222128, 4488, 208868, 4119, 402, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[430647, 8607, 824, 25, 32, "Input"],
-Cell[431474, 8634, 1837, 54, 57, "Output"]
+Cell[431033, 8612, 824, 25, 32, "Input"],
+Cell[431860, 8639, 1837, 54, 57, "Output"]
 }, Open  ]],
 Cell[CellGroupData[{
-Cell[433348, 8693, 190, 3, 32, "Input"],
-Cell[433541, 8698, 1599, 45, 280, "Output"]
+Cell[433734, 8698, 190, 3, 32, "Input"],
+Cell[433927, 8703, 1599, 45, 280, "Output"]
 }, Open  ]]
 }
 ]
