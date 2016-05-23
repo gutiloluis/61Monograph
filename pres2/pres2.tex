@@ -63,7 +63,7 @@
 \small Departamento de F\'isica \vspace{4mm}
 }
 \tiny
-\date{\footnotesize Mayo 24, 2016}
+\date{\footnotesize Mayo 23, 2016}
 
 \begin{document}
 
@@ -80,7 +80,7 @@
 \nocite{*}
 \begin{columns}[c]
 \column{.5\textwidth}
-
+\vspace{-10mm}
 \begin{figure}[p]
     \centering
     \includegraphics[width=1\textwidth]{Pcon-dogma}
@@ -97,11 +97,11 @@
 
 \subsection{Circuitos gen\'eticos}
 \begin{frame}
-\begin{figure}[p]
+  \begin{figure}[p]
     \centering
     \includegraphics[width=1\textwidth]{Pcon-circuit_simple}~\\
     \tiny Pedraza y van Oudenaarden (2005).
-\end{figure}
+  \end{figure}
 
 \begin{columns}[c]
 
@@ -152,8 +152,8 @@ $$\langle p\rangle_s \approx 3000 \text{ prote\'inas}$$
 
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth]{int-noise1}~\\
-    \tiny Elowitz y col. (2002). Pedraza y van Oudenaarden (2005).
+    \includegraphics[width=.5\textwidth]{int-noise1}~\\
+    \tiny Elowitz y col. (2002).
 \end{figure}
 \end{frame}
 
@@ -272,7 +272,7 @@ A \coloneqq \bordermatrix{
 Se puede realizar en general. Si $\mathbf{q}^T \coloneqq (q_1,q_2,\dots,q_n)$,
 la ecuaci\'on maestra queda
 \begin{equation*}
-\dot{f}_{q_i} = \sum_j \left[\left(A_{ij}q_j\right) \left(f_{q_{i-1}} - f_{q_i}\right)\right] + \Gamma_{ii}(q_i+1)f_{q_{i+1}} -\Gamma_{ii}q_if_{q_i}.
+\dot{f}= \sum_i\sum_j \left[\left(A_{ij}q_j\right) \left(f_{q_{i-1}} - f_{q_i}\right)\right] + \Gamma_{ii}(q_i+1)f_{q_{i+1}} -\Gamma_{ii}q_if_{q_i}.
 \end{equation*}
 
 Al realizar todo el procedimiento obtenemos en estado estacionario
@@ -371,12 +371,12 @@ k_0 & 0 & -k_1 \\
 \begin{frame}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth]{Pcon-circuit_simple}\\
+    \includegraphics[width=\textwidth]{lan-Circuit}\\
     \tiny Pedraza y van Oudenaarden (2005).
 \end{figure}
 \end{frame}
 
-\subsection{Ecuaci\'on de Langevin - Gen 0}
+\subsection{Ec. de Langevin - Gen 0}
 \begin{frame}
 Ecuaci\'on determinista con t\'erminos de ruido. Para el gen 0
 $$\dot{p_0} = k - \gamma p_0 + \mu_0 + \xi_{0}.$$
@@ -415,21 +415,36 @@ $$\eta_1^2 = \eta_{1\,\text{int}}^2 + \frac{1}{2} H_{10}^2 \eta_{0\,\text{int}}^
 \begin{frame}
 \begin{figure}[p]
     \centering
-    \includegraphics[width=\textwidth]{lan-Hs.png}\\
+    \includegraphics[width=.7\textwidth]{lan-H21.png}\\
 \end{figure}
 \end{frame}
 
 \subsection{Ruidos y correlaciones}
 \begin{frame}
+\vspace{-4mm}
+\begin{columns}[c]
+\column{.5\textwidth}
+
 \begin{figure}[p]
     \centering
-    \includegraphics[width=.7\textwidth]{lan-noise_corr_full.png}\\
+    \includegraphics[width=\textwidth]{lan-eta2.png}
+\end{figure}
+\column{.5\textwidth}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=\textwidth]{lan-eta3.png}
+\end{figure}
+\end{columns}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=.5\textwidth]{lan-c13.png}\\
 \end{figure}
 \end{frame}
 
 \section{Divisi\'on celular}
 
-\subsection{Ruido por partici\'on}
+\subsection{Segregaci\'on ordenada y desordenada}
 \begin{frame}
 \begin{figure}[p]
     \centering
@@ -437,7 +452,7 @@ $$\eta_1^2 = \eta_{1\,\text{int}}^2 + \frac{1}{2} H_{10}^2 \eta_{0\,\text{int}}^
 \end{figure}
 \end{frame}
 
-\subsection{Segregaci\'on ordenada y desordenada}
+\subsection{Ruido por partici\'on}
 \begin{frame}
 
 Para un componente $X$, donde $L$ y $R$ copias se segregan a cada hija, el error en la partici\'on est\'a dado por
@@ -476,7 +491,7 @@ $$
 \begin{frame}
 \begin{itemize}
 
-\item Analizar el ruido por partici\'on y compararlo con el caso de degradaci\'on continua.
+\item Analizar el ruido por partici\'on mediante simulaciones que lo integren con transcripci\'on y traducci\'on.
 \item Analizar la aleatoriedad en el volumen de la c\'elula.
 
 \end{itemize}

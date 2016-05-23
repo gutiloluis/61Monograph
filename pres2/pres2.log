@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  22 MAY 2016 20:03
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.17)  22 MAY 2016 23:13
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1183,11 +1183,11 @@ LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ]
-<img/Pcon-dogma.png, id=125, 561.297pt x 564.1878pt>
+<img/Pcon-dogma.png, id=125, 561.297pt x 561.7788pt>
 File: img/Pcon-dogma.png Graphic file (type png)
  <use img/Pcon-dogma.png>
 Package pdftex.def Info: img/Pcon-dogma.png used on input line 96.
-(pdftex.def)             Requested size: 153.64493pt x 154.43329pt.
+(pdftex.def)             Requested size: 153.64493pt x 153.77388pt.
 LaTeX Font Info:    Try loading font information for U+msa on input line 96.
 
 (/usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsa.fd
@@ -1232,12 +1232,12 @@ Package pdftex.def Info: img/con-biocircuits_comp.png used on input line 124.
 p.png>] [4
 
 ]
-<img/int-noise1.png, id=187, 1142.01656pt x 569.87906pt>
+<img/int-noise1.png, id=187, 399.74344pt x 356.0803pt>
 File: img/int-noise1.png Graphic file (type png)
 
 <use img/int-noise1.png>
 Package pdftex.def Info: img/int-noise1.png used on input line 158.
-(pdftex.def)             Requested size: 307.28987pt x 153.33896pt.
+(pdftex.def)             Requested size: 153.64493pt x 136.86041pt.
  [5
 
  <./img/int-noise1.png>]
@@ -1314,19 +1314,21 @@ ne 367.
 (pdftex.def)             Requested size: 153.64493pt x 103.16179pt.
  [12
 
- <./img/Pmas-autorreg_analytic_solver.png (PNG copy)>]
-File: img/Pcon-circuit_simple.png Graphic file (type png)
- <use img/Pcon-circuit_simple.png>
-Package pdftex.def Info: img/Pcon-circuit_simple.png used on input line 377.
+ <./img/Pmas-autorreg_analytic_solver.png (PNG copy)>] <img/lan-Circuit.png, id
+=317, 946.2552pt x 193.2018pt>
+File: img/lan-Circuit.png Graphic file (type png)
+
+<use img/lan-Circuit.png>
+Package pdftex.def Info: img/lan-Circuit.png used on input line 377.
 (pdftex.def)             Requested size: 307.28987pt x 62.73972pt.
  [13
 
-] [14
+ <./img/lan-Circuit.png>] [14
 
 ] [15
 
 ]
-<img/globalint.png, id=368, 1307.88625pt x 436.63126pt>
+<img/globalint.png, id=370, 1307.88625pt x 436.63126pt>
 File: img/globalint.png Graphic file (type png)
 
 <use img/globalint.png>
@@ -1335,30 +1337,47 @@ Package pdftex.def Info: img/globalint.png used on input line 410.
  [16
 
  <./img/globalint.png>]
-<img/lan-Hs.png, id=384, 904.88063pt x 325.215pt>
-File: img/lan-Hs.png Graphic file (type png)
- <use img/lan-Hs.png>
-Package pdftex.def Info: img/lan-Hs.png used on input line 420.
-(pdftex.def)             Requested size: 307.28987pt x 110.43765pt.
- [17
+<img/lan-H21.png, id=386, 602.25pt x 416.55624pt>
+File: img/lan-H21.png Graphic file (type png)
+ <use img/lan-H21.png>
+Package pdftex.def Info: img/lan-H21.png used on input line 420.
+(pdftex.def)             Requested size: 215.10196pt x 148.7779pt.
 
- <./img/lan-Hs.png>]
-<img/lan-noise_corr_full.png, id=400, 904.88063pt x 853.68938pt>
-File: img/lan-noise_corr_full.png Graphic file (type png)
+[17
 
-<use img/lan-noise_corr_full.png>
-Package pdftex.def Info: img/lan-noise_corr_full.png used on input line 428.
-(pdftex.def)             Requested size: 215.10196pt x 202.92267pt.
- [18
+ <./img/lan-H21.png (PNG copy)>]
+<img/lan-eta2.png, id=402, 602.25pt x 430.60875pt>
+File: img/lan-eta2.png Graphic file (type png)
+ <use img/lan-eta2.png>
+Package pdftex.def Info: img/lan-eta2.png used on input line 443.
+(pdftex.def)             Requested size: 153.64493pt x 109.85304pt.
 
- <./img/lan-noise_corr_full.png>]
-<img/Pdiv-draws.png, id=417, 1091.277pt x 741.972pt>
+<img/lan-eta3.png, id=403, 602.25pt x 430.60875pt>
+File: img/lan-eta3.png Graphic file (type png)
+ <use img/lan-eta3.png>
+Package pdftex.def Info: img/lan-eta3.png used on input line 443.
+(pdftex.def)             Requested size: 153.64493pt x 109.85304pt.
+
+<img/lan-c13.png, id=404, 602.25pt x 418.56375pt>
+File: img/lan-c13.png Graphic file (type png)
+ <use img/lan-c13.png>
+Package pdftex.def Info: img/lan-c13.png used on input line 443.
+(pdftex.def)             Requested size: 153.64493pt x 106.78024pt.
+
+Overfull \vbox (14.97203pt too high) detected at line 443
+ []
+
+[18
+
+ <./img/lan-eta2.png (PNG copy)> <./img/lan-eta3.png (PNG copy)> <./img/lan-c13
+.png (PNG copy)>] <img/Pdiv-draws.png, id=421, 1091.277pt x 741.972pt>
 File: img/Pdiv-draws.png Graphic file (type png)
- <use img/Pdiv-draws.png>
-Package pdftex.def Info: img/Pdiv-draws.png used on input line 438.
+
+<use img/Pdiv-draws.png>
+Package pdftex.def Info: img/Pdiv-draws.png used on input line 453.
 (pdftex.def)             Requested size: 307.28987pt x 208.92818pt.
 
-Overfull \vbox (4.64801pt too high) detected at line 438
+Overfull \vbox (4.64801pt too high) detected at line 453
  []
 
 [19
@@ -1397,17 +1416,17 @@ Overfull \vbox (4.64801pt too high) detected at line 438
 \tf@snm=\write9
 \openout9 = `pres2.snm'.
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 490.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 490.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 504.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 504.
  (./pres2.aux
 LaTeX Info: Redefining \sptext on input line 29.
 LaTeX Info: Redefining \. on input line 29.
 LaTeX Info: Redefining \% on input line 29.
 )
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 490.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 490.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 504.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 504.
 Package rerunfilecheck Info: File `pres2.out' has not changed.
-(rerunfilecheck)             Checksum: 9295BB7171F4104DDD22185FE3E8F279;1476.
+(rerunfilecheck)             Checksum: A9EEF181C36F557BA73D404EE776056A;1468.
 
 
 LaTeX Font Warning: Size substitutions with differences
@@ -1416,13 +1435,13 @@ LaTeX Font Warning: Size substitutions with differences
 Package logreq Info: Writing requests to 'pres2.run.xml'.
 \openout1 = `pres2.run.xml'.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 490.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 504.
  ) 
 Here is how much of TeX's memory you used:
- 23356 strings out of 494966
- 423315 string characters out of 6179559
- 831874 words of memory out of 5000000
- 25974 multiletter control sequences out of 15000+600000
+ 23371 strings out of 494966
+ 423560 string characters out of 6179559
+ 832874 words of memory out of 5000000
+ 25986 multiletter control sequences out of 15000+600000
  13503 words of font info for 50 fonts, out of 8000000 for 9000
  40 hyphenation exceptions out of 8191
  49i,20n,55p,932b,1038s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -1439,10 +1458,10 @@ sfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts
 /cm/cmsy6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cms
 y8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt8.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on pres2.pdf (28 pages, 3401327 bytes).
+Output written on pres2.pdf (28 pages, 2889396 bytes).
 PDF statistics:
- 646 PDF objects out of 1000 (max. 8388607)
+ 650 PDF objects out of 1000 (max. 8388607)
  556 compressed objects within 6 object streams
  105 named destinations out of 1000 (max. 500000)
- 296 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 311 words of extra memory for PDF output out of 10000 (max. 10000000)
 
