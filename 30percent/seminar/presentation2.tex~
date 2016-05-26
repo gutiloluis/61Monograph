@@ -1,0 +1,259 @@
+\documentclass{beamer}
+\mode<presentation>{
+\usetheme{Madrid}
+%\setbeamertemplate{footline} % To remove the footer line in all slides uncomment this line
+%\setbeamertemplate{footline}[page number] % To replace the footer line in all slides with a simple slide count uncomment this line
+\setbeamertemplate{navigation symbols}{}
+}
+
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{mathtools}
+\usepackage[font={scriptsize}]{caption}
+
+\title[Ruido en circuitos gen\'eticos]{Modelos de ruido intr\'inseco en circuitos gen\'eticos}
+\author{Luis Alberto Guti\'errez L\'opez}
+\institute[Uniandes]{Universidad de los Andes\\
+Departamento de F\'isica\\
+Seminario de Biof\'isica
+\medskip
+}
+\date{Septiembre 1 de 2015}
+
+\begin{document}
+
+\begin{frame}
+\titlepage
+\end{frame}
+
+\begin{frame}
+\frametitle{Ruido en expresi\'on gen\'etica}
+\begin{itemize}
+\item Fluctuaciones aleatorias en expresi\'on gen\'etica.
+\item En transcripci\'on y traducci\'on: Colisiones aleatorias entre mol\'eculas que se encuentran en bajo n\'umero.
+\item Otros factores como la divisi\'on celular, la disposici\'on de los organelos, la variablidad del ambiente, etc.
+\begin{align*}
+\eta_X &= \frac{\sigma}{\langle X \rangle}\\[1.5ex]
+\nu &= \frac{\sigma^2}{\langle X \rangle}
+\end{align*}
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ruido en expresi\'on gen\'etica}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.5\textwidth]{noiseGFP.png}
+    \caption{\cite{p3}}
+    \label{fig:1}
+\end{figure}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Ruido en expresi\'on gen\'etica}
+\begin{columns}[c]
+
+\column{.5\textwidth}
+\textcolor{red}{Debe haber robustez al ruido.}
+
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.9\textwidth]{drosophila.jpg}
+    \caption{\cite{p3}}
+    \label{fig:2}
+\end{figure}
+
+\column{.5\textwidth}
+\textcolor{green}{El ruido introduce variabilidad.}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.7\textwidth]{lambda.jpg}
+    \caption{\cite{p3}}
+    \label{fig:3}
+\end{figure}
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Cin\'etica de la expresi\'on gen\'etica}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=1\textwidth]{expression.png}
+    \caption{\cite{p2}}
+    \label{fig:4}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Suposiciones}
+\begin{itemize}
+\item Se ignoran estados intermedios de ADN, ARN y prote\'inas.
+\item Iniciaci\'on de la transcripci\'on y traducci\'on es una reacci\'on de pseudo-primer orden.
+\begin{enumerate}
+\item During transcription initiation, the initial reversible binding of an RNA polymerase (RNAP) to the promoter region and subsequent formation of an open complex achieve rapid equilibrium: initiation from the final open complex is the rate-limiting step.
+\item The amount of free RNAP in a cell is buffered against cell growth and other time variations by a large pool of nonspecifically bound molecules.
+\item 
+\end{enumerate}
+\item Las interacciones con factores de transcripci\'on se consideran en equilibrio y por lo tanto s\'olo cambian la tasa de transcripci\'on (la fracci\'on de ARNP que se une al ADN).
+\item Los ribosomas se pueden unir al RNA inmediatamente inicia la transcripci\'on (aproximadamente). Esto hace que no se tenga que incluir un delay entre ambas.
+\item For most E. coli operons, initiation and elongation rates are such that ribosome queuing does not occur. De esta manera se toman como independientes cada transcripci\'on y traslaci\'on.
+\item Hay tasas de degradaci\'on $\gamma_r$ y $\gamma_p$. Se pueden incluir los efectos del crecimiento celular sobre la disminuci\'on de la concentraci\'on al s\'olo sumar una constante.
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo - Un s\'olo gen}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.4\textwidth]{expressionsimple.png}
+    \caption{\cite{p1}}
+    \label{fig:4}
+\end{figure}
+\centering \textbf{Ecuaciones deterministas}
+\begin{align*}
+\dot{r}(t) &= k_r - \gamma_rr(t).\\
+\dot{p}(t) &= k_pr(t) - \gamma_pp(t).
+\end{align*}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Modelo - Un s\'olo gen}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.3\textwidth]{scheme1.png}
+    \caption{\cite{p1}}
+    \label{fig:5}
+\end{figure}
+\centering \textbf{Ecuaci\'on maestra}
+\begin{align*}
+\frac{d{f}_{r,p}}{dt} &= k_rf_{r-1,p} - k_rf_{r,p} + k_prf_{r,p-1} - k_prf_{r,p-1}\\
+&+ \gamma_r(r+1)f_{r+1,p} - \gamma_rrf_{r,p} + \gamma_p(p+1)f_{r,p+1} - \gamma_ppf_{r,p}.
+\end{align*}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados - Un s\'olo gen}
+
+\begin{columns}[c]
+\column{.45\textwidth} % Left column and width
+\centering \textbf{Promedio}
+\begin{align*}
+\langle r \rangle &= \frac{k_r}{\gamma_r}.\\[1.5ex]
+\langle p \rangle &= \frac{k_rb}{\gamma_p}.
+\end{align*}
+\column{.5\textwidth}
+\centering \textbf{Ruido}
+\begin{align*}
+\nu_r &= \frac{\sigma_r^2}{\langle r \rangle} = 1.\\[1.5ex]
+\nu_p &= \frac{\sigma_p^2}{\langle p \rangle} = \frac{b}{1+\eta} + 1 \approx b + 1.
+\end{align*}
+\end{columns}
+
+\vspace{3 mm}
+
+\begin{equation*}
+b \coloneqq \frac{k_P}{\gamma_R}, \quad \eta \coloneqq \frac{\gamma_P}{\gamma_R}.
+\end{equation*}
+
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados - Un s\'olo gen}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graph1.png}
+    \centering \caption{C\'irculos: var\'ia $b$. Tri\'angulos: var\'ia $k_R$. Cuadros: var\'ia $\gamma_R$. L\'inea s\'olida: ecuaciones. S\'imbolos: simulaciones.\cite{p1}.}
+    \label{fig:5}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Modelo - Autorregulaci\'on}
+\begin{columns}[c]
+
+\column{.5\textwidth}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.6\textwidth]{graph3.png}
+    \centering \caption{\cite{p1}.}
+    \label{fig:6}
+\end{figure}
+
+\column{.5\textwidth}
+Ecuaci\'on de Hill.
+
+\end{columns}
+\end{frame}
+
+\begin{frame}
+\frametitle{Resultados - Autorregulaci\'on}
+\begin{columns}[c]
+
+\column{.45\textwidth} % Left column and width
+\centering \textbf{Promedio}
+\begin{align*}
+\langle r \rangle &= .\\[1.5ex]
+\langle p \rangle &= \frac{1}{1+b\phi} \cdot \frac{k_0b}{\gamma_p}.
+\end{align*}
+
+\column{.5\textwidth}
+\centering \textbf{Ruido}
+\begin{align*}
+\nu_r &= .\\[1.5ex]
+\nu_p &= \frac{1-\phi}{1+b\phi} \cdot \frac{b}{1+\eta}+1.
+\end{align*}
+
+\end{columns}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Generalizaci\'on}
+\begin{figure}[p]
+    \centering
+    \includegraphics[width=0.4\textwidth]{graph4.png}
+    \caption{\cite{p1}.}
+    \label{fig:7}
+\end{figure}
+\end{frame}
+
+\begin{frame}
+\frametitle{Ventajas}
+\begin{itemize}
+\item Se puede hallar anal\'iticamente la dependencia temporal del ruido.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problemas}
+\begin{itemize}
+\item No se considera la divisi\'on aleatoria de prote\'inas debida a la divisi\'on celular.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Referencias}
+\footnotesize{
+\begin{thebibliography}{99}
+
+\bibitem[Thattai \& van Oudenaarden, 2001]{p1} Thattai, M. \& van Oudenaarden, A. (2001).
+\newblock Intrinsic noise in gene regulatory networks.
+\newblock \emph{PNAS} 98(15), 8614 -- 8619.
+
+\bibitem[Kaern et al., 2012]{p2} Kaern, M., Elston, T. C., Blake, W. J. \& Collins, J. J. (2005).
+\newblock Stochasticity in gene expression: from theories to phenothypes.
+\newblock \emph{Nat Rev Genet} 6(6), 451 -- 464.
+
+\bibitem[Pedraza \& van Oudenaarden, 2005]{p3} Pedraza, J. M. \& van Oudenaarden, A. (2005).
+\newblock Noise Propagation in Gene Networks.
+\newblock \emph{Science} 307, 1965 -- 1969.
+\end{thebibliography}
+}
+\end{frame}
+
+\end{document}

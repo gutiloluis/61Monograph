@@ -1,0 +1,176 @@
+\documentclass[12pt]{article}
+
+\usepackage{graphicx}
+\usepackage{epstopdf}
+\usepackage[spanish]{babel}
+%\usepackage[english]{babel}
+\usepackage[latin5]{inputenc}
+\usepackage{hyperref}
+\usepackage[left=3cm,top=3cm,right=3cm,nohead,nofoot]{geometry}
+\usepackage{braket}
+\usepackage{datenumber}
+%\newdate{date}{10}{05}{2013}
+%\date{\displaydate{date}}
+
+\setlength{\parskip}{1em}
+
+\begin{document}
+
+\begin{center}
+\Huge
+Modelos estoc\'asticos de circuitos gen\'eticos
+
+\vspace{3mm}
+\Large Luis Alberto Guti\'errez L\'opez
+
+\large
+C\'odigo: 201213715
+
+
+\vspace{2mm}
+\Large
+Director: Juan Manuel Pedraza Leal
+
+\normalsize
+\vspace{2mm}
+
+\today
+\end{center}
+
+
+\normalsize
+\section{Introducci\'on}
+
+La estocasticidad o ruido en circuitos gen\'eticos se da debido a las fluctuaciones durante la transcripci\'on, traducci\'on \cite{kaern05} y otros procesos que afectan la expresi\'on gen\'etica. Debido a ella, c\'elulas gen\'eticamente id\'enticas y expuestas al mismo ambiente presentan variaciones fenot\'ipicas notables \cite{kaern05} \cite{elowitz02} \cite{pedraza05}. Este ruido ha sido clasificado en dos grupos: intr\'inseco y extr\'inseco \cite{elowitz02} \cite{paulsson05}. El primero hace referencia a la variabilidad inherente a sistemas con componentes discretos y en bajos n\'umeros, como lo son en este caso el ARN y las prote\'inas. El segundo hace referencia a factores externos como la variabilidad del ambiente, el crecimiento y la divisi\'on celular.
+
+Recientes investigaciones han mostrado la enorme importancia que tiene el ruido para los seres vivos, los cuales han adaptado sus circuitos gen\'eticos ya sea para cumplir su funci\'on adecuadamente a pesar de la presencia de ruido (robustez) \cite{alon99}, o para aprovecharlo para generar variabilidad \cite{arkin98}. De igual manera, en el desarrollo de circuitos gen\'eticos sint\'eticos es importante considerar la estocasticidad que dicho circuito podr\'ia presentar.
+
+Lo anterior ha motivado al desarrollo de modelos estoc\'asticos de expresi\'on gen\'etica en los \'utimos a\~nos. En el trabajo pionero de Thattai y van Oudenaarden,  \cite{thattai01} se realiz\'o un modelo linealizado para el ruido intr\'inseco en la cantidad de ARN y prote\'inas que puede aplicarse a varios circuitos b\'asicos. Tambi\'en, Pedraza y van Oudenaarden \cite{pedraza05} desarrollaron un  modelo que incluye el ruido global y mostraron c\'omo el ruido total se propaga a trav\'es de una cascada de regulaci\'on.
+
+Los modelos m\'as recientes se han centrado en considerar otros aspectos que podr\'ian modificar las caracter\'isticas del ruido. Entre ellos se encuentran el \textit{bursting} en la producci\'on de las mol\'eculas involucradas en la expresi\'on, su senescencia \cite{pedraza08} y su repartici\'on durante la divisi\'on celular \cite{huh11a} \cite{huh11b}. Una de las conclusiones m\'as importantes que se han obtenido a partir de estos modelos es que al considerar distintos factores, el comportamiento del ruido es similar y por lo tanto lo son tambi\'en los ajustes de los modelos num\'ericos y los experimentos. Por lo tanto a partir de las caracter\'isticas de las fluctuaciones no se puede saber precisamente cu\'ales son los mecanismos que las producen.
+
+A pesar de que se han obtenido resultados importantes, la alta no linealidad de las ecuaciones utilizadas para representar la cin\'etica molecular ha obligado a que los modelos realizados sean en su mayor\'ia linealizados alrededor de los puntos fijos, perdiendo as\'i informaci\'on acerca de la din\'amica completa de las fluctuaciones. Ser\'ia \'util entonces desarrollar modelos estoc\'asticos que no ignoren las no-linealidades, que incluyan la din\'amica temporal completa y que integren m\'as factores como el crecimiento y la divisi\'on celular.
+
+
+\section{Objetivo General}
+
+Estudiar detalladamente los principales modelos estoc\'asticos de expresi\'on gen\'etica.
+
+\section{Objetivos Espec\'ificos}
+\begin{itemize}
+        \item Entender la ecuaci\'on maestra, la ecuaci\'on de Langevin y el teorema de fluctuaci\'on disipaci\'on.
+	\item Comprender los modelos linealizados de ruido intr\'inseco.
+        \item Entender c\'omo realizar simulaciones estoc\'asticas.
+	\item Analizar c\'omo se propaga el ruido a trav\'es de una cascada de regulaci\'on gen\'etica.
+	\item Estudiar de qu\'e manera la partici\'on aleatoria de mol\'eculas durante la divisi\'on celular contribuye al ruido.
+	\item Realizar simulaciones que permitan comparar los resultados exactos con los resultados seg\'un los modelos para evaluar la calidad de las aproximaciones realizadas.
+        \item Analizar las distintas maneras mediante las cuales los seres vivos podr\'ian controlar o aprovechar el ruido seg\'un los resultados obtenidos.
+        \item Analizar la posibilidad de desarrollar un modelo que considere las no-linealidades y la din\'amica temporal de la expresi\'on gen\'etica.
+\end{itemize}
+
+\section{Metodolog\'ia}
+
+En primer lugar se realizar\'a la revisi\'on bibliogr\'afica de los t\'opicos necesarios para la comprensi\'on y el desarrollo de los modelos anal\'iticos. Las principales herramientas que se utilizar\'an son conceptos de probabilidad b\'asica \cite{bertsekas08}, ecuaci\'on maestra, ecuaci\'on de Langevin y teorema de fluctuaci\'on-disipaci\'on \cite{vankampen92} \cite{gardiner03}. Tambi\'en se har\'a una revisi\'on sobre simulaciones estoc\'asticas, principalmente sobre el algoritmo de Gillespie \cite{gillespie77}.
+
+Posteriormente se realizar\'an en detalle los c\'alculos correspondientes a los modelos, as\'i como las simulaciones pertinentes para corroborar los resultados anal\'iticos y las aproximaciones. Las simulaciones se realizar\'an utilizando C, Python y Mathematica. Finalmente se analizar\'a la posibilidad de realizar un modelo no linealizado y din\'amico.
+
+Se realizar\'an reuniones semanales con el director para resolver dudas y fijar metas, a medida que se vayan realizando los c\'alculos se ir\'an incluyendo en el documento.
+
+\section{Cronograma}
+
+\begin{table}[htb]
+	\begin{tabular}{|c|cccccccccccccccc| }
+	\hline
+	Tareas $\backslash$ Semanas & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 & 11 & 12 & 13 & 14 & 15 & 16  \\
+	\hline
+	1 & X & X & X  &   &   &   &   &  &  &   &   &   &   &   &   &   \\
+	2 &   & X & X &   &  &  &   &   &   &   &   &   &   &   &   &   \\
+	3 &   &   &   & X & X  &   &   &  &   &   &   &  &   &   &  &   \\
+	4 &  &  &  &  & X & X &  &  &  &  &   &   &   &   &   &   \\
+	5 &   &   &   &   & X & X  &   &   &  &   &   &  &   &   &  &   \\
+        6 &   &   &   &   &  & X  & X  &   &  &   &   &  &   &   &  &   \\
+        7 &   &   &   &   &  & X  & X  &   &  &   &   &  &   &   &  &   \\
+        8 &   &   &   &   & &   &   & X  &  &   &   &  &   &   &  &   \\
+        9 &   &   &   &   &  &   &   &   & X & X  &   &  &   &   &  &   \\
+        10 &   &   &   &   &  &   &   &   & X & X  & X  &  &   &   &  &   \\
+        11 &   &   &   &   &  &   &   &   &  &   &   & X & X  &   &  &   \\
+        12 &   &   &   &   &  &   &   &   &  &   &   &  & X  & X  &  &   \\
+        13 &   &   &   &   &  &   &   &   &  &   &   & X  & X  & X  & X & X \\
+	\hline
+	\end{tabular}
+\end{table}
+\vspace{1mm}
+
+\begin{itemize}
+	\item Tarea 1: Estudiar los temas b\'asicos de procesos estoc\'asticos.
+	\item Tarea 2: Calcular el ruido intr\'inseco para un gen constitutivo en estado estacionario.
+	\item Tarea 3: Hallar el ruido intr\'inseco para sistemas gen\'eticos b\'asicos en estado estacionario.
+        \item Tarea 4: Estudiar la manera de realizar simulaciones estoc\'asticas.
+        \item Tarea 5: Realizar simulaciones para corroborar el modelo anterior.
+        \item Tarea 6: Calcular el ruido total en los distintos genes pertenecientes a una cascada de regulaci\'on.
+        \item Tarea 7: Redactar la fracci\'on del documento necesaria para la entrega del avance.
+        \item Tarea 8: Analizar las maneras en las que los seres vivos pueden controlar el ruido seg\'un los resultados obtenidos.
+        \item Tarea 9: Estudiar c\'omo es afectado el ruido por fen\'omenos de \textit{bursting} y senescencia en las mol\'eculas involucradas.
+        \item Tarea 10: Analizar las distintas maneras en las que surge ruido debido a la divisi\'on celular.
+        \item Tarea 11: Estudiar la posibilidad de incluir no-linealidades en los modelos.
+        \item Tarea 12: Estudiar las posibles herramientas que permitan incluir la din\'amica temporal del ruido
+	\item Tarea 13: Redactar el documento final.
+\end{itemize}
+
+\section{Personas Conocedoras del Tema}
+
+\begin{itemize}
+	\item Juan Manuel Pedraza Leal (Departamento de F\'isica, Universidad de los Andes).
+        \item Manu Forero Shelton (Departamento de F\'isica, Universidad de los Andes).
+        \item Alonso Botero Mej\'ia (Departamento de F\'isica, Universidad de los Andes).
+\end{itemize}
+
+
+\begin{thebibliography}{10}
+
+\bibitem{kaern05} Kaern, M., Elston, T. C., Blake, W. J. \& Collins, J. J. Stochasticity in gene expression: from theories to phenotypes. \textit{Nat. Rev. Genet.} \textbf{6}, 451--464 (2005).
+
+\bibitem{elowitz02} Elowitz, M. B., Levine, A. J., Siggia, E. D. \& Swain, P. S. Stochastic gene expression in a single cell. \textit{Science} \textbf{297}, 183--186 (2002).
+
+\bibitem{pedraza05} Pedraza, J. M. \& van Oudenaarden, A. Noise Propagation in Gene Networks. \textit{Science} \textbf{307}, 1965--1969 (2005).
+
+\bibitem{paulsson05} Paulsson, J. Models of stochastic gene expression. \textit{Phys. Life Rev.} \textbf{2}, 157--175 (2005).
+
+\bibitem{alon99} Alon, U., Surette, M. G., Barkai, N. \& Leibler, S. Robustness in bacterial chemotaxis. \textit{Nature} \textbf{397}, 168--171 (1999).
+
+\bibitem{arkin98} Arkin, A., Ross, J. \& McAdams H. H. Stochastic Kinetic Analysis of Developmental Pathway Bifurcation in Phage $\lambda$-Infected Escherichia coli Cells. \textit{Genetics} \textbf{149}, 1633--1648 (1998).
+
+\bibitem{thattai01} Thattai, M. \& van Oudenaarden, A. Intrinsic noise in gene regulatory networks. \textit{Proc. Natl. Acad. Sci. U.S.A.} \textbf{98}, 8614--8619 (2001).
+
+\bibitem{pedraza08} Pedraza, J. M. \& Paulsson, J. Effects of Molecular Memory and Bursting on Fluctuations in Gene Expression. \textit{Science} \textbf{319}, 339--343 (2008).
+
+\bibitem{huh11a} Huh, D. \& Paulsson, J. Non-genetic heterogeneity from stochastic partitioning at cell division. \textit{Nat. Genet.} \textbf{43}, 95--100 (2011).
+
+\bibitem{huh11b} Huh, D. \& Paulsson, J. Random partitioning of molecules at cell division. \textit{Proc. Natl. Acad. Sci. U.S.A.} \textbf{108}, 15004--15009. (2011).
+
+\bibitem{bertsekas08} Bertsekas, D. P. \& Tsitsiklis, J. N. \textit{Introduction to Probability} (Athena Scientific, Belmont, 2008).
+
+\bibitem{vankampen92} van Kampen, N. G. \textit{Stochastic Processes in Physics and Chemistry} (North-Holland, Amsterdam, 1992).
+
+\bibitem{gardiner03} Gardiner, C. W. \textit{Handbook of Stochastic Methods for Physics, Chemistry and the Natural Sciences} (Springer, Berlin, 2003).
+
+\bibitem{gillespie77} Gillespie, D. T. Exact stochastic simulation of coupled chemical reactions. \textit{J. Phys. Chem.} \textbf{81}, 2340--2361 (1977).
+
+%\bibitem{paulsson04} Paulsson, J. Summing up the noise in gene networks. \textit{Nature} \textbf{427}, 415--418 (2004).
+
+%\bibitem{Jerry} J. Banks. \textit{Discrete-Event System Simulation}. Fourth Edition. Prentice Hall International Series in Industrial and Systems Engineering, pg 86 - 116 y 219 - 235, (2005).
+
+%\bibitem{Bronner} P. Bronner, A. Strunz, C. Silberhorn \& J.P. Meyn. European Journal of Physics, \textbf{30}, 1189-1200, (2009).
+
+%\bibitem{LabInt} P. Dбaz \& N. Barbosa: \textit{Obtenciбn de nбmeros aleatorios}. Informe final del curso Laboratorio Intermedio. Universidad de Los Andes, Bogotб, Colombia, (2012).
+
+%\bibitem{Stefannov} A. Stefanov , N. Gisin , O. Guinnard , L. Guinnard \& H. Zbinden. Journal of Modern Optics, \textbf{47}:4, 595-598, (2000).
+
+\end{thebibliography}
+
+\section*{Firma del Director}
+\vspace{1.5cm}
+
+%\section*{Firma del Codirector}
+
+\end{document} 

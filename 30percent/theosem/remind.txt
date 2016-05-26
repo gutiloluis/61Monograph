@@ -1,0 +1,23 @@
+EXPRESION GENETICA
+
+Informacion genetica, la que hace que cada ser vivo sea como es.
+
+Mecansimo, ADN (transcripcion) -> ARN (traduccion) -> proteinas UNIVERSAL!. Las proteinas son los constituyentes de los seres vivos
+
+Segun qu\'e genes haya y qu\'e genes se expresan y a qu\'e tasas, se producen ciertas proteinas en ciertas cantidades que hacen que cada celula sea como es y se comporte como se comporta.
+	
+Ademas, c\'omputos que realizan las c\'elulas -> Regulaci\'on de la expresi\'on gen\'etica.
+
+Promotores, antes de la parte que codifica, se pega polimerasa y factores de transcripci\'on. (PONER COMO SE DIBULA)
+	
+Esto lleva a circuitos geneticos, explicar algunos (base, represion, activacion, represion multiple, feedback, switch). Riqueza de comportamientos.
+
+Y lo anterior es Biologia de Sistemas! entender las celulas mas como los computos y las relaciones entre los distintos componentes que las celulas mismas. No enfocarse en el detalle de la estructura de proteinas y componentes, sino en como interactuan. (Analizar el sistema en conjunto (ing, fisica) -> detalles particulares (bio).
+
+Entender la vida desde este punto de vista cuantitativo. Muchas ramas.
+
+Yo hablare de estocasticidad/ruido en estos circuitos.
+
+Disenar experimento. Mother machine. Robust growth of e coli. Wang.
+
+Feedback, German Enciso, Eduardo Sontag. Sistemas monotonos.

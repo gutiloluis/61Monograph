@@ -1,0 +1,35 @@
+\begin{frame}
+\frametitle{Suposiciones}
+\begin{itemize}
+\item Se ignoran estados intermedios de ADN, ARN y prote\'inas.
+\item Iniciaci\'on de la transcripci\'on y traducci\'on es una reacci\'on de pseudo-primer orden.
+\begin{enumerate}
+\item During transcription initiation, the initial reversible binding of an RNA polymerase (RNAP) to the promoter region and subsequent formation of an open complex achieve rapid equilibrium: initiation from the final open complex is the rate-limiting step.
+\item The amount of free RNAP in a cell is buffered against cell growth and other time variations by a large pool of nonspecifically bound molecules.
+\item 
+\end{enumerate}
+\item Las interacciones con factores de transcripci\'on se consideran en equilibrio y por lo tanto s\'olo cambian la tasa de transcripci\'on (la fracci\'on de ARNP que se une al ADN).
+\item Los ribosomas se pueden unir al RNA inmediatamente inicia la transcripci\'on (aproximadamente). Esto hace que no se tenga que incluir un delay entre ambas.
+\item For most E. coli operons, initiation and elongation rates are such that ribosome queuing does not occur. De esta manera se toman como independientes cada transcripci\'on y traslaci\'on.
+\item Hay tasas de degradaci\'on $\gamma_r$ y $\gamma_p$. Se pueden incluir los efectos del crecimiento celular sobre la disminuci\'on de la concentraci\'on al s\'olo sumar una constante.
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Problemas}
+\begin{itemize}
+\item Hay muchas otras fuentes de ruido que no se consideran. Por ejemplo la divisi\'on aleatoria de prote\'inas debida a la divisi\'on celular.
+\item Modelo linearizado. Estos sistemas son altamente no lineales.
+\item Hay comportamientos muy importantes que no admiten este acercamiento (ciclos, puntos fijos inestables).
+\item Otro tipo de reacciones pueden afectar el ruido del sistema (interacciones entre ADN y factores de transcripci\'on).
+\item No sirve para explicar el comportamiento lejos de los puntos fijos si el sistema es no lineal.
+\end{itemize}
+\end{frame}
+
+%\begin{frame}
+%\frametitle{Ventajas}
+%\begin{itemize}
+%\item Se puede hallar anal\'iticamente la dependencia temporal del ruido si el modelo es lineal.
+%\item 
+%\end{itemize}
+%\end{frame}
