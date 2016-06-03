@@ -12,9 +12,9 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.3}Hill equation}{22}{section.1.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.4}Probability}{26}{section.1.4}
+\contentsline {section}{\numberline {1.4}Probability}{25}{section.1.4}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {1.5}Noise}{29}{section.1.5}
+\contentsline {section}{\numberline {1.5}Noise}{28}{section.1.5}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {1.6}Moment generating functions}{29}{section.1.6}
 \defcounter {refsection}{0}\relax 
@@ -50,11 +50,11 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.1}Intrinsic noise in a single gene using the Langevin approach}{67}{section.4.1}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.2}Model circuit for the cascade}{71}{section.4.2}
+\contentsline {section}{\numberline {4.2}Model circuit for the cascade}{70}{section.4.2}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.3}Mathematical derivations}{72}{section.4.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {4.4}Explicit expressions for the logarithmic gain}{80}{section.4.4}
+\contentsline {section}{\numberline {4.4}Explicit expressions for the logarithmic gain}{79}{section.4.4}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {4.5}Conclusions and implications}{85}{section.4.5}
 \defcounter {refsection}{0}\relax 
@@ -64,7 +64,7 @@
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.2}Arbitrary distribution of creation times}{90}{section.5.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {section}{\numberline {5.3}Decay of molecules}{97}{section.5.3}
+\contentsline {section}{\numberline {5.3}Decay of molecules}{96}{section.5.3}
 \defcounter {refsection}{0}\relax 
 \contentsline {section}{\numberline {5.4}Senescence of mRNA}{101}{section.5.4}
 \defcounter {refsection}{0}\relax 

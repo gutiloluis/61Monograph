@@ -8,35 +8,28 @@ This chapter is based on the work done by J. Paulsson in \cite{paulsson04} and \
 \section{Statement of the FDT}
 
 Consider a genetic system with $N$ species whose concentrations are $n_1,\dotsc,n_N$. The FDT states that if $\mathbf{\sigma}$ is the matrix of covariances (i.e. $\sigma_{ij} \coloneqq \langle n_i-\langle n_i\rangle\rangle\langle n_j-\langle n_j\rangle\rangle$), it follows that 
-
 \begin{equation*}
   %\label{eq:fdt-fdt1}
   \frac{\mathrm{d}\mathbf{\sigma}}{\mathrm{d}t} = \mathbf{A\sigma} + \mathbf{\sigma A^T}+\mathbf{B}.
 \end{equation*}
 
 The elements of $\mathbf{A}$ are,
-
 \begin{equation}
   \label{eq:fdt-Adef}
   A_{ij} \coloneqq \frac{\partial}{\partial \langle n_j\rangle}\frac{\partial \langle n_i\rangle}{\partial t} = \frac{\partial}{\partial \langle n_j\rangle}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right).
 \end{equation}
-
 where $J_i^\pm$ are the total fluxes of synthesis and degradation of species $i$. For the matrix $\mathbf{B}$
-
 \begin{equation}
   \label{eq:fdt-Bdef}
   B_{ij} = \sum_k v_{jk}v_{ik}R_k,
 \end{equation}
-
 where $k$ runs over all the possible reactions for the system. $R_k$ is the rate of reaction $k$, which produces $v_{ik}$ molecules of species $i$.
 
 In steady state, the FDT becomes
-
 \begin{equation}
   \label{eq:fdt-fdtss}
   \mathbf{A\sigma}+\mathbf{\sigma A^T}+\mathbf{B} = 0
 \end{equation}
-
 where $\mathbf{A}$ and $\mathbf{B}$ are now evaluated at steady state. We illustrate the concept with an example in the next section.
 
 \section{Example: single gene}
@@ -44,43 +37,35 @@ where $\mathbf{A}$ and $\mathbf{B}$ are now evaluated at steady state. We illust
 Consider a single gene such as the explained on section \ref{sec:mas-single_gene}. We will treat the same case without the supposition of a fixed number of active copies of the gene. In this case, there is a fixed number $n_1^{\text{max}}$ of total copies of the gene, and $n_1$ copies that are active, i.e. that are available for transcription. There are several ways in which genes can be turned on and off including binding of transcription factors or chromatin remodeling in eukaryotes \cite{paulsson05}.
 
 We assume that the activation and deactivation for each gene follows a telegraph process. Each gene switches from \textit{off} to \textit{on} with rate $k_1^+$ and in the opposite sense with rate $k_1^-$. This can be illustrated as
-
 \begin{equation*}
   \text{off}\ce{<=>[k_1^+][k_1^-]}\text{on}.
 \end{equation*}
 
 Let $P_\text{on}(t)$ and $P_\text{off}(t)$ be the probabilities for a gene to be active or inactive, respectively. Clearly $P_\text{on}(t) + P_\text{off}(t) = 1$ and the ME for $P_\text{on}(t)$ is given by
-
 \begin{equation*}
   \dot{P}_\text{on}(t)=k_1^+P_\text{off}(t)-k_1^-P_\text{on}(t).
 \end{equation*}
 
 In steady state,
-
 \begin{equation*}
   P_\text{on} = \frac{k_1^+}{k_1^-}P_\text{off} = \frac{k_1^+}{k_1^-}(1-P_\text{on}),
 \end{equation*}
-
 hence,
-
 \begin{equation*}
   P_\text{on} = \frac{k_1^+}{k_1^++k_1^-}.
 \end{equation*}
 
 Besides, suppose that the $n_1^\text{max}$ copies of the gene are independent. Then, in steady state $n_1$ follows a binomial distribution
-
 \begin{equation*}
   P(n_1) = {n_1^\text{max}\choose n_1} P_\text{on}^{n_1}(1-P_\text{on})^{n_1^\text{max}-n_1}.
 \end{equation*}
 
 Recalling that the averages satisfy the deterministic equations, $\langle n_1\rangle$ follows
-
 \begin{equation*}
   \dot{\langle n_1\rangle} = k_1^+(n_1^\text{max}-\langle n_1\rangle) - k_1^-\langle n_1\rangle = k_1^+n_1^\text{max} - (k_1^++k_1^-)\langle n_1\rangle.
 \end{equation*}
 
 For the number of mRNA $n_2$ and proteins $n_3$, we use the same equations as on section \ref{sec:mas-single_gene}. To make the analysis clearer, we define $\tau_i\coloneqq 1/\gamma_i$, for $i=2,3$ and $\tau_1\coloneqq (k_1^++k_1^-)^{-1}$, then
-
 \begin{equation}
   \begin{split}
     \dot{\langle n_1\rangle} &= k_1^+n_1^\text{max} - \frac{1}{\tau_1}\langle n_1\rangle,\\
@@ -96,12 +81,10 @@ First, we need to write the matrices $\mathbf{A}$ and $\mathbf{B}$, according to
 \begin{equation*}
   \begin{split}
     A_{11} &= \partial_{n_1}\dot{\langle n_1\rangle} =-\frac{1}{\tau_1},\\
-    A_{12} &= \partial_{n_1}\dot{\langle n_2\rangle} = k_2^+
+    A_{12} &= \partial_{n_1}\dot{\langle n_2\rangle} = k_2^+,
   \end{split}
 \end{equation*}
-
 and so on. In this case, the fluxes of synthesis of degradation are $\langle J_1^+\rangle = n_1^\text{max}-\langle n_1\rangle$ and $\langle J_i^-\rangle = \langle n_1\rangle/\tau_1$ (notice that the minus sign is not included in $\langle J_i^-\rangle$). The definition is analogous for the other species. There are some terms that are zero, including $A_{12}$, $A_{13}$, and $A_{21}$. Evaluating all the elements results in
-
 \begin{equation}
   \label{eq:fdt-A}
   \mathbf{A} = \begin{pmatrix}
@@ -112,7 +95,6 @@ and so on. In this case, the fluxes of synthesis of degradation are $\langle J_1
 \end{equation}
 
 For the matrix $\mathbf{B}$, there are six reactions in this case: activation and deactivation of a gene, synthesis and destruction of mRNA, and the same for proteins. There are not reactions involving different species neither creating or destroying more than one molecule, hence from eq. \eqref{eq:fdt-Bdef}
-
 \begin{equation*}
   v_{ik}v_{jk} = 
   \begin{cases}
@@ -122,25 +104,19 @@ For the matrix $\mathbf{B}$, there are six reactions in this case: activation an
 \end{equation*}
 
 In the first case $v_{ik} =\pm 1$ depending on whether the reaction is of synthesis or destruction, but in either case $v_{ik}^2 = 1$. The rates $R_k$ are given by the deterministic equations. In steady state the rates of creation and destruction are equal. For example, for the reactions involving modifications in $n_2$:
-
 \begin{equation*}
   B_{22} \coloneqq \sum_kv_{2k}^2R_k = \sum_kR_k = k_2\langle n_1\rangle + \frac{1}{\tau_2}\langle n_2\rangle = \frac{2\langle n_2\rangle}{\tau_2},
 \end{equation*}
-
 where the last equality holds from the steady state assumption. For $B_{33}$ it is analogous. For $B_{11}$,
-
 \begin{equation*}
   B_{11} = k_1^+(n_1^\text{max}-\langle n_1\rangle)+k_1^-\langle n_1\rangle = 2k_1^-\langle n_1\rangle = 2\frac{1-P_\text{on}}{\tau_1}\langle n_1\rangle,
 \end{equation*}
-
 since
-
 \begin{equation*}
   k_1^- = \left(1-\frac{k_1^+}{k_1^++k_1^-}\right)(k_1^++k_1^-)=\frac{1-P_\text{on}}{\tau_1}.
 \end{equation*}
 
 Putting all the expressions together, the matrix $\mathbf{B}$ becomes
-
 \begin{equation}
   \label{eq:fdt-B}
   \mathbf{B} = 
@@ -152,7 +128,6 @@ Putting all the expressions together, the matrix $\mathbf{B}$ becomes
 \end{equation}
 
 Replacing eqs. \eqref{eq:fdt-A} and \eqref{eq:fdt-B} in \eqref{eq:fdt-fdtss} we obtain a linear system that can be solved for $\mathbf{\sigma}$ using a computer program. The diagonal elements are the variances, from which the noises can be found. The next expressions for the CVs can be trivially found from the variances and means resulting in
-
 \begin{align}
   \eta_1^2 &= \frac{1-P_\text{on}}{\langle n_1\rangle}, \label{eq:fdt-eta1}\\
   \eta_2^2 &= \frac{1}{\langle n_2\rangle}+\frac{1-P_\text{on}}{\langle n_1\rangle}\frac{\tau_1}{\tau_1+\tau_2}, \label{eq:fdt-eta2}\\
@@ -166,8 +141,7 @@ The first term in eq. \eqref{eq:fdt-eta2} is the Poissonian noise (see sec. \ref
 \section{Time averaging}
 \label{sec:fdt-time-ave}
 
-We have seen in sec. \ref{sec:mas-single_gene} that the response time depends on the degradation rates and that it determines the speed for the levels of some molecule to reach its steady state levels. In this example, the fluctuations in the number of active genes $n_1$ change the steady state levels of the number of mRNA molecules. Consequently, the mRNAs continuously has to reach its new stationary level with a timescale given by $\tau_2$. Therefore, if $\tau_2$ is small relative to $\tau_1$, the mRNAs respond quickly to fluctuations in the number of active genes, increasing its noise. In the opposite case, what occurs is that in a time of $\tau_2$ the number of active genes has fluctuated many times. Since the mRNA levels is unable to follow all of them, it makes a time average that reduces its fluctuations. This can be seen in the term of time averaging of eq. \eqref{eq:fdt-eta2}:
-
+We have seen in sec. \ref{sec:mas-single_gene} that the response time depends on the degradation rates and that it determines the speed for the levels of some molecule to reach its steady state levels. In this example, the fluctuations in the number of active genes $n_1$ change the steady state levels of the number of mRNA molecules. Consequently, the mRNAs continuously has to reach its new stationary level with a timescale given by $\tau_2$. Therefore, if $\tau_2$ is small relative to $\tau_1$, the mRNAs respond quickly to fluctuations in the number of active genes, increasing its noise. In the opposite case, what occurs is that in a time of $\tau_2$ the number of active genes has fluctuated many times. Since the mRNA levels are unable to follow all of them, it makes a time average that reduces its fluctuations. This can be seen in the term of time averaging of eq. \eqref{eq:fdt-eta2}:
 \begin{equation*}
   \frac{\tau_1}{\tau_1+\tau_2} = \frac{1}{1+\tau_2/\tau_1}
 \end{equation*}
@@ -181,7 +155,6 @@ Altought the noise in mRNA is usually large due to its low numbers. The effect o
 \section{The logarithmic gain}
 \label{sec:log_gain}
 An important quantity for the analysis of genetic circuits is the logarithmic gain or elasticity $H_{ij}$. It measures the amount by which relative changes in the quantities of the $j$th component of the circuit produces changes in the $i$th component i.e.
-
 \begin{equation}
   \label{eq:fdt-def_H}
   H_{ij} = \frac{\partial \ln (\langle J_i^-\rangle/\langle J_i^+\rangle)}{\partial \ln \langle n_j\rangle}.
@@ -190,20 +163,16 @@ An important quantity for the analysis of genetic circuits is the logarithmic ga
 Recall that $\mathrm{d}\ln x = \mathrm{d}x/x$. Thus, $H_{ij}$ measures by how fractional changes in $\langle n_j\rangle$ cause the levels of species $i$ to decrease due to fractional changing its degradation to synthesis ratio $\langle J_i^+\rangle/\langle J_i^-\rangle$. If $H_{ij} = h$, then a $1\%$ increase in $n_j$ will increase the degradation to synthesis ratio by approximately $h\%$.
 
 Eq. \eqref{eq:fdt-fdtss} can be rewritten in terms of the logarithmic gain to a more compact form using the following definitions
-
 \begin{equation*}
   \eta_{ij}\coloneqq\frac{\sigma_{ij}}{\langle n_i\rangle\langle n_j\rangle}, \quad M_{ij}\coloneqq\frac{\langle n_j\rangle}{\langle n_i\rangle}A_{ij}, \quad D_{ij}\coloneqq\frac{B_{ij}}{\langle n_i\rangle\langle n_j\rangle}.
 \end{equation*}
 
 It can be easily shown that, in steady state, the equation
-
 \begin{equation}
   \label{eq:fdt-fdtss2}
   \mathbf{M\eta}+\mathbf{\eta M}^T+\mathbf{D}=0
 \end{equation}
-
 corresponds to eq. \eqref{eq:fdt-fdtss} after dividing by $\langle n_i\rangle\langle n_j\rangle$. The diagonal terms of $\mathbf{\eta}$ are the squared CVs. Hence, using these definitions it is more direct to calculate them. The elements of $\mathbf{M}$ can be written in terms of the logarithmic gain. From eq. \eqref{eq:fdt-Adef}
-
 \begin{equation}
   \begin{split}
     A_{ij}&=\frac{\partial}{\partial \langle n_j\rangle}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right) = \frac{1}{\langle n_j\rangle}\frac{\partial}{\frac{\partial \langle n_j\rangle}{\langle n_j\rangle}}\left(\langle J_i^+\rangle - \langle J_i^-\rangle\right)\\
@@ -213,19 +182,16 @@ corresponds to eq. \eqref{eq:fdt-fdtss} after dividing by $\langle n_i\rangle\la
 \end{equation}
 
 In steady state, $\langle J_i^+\rangle = \langle J_i^-\rangle \coloneqq \langle J_i\rangle$ and the flux of degradation is of the form $\langle J_i^-\rangle = \frac{\langle n_i\rangle}{\tau_i}$. Then, replacing on the previous eq. and on the definition of $\mathbf{M}$ we get
-
 \begin{equation*}
   M_{ij} = -\frac{H_{ij}}{\tau_i}.
 \end{equation*}
 
 Also, for genetic systems of this kind, where there are not reactions producing several components and the relations are linear. The only nonzero elements of the matrix $\mathbf{D}$ are the diagonal, which according to eq. \eqref{eq:fdt-Bdef} are
-
 \begin{equation*}
  D_{ii} = \frac{\sum_k R_k}{\langle n_i\rangle^2} =  \frac{\langle J_i^+\rangle + \langle J_i^-\rangle}{\langle n_i\rangle^2} = 2\frac{\langle J_i\rangle}{\langle n_i\rangle^2} = \frac{2}{\langle n_i\rangle\tau_i}.
 \end{equation*}
 
 For the example used in this chapter the matrices can be easily found using the previous results
-
 \begin{equation*}
   \mathbf{H} = \begin{pmatrix}
     -1 & 0 & 0 \\
@@ -248,4 +214,4 @@ For the example used in this chapter the matrices can be easily found using the 
 
 Replacing in eq. \eqref{eq:fdt-fdtss2} we obtain equivalently eqs. \eqref{eq:fdt-eta1} - \eqref{eq:fdt-eta3}.
 
-In this example the logarithmic gain only takes values $\pm 1$ so its effect in noise propagation is not so clear. In the next chapter we will consider a model that involves nonlinear interaction of Hill type between different species. The calculations yield to expressions for the noise where  it can be seen explicitely that the noise propagation between different species depens on their intrinsic noise, the effect of time averaging, and the logarithmic gain. If the logarithmic gain is high in absolute value, the noise will be amplified as it is propagated and viceversa. 
+In this example the logarithmic gain only takes values $\pm 1$ so its effect in noise propagation is not so clear. In the next chapter we will consider a model that involves nonlinear interaction of Hill type between different species. The calculations yield to expressions for the noise where  it can be seen explicitely that the noise propagation between different species depens on their intrinsic noise, the effect of time averaging, and the logarithmic gain. If the logarithmic gain is high in absolute value, the noise will be amplified as it is propagated and viceversa.

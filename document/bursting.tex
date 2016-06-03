@@ -6,7 +6,6 @@ In the previous chapters we have modeled some genetic circuits that satisfy the 
 For instance, there may be cases of bursting in synthesis. This occurs when several molecules produced per creation events, and both the time between events and the number of molecules produced in an event is a random number following some arbitrary distribution (fig. \ref{fig:bur-examples} - left). On the other hand, some molecules can senesce before being completely degraded. That is, they transit over several steps in their process of degradation (fig. \ref{fig:bur-examples} - right). To model these phenomena, it is not enough to assume single step Poisson processes. In this chapter we will use the FDT and elements of basic probability to analyze the effect of bursting and senescence on noise.
 
 This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite{pedraza08}.
-
 \begin{figure}[H]
   \centering
   \includegraphics[width=16cm]{bur-examples}
@@ -15,40 +14,30 @@ This chapter is based on the work done by J. M. Pedraza and J. Paulsson in \cite
 
 \section{mRNA bursts}
 Let the mRNA be produced in bursts of random size $b$, the degradation and protein creation occur one at a time with exponential waiting times (single-step Poisson processes). In this case the only modification with respect to the ``standard model'' [eq. \eqref{eq:mas-simple_det_1}] is the $D_{11}$ term in the matrix $\mathbf{D}$ of the FDT, which by definition is
-
 \begin{equation}
   \label{eq:mrnab1}
   D_{11}=\frac{1}{\langle n_1\rangle^2}\sum_k(s_1^k)^2r_k(\mathbf{n}).
 \end{equation}
 
 All the possible $k$ reactions include all the creation bursts and the reaction of degradation whose rate is $\langle n_1 \rangle/\tau_1$ and has a value of $s_1=-1$, then
-
 \begin{equation}
   \label{eq:mrnab2}
   \sum_k(s_1^k)^2r_k = \frac{\langle n_1 \rangle}{\tau_1} + \sum_{k}(s_1^{k})^2r_{k},
 \end{equation}
-
 where now the index $k$ runs over all the synthesis reactions only. We can rewrite the second term as
-
 \begin{equation*}
   \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\left(\frac{r_k}{\sum_kr_k}\right)(s_1^k)^2,
 \end{equation*}
-
 where the sum over the term in parentheses results in $1$. This term can be interpreted as the probability that the upcoming reaction turns out to be the $k^{\text{th}}$ one. Writing it as $\rho_k$
-
 \begin{equation*}
   \sum_k(s_1^k)^2r_k=\sum_kr_k\sum_k\rho_k(s_1^k)^2,
 \end{equation*}
-
 but $s_1^k$ is the burst size for the $k^{\text{th}}$ synthesis reaction. Therefore the inner sum of the previous equation is actually an average over all the possible burst sizes, hence
-
 \begin{equation}
   \label{eq:mrnab4}
   \sum_k(s_1^k)^2r_k=\sum_kr_k\langle b^2 \rangle=\left(\langle b\rangle^2+\sigma_b^2\right)\sum_kr_k,
 \end{equation}
-
 and using a similar trick we get
-
 \begin{equation*}
   \begin{split}
     \sum_kr_k&=\sum_kr_ks_1^k\frac{\sum_kr_k}{\sum_kr_ks_1^k}=\sum_kr_ks_1^k\left(\sum_k\left(\frac{r_k}{\sum_kr_k}\right)s_1^k\right)^{-1}\\
@@ -57,26 +46,21 @@ and using a similar trick we get
 \end{equation*}
 
 If the system is in steady state, the net synthesis rate equal the degradation rate. Therefore
-
 \begin{equation*}
   \sum_kr_ks_1^k = \frac{\langle n_1\rangle}{\tau_1},
 \end{equation*}
-
 obtaining
-
 \begin{equation*}
    \sum_kr_k = \frac{\langle n_1\rangle}{\langle b\rangle\tau_1}.
 \end{equation*}
 
 Replacing this on eq. \eqref{eq:mrnab4}, then on eq. \eqref{eq:mrnab2}, and finally on \eqref{eq:mrnab1} we get
-
 \begin{equation}
   \label{eq:d11}
   D_{11}=\frac{1}{\langle n_1\rangle^2}\left(\frac{\langle n_1\rangle}{\tau_1}+\frac{\langle n_1\rangle}{\langle b\rangle\tau_1}\left(\langle b\rangle^2+\sigma_b^2\right)\right) = \frac{1}{\tau_1\langle n_1\rangle}\left( 1+ \langle b\rangle\left(1+\frac{\sigma_b^2}{\langle b\rangle^2}\right)\right)
 \end{equation}
 
 Hence, the matrices for the FDT are
-
 \begin{equation*}
   \mathbf{D} = 
   \begin{pmatrix}
@@ -89,9 +73,7 @@ Hence, the matrices for the FDT are
     -\frac{1}{\tau_2} & \frac{1}{\tau_2}
   \end{pmatrix},
 \end{equation*}
-
 where $D_{11}$ is given by eq. \eqref{eq:d11}. By solving the linear system $\mathbf{M}\mathbf{\eta} + \mathbf{\eta M}^T+\mathbf{D}=0$ we obtain the following expression for the noise in protein number
-
 \begin{equation*}
   \eta_{22}=\frac{1}{\langle n_2\rangle} + \frac{1}{\langle n_1\rangle} \frac{\tau_1}{\tau_1 + \tau_2} \frac{\langle b\rangle\left(1+\nicefrac{\sigma_b^2}{\langle b\rangle^2}\right)+1}{2}.
 \end{equation*}
@@ -105,9 +87,7 @@ Suppose a creation event occurred at $t=0$, and let $f(t)$ be the PDF of a creat
 \begin{equation*}
 P(n=0|t=T) = P(t>T) = 1 - P(t<T) = 1 - F(T),
 \end{equation*}
-
 where $n$ is number of creation events and $F$ is the CDF associated to $f$. Also, for a creation event to have happened before time $t=T$, there must be a creation at a time $t_1$ such that $0<t_1<T$ and none during the remaining ($T-t_1$) time. This leads to the following equation
-
 \begin{equation*}
   \begin{split}
     P(n=1|t=T) &= \int_0^TP(t=t_1)P(t>T-t_1)\mathrm{d}t_1 \\
@@ -116,7 +96,6 @@ where $n$ is number of creation events and $F$ is the CDF associated to $f$. Als
 \end{equation*}
 
 The asterisk denotes the convolution product. Following a similar argument, we obtain for an arbitrary number of events
-
 \begin{equation}
   \label{eq:nconvs}
   \begin{split}
@@ -128,59 +107,50 @@ The asterisk denotes the convolution product. Following a similar argument, we o
 Since the convolutions are difficult to deal with, we will use the Laplace transform and solve on the Laplace space. The property that $\mathcal{L}(f\ast g) = \hat{f}\cdot\hat{g}$, where $\hat{f}\coloneqq\mathcal{L}(f)$ will make the problem much simpler.
 
 Aplying $\mathcal{L}$ to eq. \eqref{eq:nconvs} we get
-
 \begin{equation*}
   \hat{P}(n,s) = \hat{f}^n(s)\mathcal{L}(1-F)(s).
 \end{equation*}
 
 It can be easily shown that $\hat{F} = \hat{f}/s$ and $\hat{1} = 1/s$, applying these properties,
-
 \begin{equation}
   \label{eq:lapP}
   \hat{P}(n,s) = \frac{1}{s}\hat{f}^n(s)(1-\hat{f}(s)).
 \end{equation}
 
 To find the moments and the noise, we will use the moment generating function, as defined on \eqref{def:mom_gen}. It will be denoted as $G(z,s)$.
-
 \begin{equation}
   \label{eq:lapG}
   \hat{G}(z,s) \coloneqq \sum_{n=0}^{\infty}z^n\hat{P}(n,s) = \frac{1}{s}(1-\hat{f}(s))\sum_{n=0}^{\infty}(z\hat{f})^n=\frac{1-\hat{f}(s)}{s(1-z\hat{f}(s))}.
 \end{equation}
 
 The geometric series convereges in this case because $\hat{f}(s)\leq1$ and we will evaluate $z$ at $1$. The first and second derivatives of $G$ in Laplace space are given by
-
 \begin{equation}
   \label{eq:lapavn}
   \langle\hat{n}\rangle(s) = \left.\frac{\partial\hat{G}(z,s)}{\partial z}\right|_1 = \frac{\hat{f}(s)}{s(1-\hat{f}(s))}.
 \end{equation}
-
 \begin{equation}
   \label{eq:lapvarn}
   \langle\hat{n}(\hat{n}-1)\rangle(s) = \left.\frac{\partial^2\hat{G}(z,s)}{\partial z^2}\right|_1 = \frac{2}{s}\left(\frac{\hat{f}(s)}{1-\hat{f}(s)}\right)^2.
 \end{equation}
 
 It could also be proven that
-
 \begin{equation}
   \label{eq:lapfprop}
   \hat{f}(0) = 1, \quad \left.\frac{\mathrm{d}\hat{f}(s)}{\mathrm{d}s}\right|_0=-\langle t\rangle,\quad \left.\frac{\mathrm{d}^2\hat{f}(s)}{\mathrm{d}s^2}\right|_0=\langle t^2\rangle.
 \end{equation}
 
 Therefore, we can obtain the moments by applying the inverse Laplace transform to eqs. \eqref{eq:lapavn}-\eqref{eq:lapvarn}, and using properties \eqref{eq:lapfprop}. For the expected value
-
 \begin{equation}
   \langle n\rangle(t) = \mathcal{L}^{-1}(\langle\hat{n}\rangle(s))=\frac{1}{2i\pi}\oint e^{st}\frac{\hat{f}(s)}{s(1-\hat{f}(s))}\mathrm{d}s
 \end{equation}
 
 The integral can be solved by residues. Since $\hat{f}(0)=1$, there is a pole of order $2$ in $s=0$. To find the residues of a pole $c$ of order $m$ of the function $f$, the residue is given by
-
 \begin{equation}
   \label{eq:residues}
   \text{Res}_c(f)=\frac{1}{(m-1)!}\lim_{z\to c}\frac{\mathrm{d}^{m-1}}{\mathrm{d}z^{m-1}}((z-c)^mf(z)).
 \end{equation}
 
 Then
-
 \begin{equation*}
   \begin{split}
     \langle n\rangle(t)&=\text{Res}_0\frac{e^{st}}{s}\frac{\hat{f}(s)}{1-\hat{f}(s)}=\lim_{s\to0}\frac{\mathrm{d}}{\mathrm{d}s}\frac{se^{st}\hat{f}(s)}{1-\hat{f}(s)}\\
@@ -188,69 +158,58 @@ Then
   \end{split}
 \end{equation*}
 
-To find the limit we have to apply L'Hospital rule twice. After some algebra the obtained result is
-
+To find the limit we have to apply L'H\^opital rule twice. After some algebra the obtained result is
 \begin{equation}
   \label{eq:aven}
   \langle n\rangle(t)=\frac{\hat{f}''(0)}{2(\hat{f}'(0))^2}-\frac{t}{\hat{f}'(0)}-1=\frac{t}{\langle t\rangle}+\left(\frac{\langle t^2\rangle}{2\langle t\rangle^2}-1\right).
 \end{equation}
 
 For the second moment, inverting eq. \eqref{eq:lapvarn} we obtain
-
 \begin{equation*}
   \begin{split}
     \langle n(n-1)\rangle(t)&=\frac{1}{2i\pi}\oint e^{st}\frac{2}{s}\left(\frac{\hat{f}(s)}{1-\hat{f}(s)}\right)^2\mathrm{d}s=\text{Res}_0\frac{2}{s}\left(\frac{\hat{f}(s)}{1-\hat{f}(s)}\right)^2\\
 &=\lim_{s\to0}\frac{\mathrm{d}^2}{\mathrm{d}s^2}e^{st}\left(\frac{s\hat{f}(s)}{1-\hat{f}(s)}\right)^2,
   \end{split}
 \end{equation*}
-
-where we used eq. \eqref{eq:residues} to find the residue of a pole of order $3$. After doing the necessary algebra and applying the L'Hospital rule three times we get
-
+where we used eq. \eqref{eq:residues} to find the residue of a pole of order $3$. After doing the necessary algebra and applying the L'\^opital rule three times we get
 \begin{equation*}
   \langle n(n-1)\rangle(t)=\frac{t^2}{\langle t\rangle^2}+\frac{4t}{\langle t\rangle}\left(\frac{\langle t^2\rangle}{2\langle t\rangle^2}-1\right)+2\left(1-\frac{\langle t^2\rangle}{\langle t\rangle^2}+\frac{3\langle t^2\rangle^2}{4\langle t\rangle^4}+\frac{\langle t^3\rangle}{3\langle t\rangle^3}\right).
 \end{equation*}
 
 Combining with eq. \eqref{eq:aven} we obtain the variance
-
 \begin{equation}
   \label{eq:stdn}
   \sigma_n^2(t) = \frac{t}{\langle t\rangle}\left(\frac{\langle t^2\rangle}{\langle t\rangle^2}-1\right)+\left(-\frac{\langle t^2\rangle}{2\langle t\rangle^2} + \frac{5\langle t^2\rangle^2}{4\langle t\rangle^4}-\frac{2\langle t^3\rangle}{3\langle t\rangle^3}\right).
 \end{equation}
 
 The second terms of eqs. \eqref{eq:aven} and \eqref{eq:stdn} represent the fact that, in general, the distribution for the events depend on the initial time. They are exactly zero if times were exponentially distributed, consistent with the memorylessness property\footnote{This can be easily proven using the following property: if $X$ is an exponential random variable, then $\langle X^m\rangle = n!/\lambda^m$, for $m\in\mathbb{Z}^+$.}. If we assume that the starting time is far in the past these terms are negligible. This yields
-
 \begin{equation*}
   \langle n\rangle = \frac{t}{\langle t\rangle},\quad\quad\sigma_n^2 = \frac{t}{\langle t\rangle}\left(\frac{\langle t^2\rangle}{\langle t\rangle^2}-1\right).
 \end{equation*}
 
 Using both equations,
-
 \begin{equation*}
   \sigma_n^2 = \frac{t}{\langle t\rangle}\left(\frac{\langle t^2\rangle - \langle t\rangle^2}{\langle t\rangle^2}\right) = \frac{t}{\langle t\rangle}\eta_t^2 = \langle n\rangle\eta_t^2.
 \end{equation*}
 
 Hence
-
 \begin{equation}
   \label{eq:noisen1}
   \eta_n^2=\frac{1}{\langle n\rangle}\eta_t^2, \quad \text{with}\quad \langle n\rangle = \frac{t}{\langle t\rangle}.
 \end{equation}
 
 Now we will include the effect of bursts of creation. Let $n$ be the number of creation events (meaning the number of bursts, not the total number of molecules created), and let $b_i$ be burst size for the $i^{\text{th}}$ events. Both $n$ and $b_i$ are random variables, and all the $b_i$s follows the same probability distribution. Then, the number of molecules created is
-
 \begin{equation}
   \label{eq:xtotal}
   x\coloneqq\sum_{i=0}^nb_i.
 \end{equation}
 
 It is a sum of a random number of random variables. Denoting the probability mass function of $x$ as $P_x(x)$, and using the definition of the characteristic function $\phi(s)$ [see sec. \ref{sec:con-charac_func}] we get
-
 \begin{equation*}
   \phi(s) \coloneqq \langle e^{xs}\rangle_x = \sum_{a=0}^\infty e^{xs}P_x(x=a).
 \end{equation*}
 
 Using the total probability theorem, we can write it as
-
 \begin{equation}
   \label{eq:charac1}
   \begin{split}
@@ -260,38 +219,30 @@ Using the total probability theorem, we can write it as
 \end{equation}
 
 $\langle\quad\rangle_x$ denotes average with respect to the distribution of $x$. Using eq. \eqref{eq:xtotal} we obtain
-
 \begin{equation*}
   \langle e^{xs}\rangle_{x|n} = \left\langle e^{s\sum_{i=0}^nb_i} \right\rangle_b = \left\langle \prod_{i=0}^ne^{sb_i}\right\rangle_b.
 \end{equation*}
 
 Assuming independence between the different burst sizes $b_i$ and using eq. \eqref{eq:con-mom_ind} we get
-
 \begin{equation*}
   \langle e^{xs}\rangle_{x|n} =  \prod_{i=0}^n\langle e^{sb_i}\rangle_b,
 \end{equation*}
-
 and since all the $b_i$s follow the same distribution, the product is independent of $i$
-
 \begin{equation*}
   \langle e^{xs}\rangle_{x|n} = \prod_{i=0}^n\langle e^{sb}\rangle_b = \langle e^{sb}\rangle_b^n.
 \end{equation*}.
 
 Replacing this result in eq. \eqref{eq:charac1},
-
 \begin{equation*}
   \phi(s) = \sum_{n=0}^\infty \langle e^{sb}\rangle_b^n P(n) = \left\langle\langle e^{sb}\rangle_b^n\right\rangle_n,
 \end{equation*}
-
 where $\langle\quad\rangle_n$ denotes average with respect to the distribution of events. Now we find the moments using the properties of the characteristic function
-
 \begin{equation}
   \label{eq:avex}
   \langle x\rangle = \left.\frac{\mathrm{d}\phi(s)}{\mathrm{d}s}\right|_0 = \left.\frac{\mathrm{d}}{\mathrm{d}s}\left\langle\langle e^{bs}\rangle_b^n\right\rangle_n\right|_0 = \left.\left\langle n\langle e^{bs}\rangle_b^{n-1}\langle b e^{bs}\rangle_b\right\rangle_n\right|_0 = \left\langle n\langle b\rangle_b\right\rangle_n = \langle n\rangle_n\langle b\rangle_b,
 \end{equation}
 
 The average number of molecules produced is thus the mean number of bursts times the mean burst size. For the second moment,
-
 \begin{equation*}
   \begin{split}
     \langle x^2\rangle &= \left.\frac{\mathrm{d^2}\phi(s)}{\mathrm{d}s^2}\right|_0 = \left.\frac{\mathrm{d}\phi(s)}{\mathrm{d}s}\left\langle n\langle e^{bs}\rangle_b^{n-1}\langle b e^{bs}\rangle_b\right\rangle_n\right|_0\\
@@ -301,7 +252,6 @@ The average number of molecules produced is thus the mean number of bursts times
 \end{equation*}
 
 Using the previous result with eq. \eqref{eq:avex} to find the variance, we get
-
 \begin{equation*}
   \begin{split}
     \sigma_x^2 &= \langle n^2\rangle_n\langle b\rangle_b^2-\langle n\rangle_n\langle b\rangle_b^2+\langle n\rangle_n\langle b^2\rangle_b - \langle n\rangle_n^2\langle b\rangle_b^2\\
@@ -311,20 +261,16 @@ Using the previous result with eq. \eqref{eq:avex} to find the variance, we get
 \end{equation*}
 
 Dividing by $\langle x\rangle^2=\langle n\rangle_n^2\langle b\rangle_b^2$,
-
 \begin{equation*}
   \eta_x^2=\frac{\sigma_n^2}{\langle n\rangle_n^2} + \frac{\sigma_b^2}{\langle n\rangle_n\langle b\rangle_b^2} = \eta_n^2+\frac{1}{\langle n\rangle_n}\eta_b^2.
 \end{equation*}
 
 Replacing eq. \ref{eq:noisen1} we obtain
-
 \begin{equation}
   \label{eq:noisex}
   \eta_x^2=\frac{1}{\langle n\rangle}\left(\eta_t^2+\eta_n^2\right)=\frac{\langle b\rangle\left(\eta_t^2+\eta_n^2\right)}{\langle x\rangle},
 \end{equation}
-
 where
-
 \begin{equation}
   \langle x\rangle = \langle b\rangle\frac{t}{\langle t\rangle}.
 \end{equation}
@@ -336,19 +282,16 @@ This result holds for a pure birth process.
 We include the decay of molecules considering their partitioning during cell division. Let $P_\text{Dr}(l|m)$ be the probability of finding $l$ molecules in volume fraction $r$ given that there are $m$ molecules before division.
 
 Assuming that each molecule segregates independently, and that the probability of arriving at a volume is proportional to it we obtain a binomial distribution
-
 \begin{equation*}
   P_\text{Dr}(l|m) = {m\choose l}r^l(1-r)^{m-l}.
 \end{equation*}
 
 For a fixed volume fraction $r$, let $P_\text{Br}(m)$ and $P_\text{Ar}(m)$ be the probabilities of having $m$ molecules before and after division, respectively. Then
-
 \begin{equation*}
   P_\text{Ar}(l) = \sum_{m=0}^\infty P_\text{Dr}(l|m)P_\text{Br}(m) = \sum_{m=0}^\infty {m\choose l}r^l(1-r)^{m-l}P_\text{Br}(m).
 \end{equation*}
 
 Multiplying by $z^l$ and summing we get the moment generating function $G_\text{Ar}(z)$
-
 \begin{equation}
   \label{eq:binomG}
   \begin{split}
@@ -359,26 +302,21 @@ Multiplying by $z^l$ and summing we get the moment generating function $G_\text{
 \end{equation}
 
 The number of molecules of at the end of a growth stage (with distribution $P_\text{Br}$) equals the number of molecules at the beginning (with distribution $P_\text{Ar}$) plus the number of molecules created during the cycle (with distribution $P_{x,\tau} \coloneqq P_x|_{t=\tau}$). Assuming that both random variables as independent, and recalling that the PMF of the sum of random variables is the convolution of the individual PMFs,
-
 \begin{equation*}
   P_\text{Br}(m) = P_\text{Ar}\ast P_{x,\tau}(m).
 \end{equation*}
 
 Thus,
-
 \begin{equation*}
   G_\text{Br}(z) = G_\text{Ar}(z)G_{x,\tau}(z).
 \end{equation*}
 
 From the properties of $G$ and the previous equation the moments can be obtained. The mean is given by
-
 \begin{equation}
   \label{eq:bur-aveBr}
   \langle n\rangle_\text{Br} = \left.\frac{\partial G_\text{Br}(z)}{\partial z}\right|_1 = G_\text{Ar}(1)\left.\frac{\partial G_{x,\tau}(z)}{\partial z}\right|_1 + \left.\frac{\partial G_\text{Ar}(z)}{\partial z}\right|_1G_{x,\tau}(1) = \langle m\rangle_{x,\tau} + \langle m\rangle_\text{Ar},
 \end{equation}
-
 and from eq. \eqref{eq:binomG},
-
 \begin{equation*}
   \begin{split}
   \left.\frac{\partial G_\text{Ar}(z)}{\partial z}\right|_1 &= \langle m\rangle_\text{Ar} = \left.\frac{\partial}{\partial z} \sum_{m=0}^\infty(zr+1-r)^mP_\text{Br}(m)\right|_1\\
@@ -388,14 +326,12 @@ and from eq. \eqref{eq:binomG},
 \end{equation*}
   
 Therefore
-
 \begin{equation}
   \label{eq:aveBrAr}
   \langle m\rangle_\text{Br} = \frac{1}{1-r}\langle m\rangle_{x,\tau},\quad\quad \langle m\rangle_\text{Ar} = r\langle n\rangle_\text{Br} = \frac{r}{1-r}\langle m\rangle_{x,\tau}.
 \end{equation}
 
 Now we find the variance. Differentiating twice we obtain
-
 \begin{equation}
   \label{eq:2Br}
   \begin{split}
@@ -404,9 +340,7 @@ Now we find the variance. Differentiating twice we obtain
     &=\langle m(m-1)\rangle_{x,\tau}+\langle m(m-1)\rangle_\text{Ar}+2\langle m\rangle_{x,\tau}\langle m\rangle_\text{Ar},
   \end{split}
 \end{equation}
-
 and from eq. \eqref{eq:binomG}
-
 \begin{equation}
   \label{eq:2Ar}
   \begin{split}
@@ -416,7 +350,6 @@ and from eq. \eqref{eq:binomG}
 \end{equation}
 
 For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - \langle x\rangle + \langle x\rangle^2$. Using this on eqs. \eqref{eq:2Br} and \eqref{eq:2Ar} we get
-
 \begin{equation*}
   \begin{split}
   \sigma^2_\text{Br}- \langle m\rangle_\text{Br} + \langle m\rangle^2_\text{Br} &= \left( \sigma^2_{x,\tau} - \langle m\rangle_{x,\tau} + \langle m\rangle_{x,\tau}^2\right)\\
@@ -425,14 +358,12 @@ For any random variable $x$, we can write $\langle x(x-1)\rangle = \sigma_x^2 - 
 \end{equation*}
 
 After some algebra the expression can be reduced to
-
 \begin{equation}
   \label{eq:sigmaBr}
   \sigma^2_\text{Br} = \frac{1}{1-r^2}\sigma^2_{x,\tau}+\frac{r}{1+r}\langle m\rangle_\text{Br}
 \end{equation}
 
 Dividing by $\langle m\rangle_\text{Br}^2$ and using eq. \ref{eq:aveBrAr} we get
-
 \begin{equation}
   \label{eq:bur-etaBr}
   \begin{split}
@@ -442,7 +373,6 @@ Dividing by $\langle m\rangle_\text{Br}^2$ and using eq. \ref{eq:aveBrAr} we get
 \end{equation}
 
 Also, from eqs. \ref{eq:2Ar} and \ref{eq:sigmaBr} we get
-
 \begin{equation}
   \begin{split}
     \sigma^2_\text{Ar} - \langle m\rangle_\text{Ar} + \langle m\rangle_\text{Ar}^2 &= r^2\left(\sigma^2_\text{Br}- \langle m\rangle_\text{Br} + \langle m\rangle^2_\text{Br}\right)\\
@@ -451,13 +381,10 @@ Also, from eqs. \ref{eq:2Ar} and \ref{eq:sigmaBr} we get
 \end{equation}
 
 Using eq. \ref{eq:aveBrAr} and after a little algebra we get
-
 \begin{equation}
   \sigma^2_\text{Ar} = \frac{r^2}{1-r^2}\sigma^2_{x,\tau}+\frac{1}{1+r}\langle m\rangle_\text{Ar},
 \end{equation}
-
 hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \eqref{eq:aveBrAr},
-
 \begin{equation}
   \begin{split}
     \eta^2_\text{Ar} &= \frac{r^2}{1-r^2}\sigma^2_{x,\tau}\left(\frac{1-r}{r\langle m\rangle_{x,\tau}}\right)^2+\frac{1}{1+r}\frac{1}{\langle m\rangle_\text{Ar}}\\
@@ -466,25 +393,20 @@ hence, dividing by $\langle m\rangle_\text{Ar}^2$ and using eq. \eqref{eq:aveBrA
 \end{equation}
 
 From eqs. \eqref{eq:bur-aveBr} and \eqref{eq:aveBrAr}, we have $\langle n\rangle_{x,\tau}=\langle n\rangle_{Br}(1-r)$. Replacing on eq. \eqref{eq:noisex}
-
 \begin{equation*}
   \eta^2_{x,\tau} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b)}{(1-r)\langle n\rangle_{Br}},
 \end{equation*}
-
 and replacing this on eq. \eqref{eq:bur-etaBr} we obtain
-
 \begin{equation*}
   \eta^2_{Br} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + r}{(1+r)\langle n\rangle_{Br}}.
 \end{equation*}
 
 The continuous decay of molecules can be approximated by considering division in the limit where $r\to 1$, that is, when the lost volume fraction is very small. In this case,
-
 \begin{equation*}
   \eta^2 = \lim_{r\to 1}\eta^2_{Br} = \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + 1}{2\langle n\rangle}.
 \end{equation*}
 
 In the model of transcription and translation this corresponds to the noise in mRNA number. The noise in protein number can be found immediately keeping in mind that, as we saw on chapter \ref{ch:fdt}, the noise in the number of protein is composed of its intrinsic Poissonian component ($1/\langle p\rangle$), and the transmitted noise from mRNA modulated by the time averaging factor, i.e.
-
 \begin{equation*}
   \eta^2_p = \frac{1}{\langle p\rangle} + \frac{\langle b\rangle(\eta^2_t+\eta^2_b) + 1}{2}\frac{1}{\langle m\rangle}\frac{\tau_m}{\tau_m+\tau_p}.
 \end{equation*}
@@ -494,13 +416,11 @@ Therefore, by considering the bursting and general random timing between creatio
 \section{Senescence of mRNA}
 
 Suppose that mRNAs are created at a constant rate $\lambda_1$ and that they senesce through a sequence of $N$ steps labeled as $X_1,X_2,\dotsc,X_N$. Thus, the states and their transitions are
-
 \begin{equation*}
-  \text{Transcription} \rightarrow X_1 \rightarrow X_2 \rightarrow \dots \rightarrow X_N \rightarrow \text{Degradation}
+  \text{Transcription} \rightarrow X_1 \rightarrow X_2 \rightarrow \dots \rightarrow X_N \rightarrow \text{Degradation}.
 \end{equation*}
 
 The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N$. Let the rate of transcription be $\lambda_1$ and assume that the rates of transition $\beta_1$ per mRNA between the states are the same. The possible transtions in the state space are thus
-
 \begin{equation}
   \begin{split}
     x_1&\xrightarrow{\lambda_1}x_1+1,\\
@@ -510,16 +430,13 @@ The number of mRNA molecules in each step is labeled as $x_i$ for $1\leq i\leq N
 \end{equation}
 
 The first line denotes transcription, the second denotes transitions between states and the third refers to degradation. Now, let $x_{N+1}$ be the number of proteins in the cell and suppose that independently of the current state of the mRNA molecules, they are translated with the same rate $\lambda_2$ per mRNA. The possible transitions for the proteins are
-
 \begin{equation*}
   \begin{split}
     x_{N+1} &\xrightarrow{\lambda_2\sum_{i=1}^Nx_i} x_{N+1}+1,\\
     x_{N+1} &\xrightarrow{\beta_2x_{N+1}}x_{N+1}-1,
   \end{split}
 \end{equation*}
-
 where $\beta_2$ is their degradation rate. Then, the average dynamics are
-
 \begin{equation*}
   \begin{split}
     \dot{\langle x_1\rangle} &= \lambda_1 -\beta_1\langle x_1\rangle,\\
@@ -529,7 +446,6 @@ where $\beta_2$ is their degradation rate. Then, the average dynamics are
 \end{equation*}
 
 At steady state we get
-
 \begin{equation*}
   \begin{split}
     \langle x_1\rangle &= \frac{\lambda_1}{\beta_1},\\
@@ -539,25 +455,19 @@ At steady state we get
 \end{equation*}
 
 Hence
-
 \begin{equation*}
   \langle x_i\rangle = \lambda_1\tau_1\quad\text{for}\quad 1\leq i\leq N,
 \end{equation*}
-
 where $\tau_1 \coloneqq 1/\beta_1$. Denoting the total mRNA as $m=\sum_{i=1}^Nx_i$ and taking the average,
-
 \begin{equation*}
   \langle m\rangle = \sum_{i=1}^N\langle x_i\rangle = \lambda_1\tau_1n = \lambda_1\tau_m
 \end{equation*}
-
 where $\tau_m\coloneqq n\tau_1$. With the previous results the coefficients of the matrices $\mathbf{M}$ and $\mathbf{D}$ of the FDT can be found, replaced in the equation and solved for the noises. Following this procedure, we obtain the following expression for the noise in the number of proteins
-
 \begin{equation*}
   \eta_p^2= \frac{1}{\langle p\rangle}+\frac{1}{\langle m\rangle} \left[1+\frac{\tau_p}{\tau_m}\left(\left(\frac{\tau_pN}{\tau_m+\tau_pN}\right)^N-1\right)\right].
 \end{equation*}
 
 The noise for the total mRNA can be found using the properties of time averaging. If we let $\tau_p\ll\tau_m$ the proteins respond immediately to changes in mRNA. Consequently, the transmitted fluctuations from the mRNA are completely reproduced by them and we get
-
 \begin{equation*}
   \eta_m^2 = \frac{1}{\langle m\rangle}.
 \end{equation*}
